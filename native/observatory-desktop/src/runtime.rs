@@ -253,6 +253,7 @@ struct Engine {
     paths: ConfigPaths,
     store: Store,
     notifications: Notifications,
+    native_notifications_enabled: bool,
     native_popups: crate::native_popup::Manager,
     findings: VecDeque<Finding>,
     finding_grid_times: VecDeque<Option<String>>,
@@ -290,10 +291,14 @@ fn load_worker<T>(
     builtin()
 }
 impl Engine {
-    fn new(
+    fn new(settings: Settings, paths: ConfigPaths, snapshot: Arc<Mutex<Snapshot>>) -> Result<Self> {
+        Self::with_native_notifications(settings, paths, snapshot, true)
+    }
+    fn with_native_notifications(
         mut settings: Settings,
         paths: ConfigPaths,
         snapshot: Arc<Mutex<Snapshot>>,
+        native_notifications_enabled: bool,
     ) -> Result<Self> {
         default_plugin_settings(&mut settings);
         let explorer = Explorer::new(settings.plugins["Explorer"].clone(), None)?;
@@ -410,6 +415,7 @@ impl Engine {
             paths,
             store,
             notifications: Notifications::new(),
+            native_notifications_enabled,
             native_popups: Default::default(),
             http: HttpClient::new(),
             snapshot,
@@ -1019,6 +1025,9 @@ impl Engine {
         Ok(())
     }
     fn native_lifecycle(&mut self, value: Value, mut settings: Settings) {
+        if !self.native_notifications_enabled {
+            return;
+        }
         let value = crate::core_notification::normalize(value);
         if settings
             .extra
@@ -1423,6 +1432,9 @@ impl Engine {
                         self.dispatch_core_notification(payload);
                     }
                     "PlayAudioFile" => {
+                        if !self.native_notifications_enabled {
+                            continue;
+                        }
                         let filename = payload["Filename"]
                             .as_str()
                             .or_else(|| payload["filename"].as_str())
@@ -2470,7 +2482,9 @@ fn worker(
 /// Run the same engine without a display, useful for imports and reproducible diagnostics.
 pub fn replay(settings: Settings, paths: ConfigPaths, export: Option<PathBuf>) -> Result<Value> {
     let snapshot = Arc::new(Mutex::new(Snapshot::default()));
-    let mut engine = Engine::new(settings, paths, snapshot)?;
+    // Completion callbacks leave batch mode; retain headless silence without
+    // replacing or persisting the user's desktop notification preferences.
+    let mut engine = Engine::with_native_notifications(settings, paths, snapshot, false)?;
     let dir = observatory_io::resolve_journal_dir(engine.settings.journal_dir.as_deref())?;
     let mut reader = JournalTailer::new(dir);
     let cancel = AtomicBool::new(false);
@@ -2481,19 +2495,34 @@ pub fn replay(settings: Settings, paths: ConfigPaths, export: Option<PathBuf>) -
             .context("rebuild Hecate vault")?;
     }
     engine.state("Reading all journals", true);
-    let summary = reader
-        .replay_all(&cancel, |item| match item {
-            ReplayItem::Event(event) => engine.process(event),
-            ReplayItem::Error(issue) => engine.error(format!(
-                "{}:{}: {}",
-                issue.path.display(),
-                issue.line,
-                issue.message
-            )),
-            ReplayItem::Progress { .. } => {}
-        })
-        .context("journal replay")?;
+    engine.native_messages(vec![(
+        "Core".into(),
+        json!({"target":"","command":"SourceReadAllState","payload":{"State":"Started"}}),
+    )]);
+    let result = reader.replay_all(&cancel, |item| match item {
+        ReplayItem::Event(event) => engine.process(event),
+        ReplayItem::Error(issue) => engine.error(format!(
+            "{}:{}: {}",
+            issue.path.display(),
+            issue.line,
+            issue.message
+        )),
+        ReplayItem::Progress { .. } => {}
+    });
+    let read_state = if result.is_ok() {
+        "Completed"
+    } else {
+        "Required"
+    };
+    engine.native_messages(vec![(
+        "Core".into(),
+        json!({"target":"","command":"SourceReadAllState","payload":{"State":read_state}}),
+    )]);
+    engine.finish_read(false);
+    // Leaving batch mode queues local peer queries for the completed views.
+    engine.native_messages(Vec::new());
     engine.publish();
+    let summary = result.context("journal replay")?;
     engine.hecate.flush()?;
     if let Some(path) = export {
         engine.store.export(&path, b',', None)?;

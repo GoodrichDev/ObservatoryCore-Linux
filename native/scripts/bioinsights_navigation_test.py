@@ -169,7 +169,8 @@ def main():
                 time.sleep(1)
                 page_hashes={}
                 capture(main_window,args.output.with_name(args.output.stem+"-initial.png"))
-                coordinates=[("Unsold",82),("About",120),("Codex Companion",158),("Main",44),("Zoom",234)] if args.browser else [("Unsold",74),("About",108),("Codex Companion",142),("Main",40),("Zoom",210)]
+                # Both renderers use the source toolbar's 38-pixel button spacing.
+                coordinates=[("Unsold",82),("About",120),("Codex Companion",158),("Main",44),("Zoom",234)]
                 for page, px in coordinates:
                     click(main_window, px, 64)
                     found = expect(1)
@@ -180,17 +181,17 @@ def main():
                 assert len(set(page_hashes.values()))==4, page_hashes
                 # Close the anchored zoom selector by clicking outside it.
                 click(main_window, 700, 500)
-                click(main_window, 196 if args.browser else 176, 68 if args.browser else 64)
+                click(main_window, 196, 68)
                 popped = expect(2)
                 child = next(window for window, title in popped.items() if title == "BioInsights Popout")
                 receipt.append({"clicked": "Popout", "native_windows": len(popped)})
                 time.sleep(0.5)
                 capture(child,args.output.with_suffix(".png"))
-                click(child, 180 if args.browser else 160, 28 if args.browser else 24)
+                click(child, 180, 28)
                 receipt.append({"clicked": "Popout in child (reattach)", "native_windows": len(expect(1))})
-                click(main_window, 74, 64)
+                click(main_window, 82, 64)
                 receipt.append({"clicked": "Unsold after reattach", "native_windows": len(expect(1))})
-                click(main_window, 272 if args.browser else 244, 68 if args.browser else 64)
+                click(main_window, 272, 68)
                 settings_windows = expect(2)
                 assert "BioInsights Settings" in settings_windows.values(), settings_windows
                 receipt.append({"clicked": "Settings", "native_windows": len(settings_windows)})

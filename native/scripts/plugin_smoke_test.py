@@ -66,7 +66,7 @@ return {
 """
 
 
-def visible_png(path, require_colour=False, require_bio_main=False):
+def visible_png(path, require_colour=False, require_bio_main=False, require_notification=False):
     """Decode 8-bit RGB(A) PNG scanlines and reject blank native captures."""
     data = path.read_bytes()
     assert data[:8] == b"\x89PNG\r\n\x1a\n", path
@@ -83,11 +83,11 @@ def visible_png(path, require_colour=False, require_bio_main=False):
             channels = 4 if colour == 6 else 3
         elif kind == b"IDAT":
             compressed.extend(chunk)
-    assert width and height and channels and width > 50 and height > 50, path
+    assert width and height and channels and width > 50 and height > (0 if require_notification else 50), path
     raw = zlib.decompress(compressed)
     stride, offset, chromatic, painted = width * channels, 0, 0, 0
     colours = set()
-    bio_bands, brown_pixels = [], 0
+    bio_bands, brown_pixels, notification_text_pixels = [], 0, 0
     previous = bytearray(stride)
     for y in range(height):
         method = raw[offset]
@@ -117,6 +117,8 @@ def visible_png(path, require_colour=False, require_bio_main=False):
             red, green, blue = row[i:i + 3]
             if (red,green,blue)==(255,111,0):orange_pixels+=1
             if (red,green,blue)==(35,16,2):brown_pixels+=1
+            if red>200 and 70<=green<=145 and blue<40 and (channels==3 or row[i+3]>80):
+                notification_text_pixels+=1
             if max(red, green, blue) > 60 and (channels == 3 or row[i + 3] > 80):
                 painted += 1
             if len(colours) < 4096:
@@ -128,6 +130,10 @@ def visible_png(path, require_colour=False, require_bio_main=False):
     assert painted > 100 and len(colours) > 8, f"Blank or unpainted native viewport: {path}"
     if require_colour:
         assert chromatic > 30, f"Overlay colours were not painted: {path}"
+    if require_notification:
+        # The fixture's orange title/detail glyphs must be present; its blue
+        # border alone cannot satisfy the compact-notification check.
+        assert notification_text_pixels>100, f"Stellar notification text was not painted: {path}"
     if require_bio_main:
         # The former incorrect generic grid passed a nonblank-image test. The
         # installed main view has full-width orange banner/body/footer bands
@@ -232,7 +238,10 @@ def main():
             (output / f"{name}.log").write_text(rendered.stdout + rendered.stderr)
             assert rendered.returncode == 0, (name, rendered.stderr)
             assert image.is_file() and image.stat().st_size > 1000, image
-            captures[name] = visible_png(image, require_colour=name.startswith("stellar-"),require_bio_main=name=="bioinsights")
+            # Source notification height follows its two text lines and monitor
+            # font scaling; a correctly painted 49-pixel notification is valid.
+            captures[name] = visible_png(image, require_colour=name.startswith("stellar-"),require_bio_main=name=="bioinsights",
+                                         require_notification=name=="stellar-notification")
             if name in ("bioinsights", "codex-companion", "unsold-biology", "bioinsights-about"):
                 reports=[json.loads(line.removeprefix("observatory-smoke ")) for line in rendered.stderr.splitlines()
                          if line.startswith("observatory-smoke ")]

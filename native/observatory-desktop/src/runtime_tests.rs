@@ -419,6 +419,166 @@ fn live_status_moves_sampler_then_analysis_closes_it() {
 }
 
 #[test]
+fn headless_replay_completes_source_lifecycle_and_publishes_final_rows_and_callbacks() {
+    let temporary = tempfile::tempdir().unwrap();
+    let directory = temporary.path().join("journals");
+    fs::create_dir(&directory).unwrap();
+    fs::write(
+        directory.join("Journal.2026-01-01T000000.01.log"),
+        include_str!("../../fixtures/parity-journal.jsonl"),
+    )
+    .unwrap();
+    let paths = ConfigPaths::from_roots(
+        temporary.path().join("config"),
+        temporary.path().join("data"),
+        temporary.path().join("cache"),
+    );
+    paths.create_dirs().unwrap();
+    let criteria = paths.data_dir.join("headless-startup.lua");
+    fs::write(
+        &criteria,
+        "---@Global\nnotify('Headless startup','Headless startup','Initialised')\n---@End",
+    )
+    .unwrap();
+    fs::write(
+        paths.plugin_dir.join("headless-lifecycle.lua"),
+        r#"return {id='tests.headless-lifecycle',name='Headless lifecycle',
+        settings={finished=false},accept_batch_notifications=true,
+        on_state_changed=function(s)
+            core.add_row{kind='state',state=s.state,batch=s.batch,flags=core.get_log_monitor_state()}
+            if s.state=='Idle' then
+                core.save_settings{finished=true}
+                core.add_finding{title='Headless completion'}
+            end
+        end,
+        on_message=function(m)
+            if m.source.name=='Core' and m.data.command=='SourceReadAllState' then
+                core.add_row{kind='read',state=m.data.payload.State,
+                    batch=core.is_log_monitor_batch_reading(),flags=core.get_log_monitor_state()}
+            end
+        end,
+        on_journal=function(e)
+            if e.event=='Shutdown' then
+                core.add_row{kind='journal',event=e.event,
+                    batch=core.is_log_monitor_batch_reading(),flags=core.get_log_monitor_state()}
+            end
+        end,
+        on_notification=function(n)
+            if n.title=='Headless completion' then
+                core.add_row{kind='notification',title=n.title,
+                    batch=core.is_log_monitor_batch_reading(),flags=core.get_log_monitor_state()}
+            end
+        end}"#,
+    )
+    .unwrap();
+    let settings = Settings {
+        journal_dir: Some(directory),
+        popup: true,
+        speech: true,
+        plugins: json!({"Explorer":{"CustomCriteriaFile":criteria,"EnableCustomCriteria":false},"BioInsights":{"GalacticCodexRemote":false},"Hecate":{"RemoteLookups":false}}),
+        ..Settings::default()
+    };
+    settings.save(&paths.settings_file).unwrap();
+    let export = temporary.path().join("findings.csv");
+    let replay = super::replay(settings, paths.clone(), Some(export.clone())).unwrap();
+    assert_eq!(replay["events"], 19);
+    assert_eq!(replay["botanist"].as_array().unwrap().len(), 1);
+    assert_eq!(replay["botanist"][0]["species"], "Stratum Tectonicas");
+    assert_eq!(replay["botanist"][0]["analysed"], true);
+    assert_eq!(replay["messages"].as_array().unwrap().len(), 2);
+    assert_eq!(
+        replay["plugins"]["Headless lifecycle"],
+        json!([
+            {"kind":"state","state":"Reading all journals","batch":true,"flags":2},
+            {"kind":"read","state":"Started","batch":true,"flags":2},
+            {"kind":"journal","event":"Shutdown","batch":true,"flags":2},
+            {"kind":"read","state":"Completed","batch":true,"flags":2},
+            {"kind":"state","state":"Idle","batch":false,"flags":0},
+            {"kind":"notification","title":"Headless completion","batch":false,"flags":0}
+        ])
+    );
+    for summary in ["bio_summary", "eval_summary"] {
+        assert!(replay[summary]["UIAlerts"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|alert| alert["Type"] == "ReadAllCompleted"));
+    }
+    assert!(replay["findings"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .any(|finding| finding["title"] == "Headless completion"));
+    assert!(replay["findings"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .any(|finding| finding["title"] == "Headless startup"));
+    assert!(fs::read_to_string(export)
+        .unwrap()
+        .contains("Headless completion"));
+    let saved = Settings::load(&paths.settings_file).unwrap();
+    assert!(saved.popup && saved.speech);
+    assert_eq!(saved.plugins["Headless lifecycle"]["finished"], true);
+    assert_eq!(replay["errors"], json!([]));
+}
+
+#[test]
+fn headless_notification_mode_suppresses_startup_completion_and_direct_audio_delivery() {
+    use super::Engine;
+    use std::sync::{Arc, Mutex};
+
+    let temporary = tempfile::tempdir().unwrap();
+    let paths = ConfigPaths::from_roots(
+        temporary.path().join("config"),
+        temporary.path().join("data"),
+        temporary.path().join("cache"),
+    );
+    paths.create_dirs().unwrap();
+    let criteria = paths.data_dir.join("headless-startup.lua");
+    fs::write(
+        &criteria,
+        "---@Global\nnotify('Headless startup','Headless startup','Initialised')\n---@End",
+    )
+    .unwrap();
+    fs::write(
+        paths.plugin_dir.join("headless-completion.lua"),
+        r#"return {id='tests.headless-completion',name='Headless completion',
+        on_state_changed=function(s)
+            if s.state=='Idle' then core.add_finding{title='Headless completion'} end
+        end}"#,
+    )
+    .unwrap();
+    let settings = Settings {
+        popup: true,
+        speech: true,
+        plugins: json!({"Explorer":{"CustomCriteriaFile":criteria,"EnableCustomCriteria":false},"BioInsights":{"GalacticCodexRemote":false},"Hecate":{"RemoteLookups":false}}),
+        ..Settings::default()
+    };
+    let shared = Arc::new(Mutex::new(Snapshot::default()));
+    let mut engine =
+        Engine::with_native_notifications(settings, paths, shared.clone(), false).unwrap();
+    assert!(engine
+        .findings
+        .iter()
+        .any(|finding| finding.title == "Headless startup"));
+    assert!(engine.native_popups.snapshot().is_empty());
+    engine.state("Reading all journals", true);
+    engine.finish_read(false);
+    let snapshot = shared.lock().unwrap().clone();
+    assert!(snapshot
+        .findings
+        .iter()
+        .any(|finding| finding.title == "Headless completion"));
+    assert!(snapshot.native_popups.is_empty());
+    // A missing audio file normally produces a completion callback. Headless
+    // delivery bypasses the player entirely, including direct plugin requests.
+    engine.native_messages(vec![("Core".into(),json!({"target":"Core","command":"PlayAudioFile","payload":{"Filename":temporary.path().join("missing.wav")}}))]);
+    assert!(engine.notifications.take_audio_completions().is_empty());
+    assert!(snapshot.errors.is_empty(), "{:?}", snapshot.errors);
+}
+
+#[test]
 fn replay_is_idempotent_in_database_and_exports_quoted_csv() {
     let mut events = fixture();
     events[4]["Atmosphere"] = "thin argon, \"trace\" atmosphere".into();

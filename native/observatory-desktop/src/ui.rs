@@ -2148,13 +2148,22 @@ impl eframe::App for ObservatoryApp {
         if self.screenshot.is_some() {
             ctx.request_repaint_after(Duration::from_millis(33));
         }
-        if self.smoke_frames.is_some_and(|n| self.frames >= n) {
-            if self.smoke_frames == Some(self.frames) {
-                eprintln!(
-                    "observatory-smoke {}",
-                    json!({"native_viewport_count":ctx.input(|i|i.raw.viewports.len()),"selected_tab":self.tab})
-                );
+        // Frame limits can finish before delayed captures. Keep a missing
+        // viewport bounded while allowing the requested capture to complete.
+        let capture_timed_out = self.screenshot.is_some()
+            && Instant::now().saturating_duration_since(self.capture_ready_at)
+                >= Duration::from_secs(10);
+        if self.smoke_frames.is_some_and(|n| self.frames >= n)
+            && (self.screenshot.is_none() || capture_timed_out)
+        {
+            if capture_timed_out {
+                eprintln!("requested screenshot was not captured within ten seconds");
             }
+            self.smoke_frames = None;
+            eprintln!(
+                "observatory-smoke {}",
+                json!({"native_viewport_count":ctx.input(|i|i.raw.viewports.len()),"selected_tab":self.tab})
+            );
             ctx.send_viewport_cmd(egui::ViewportCommand::Close);
         }
         if let Some(Ok(browser)) = &mut self.bio_browser {

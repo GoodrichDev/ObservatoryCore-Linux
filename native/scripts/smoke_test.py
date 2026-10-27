@@ -37,7 +37,8 @@ def main():
         journal.write_bytes((repo / "native/fixtures/parity-journal.jsonl").read_bytes())
         config = root / "settings.json"
         config.write_text(json.dumps({"journal_dir": str(journal_dir), "poll_interval_ms": 50,
-                                      "popup": True, "speech": False, "start_read_all": True,
+                                      "popup": True, "speech": False, "auto_start": True, "start_read_all": True,
+                                      "notification_backend": "dbus",
                                       "disabled_plugins":["StellarOverlay"],"plugins":{"Hecate":{"RemoteLookups":False},"BioInsights":{"GalacticCodexRemote":False}}}))
         env["XDG_CONFIG_HOME"] = str(root / "config")
         env["XDG_DATA_HOME"] = str(root / "data")
@@ -59,7 +60,10 @@ def main():
             app_env = env.copy()
             if args.wayland:
                 app_env.pop("DISPLAY", None)  # Backend fallback must not hide a Wayland failure.
+            # Capture after the live log/status/analysis sequence below, so the
+            # frame limit cannot end the optimized application before it runs.
             app = subprocess.Popen([str(binary), "--config", str(config), "--smoke-frames", "45",
+                                    "--screenshot-delay-ms", "3000",
                                     "--screenshot", str(output / "window.png")],
                                    env=app_env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             time.sleep(1)
@@ -82,6 +86,8 @@ def main():
             append({"event": "LoadGame", "Commander": "Smoke", "Odyssey": True},
                    {"event": "Location", "StarSystem": "Smoke", "SystemAddress": 42, "BodyID": 2, "Body": "Smoke 1"},
                    {"event": "Touchdown", "SystemAddress": 42, "BodyID": 2, "Body": "Smoke 1", "Latitude":0,"Longitude":0},
+                   {"event": "SAASignalsFound", "SystemAddress": 42, "BodyID": 2, "BodyName": "Smoke 1",
+                    "Signals": [{"Type": "$SAA_SignalType_Biological;", "Count": 1}]},
                    {"event": "ReceiveText", "Channel": "player", "From": "Test pilot", "Message": "Native notification check"},
                    dict(organic, ScanType="Log"))
             time.sleep(0.5)
@@ -103,6 +109,8 @@ def main():
             monitor_log.close()
         trace = (output / "notifications.txt").read_text()
         assert trace.count("member=Notify") >= 3, trace
+        assert trace.count('string "Smoke Tussock"') >= 2, trace
+        assert "Sample 1 of 3" in trace and "Colony distance: 200m" in trace, trace
         assert "member=CloseNotification" in trace, trace
         # Render the customized settings page and a real restored plugin window.
         settings=json.loads(config.read_text())
