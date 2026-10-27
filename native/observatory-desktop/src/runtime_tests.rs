@@ -642,6 +642,65 @@ fn notification_message_cycle_is_bounded_and_worker_remains_usable() {
 }
 
 #[test]
+fn read_completion_publishes_partial_chunk_and_state_callbacks_before_clearing_progress() {
+    use super::Engine;
+    use observatory_domain::JournalEvent;
+    use std::sync::{Arc, Mutex};
+
+    let temporary = tempfile::tempdir().unwrap();
+    let paths = ConfigPaths::from_roots(
+        temporary.path().join("config"),
+        temporary.path().join("data"),
+        temporary.path().join("cache"),
+    );
+    paths.create_dirs().unwrap();
+    fs::write(
+        paths.plugin_dir.join("completion.lua"),
+        r#"return {id='tests.read-completion',name='Read completion',
+        on_journal=function(e) core.add_finding{title='Row '..e.N} end,
+        on_state_changed=function(s)
+            if s.state=='Monitoring' then core.add_finding{title='Read ready'} end
+        end}"#,
+    )
+    .unwrap();
+    let shared = Arc::new(Mutex::new(Snapshot::default()));
+    let settings = Settings {
+        popup: false,
+        speech: false,
+        plugins: json!({"BioInsights":{"GalacticCodexRemote":false},"Hecate":{"RemoteLookups":false}}),
+        auto_start: false,
+        ..Settings::default()
+    };
+    let mut engine = Engine::new(settings, paths, shared.clone()).unwrap();
+    engine.state("Reading all journals", true);
+    shared.lock().unwrap().read_progress = Some(("journal.log".into(), 0, 1));
+    for n in 0..257 {
+        engine.process(
+            JournalEvent::parse(&json!({"event":"CompletionProbe","N":n}).to_string()).unwrap(),
+        );
+        if n == 255 {
+            engine.publish();
+        }
+    }
+    let partial = shared.lock().unwrap().clone();
+    assert_eq!(partial.total, 256);
+    assert_eq!(partial.findings.len(), 256);
+    assert!(partial.read_progress.is_some());
+
+    engine.state("Read all cancelled", false);
+    engine.finish_read(true);
+    let ready = shared.lock().unwrap().clone();
+    assert_eq!(ready.state, "Monitoring");
+    assert!(ready.monitoring);
+    assert!(ready.read_progress.is_none());
+    assert_eq!(ready.total, 257);
+    assert_eq!(ready.last_event, "CompletionProbe");
+    assert_eq!(ready.findings.len(), 258);
+    assert_eq!(ready.findings.back().unwrap().title, "Read ready");
+    assert!(ready.errors.is_empty(), "{:?}", ready.errors);
+}
+
+#[test]
 fn cancel_read_all_resumes_monitor_without_turning_unread_history_into_live_events() {
     let session = Session::new(&fixture());
     session.start();

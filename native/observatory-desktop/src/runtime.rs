@@ -655,6 +655,14 @@ impl Engine {
         self.snapshot.lock().unwrap().state = state.into();
         self.call_plugins("on_state_changed", &json!({"state":state,"batch":batch}));
     }
+    fn finish_read(&mut self, monitoring: bool) {
+        self.state(if monitoring { "Monitoring" } else { "Idle" }, false);
+        // Replay publishes full chunks while reading. Keep progress visible
+        // until the final partial chunk and state callbacks are published, so
+        // they cannot appear to arrive later from the resumed live monitor.
+        self.publish();
+        self.snapshot.lock().unwrap().read_progress = None;
+    }
     fn invalidate_event(&mut self, event: &str) {
         // These are the journal branches which mutate the corresponding workers'
         // visible data. Mining/inventory/heartbeat records do not rebuild tabs.
@@ -2423,12 +2431,11 @@ fn worker(
                         if replay && replay_cancel.swap(false, Ordering::Relaxed) {
                             cancel.store(false, Ordering::Relaxed);
                         }
-                        engine.snapshot.lock().unwrap().read_progress = None;
                         monitoring = resume_after_read && !cancel.load(Ordering::Relaxed);
                         if first_start && !replay && !monitoring {
                             tailer = None;
                         }
-                        engine.state(if monitoring { "Monitoring" } else { "Idle" }, false);
+                        engine.finish_read(monitoring);
                     }
                     Err(error) => {
                         monitoring = false;
