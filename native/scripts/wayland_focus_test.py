@@ -25,13 +25,15 @@ def wait_window(app):
   time.sleep(.05)
  raise AssertionError('window never mapped: '+app)
 def run_case(negative):
- name='negative-control'if negative else'passive';case=a.output/name;case.mkdir(exist_ok=True);env=dict(baseenv,OBSERVATORY_WAYLAND_QA=str(case));processes=[];logs=[]
+ name='negative-control'if negative else'passive';case=a.output/name;case.mkdir(exist_ok=True);env=dict(baseenv,OBSERVATORY_WAYLAND_QA=str(case),OBSERVATORY_WAYLAND_WAIT_FOR_START='1');processes=[];logs=[]
+ start_marker=case/'probe-start';start_marker.unlink(missing_ok=True)
  def start(test,log):
   f=(case/log).open('w');logs.append(f);proc=subprocess.Popen([binary,'--exact',namespace+test,'--ignored','--nocapture'],env=env,stdout=f,stderr=subprocess.STDOUT);processes.append(proc);return proc
  overlay=start('unsafe_xdg_toplevel_negative_control'if negative else'passive_overlay_native_rendering_probe','overlay.log');wait_window('observatory-overlay-probe')
  game=start('fullscreen_game_input_probe','game.log');wait_window('observatory-game-probe');
  if not negative:ipc('[app_id="observatory-game-probe"] fullscreen enable')
  # Initial arrangement ends here. Never focus or restore any window during popup sampling.
+ start_marker.touch()
  keyboard_log=(case/'keyboard.log').open('w');logs.append(keyboard_log);keyboard=subprocess.Popen(['wtype','-s','1200','a','-s','1500','b','-s','1500','c','-s','1500','d','-s','8000'],env=env,stdout=keyboard_log,stderr=subprocess.STDOUT);processes.append(keyboard)
  start('virtual_input::game_pointer_probe','pointer.log')
  began=time.monotonic();samples=[];screenshot=False

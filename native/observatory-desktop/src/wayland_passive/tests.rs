@@ -25,6 +25,23 @@ fn directory() -> PathBuf {
         std::env::var_os("OBSERVATORY_WAYLAND_QA").expect("isolated QA directory required"),
     )
 }
+fn probe_clock() -> Option<Instant> {
+    std::env::var_os("OBSERVATORY_WAYLAND_WAIT_FOR_START")
+        .is_none()
+        .then(Instant::now)
+}
+fn probe_elapsed(start: &mut Option<Instant>, directory: &Path) -> Duration {
+    if start.is_none() && directory.join("probe-start").is_file() {
+        *start = Some(Instant::now());
+    }
+    start.as_ref().map(Instant::elapsed).unwrap_or_default()
+}
+fn write_report(directory: &Path, name: &str, report: &Value) {
+    let path = directory.join(name);
+    let temporary = path.with_extension("tmp");
+    std::fs::write(&temporary, report.to_string()).unwrap();
+    std::fs::rename(temporary, path).unwrap();
+}
 fn monitor() -> Rect {
     crate::passive_windows::wayland_outputs()
         .first()
@@ -32,20 +49,21 @@ fn monitor() -> Rect {
         .unwrap_or_else(|| Rect::from_min_size(Pos2::ZERO, Vec2::new(1920.0, 1080.0)))
 }
 struct Game {
-    start: Instant,
+    start: Option<Instant>,
     directory: PathBuf,
     report: Value,
 }
 impl eframe::App for Game {
     fn update(&mut self, ctx: &egui::Context, _: &mut eframe::Frame) {
+        let elapsed = probe_elapsed(&mut self.start, &self.directory);
         egui::CentralPanel::default().frame(egui::Frame::NONE.fill(egui::Color32::from_rgb(12,20,36))).show(ctx,|ui|{
    ui.label("Fullscreen game surrogate: passive overlays must not take keyboard or pointer input.");
    let target=Rect::from_min_size(Pos2::new(100.0,100.0),Vec2::new(360.0,190.0));
    if ui.put(target,egui::Button::new("GAME INPUT TARGET")).clicked(){self.report["clicks"]=json!(self.report["clicks"].as_u64().unwrap()+1);}
   });
-        let game_title = if self.start.elapsed().as_secs_f64() > 8.0 {
+        let game_title = if elapsed.as_secs_f64() > 8.0 {
             "Game input probe"
-        } else if self.start.elapsed().as_secs_f64() > 2.0 {
+        } else if elapsed.as_secs_f64() > 2.0 {
             "Elite - Dangerous (QA)"
         } else {
             "Game input probe"
@@ -60,16 +78,16 @@ impl eframe::App for Game {
             }
         }
         self.report["focused"] = json!(ctx.input(|i| i.focused));
-        self.report["seconds"] = json!(self.start.elapsed().as_secs_f64());
-        std::fs::write(self.directory.join("game.json"), self.report.to_string()).unwrap();
+        self.report["seconds"] = json!(elapsed.as_secs_f64());
+        write_report(&self.directory, "game.json", &self.report);
         ctx.request_repaint_after(Duration::from_millis(20));
-        if self.start.elapsed() > Duration::from_secs(16) {
+        if elapsed > Duration::from_secs(16) {
             ctx.send_viewport_cmd(egui::ViewportCommand::Close);
         }
     }
 }
 struct Overlay {
-    start: Instant,
+    start: Option<Instant>,
     directory: PathBuf,
     model: StellarOverlay,
     core: crate::native_popup::Manager,
@@ -119,7 +137,7 @@ impl eframe::App for Overlay {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.label("Observatory Core background window");
         });
-        let elapsed = self.start.elapsed();
+        let elapsed = probe_elapsed(&mut self.start, &self.directory);
         if elapsed > Duration::from_secs(2) && elapsed < Duration::from_secs(9) {
             let phase = elapsed.as_millis() as u64 / 400;
             if phase != self.phase {
@@ -184,15 +202,15 @@ impl eframe::App for Overlay {
         self.report["seconds"] = json!(elapsed.as_secs_f64());
         self.report["phase"] = json!(self.phase);
         self.report["main_focused"] = json!(ctx.input(|i| i.focused));
-        std::fs::write(
-            self.directory.join(if self.negative {
+        write_report(
+            &self.directory,
+            if self.negative {
                 "negative.json"
             } else {
                 "overlay.json"
-            }),
-            self.report.to_string(),
-        )
-        .unwrap();
+            },
+            &self.report,
+        );
         ctx.request_repaint_after(Duration::from_millis(15));
         if elapsed > Duration::from_secs(10) {
             ctx.send_viewport_cmd(egui::ViewportCommand::Close);
@@ -224,7 +242,7 @@ fn run_overlay(negative: bool) {
   model.handle_message("BioInsights","ShowBitmapNotification",&json!({"ImageKey":"native-image","Filename":png,"XPos":70,"YPos":30,"TTLms":0,"ForceShow":true})).unwrap();
   let mut settings=observatory_io::Settings::default();settings.extra.insert("NativeNotifyTransparent".into(),json!(false));settings.extra.insert("NativeNotifyTimeout".into(),json!(0));
   let mut core=crate::native_popup::Manager::default();core.lifecycle(&json!({"id":"core","title":"Core notification","detail":"Actual native Core notification surface","timeout":0}),&settings,0).unwrap();
-  Ok(Box::new(Overlay{start:Instant::now(),directory:dir,model,core,captured:Arc::default(),phase:0,negative,report:json!({"max_layers":0})}))
+  Ok(Box::new(Overlay{start:probe_clock(),directory:dir,model,core,captured:Arc::default(),phase:0,negative,report:json!({"max_layers":0})}))
  })).unwrap();
 }
 #[test]
@@ -246,7 +264,7 @@ fn fullscreen_game_input_probe() {
         options("observatory-game-probe"),
         Box::new(move |_| {
             Ok(Box::new(Game {
-                start: Instant::now(),
+                start: probe_clock(),
                 directory: dir,
                 report: json!({"clicks":0,"text":""}),
             }))
