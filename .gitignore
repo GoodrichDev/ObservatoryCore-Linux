@@ -382,3 +382,7 @@ InnoSetup/ObservatoryCore.zip
 # Native Rust build output
 /target/
 /dist/
+
+# Rust binary entry points are source, unlike the .NET bin output above.
+!/native/observatory-plugins/src/bin/
+!/native/observatory-plugins/src/bin/*.rs
