@@ -30,6 +30,9 @@ const ANCHOR_BYTES: usize = 128;
 const MAX_SCAN_RECORDS: usize = 512;
 const MAX_SCAN_BYTES: usize = 4 * 1024 * 1024;
 const MAX_RECORD_BYTES: usize = 16 * 1024 * 1024;
+// A same-length rewrite can retain both timestamps within one filesystem tick.
+// Validate recent files, but keep unchanged archives on the metadata-only path.
+const STAMP_SETTLE_TIME: Duration = Duration::from_secs(2);
 
 struct ReadBudget {
     records: usize,
@@ -116,6 +119,10 @@ impl JournalTailer {
     /// Each call reads at most 512 records / 4 MiB; backlog continues on the next
     /// call without advancing beyond the records delivered to this batch.
     pub fn scan(&mut self, cancel: &AtomicBool) -> ScanBatch {
+        self.scan_at(cancel, SystemTime::now())
+    }
+
+    fn scan_at(&mut self, cancel: &AtomicBool, now: SystemTime) -> ScanBatch {
         let mut batch = ScanBatch::default();
         let files = match journal_files(&self.directory) {
             Ok(files) => files,
@@ -145,6 +152,7 @@ impl JournalTailer {
                 false,
                 cancel,
                 Some(&mut budget),
+                now,
                 |item| match item {
                     Record::Event(event) => batch.events.push(event),
                     Record::Error(issue) => batch.errors.push(issue),
@@ -152,7 +160,7 @@ impl JournalTailer {
             );
         }
         if !cancel.load(Ordering::Relaxed) {
-            self.scan_ancillary(cancel, &mut batch);
+            self.scan_ancillary(cancel, &mut batch, now);
         }
         batch
     }
@@ -188,6 +196,7 @@ impl JournalTailer {
         let mut recent_events = Vec::new();
         let mut headers = Vec::new();
         let mut saw_jump = false;
+        let now = SystemTime::now();
         for (index, path) in files.iter().enumerate() {
             if cancel.load(Ordering::Relaxed) {
                 break;
@@ -206,7 +215,7 @@ impl JournalTailer {
                 continue;
             }
             let cursor = self.cursors.entry(path.clone()).or_default();
-            read_incremental(path, cursor, false, cancel, None, |item| match item {
+            read_incremental(path, cursor, false, cancel, None, now, |item| match item {
                 Record::Error(issue) => batch.errors.push(issue),
                 Record::Event(event) => {
                     let jump = event.event == "FSDJump"
@@ -262,6 +271,7 @@ impl JournalTailer {
         let replay_boundaries = self.cursors.clone();
         let mut summary = ReplaySummary::default();
         let total = files.len();
+        let now = SystemTime::now();
         for path in files {
             if cancel.load(Ordering::Relaxed) {
                 break;
@@ -276,7 +286,7 @@ impl JournalTailer {
             }
             let cursor = self.cursors.entry(path.clone()).or_default();
             *cursor = Cursor::default();
-            read_incremental(&path, cursor, true, cancel, None, |item| match item {
+            read_incremental(&path, cursor, true, cancel, None, now, |item| match item {
                 Record::Event(event) => {
                     summary.events += 1;
                     emit(ReplayItem::Event(event));
@@ -306,7 +316,7 @@ impl JournalTailer {
         Ok(summary)
     }
 
-    fn scan_ancillary(&mut self, cancel: &AtomicBool, batch: &mut ScanBatch) {
+    fn scan_ancillary(&mut self, cancel: &AtomicBool, batch: &mut ScanBatch, now: SystemTime) {
         for &name in AUXILIARY_FILES {
             if cancel.load(Ordering::Relaxed) {
                 break;
@@ -329,7 +339,7 @@ impl JournalTailer {
             };
             let stamp = FileStamp::new(&metadata);
             let cursor = self.ancillary.entry(name.to_owned()).or_default();
-            if cursor.stamp.as_ref() == Some(&stamp) {
+            if cursor.stamp.as_ref() == Some(&stamp) && stamp.can_skip_read(now) {
                 continue;
             }
             // A game write can truncate the snapshot before replacing its JSON.
@@ -404,6 +414,7 @@ struct AuxiliaryCursor {
 struct FileStamp {
     length: u64,
     modified: Option<SystemTime>,
+    changed: Option<SystemTime>,
     identity: FileIdentity,
 }
 impl FileStamp {
@@ -411,9 +422,30 @@ impl FileStamp {
         Self {
             length: metadata.len(),
             modified: metadata.modified().ok(),
+            changed: file_change_time(metadata),
             identity: file_identity(metadata),
         }
     }
+
+    fn can_skip_read(&self, now: SystemTime) -> bool {
+        [self.modified, self.changed].into_iter().all(|time| {
+            time.and_then(|time| now.duration_since(time).ok())
+                .is_some_and(|age| age >= STAMP_SETTLE_TIME)
+        })
+    }
+}
+
+#[cfg(unix)]
+fn file_change_time(metadata: &Metadata) -> Option<SystemTime> {
+    use std::os::unix::fs::MetadataExt;
+    let seconds = u64::try_from(metadata.ctime()).ok()?;
+    let nanos = u32::try_from(metadata.ctime_nsec()).ok()?;
+    SystemTime::UNIX_EPOCH.checked_add(Duration::new(seconds, nanos))
+}
+
+#[cfg(not(unix))]
+fn file_change_time(_metadata: &Metadata) -> Option<SystemTime> {
+    None
 }
 
 #[cfg(unix)]
@@ -455,11 +487,12 @@ fn read_incremental<F>(
     finish_last: bool,
     cancel: &AtomicBool,
     budget: Option<&mut ReadBudget>,
+    now: SystemTime,
     mut emit: F,
 ) where
     F: FnMut(Record),
 {
-    let result = read_records(path, cursor, finish_last, cancel, budget, &mut emit);
+    let result = read_records(path, cursor, finish_last, cancel, budget, now, &mut emit);
     if let Err(error) = result {
         emit(Record::Error(ReadIssue {
             path: path.to_owned(),
@@ -475,13 +508,17 @@ fn read_records<F>(
     finish_last: bool,
     cancel: &AtomicBool,
     mut budget: Option<&mut ReadBudget>,
+    now: SystemTime,
     emit: &mut F,
 ) -> Result<()>
 where
     F: FnMut(Record),
 {
     let initial_stamp = FileStamp::new(&fs::metadata(path)?);
-    if !finish_last && cursor.stamp.as_ref() == Some(&initial_stamp) {
+    if !finish_last
+        && cursor.stamp.as_ref() == Some(&initial_stamp)
+        && initial_stamp.can_skip_read(now)
+    {
         return Ok(());
     }
     let mut file = File::open(path).with_context(|| format!("Cannot open {}", path.display()))?;
@@ -806,6 +843,83 @@ mod tests {
         fs::write(&first, event("Replacement")).unwrap();
         assert_eq!(tailer.scan(&cancel).events[0].event, "Replacement");
         assert!(tailer.scan(&cancel).events.is_empty());
+    }
+
+    #[test]
+    fn same_length_rewrite_with_colliding_metadata_is_delivered_once() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("Journal.2026-10-25T000000.01.log");
+        fs::write(&path, event("Original")).unwrap();
+        let cancel = AtomicBool::new(false);
+        let mut tailer = JournalTailer::new(dir.path());
+        assert_eq!(tailer.scan(&cancel).events[0].event, "Original");
+
+        fs::write(&path, event("Replaced")).unwrap();
+        let stamp = FileStamp::new(&fs::metadata(&path).unwrap());
+        let cursor = tailer.cursors.get_mut(&path).unwrap();
+        assert_eq!(cursor.stamp.as_ref().unwrap().length, stamp.length);
+        assert_eq!(cursor.identity.as_ref(), Some(&stamp.identity));
+        // Model a filesystem timestamp collision without depending on its clock
+        // resolution: the changed contents have the exact cached metadata.
+        let now = stamp
+            .modified
+            .unwrap()
+            .max(stamp.changed.unwrap_or(SystemTime::UNIX_EPOCH));
+        cursor.stamp = Some(stamp);
+        let batch = tailer.scan_at(&cancel, now);
+        assert!(batch.errors.is_empty());
+        assert_eq!(batch.events.len(), 1);
+        assert_eq!(batch.events[0].event, "Replaced");
+        assert!(tailer.scan(&cancel).events.is_empty());
+
+        append(&path, event("Live").as_bytes());
+        let batch = tailer.scan(&cancel);
+        assert!(batch.errors.is_empty());
+        assert_eq!(batch.events.len(), 1);
+        assert_eq!(batch.events[0].event, "Live");
+        assert!(tailer.scan(&cancel).events.is_empty());
+    }
+
+    #[test]
+    fn unchanged_metadata_is_trusted_only_after_both_timestamps_settle() {
+        let dir = tempfile::tempdir().unwrap();
+        let mut stamp = FileStamp::new(&fs::metadata(dir.path()).unwrap());
+        let now = SystemTime::UNIX_EPOCH + Duration::from_secs(10);
+        let settled = Some(now - STAMP_SETTLE_TIME);
+        stamp.modified = settled;
+        stamp.changed = settled;
+        assert!(stamp.can_skip_read(now));
+        for untrusted in [None, Some(now), Some(now + Duration::from_secs(1))] {
+            stamp.modified = untrusted;
+            stamp.changed = settled;
+            assert!(!stamp.can_skip_read(now));
+            stamp.modified = settled;
+            stamp.changed = untrusted;
+            assert!(!stamp.can_skip_read(now));
+        }
+    }
+
+    #[test]
+    fn same_length_ancillary_rewrite_with_colliding_metadata_is_delivered_once() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("Status.json");
+        fs::write(&path, "{\"Flags\":0}").unwrap();
+        let cancel = AtomicBool::new(false);
+        let mut tailer = JournalTailer::new(dir.path());
+        assert_eq!(tailer.scan(&cancel).updates[0].data["Flags"], 0);
+
+        fs::write(&path, "{\"Flags\":1}").unwrap();
+        let stamp = FileStamp::new(&fs::metadata(&path).unwrap());
+        let now = stamp
+            .modified
+            .unwrap()
+            .max(stamp.changed.unwrap_or(SystemTime::UNIX_EPOCH));
+        tailer.ancillary.get_mut("Status.json").unwrap().stamp = Some(stamp);
+        let batch = tailer.scan_at(&cancel, now);
+        assert!(batch.errors.is_empty());
+        assert_eq!(batch.updates.len(), 1);
+        assert_eq!(batch.updates[0].data["Flags"], 1);
+        assert!(tailer.scan(&cancel).updates.is_empty());
     }
 
     #[test]
