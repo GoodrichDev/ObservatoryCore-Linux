@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>ObservatoryFramework</AssemblyName>
+    <RootNamespace>Observatory.Framework</RootNamespace>
+    <!-- Match the installed reference used by the native parity fixtures. -->
+    <AssemblyVersion>1.10.26274.2239</AssemblyVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../ObservatoryFramework/**/*.cs" Exclude="../../../ObservatoryFramework/bin/**;../../../ObservatoryFramework/obj/**" LinkBase="Original" />
+  </ItemGroup>
+</Project>

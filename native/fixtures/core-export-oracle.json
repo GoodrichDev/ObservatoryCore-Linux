@@ -1,0 +1,27 @@
+{
+  "headers": [
+    "Title",
+    "Count",
+    "Details"
+  ],
+  "rows": [
+    [
+      "Alpha",
+      "001",
+      "two\tfields"
+    ],
+    [
+      "=1+2",
+      "9007199254740993",
+      "line1\nline2 & <\u03c0>"
+    ]
+  ],
+  "csv": "VGl0bGUJQ291bnQJRGV0YWlscwkNCkFscGhhCTAwMQl0d28JZmllbGRzCQ0KPTErMgk5MDA3MTk5MjU0NzQwOTkzCWxpbmUxCmxpbmUyICYgPM+APgkNCg==",
+  "xlsx": {
+    "[Content_Types].xml": "<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\"><Default Extension=\"xml\" ContentType=\"application/xml\"/><Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/><Override PartName=\"/_rels/.rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/><Override PartName=\"/xl/workbook.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\"/><Override PartName=\"/xl/worksheets/sheet1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\"/></Types>",
+    "xl/workbook.xml": "<workbook xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><sheets><sheet name=\"Synthetic Export\" sheetId=\"1\" r:id=\"rId1\"/></sheets></workbook>",
+    "_rels/.rels": "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"xl/workbook.xml\"/></Relationships>",
+    "xl/worksheets/sheet1.xml": "<worksheet xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">\n  <sheetData>\n    <row r=\"1\">\n      <c r=\"A1\" t=\"inlineStr\">\n        <is>\n          <t>Title</t>\n        </is>\n      </c>\n      <c r=\"B1\" t=\"inlineStr\">\n        <is>\n          <t>Count</t>\n        </is>\n      </c>\n      <c r=\"C1\" t=\"inlineStr\">\n        <is>\n          <t>Details</t>\n        </is>\n      </c>\n    </row>\n    <row r=\"2\">\n      <c r=\"A2\" t=\"inlineStr\">\n        <is>\n          <t>Alpha</t>\n        </is>\n      </c>\n      <c r=\"B2\" t=\"inlineStr\">\n        <is>\n          <t>001</t>\n        </is>\n      </c>\n      <c r=\"C2\" t=\"inlineStr\">\n        <is>\n          <t>two\tfields</t>\n        </is>\n      </c>\n    </row>\n    <row r=\"3\">\n      <c r=\"A3\" t=\"inlineStr\">\n        <is>\n          <t>=1+2</t>\n        </is>\n      </c>\n      <c r=\"B3\" t=\"inlineStr\">\n        <is>\n          <t>9007199254740993</t>\n        </is>\n      </c>\n      <c r=\"C3\" t=\"inlineStr\">\n        <is>\n          <t>line1\nline2 &amp; &lt;\u03c0&gt;</t>\n        </is>\n      </c>\n    </row>\n  </sheetData>\n</worksheet>",
+    "xl/_rels/workbook.xml.rels": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"worksheets/sheet1.xml\"/></Relationships>"
+  }
+}

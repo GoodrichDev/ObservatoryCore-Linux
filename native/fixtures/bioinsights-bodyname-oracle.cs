@@ -1,0 +1,279 @@
+using System;using System.Linq;using System.Collections.Generic;using System.Text.Json;using System.Text.RegularExpressions;class Original{public static string SSMLify(string s)=>s;public static string NotificationBodyName(string bodyname, string sysname, bool isTTS, bool includeSSMLtag)
+	{
+		string text = "";
+		if (_202A_206E_206B_206F_206D_206C_206A_202C_202E_202D_202E_206F_200B_206E_200E_200F_206B_200E_200E_206F_206F_206D_202A_200F_202E_202C_206E_202C_202C_200E_202A_206E_206B_206E_200D_206E_202D_206C_200F_206F_202E(_206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(_200E_200C_202A_206D_200F_200F_200C_202B_200D_206F_206A_202E_200F_200C_206F_202B_200B_202D_202E_206E_206A_206C_202E_200E_202D_200B_200B_200C_206C_206F_200C_200F_200D_200C_200F_202E_202C_206A_206D_202E(bodyname)), _206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(_200E_200C_202A_206D_200F_200F_200C_202B_200D_206F_206A_202E_200F_200C_206F_202B_200B_202D_202E_206E_206A_206C_202E_200E_202D_200B_200B_200C_206C_206F_200C_200F_200D_200C_200F_202E_202C_206A_206D_202E(sysname))))
+		{
+			goto IL_0023;
+		}
+		goto IL_0062;
+		IL_0023:
+		int num = 496359207;
+		goto IL_0028;
+		IL_0028:
+		while (true)
+		{
+			uint num2;
+			switch ((num2 = (uint)(num ^ 0x485766BC)) % 5)
+			{
+			case 0u:
+				break;
+			case 1u:
+				text = "Main Star";
+				num = 138803550;
+				continue;
+			case 3u:
+				goto IL_0062;
+			default:
+				goto IL_0094;
+			case 2u:
+				goto IL_035e;
+			}
+			break;
+		}
+		goto IL_0023;
+		IL_0343:
+		text = bodyname;
+		int num3 = 2089345429;
+		goto IL_0309;
+		IL_0062:
+		if (_206E_206E_200F_202B_206E_202E_200B_206A_206D_206F_200E_206F_200B_202D_206E_206D_202E_206C_206B_206A_206A_200C_206E_202C_202B_200E_206E_200D_206F_200B_206E_206C_206D_206B_202C_200C_200D_206D_206B_202D_202E(_206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(bodyname), _206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(sysname)))
+		{
+			num = 695122400;
+			goto IL_0028;
+		}
+		goto IL_0343;
+		IL_0309:
+		while (true)
+		{
+			uint num2;
+			switch ((num2 = (uint)(num3 ^ 0x485766BC)) % 6)
+			{
+			case 5u:
+				break;
+			case 3u:
+				num3 = ((int)num2 * -283126095) ^ 0x35F24984;
+				continue;
+			case 4u:
+				goto IL_0343;
+			case 2u:
+				return text;
+			case 1u:
+				goto IL_035e;
+			default:
+				return SSMLify(text);
+			}
+			break;
+		}
+		goto IL_0304;
+		IL_0094:
+		string text2 = "Body";
+		using (List<string>.Enumerator enumerator = _206D_202B_206C_206E_200C_200D_200F_202E_202D_202B_206D_206A_200E_200E_206A_206B_206A_202C_202B_202C_200B_202E_206A_206F_200E_200C_202B_202E_202D_200C_206A_202E_200D_200F_202E_206F_202D_206B_202A_202B_202E(_200C_202C_202A_200B_202C_206A_206A_200B_200F_200C_202C_200D_202A_202D_200F_202A_202A_200D_206B_200E_200D_206C_202E_206A_200C_206E_200F_202D_202D_202B_200C_200E_206F_200C_206A_206D_200F_200F_206E_202C_202E(_206D_206F_206F_206C_200F_200C_206D_202E_200C_206E_202A_200F_202D_206E_202C_206B_202B_206C_202A_206A_200E_206E_202A_202C_206C_200F_202A_206C_200E_202A_206B_202B_202A_202E_206F_200E_206F_206C_202E_206C_202E(bodyname, _202B_206D_206E_202B_202A_206C_200E_206F_200B_206A_206D_206A_200F_202D_202B_206C_200B_200C_206F_206C_202C_206F_200B_200F_206F_202C_202D_206C_200E_206A_200C_202C_202C_202D_200B_200F_206F_200B_200F_200C_202E(sysname)), ' '), ' ', StringSplitOptions.None).ToList().GetEnumerator())
+		{
+			string current = default;
+			while (true)
+			{
+				IL_01bb:
+				int num4;
+				int num5;
+				if (!enumerator.MoveNext())
+				{
+					num4 = 1068802542;
+					num5 = num4;
+				}
+				else
+				{
+					num4 = 408220731;
+					num5 = num4;
+				}
+				while (true)
+				{
+					uint num2;
+					switch ((num2 = (uint)(num4 ^ 0x485766BC)) % 17)
+					{
+					case 2u:
+						num4 = 408220731;
+						continue;
+					default:
+						goto end_IL_00d1;
+					case 1u:
+						text = _202D_200F_206B_200E_206A_206D_206D_202D_200C_206A_200B_206B_202C_200C_202B_206C_202D_206C_200B_200B_202C_200D_202E_206B_200F_206B_206D_206B_202C_206A_200C_200B_202E_206E_202A_200E_202B_200D_200D_206B_202E(text, current, " ");
+						num4 = 1606567515;
+						continue;
+					case 16u:
+					{
+						int num11;
+						if (_202A_206E_206B_206F_206D_206C_206A_202C_202E_202D_202E_206F_200B_206E_200E_200F_206B_200E_200E_206F_206F_206D_202A_200F_202E_202C_206E_202C_202C_200E_202A_206E_206B_206E_200D_206E_202D_206C_200F_206F_202E(_206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(current), "ring"))
+						{
+							num4 = 1182473182;
+							num11 = num4;
+						}
+						else
+						{
+							num4 = 256871153;
+							num11 = num4;
+						}
+						continue;
+					}
+					case 8u:
+					{
+						int num8;
+						if (!isTTS)
+						{
+							num4 = 1659369241;
+							num8 = num4;
+						}
+						else
+						{
+							num4 = 1166695217;
+							num8 = num4;
+						}
+						continue;
+					}
+					case 9u:
+						text2 = current;
+						num4 = 2013415742;
+						continue;
+					case 7u:
+						current = enumerator.Current;
+						num4 = 1135059170;
+						continue;
+					case 13u:
+						num4 = (int)(num2 * 2036277011) ^ -660511757;
+						continue;
+					case 10u:
+						break;
+					case 14u:
+					{
+						int num9;
+						int num10;
+						if (isTTS)
+						{
+							num9 = 276737711;
+							num10 = num9;
+						}
+						else
+						{
+							num9 = 971329312;
+							num10 = num9;
+						}
+						num4 = num9 ^ ((int)num2 * -312943243);
+						continue;
+					}
+					case 0u:
+					{
+						int num7;
+						if (!_202A_206E_206B_206F_206D_206C_206A_202C_202E_202D_202E_206F_200B_206E_200E_200F_206B_200E_200E_206F_206F_206D_202A_200F_202E_202C_206E_202C_202C_200E_202A_206E_206B_206E_200D_206E_202D_206C_200F_206F_202E(_206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(current), "belt"))
+						{
+							num4 = 777921086;
+							num7 = num4;
+						}
+						else
+						{
+							num4 = 1182473182;
+							num7 = num4;
+						}
+						continue;
+					}
+					case 4u:
+						num4 = ((int)num2 * -1320135332) ^ 0x3DC17AE3;
+						continue;
+					case 3u:
+					{
+						int num6;
+						if (!int.TryParse(current, out var _))
+						{
+							num4 = 23511100;
+							num6 = num4;
+						}
+						else
+						{
+							num4 = 1202991345;
+							num6 = num4;
+						}
+						continue;
+					}
+					case 12u:
+						num4 = (int)(num2 * 1946123753) ^ -277390502;
+						continue;
+					case 6u:
+						text = _202D_200F_206B_200E_206A_206D_206D_202D_200C_206A_200B_206B_202C_200C_202B_206C_202D_206C_200B_200B_202C_200D_202E_206B_200F_206B_206D_206B_202C_206A_200C_200B_202E_206E_202A_200E_202B_200D_200D_206B_202E(text, current, " ");
+						num4 = 128357892;
+						continue;
+					case 5u:
+						text = _200B_206E_206D_206A_206D_200F_200F_206F_202D_200D_200B_202E_202B_200C_200D_202C_206C_202D_202C_202A_200D_206E_206F_200C_206D_202A_206D_206A_200C_202D_200C_202D_202C_200F_200F_206C_206C_206B_202B_200D_202E(text, " <say-as interpret-as=\"cardinal\">", current, "</say-as>");
+						num4 = 1872845285;
+						continue;
+					case 11u:
+						text = _200B_206E_206D_206A_206D_200F_200F_206F_202D_200D_200B_202E_202B_200C_200D_202C_206C_202D_202C_202A_200D_206E_206F_200C_206D_202A_206D_206A_200C_202D_200C_202D_202C_200F_200F_206C_206C_206B_202B_200D_202E(text, " <say-as interpret-as=\"spell-out\">", current, "</say-as>");
+						num4 = 1606567515;
+						continue;
+					case 15u:
+						goto end_IL_00d1;
+					}
+					goto IL_01bb;
+					continue;
+					end_IL_00d1:
+					break;
+				}
+				break;
+			}
+		}
+		text = _200E_200C_202A_206D_200F_200F_200C_202B_200D_206F_206A_202E_200F_200C_206F_202B_200B_202D_202E_206E_206A_206C_202E_200E_202D_200B_200B_200C_206C_206F_200C_200F_200D_200C_200F_202E_202C_206A_206D_202E(_202D_200F_206B_200E_206A_206D_206D_202D_200C_206A_200B_206B_202C_200C_202B_206C_202D_206C_200B_200B_202C_200D_202E_206B_200F_206B_206D_206B_202C_206A_200C_200B_202E_206E_202A_200E_202B_200D_200D_206B_202E(text2, " ", text));
+		goto IL_0304;
+		IL_035e:
+		int num12;
+		if (!(isTTS & includeSSMLtag))
+		{
+			num3 = 1181573166;
+			num12 = num3;
+		}
+		else
+		{
+			num3 = 2106128846;
+			num12 = num3;
+		}
+		goto IL_0309;
+		IL_0304:
+		num3 = 1019714013;
+		goto IL_0309;
+	}
+static int _202B_206D_206E_202B_202A_206C_200E_206F_200B_206A_206D_206A_200F_202D_202B_206C_200B_200C_206F_206C_202C_206F_200B_200F_206F_202C_202D_206C_200E_206A_200C_202C_202C_202D_200B_200F_206F_200B_200F_200C_202E(string P_0)
+	{
+		return P_0.Length;
+	}
+static string[] _206D_202B_206C_206E_200C_200D_200F_202E_202D_202B_206D_206A_200E_200E_206A_206B_206A_202C_202B_202C_200B_202E_206A_206F_200E_200C_202B_202E_202D_200C_206A_202E_200D_200F_202E_206F_202D_206B_202A_202B_202E(string P_0, char P_1, StringSplitOptions P_2)
+	{
+		return P_0.Split(P_1, P_2);
+	}
+static string _206D_206F_206F_206C_200F_200C_206D_202E_200C_206E_202A_200F_202D_206E_202C_206B_202B_206C_202A_206A_200E_206E_202A_202C_206C_200F_202A_206C_200E_202A_206B_202B_202A_202E_206F_200E_206F_206C_202E_206C_202E(string P_0, int P_1)
+	{
+		return P_0.Substring(P_1);
+	}
+static string _200E_200C_202A_206D_200F_200F_200C_202B_200D_206F_206A_202E_200F_200C_206F_202B_200B_202D_202E_206E_206A_206C_202E_200E_202D_200B_200B_200C_206C_206F_200C_200F_200D_200C_200F_202E_202C_206A_206D_202E(string P_0)
+	{
+		return P_0.Trim();
+	}
+static bool _206E_206E_200F_202B_206E_202E_200B_206A_206D_206F_200E_206F_200B_202D_206E_206D_202E_206C_206B_206A_206A_200C_206E_202C_202B_200E_206E_200D_206F_200B_206E_206C_206D_206B_202C_200C_200D_206D_206B_202D_202E(string P_0, string P_1)
+	{
+		return P_0.StartsWith(P_1);
+	}
+static string _202D_200F_206B_200E_206A_206D_206D_202D_200C_206A_200B_206B_202C_200C_202B_206C_202D_206C_200B_200B_202C_200D_202E_206B_200F_206B_206D_206B_202C_206A_200C_200B_202E_206E_202A_200E_202B_200D_200D_206B_202E(string P_0, string P_1, string P_2)
+	{
+		return P_0 + P_1 + P_2;
+	}
+static string _200B_206E_206D_206A_206D_200F_200F_206F_202D_200D_200B_202E_202B_200C_200D_202C_206C_202D_202C_202A_200D_206E_206F_200C_206D_202A_206D_206A_200C_202D_200C_202D_202C_200F_200F_206C_206C_206B_202B_200D_202E(string P_0, string P_1, string P_2, string P_3)
+	{
+		return P_0 + P_1 + P_2 + P_3;
+	}
+static string _200C_202C_202A_200B_202C_206A_206A_200B_200F_200C_202C_200D_202A_202D_200F_202A_202A_200D_206B_200E_200D_206C_202E_206A_200C_206E_200F_202D_202D_202B_200C_200E_206F_200C_206A_206D_200F_200F_206E_202C_202E(string P_0, char P_1)
+	{
+		return P_0.Trim(P_1);
+	}
+static bool _202A_206E_206B_206F_206D_206C_206A_202C_202E_202D_202E_206F_200B_206E_200E_200F_206B_200E_200E_206F_206F_206D_202A_200F_202E_202C_206E_202C_202C_200E_202A_206E_206B_206E_200D_206E_202D_206C_200F_206F_202E(string P_0, string P_1)
+	{
+		return P_0 == P_1;
+	}
+static string _206F_202A_206C_200C_202C_206F_202C_200F_200E_202E_206B_206D_206E_200D_200E_200C_206B_200C_202D_200F_202D_200E_206E_200C_202B_202B_206F_200C_202C_206E_206F_200D_202D_206C_202E_202C_206D_202B_206E_202B_202E(string P_0)
+	{
+		return P_0.ToLower();
+	}static void Main(){var cases=new List<object>();foreach(string body in new[]{"Test","Test A","Test A 1","Test 1","Test A 1 a","Test A Belt Cluster 1","Other 1","Test 1 A Ring"})cases.Add(new{body,system="Test",result=NotificationBodyName(body,"Test",false,false)});Console.WriteLine(JsonSerializer.Serialize(cases));}}

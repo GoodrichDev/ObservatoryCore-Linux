@@ -1,0 +1,2746 @@
+[
+  {
+    "id": "framework-types",
+    "source": "---@Complex framework-types\nlocal t = scan:GetType()\nreturn true, \"types\", t.FullName .. \";\" .. t.BaseType.FullName .. \";\" .. scan.Parent[0]:GetType().Name .. \";\" .. scan.Parent[0].Item1:ToString() .. \";\" .. scan.Parent[0].Item2\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "framework-datetime",
+    "source": "---@Complex framework-datetime\nlocal dt = scan.TimestampDateTime\nreturn true, \"date\", dt:AddDays(1):ToString(\"yyyy-MM-ddTHH:mm:ss\") .. \";\" .. dt:GetType().FullName .. \";\" .. dt.DayOfWeek:ToString()\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "collection-methods",
+    "source": "---@Complex collection-methods\nlocal list = scan.Materials\nlocal slice = list:GetRange(0, 1)\nlocal added = slice:Add(list[1])\nreturn true, \"collections\", list:GetType().Name .. \";\" .. list:IndexOf(list[1]) .. \";\" .. tostring(list:Contains(list[0])) .. \";\" .. slice.Count .. \";\" .. added.Count .. \";\" .. tostring(slice[0]:Equals(list[0])) .. \";\" .. tostring(added[1]:Equals(list[1]))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "collection-callback",
+    "source": "---@Complex collection-callback\nlocal found = scan.Materials:Find(function(item) return item.Name == \"carbon\" end)\nlocal exists = scan.Materials:Exists(function(item) return item.Percent > 10 end)\nreturn true, \"callbacks\", found.Name .. \";\" .. tostring(exists) .. \";\" .. tostring(found:Equals(scan.Materials[1]))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clr-imports",
+    "source": "---@Global\nluanet.load_assembly(\"System.Runtime\")\nluanet.load_assembly(\"System.Private.CoreLib\")\nStringBuilder = luanet.import_type(\"System.Text.StringBuilder\")\nMath = luanet.import_type(\"System.Math\")\nDateTime = luanet.import_type(\"System.DateTime\")\n---@End\n---@Complex clr-imports\nlocal builder = StringBuilder()\nbuilder:Append(\"CLR\"):Append(\":\"):Append(Math.Sqrt(81))\nreturn true, \"imports\", builder:ToString() .. \";\" .. DateTime(2026, 10, 26):AddDays(2):ToString(\"yyyy-MM-dd\") .. \";\" .. tostring(Math.Round(2.5))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clr-collections-enum",
+    "source": "---@Global\nluanet.load_assembly(\"System.Collections.NonGeneric\")\nArrayList = luanet.import_type(\"System.Collections.ArrayList\")\nEnum = luanet.import_type(\"System.Enum\")\nDayOfWeek = luanet.import_type(\"System.DayOfWeek\")\n---@End\n---@Complex clr-collections-enum\nlocal list = ArrayList()\nlist:Add(scan)\nlist:Add(scan.Parent[0].Item1)\nlocal day = Enum.Parse(DayOfWeek.Monday:GetType(), \"Monday\")\nreturn true, \"enum\", list.Count .. \";\" .. tostring(list[0]:Equals(scan)) .. \";\" .. list[1]:ToString() .. \";\" .. day:ToString() .. \";\" .. day:GetType().FullName\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "framework-import",
+    "source": "---@Global\nluanet.load_assembly(\"ObservatoryFramework\")\nScan = luanet.import_type(\"Observatory.Framework.Files.Journal.Scan\")\nRing = luanet.import_type(\"Observatory.Framework.Files.ParameterTypes.Ring\")\n---@End\n---@Complex framework-import\nlocal other = Scan()\nlocal ring = Ring()\nreturn true, \"framework-import\", other:GetType().FullName .. \";\" .. ring:GetType().FullName .. \";\" .. tostring(other:Equals(scan))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "framework-own-methods",
+    "source": "---@Global\nluanet.load_assembly(\"ObservatoryFramework\")\nReputation = luanet.import_type(\"Observatory.Framework.Files.Journal.Reputation\")\nPluginMessage = luanet.import_type(\"Observatory.Framework.PluginMessage\")\nJournalUtilities = luanet.import_type(\"Observatory.Framework.Files.JournalUtilities\")\n---@End\n---@Complex framework-own-methods\nlocal reputation = Reputation()\nreputation.Empire = 91\nreputation.Federation = 35\nreputation.Independent = -35\nreputation.Alliance = -90\nlocal message = PluginMessage(\"synthetic\", nil, nil)\nmessage.MessagePayload:Add(\"scan\", scan)\nlocal copy = message:Clone()\nreturn true, \"framework-methods\", reputation:EmpireText() .. \";\" .. reputation:FederationText() .. \";\" .. reputation:IndependentText() .. \";\" .. reputation:AllianceText() .. \";\" .. copy.MessageType .. \";\" .. tostring(copy:Equals(message)) .. \";\" .. tostring(copy.MessagePayload:Equals(message.MessagePayload)) .. \";\" .. tostring(copy.MessagePayload[\"scan\"]:Equals(scan)) .. \";\" .. tostring(copy.MessageId:Equals(message.MessageId)) .. \";\" .. JournalUtilities.GetEventType(scan.Json)\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clr-ref-out-conversion",
+    "source": "---@Global\nluanet.load_assembly(\"System.Private.CoreLib\")\nInt32 = luanet.import_type(\"System.Int32\")\nConvert = luanet.import_type(\"System.Convert\")\n---@End\n---@Complex clr-ref-out-conversion\nlocal good, parsed = Int32.TryParse(\"42\")\nlocal bad, rejected = Int32.TryParse(\"invalid\")\nreturn true, \"ref-out\", tostring(good) .. \";\" .. parsed .. \";\" .. tostring(bad) .. \";\" .. rejected .. \";\" .. Convert.ToString(scan.Radius)\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "framework-assembly-identity",
+    "source": "---@Complex framework-assembly-identity\nreturn true, \"assembly\", scan:GetType().Assembly.FullName\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event-identity",
+    "source": "---@Complex event-identity\nlocal current = nil\nfor body in bodies(system) do if body.BodyID == scan.BodyID then current = body end end\nlocal same = current:Equals(scan)\nlocal parent = parents[0].Scan\nlocal cachedSame = cachedParent == nil or cachedParent:Equals(parent)\ncachedParent = parent\nreturn true, \"identity\", tostring(same) .. \";\" .. tostring(cachedSame) .. \";\" .. parent.BodyName\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 b",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 b\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "StarSystem": "CLR Oracle",
+            "BodyID": 2,
+            "BodyName": "CLR Oracle 1 a",
+            "Parents": [
+              {
+                "Planet": 1
+              },
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 1234.5,
+            "Materials": [
+              {
+                "Name": "iron",
+                "Percent": 12.5
+              },
+              {
+                "Name": "carbon",
+                "Percent": 2
+              }
+            ],
+            "Rings": [
+              {
+                "Name": "CLR Oracle 1 a A Ring",
+                "RingClass": "eRingClass_Rocky",
+                "MassMT": 3.5,
+                "InnerRad": 2000,
+                "OuterRad": 4000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "retained-callback-gc",
+    "source": "---@Complex retained-callback-gc\nif held == nil then\n  held = scan.Materials:Find(function(item) return item.Name == \"iron\" end)\n  predicate = function(item) return item:Equals(held) end\nend\ncollectgarbage(\"collect\")\nreturn true, \"retained\", held.Name .. \";\" .. tostring(scan.Materials:Exists(predicate))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "clr-exception-disable",
+    "source": "---@Complex clr-exception-disable\nlocal bad = scan.Materials:GetRange(50, 1)\nreturn true, \"unreachable\", \"unreachable\"\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "json-setter-exception",
+    "source": "---@Complex json-setter-exception\nscan.Json = \"replacement\"\nreturn true, \"unreachable\", \"unreachable\"\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "callback-exception-disable",
+    "source": "---@Complex callback-exception-disable\nscan.Materials:Exists(function(item) error(\"callback failure\") end)\nreturn true, \"unreachable\", \"unreachable\"\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "callback-notify",
+    "source": "---@Jump callback-notify\nnotify(\"CLR title\", jump.StarPos:GetType().FullName, jump.TimestampDateTime:ToString(\"s\"))\nnotifyForBody(\"Body title\", \"detail\", \"extended\", 2)\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "FSDJump",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "StarPos": [
+            1.25,
+            -2.5,
+            3.75
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"FSDJump\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"StarPos\":[1.25,-2.5,3.75]}"
+      }
+    ]
+  },
+  {
+    "id": "allbodies-dictionary",
+    "source": "---@AllBodies allbodies-dictionary\nlocal list = parentsTable[2]\nlocal matching = nil\nfor body in bodies(system) do if body.BodyID == 1 then matching = body end end\nreturn notify(\"allbodies\", tostring(parentsTable:ContainsKey(2)) .. \";\" .. list[0].Scan:GetType().Name .. \";\" .. tostring(list[0].Scan:Equals(matching)), \"\")\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "FSSAllBodiesFound",
+          "SystemAddress": 42
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"FSSAllBodiesFound\",\"SystemAddress\":42}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "readall-recreates-clr-state",
+    "source": "---@Global\nluanet.load_assembly(\"System.Private.CoreLib\")\nBuilder = luanet.import_type(\"System.Text.StringBuilder\")\nbuilder = Builder()\ncount = 0\n---@End\n---@Complex readall-recreates-clr-state\ncount = count + 1\nbuilder:Append(count)\nreturn true, \"state\", builder:ToString()\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_read_all",
+        "value": true
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_read_all",
+        "value": false
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "path-readall-shared-settings",
+    "source": "---@Global\nnotify(\"old-path\", \"global\", \"\")\n---@End\n---@Complex path-readall-shared-settings\nreturn true, \"path\", \"old\"\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_path",
+        "source": "---@Global\nnotify(\"new-path\", \"global\", \"\")\n---@End\n---@Complex changed\nreturn true, \"path\", \"new\"\n---@End\n"
+      },
+      {
+        "op": "set_read_all",
+        "value": true
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_read_all",
+        "value": false
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "mtime-reload-recovers-failing-criteria",
+    "source": "---@Complex mtime-reload-recovers-failing-criteria\nerror(\"synthetic criterion failure\")\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "rewrite",
+        "source": "---@Global\nluanet.load_assembly(\"System.Private.CoreLib\")\nBuilder = luanet.import_type(\"System.Text.StringBuilder\")\nbuilder = Builder()\nnotify(\"reload\", \"global\", \"\")\n---@End\n---@Complex reload\nbuilder:Append(\"x\")\nreturn true, \"reloaded\", builder:ToString()\n---@End\n"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_read_all",
+        "value": true
+      },
+      {
+        "op": "rewrite",
+        "source": "---@Complex latest\nreturn true, \"reloaded\", \"latest\"\n---@End\n"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "set_read_all",
+        "value": false
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "mutable-scan-parent-history",
+    "source": "---@Complex mutable-scan-parent-history\nif saved == nil then\n  saved = scan\n  scan.BodyName = \"mutated current body\"\n  scan.Radius = 4321\n  parents[0].Scan.BodyName = \"mutated parent body\"\n  parents[0].Scan.Radius = 99\n  return true, \"mutated\", scan.BodyName .. \";\" .. scan.Radius .. \";\" .. parents[0].Scan.BodyName\nend\nlocal previous = nil\nfor body in bodies(system) do if body.BodyID == 2 then previous = body end end\nreturn true, \"retained-mutation\", previous.BodyName .. \";\" .. previous.Radius .. \";\" .. tostring(saved:Equals(previous)) .. \";\" .. parents[0].Scan.BodyName .. \";\" .. parents[0].Scan.Radius\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "StarSystem": "CLR Oracle",
+            "BodyID": 2,
+            "BodyName": "CLR Oracle 1 a",
+            "Parents": [
+              {
+                "Planet": 1
+              },
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 1234.5,
+            "Materials": [
+              {
+                "Name": "iron",
+                "Percent": 12.5
+              },
+              {
+                "Name": "carbon",
+                "Percent": 2
+              }
+            ],
+            "Rings": [
+              {
+                "Name": "CLR Oracle 1 a A Ring",
+                "RingClass": "eRingClass_Rocky",
+                "MassMT": 3.5,
+                "InnerRad": 2000,
+                "OuterRad": 4000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mutated-id-preserves-original-history-key",
+    "source": "---@Complex mutated-id-preserves-original-history-key\nif heldParent == nil then\n  heldParent = parents[0].Scan\n  parents[0].Scan.BodyID = 17\n  scan.BodyID = 22\nend\nreturn true, \"original-key\", parents[0].Body .. \";\" .. parents[0].Scan.BodyID .. \";\" .. tostring(heldParent:Equals(parents[0].Scan))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "StarSystem": "CLR Oracle",
+            "BodyID": 2,
+            "BodyName": "CLR Oracle 1 a",
+            "Parents": [
+              {
+                "Planet": 1
+              },
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 1234.5,
+            "Materials": [
+              {
+                "Name": "iron",
+                "Percent": 12.5
+              },
+              {
+                "Name": "carbon",
+                "Percent": 2
+              }
+            ],
+            "Rings": [
+              {
+                "Name": "CLR Oracle 1 a A Ring",
+                "RingClass": "eRingClass_Rocky",
+                "MassMT": 3.5,
+                "InnerRad": 2000,
+                "OuterRad": 4000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mutable-parent-projection",
+    "source": "---@Complex mutable-parent-projection\nif savedProjection == nil then\n  savedProjection = scan\n  scan.Parent = parents[0].Scan.Parent\nend\nreturn true, \"parent-projection\", savedProjection.Parent[0].Item1:ToString() .. \";\" .. tostring(savedProjection.Parents[0].Planet) .. \";\" .. tostring(savedProjection.Parent:Equals(parents[0].Scan.Parent))\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          }
+        ]
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+        "system": [
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 0,
+            "BodyName": "CLR Oracle",
+            "Parents": [],
+            "StarType": "K"
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "BodyID": 1,
+            "BodyName": "CLR Oracle 1",
+            "Parents": [
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 9000
+          },
+          {
+            "timestamp": "2026-10-26T01:02:03Z",
+            "event": "Scan",
+            "SystemAddress": 42,
+            "StarSystem": "CLR Oracle",
+            "BodyID": 2,
+            "BodyName": "CLR Oracle 1 a",
+            "Parents": [
+              {
+                "Planet": 1
+              },
+              {
+                "Star": 0
+              }
+            ],
+            "Radius": 1234.5,
+            "Materials": [
+              {
+                "Name": "iron",
+                "Percent": 12.5
+              },
+              {
+                "Name": "carbon",
+                "Percent": 2
+              }
+            ],
+            "Rings": [
+              {
+                "Name": "CLR Oracle 1 a A Ring",
+                "RingClass": "eRingClass_Rocky",
+                "MassMT": 3.5,
+                "InnerRad": 2000,
+                "OuterRad": 4000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mutable-signal-identity-original-key",
+    "source": "---@BodySignals mutation\nif heldSignal == nil then\n  heldSignal = bodySignals\n  bodySignals.Signals[0].Count = 9\n  bodySignals.BodyID = 999\nelse\n  notify(\"signal-identity\", tostring(heldSignal:Equals(bodySignals)), tostring(bodySignals.Signals[0].Count))\nend\n---@End\n---@Complex signals\nreturn true, \"signal-mutation\", tostring(biosignals) .. \";\" .. heldSignal.BodyID\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "FSSBodySignals",
+          "SystemAddress": 42,
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Signals": [
+            {
+              "Type": "$SAA_SignalType_Biological;",
+              "Count": 3
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"FSSBodySignals\",\"SystemAddress\":42,\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Signals\":[{\"Type\":\"$SAA_SignalType_Biological;\",\"Count\":3}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "FSSBodySignals",
+          "SystemAddress": 42,
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Signals": [
+            {
+              "Type": "$SAA_SignalType_Biological;",
+              "Count": 3
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"FSSBodySignals\",\"SystemAddress\":42,\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Signals\":[{\"Type\":\"$SAA_SignalType_Biological;\",\"Count\":3}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "idle-timer-callback",
+    "source": "---@Global\nluanet.load_assembly(\"System.ComponentModel.TypeConverter\")\nTimer = luanet.import_type(\"System.Timers.Timer\")\n---@End\n---@Complex idle-timer-callback\ntimer = Timer(500)\ntimer.AutoReset = false\ntimer.Elapsed:Add(function(sender, args) notify(\"idle-timer\", \"callback\", args:GetType().Name) end)\ntimer:Start()\nreturn true, \"timer-started\", \"\"\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "wait",
+        "milliseconds": 1000
+      }
+    ]
+  },
+  {
+    "id": "idle-timer-mutates-retained-scan",
+    "source": "---@Global\nluanet.load_assembly(\"System.ComponentModel.TypeConverter\")\nTimer = luanet.import_type(\"System.Timers.Timer\")\n---@End\n---@Complex idle-timer-mutates-retained-scan\nif savedTimerScan == nil then\n  savedTimerScan = scan\n  timer = Timer(500)\n  timer.AutoReset = false\n  timer.Elapsed:Add(function(sender, args)\n    savedTimerScan.BodyName = \"timer-mutated body\"\n    savedTimerScan.Radius = 888\n    notify(\"idle-mutation\", savedTimerScan.BodyName, tostring(savedTimerScan.Radius))\n  end)\n  timer:Start()\n  return true, \"timer-started\", \"\"\nend\nreturn true, \"after-timer\", savedTimerScan.BodyName .. \";\" .. savedTimerScan.Radius\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "wait",
+        "milliseconds": 1000
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  },
+  {
+    "id": "mutable-nonfinite-clr-numbers",
+    "source": "---@Complex mutable-nonfinite-clr-numbers\nif heldNumbers == nil then\n  heldNumbers = scan\n  scan.Radius = 0/0\n  scan.SurfaceGravity = math.huge\n  scan.DistanceFromArrivalLS = -math.huge\n  scan.Materials[0].Percent = 0/0\nend\nreturn true, \"nonfinite\", tostring(heldNumbers.Radius) .. \";\" .. tostring(heldNumbers.SurfaceGravity) .. \";\" .. tostring(heldNumbers.DistanceFromArrivalLS) .. \";\" .. tostring(heldNumbers.Materials[0].Percent)\n---@End\n",
+    "steps": [
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 2,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      },
+      {
+        "op": "process",
+        "event": {
+          "timestamp": "2026-10-26T01:02:03Z",
+          "event": "Scan",
+          "SystemAddress": 42,
+          "StarSystem": "CLR Oracle",
+          "BodyID": 3,
+          "BodyName": "CLR Oracle 1 a",
+          "Parents": [
+            {
+              "Planet": 1
+            },
+            {
+              "Star": 0
+            }
+          ],
+          "Radius": 1234.5,
+          "Materials": [
+            {
+              "Name": "iron",
+              "Percent": 12.5
+            },
+            {
+              "Name": "carbon",
+              "Percent": 2
+            }
+          ],
+          "Rings": [
+            {
+              "Name": "CLR Oracle 1 a A Ring",
+              "RingClass": "eRingClass_Rocky",
+              "MassMT": 3.5,
+              "InnerRad": 2000,
+              "OuterRad": 4000
+            }
+          ]
+        },
+        "raw_json": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":3,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}"
+      }
+    ]
+  }
+]

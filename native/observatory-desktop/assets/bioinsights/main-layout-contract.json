@@ -1,0 +1,128 @@
+{
+  "source_method": "UIHandler.AddHTMLTableHeaders",
+  "logical_columns": 11,
+  "header_rows": [
+    [
+      {
+        "text": "CMDR Reference Commander",
+        "span": 11,
+        "tag": "th"
+      }
+    ],
+    [
+      {
+        "text": "Body",
+        "span": 4,
+        "tag": "th"
+      },
+      {
+        "text": "Type",
+        "span": 1,
+        "tag": "th"
+      },
+      {
+        "text": "Signals",
+        "span": 1,
+        "tag": "th"
+      },
+      {
+        "text": "Radiant Star",
+        "span": 3,
+        "tag": "th"
+      },
+      {
+        "text": "Body Value",
+        "span": 2,
+        "tag": "th"
+      }
+    ],
+    [
+      {
+        "text": "",
+        "span": 1,
+        "tag": "td"
+      },
+      {
+        "text": "Genus",
+        "span": 1,
+        "tag": "th"
+      },
+      {
+        "text": "Species",
+        "span": 2,
+        "tag": "th"
+      },
+      {
+        "text": "Status",
+        "span": 2,
+        "tag": "th"
+      },
+      {
+        "text": "Variants",
+        "span": 2,
+        "tag": "th"
+      },
+      {
+        "text": "Value",
+        "span": 1,
+        "tag": "th"
+      },
+      {
+        "text": "Dist",
+        "span": 2,
+        "tag": "th"
+      }
+    ]
+  ],
+  "toolbar": [
+    {
+      "key": "main",
+      "tooltip": "Main Window"
+    },
+    {
+      "key": "unsold",
+      "tooltip": "Show Current Data"
+    },
+    {
+      "key": "about",
+      "tooltip": "About"
+    },
+    {
+      "key": "codexcompanion",
+      "tooltip": "Codex Companion"
+    },
+    {
+      "key": "popout",
+      "tooltip": "Popout Window"
+    },
+    {
+      "key": "zoom",
+      "tooltip": "Zoom"
+    },
+    {
+      "key": "settings",
+      "tooltip": "Settings"
+    }
+  ],
+  "css": {
+    "table_font_size": 15,
+    "body_header_font_size": 16,
+    "cell_padding_x": 5,
+    "cell_padding_y": 2,
+    "row_height_setting": 24,
+    "row_spacing": 2,
+    "default_browser_body_margin": 8,
+    "button_size_normal": 32,
+    "button_margin_divisor": 16,
+    "button_bar_padding": 2,
+    "button_gap": 2,
+    "content_padding_top": 5,
+    "content_padding_left": 2,
+    "button_corner_radius": 5
+  },
+  "footer": {
+    "show_headers": "<tr><th class=\"banner \" colspan=11>&nbsp;</th></tr>",
+    "always": "<tr><th id=\"footer\" class=\"body\" colspan=11>&nbsp;</th>"
+  },
+  "layout": "Original HTML auto table layout; ExpandOutput selects width=100%; no fixed column pixel widths in source"
+}

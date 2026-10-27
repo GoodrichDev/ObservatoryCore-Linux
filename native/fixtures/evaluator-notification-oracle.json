@@ -1,0 +1,230 @@
+{
+  "reference": "Installed EDJP.Observatory.Utils.NotificationBodyName and SSMLify copied calculation-only code",
+  "normalization": "text2 initlocal hoisted so goto cannot reset Body prefix",
+  "cases": [
+    {
+      "body": "Sol",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Main Star"
+    },
+    {
+      "body": "Sol",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Main Star"
+    },
+    {
+      "body": "Sol",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Main Star"
+    },
+    {
+      "body": "Sol",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Main Star</voice></speak>"
+    },
+    {
+      "body": "Sol A 1",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Body A 1"
+    },
+    {
+      "body": "Sol A 1",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Body A 1"
+    },
+    {
+      "body": "Sol A 1",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Body  <say-as interpret-as=\"spell-out\">A</say-as> <say-as interpret-as=\"cardinal\">1</say-as>"
+    },
+    {
+      "body": "Sol A 1",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Body  <say-as interpret-as=\"spell-out\">A</say-as> <say-as interpret-as=\"cardinal\">1</say-as></voice></speak>"
+    },
+    {
+      "body": "Sol Belt A",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Belt A"
+    },
+    {
+      "body": "Sol Belt A",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Belt A"
+    },
+    {
+      "body": "Sol Belt A",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Belt  <say-as interpret-as=\"spell-out\">A</say-as>"
+    },
+    {
+      "body": "Sol Belt A",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Belt  <say-as interpret-as=\"spell-out\">A</say-as></voice></speak>"
+    },
+    {
+      "body": "Sol A 1 Ring",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Ring A 1"
+    },
+    {
+      "body": "Sol A 1 Ring",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Ring A 1"
+    },
+    {
+      "body": "Sol A 1 Ring",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Ring  <say-as interpret-as=\"spell-out\">A</say-as> <say-as interpret-as=\"cardinal\">1</say-as>"
+    },
+    {
+      "body": "Sol A 1 Ring",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Ring  <say-as interpret-as=\"spell-out\">A</say-as> <say-as interpret-as=\"cardinal\">1</say-as></voice></speak>"
+    },
+    {
+      "body": "Other A 1",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Other A 1"
+    },
+    {
+      "body": "Other A 1",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Other A 1"
+    },
+    {
+      "body": "Other A 1",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Other A 1"
+    },
+    {
+      "body": "Other A 1",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Other A 1</voice></speak>"
+    },
+    {
+      "body": " Sol ",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Main Star"
+    },
+    {
+      "body": " Sol ",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Main Star"
+    },
+    {
+      "body": " Sol ",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Main Star"
+    },
+    {
+      "body": " Sol ",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Main Star</voice></speak>"
+    },
+    {
+      "body": "Sol 1111",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Body 1111"
+    },
+    {
+      "body": "Sol 1111",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Body 1111"
+    },
+    {
+      "body": "Sol 1111",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Body  <say-as interpret-as=\"cardinal\">1111</say-as>"
+    },
+    {
+      "body": "Sol 1111",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Body  <say-as interpret-as=\"cardinal\">1111</say-as></voice></speak>"
+    },
+    {
+      "body": "Sol AB 1 b",
+      "system": "Sol",
+      "tts": false,
+      "tag": false,
+      "text": "Body AB 1 b"
+    },
+    {
+      "body": "Sol AB 1 b",
+      "system": "Sol",
+      "tts": false,
+      "tag": true,
+      "text": "Body AB 1 b"
+    },
+    {
+      "body": "Sol AB 1 b",
+      "system": "Sol",
+      "tts": true,
+      "tag": false,
+      "text": "Body  <say-as interpret-as=\"spell-out\">AB</say-as> <say-as interpret-as=\"cardinal\">1</say-as> <say-as interpret-as=\"spell-out\">b</say-as>"
+    },
+    {
+      "body": "Sol AB 1 b",
+      "system": "Sol",
+      "tts": true,
+      "tag": true,
+      "text": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en-US\"><voice name=\"\">Body  <say-as interpret-as=\"spell-out\">AB</say-as> <say-as interpret-as=\"cardinal\">1</say-as> <say-as interpret-as=\"spell-out\">b</say-as></voice></speak>"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-26",
+  "platform": "x86_64-unknown-linux-gnu",
+  "worker_protocol": 1,
+  "commands": [
+    "cargo test -p observatory-plugins --all-targets",
+    "cargo clippy -p observatory-plugins --all-targets -- -D warnings",
+    "python3 native/scripts/package_native_workers.py --binary /home/loic/.cache/observatory-native-target/debug/observatory-native-worker --out /home/loic/.cache/observatory-native-worker-qa/feed --base-url http://127.0.0.1:58081 --revision 2",
+    "sha256sum -c NATIVE-SHA256SUMS"
+  ],
+  "tests": {
+    "unit": 166,
+    "shared_replay": 1,
+    "source_parity": 2,
+    "real_subprocess": 9,
+    "failures": 0,
+    "clippy_warnings": 0
+  },
+  "subprocess_checks": [
+    "All Bio projections including source HTML, bus/HTTP/diagnostic effects and notification rendering match builtin",
+    "Evaluator findings, rows, route effects, source HTML and full notification payloads match builtin",
+    "Hecate journal/ledger queries match builtin and reopen durable values after worker restart",
+    "Stellar host monotonic clock, queue/radar/brushes and handler changes survive transport",
+    "All four CLI metadata inspections exit without initializing services",
+    "Independent selection and missing artifact rejection",
+    "SIGKILL one child: last Bio personal state/projections retained, one error reported, second child remains healthy",
+    "Unrelated valid Linux ELF rejected by real metadata/protocol handshake",
+    "Real Hecate child HTTP201 UTF8 response and WebSocket request/response traverse host RPC with original correlation fields"
+  ],
+  "packaged_artifacts": [
+    {
+      "plugin": "BioInsights",
+      "version": "1.3.444.1052",
+      "revision": 2,
+      "protocol": 1,
+      "sha256": "deb5f4a9732d636776be22a5b67deda527a1f8ff8395e7ca7ab2e38217ce734c",
+      "size": 68960632
+    },
+    {
+      "plugin": "Evaluator",
+      "version": "1.3.444.637",
+      "revision": 2,
+      "protocol": 1,
+      "sha256": "deb5f4a9732d636776be22a5b67deda527a1f8ff8395e7ca7ab2e38217ce734c",
+      "size": 68960632
+    },
+    {
+      "plugin": "Hecate",
+      "version": "1.3.444.761",
+      "revision": 2,
+      "protocol": 1,
+      "sha256": "deb5f4a9732d636776be22a5b67deda527a1f8ff8395e7ca7ab2e38217ce734c",
+      "size": 68960632
+    },
+    {
+      "plugin": "StellarOverlay",
+      "version": "1.3.228.387",
+      "revision": 2,
+      "protocol": 1,
+      "sha256": "deb5f4a9732d636776be22a5b67deda527a1f8ff8395e7ca7ab2e38217ce734c",
+      "size": 68960632
+    }
+  ],
+  "scope": "These tests prove the native worker boundary, not deployment of a public update service. Root host updater integration has separate tests."
+}

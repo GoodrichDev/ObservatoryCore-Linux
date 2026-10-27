@@ -1,0 +1,1135 @@
+{
+  "reference": "Evaluator 1.3.444.637",
+  "reference_eop_sha256": "4de135ab48b8fbbc9ea350bfd1c8a5d40d52d94615cebf51c53a0f31a04a21e2",
+  "source_hashes": {
+    "Evaluator/Evaluator.cs": "c7bd407344f008b8fae5a81db1b988643a7992348b9fce55095ac8c57929a558",
+    "Evaluator/EvaluatorSettings.cs": "5e4cdbd07df1cfa7669175e3ab106a999c8f038a37bf5858dab42a22261075dd",
+    "Evaluator/UIHandler.cs": "8d0e86b1cab9abd42e4ca20c3c5ed330d323f998672708cd00e1f25fb99c8731",
+    "Evaluator.Settings/NotificationSettings.cs": "35d115062a02f98053354213237b0a59f12fbdfc8359a032cd84bac6cfa59e7a",
+    "Evaluator/EDSystem.cs": "4a6b09487af21e24adb3dafd5a02a50c0a0aba9599c29308f8b1bf178fc8eb3b",
+    "Evaluator/Body.cs": "419973cda88ad16f2005510ada9c64d6f8cb2b7fe3ae196a0165ca4a07b415a9",
+    "EDJP.Observatory.Solver/Tsp3DSolver.cs": "727136ced2d87a10c342d42b982cbaf342f396155b8146acc1bdd643ffe632e4",
+    "EDJP.Observatory/FZoomSelector.cs": "32db81e5a57653f66ad40daab4d3f1c98e5978a4c747669e0b9b00bb1d0679e8",
+    "EDJP.Observatory/UIBlankView.cs": "1a726ceeb0428eaeb3f3fdf6e9fea6516a90ab216683a6c47282f05975cf2e2e"
+  },
+  "settings": [
+    {
+      "name": "ThemeSettings",
+      "type": "BaseThemeSettings",
+      "line": 36,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "MinimumBodyValue",
+      "type": "int",
+      "line": 40,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 Mapping Options \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Hide Bodies Below"
+        ]
+      ]
+    },
+    {
+      "name": "MinimumValueForWorthMapping",
+      "type": "int",
+      "line": 43,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Minimum Mapping Value"
+        ]
+      ]
+    },
+    {
+      "name": "MaxDistanceELW",
+      "type": "int",
+      "line": 46,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Distance - Earth-Like Worlds"
+        ]
+      ]
+    },
+    {
+      "name": "MaxDistanceWW",
+      "type": "int",
+      "line": 49,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Distance - Water Worlds"
+        ]
+      ]
+    },
+    {
+      "name": "MaxDistanceAW",
+      "type": "int",
+      "line": 52,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Distance - Ammonia Worlds"
+        ]
+      ]
+    },
+    {
+      "name": "MaxDistanceAtmospheric",
+      "type": "int",
+      "line": 55,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Distance - Atmospheric"
+        ]
+      ]
+    },
+    {
+      "name": "MaxDistanceOther",
+      "type": "int",
+      "line": 58,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Distance - Other"
+        ]
+      ]
+    },
+    {
+      "name": "IncludeAtmosphericBio",
+      "type": "bool",
+      "line": 61,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Atmospherics with Bios worth mapping"
+        ]
+      ]
+    },
+    {
+      "name": "SetTargetedInFSSWorthMapping",
+      "type": "bool",
+      "line": 64,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Set bodies targeted in FSS as Worth Mapping"
+        ]
+      ]
+    },
+    {
+      "name": "BIHighValueWorthMapping",
+      "type": "bool",
+      "line": 68,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 BioInsights Mapping Options \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Valuable Biologicals/Bodies Worth Mapping?"
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowBIHighValue",
+      "type": "bool",
+      "line": 71,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "BIPersonalCodexWorthMapping",
+      "type": "bool",
+      "line": 74,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Possible Personal Codex Entries Worth Mapping?"
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowBIPersonalCodex",
+      "type": "bool",
+      "line": 77,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "BIGalacticCodexWorthMapping",
+      "type": "bool",
+      "line": 80,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Possible Galactic Codex Entries Worth Mapping?"
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowBIGalacticCodex",
+      "type": "bool",
+      "line": 83,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "BIMarkedWorthMapping",
+      "type": "bool",
+      "line": 86,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Possible Marked Biologicals Worth Mapping?"
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowBIMarked",
+      "type": "bool",
+      "line": 89,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ConfigureAlwaysShow",
+      "type": "Action",
+      "line": 93,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Always Show"
+        ]
+      ]
+    },
+    {
+      "name": "ConfigureStellarOverlay",
+      "type": "Action",
+      "line": 98,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 Stellar Overlay (requires StellarOverlay plugin) \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Configure Stellar Overlay"
+        ]
+      ]
+    },
+    {
+      "name": "NativeOutputDict",
+      "type": "Dictionary<string, object>",
+      "line": 103,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 Interface \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Native Output (requires restart)"
+        ],
+        [
+          "SettingBackingValue",
+          "NativeOutput"
+        ]
+      ]
+    },
+    {
+      "name": "NativeOutput",
+      "type": "string",
+      "line": 123,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ExpandOutput",
+      "type": "bool",
+      "line": 136,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Expand output to window size"
+        ]
+      ]
+    },
+    {
+      "name": "ShowHeaders",
+      "type": "bool",
+      "line": 139,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Show Headers"
+        ]
+      ]
+    },
+    {
+      "name": "ShowTotal",
+      "type": "bool",
+      "line": 142,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Show Unsold Data Total (requires Hecate)"
+        ]
+      ]
+    },
+    {
+      "name": "MaxSystems",
+      "type": "int",
+      "line": 145,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Maximum Systems to show after Read All"
+        ]
+      ]
+    },
+    {
+      "name": "ButtonSizeDict",
+      "type": "Dictionary<string, object>",
+      "line": 150,
+      "attributes": [
+        [
+          "SettingBackingValue",
+          "ButtonSize"
+        ],
+        [
+          "SettingDisplayName",
+          "Button Size"
+        ]
+      ]
+    },
+    {
+      "name": "ConfigureNotifications",
+      "type": "Action",
+      "line": 183,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Configure Notifications"
+        ]
+      ]
+    },
+    {
+      "name": "Notifications",
+      "type": "NotificationSettings",
+      "line": 186,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ConfigureTheming",
+      "type": "Action",
+      "line": 190,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Configure Theming"
+        ]
+      ]
+    },
+    {
+      "name": "ConfigurePopout",
+      "type": "Action",
+      "line": 194,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Configure Popout"
+        ]
+      ]
+    },
+    {
+      "name": "ButtonSize",
+      "type": "string",
+      "line": 197,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ButtonSizeValue",
+      "type": "int",
+      "line": 254,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowMain",
+      "type": "bool",
+      "line": 278,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowELW",
+      "type": "bool",
+      "line": 281,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowWW",
+      "type": "bool",
+      "line": 284,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowAW",
+      "type": "bool",
+      "line": 287,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowTerraformables",
+      "type": "bool",
+      "line": 290,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowAtmospherics",
+      "type": "bool",
+      "line": 293,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowAtmosphericsBios",
+      "type": "bool",
+      "line": 296,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "AlwaysShowNonAtmosphericsBios",
+      "type": "bool",
+      "line": 299,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutAlwaysShow",
+      "type": "bool",
+      "line": 302,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowNoFocus",
+      "type": "bool",
+      "line": 305,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowLeftPanel",
+      "type": "bool",
+      "line": 308,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowRightPanel",
+      "type": "bool",
+      "line": 311,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowDSSMode",
+      "type": "bool",
+      "line": 314,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowRolePanel",
+      "type": "bool",
+      "line": 317,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowSysMap",
+      "type": "bool",
+      "line": 320,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutShowFSSMode",
+      "type": "bool",
+      "line": 323,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "PopoutOpacity",
+      "type": "int",
+      "line": 326,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "InstallUpdates",
+      "type": "bool",
+      "line": 330,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 Automatic Updates \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Automatically install updates"
+        ]
+      ]
+    },
+    {
+      "name": "InstallBetas",
+      "type": "bool",
+      "line": 333,
+      "attributes": [
+        [
+          "SettingDisplayName",
+          "Install beta releases *NOT RECOMMENDED*"
+        ]
+      ]
+    },
+    {
+      "name": "VerboseLogging",
+      "type": "bool",
+      "line": 337,
+      "attributes": [
+        [
+          "SettingNewGroup",
+          "\u2666 Advanced \u2666"
+        ],
+        [
+          "SettingDisplayName",
+          "Verbose Logging"
+        ]
+      ]
+    },
+    {
+      "name": "UseCustomNotificationColours",
+      "type": "bool",
+      "line": 393,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "TitleColorHex",
+      "type": "string",
+      "line": 396,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "BackgroundColorHex",
+      "type": "string",
+      "line": 399,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "BorderColorHex",
+      "type": "string",
+      "line": 402,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "ColorHex",
+      "type": "string",
+      "line": 405,
+      "attributes": [
+        [
+          "SettingIgnore",
+          ""
+        ]
+      ]
+    }
+  ],
+  "journal_events": [
+    "ApproachBody",
+    "CarrierJump",
+    "Died",
+    "Disembark",
+    "Embark",
+    "FSDJump",
+    "FSSAllBodiesFound",
+    "FSSBodySignals",
+    "FSSDiscoveryScan",
+    "LoadGame",
+    "Location",
+    "MultiSellExplorationData",
+    "SAAScanComplete",
+    "SAASignalsFound",
+    "Scan",
+    "ScanBaryCentre",
+    "ScanOrganic",
+    "SellExplorationData",
+    "Shutdown",
+    "StartJump",
+    "SupercruiseExit"
+  ],
+  "message_dispatch_strings": [
+    "EvaluatorSetTotal",
+    "GetFIDResponse",
+    "LegacyPluginMessage",
+    "Ready",
+    "RegisterPluginCustomColoursResponse",
+    "SetBioInsightsFlags",
+    "SetBodyVisited",
+    "SetServerAddress",
+    "SetWorthVisiting",
+    "WebRequest",
+    "WebSocketRequest",
+    "message"
+  ],
+  "UI_routes": [
+    "main",
+    "unsold",
+    "about",
+    "popout",
+    "zoom",
+    "settings",
+    "filter/{0|1|2}",
+    "toggle/{id64}/{bodyid}/{0|1}",
+    "theme/{default|custom}/{resource}",
+    "alert_.../hide"
+  ],
+  "public_methods": [
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "SetBodyExtraDetailsBI",
+      "line": 640
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "SetBodyExtraDetails",
+      "line": 704
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "ResetPluginUI",
+      "line": 2831
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "ProcessOrrery",
+      "line": 2836
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "GetOptimizedListNew",
+      "line": 3466
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "SetCurrentSystem",
+      "line": 3757
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "Load",
+      "line": 3897
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "ObservatoryReady",
+      "line": 4216
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "StartedReadAll",
+      "line": 4246
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "FinishedReadAll",
+      "line": 4300
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "ForceWebClientsToRefresh",
+      "line": 4402
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "StartedPreRead",
+      "line": 4443
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "FinishedPreRead",
+      "line": 4451
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "RequestUpdatedTotal",
+      "line": 4559
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "Test",
+      "line": 4619
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "UpdateUItmp",
+      "line": 4685
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "UpdateUI",
+      "line": 4691
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "StatusChange",
+      "line": 5045
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "UpdatePersistentNotification",
+      "line": 5438
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandlePluginMessage",
+      "line": 5876
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleLegacyPluginMessage",
+      "line": 6436
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleSetBioInsightsFlags",
+      "line": 6610
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleSetWorthVisiting",
+      "line": 6707
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleSetBodyVisited",
+      "line": 6759
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleEvaluatorSetTotal",
+      "line": 6814
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleGetFIDResponse",
+      "line": 6919
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleWebRequest",
+      "line": 7020
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleWebSocketRequest",
+      "line": 7058
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleRegisterPluginCustomColoursResponse",
+      "line": 7120
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "HandleSetServerAddress",
+      "line": 7252
+    },
+    {
+      "file": "Evaluator/Evaluator.cs",
+      "method": "ProcessWebRequest",
+      "line": 7316
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "HandleFilterChange",
+      "line": 302
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "GenerateCurrentPage",
+      "line": 352
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "HandleURL",
+      "line": 359
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "HandleEVToggle",
+      "line": 1110
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "SetCommander",
+      "line": 1255
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "OpenHTMLTable",
+      "line": 1263
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "CloseHTMLTable",
+      "line": 1274
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "AddHTMLTableFooter",
+      "line": 1280
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "AddHTMLTableHeaders",
+      "line": 1318
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "AddHTMLSystemDetails",
+      "line": 1459
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "AddHTMLBodyDetails",
+      "line": 1652
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "SaveSettings",
+      "line": 2187
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "GenerateAboutPage",
+      "line": 2217
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "GenerateUnsoldDataPage",
+      "line": 2389
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "GenerateUnsoldDataPage",
+      "line": 2526
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "HandleGuiStatusChange",
+      "line": 2738
+    },
+    {
+      "file": "Evaluator/UIHandler.cs",
+      "method": "StarTypeLookup",
+      "line": 2789
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "AddBody",
+      "line": 408
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "GetBodyValue",
+      "line": 546
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "UpdateMainStarBonus",
+      "line": 627
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "GetMainStarId",
+      "line": 788
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "GetBodyIdFromVisitOrder",
+      "line": 912
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "ResetVisitOrder",
+      "line": 984
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "SetBioGeocount",
+      "line": 1025
+    },
+    {
+      "file": "Evaluator/EDSystem.cs",
+      "method": "ShowInInterface",
+      "line": 1096
+    },
+    {
+      "file": "Evaluator/Body.cs",
+      "method": "UpdateValues",
+      "line": 782
+    },
+    {
+      "file": "EDJP.Observatory.Solver/Tsp3DSolver.cs",
+      "method": "KNearest",
+      "line": 224
+    },
+    {
+      "file": "EDJP.Observatory.Solver/Tsp3DSolver.cs",
+      "method": "Run",
+      "line": 5044
+    },
+    {
+      "file": "EDJP.Observatory.Solver/Tsp3DSolver.cs",
+      "method": "Solve",
+      "line": 5270
+    },
+    {
+      "file": "EDJP.Observatory.Solver/Tsp3DSolver.cs",
+      "method": "SolveAsync",
+      "line": 5465
+    },
+    {
+      "file": "EDJP.Observatory/FZoomSelector.cs",
+      "method": "Dispose",
+      "line": 105
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "SetPanel",
+      "line": 56
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "SetWidthHeight",
+      "line": 67
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "ScrollToLine",
+      "line": 77
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "SetVisible",
+      "line": 87
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "SetNativeDocument",
+      "line": 98
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "AddSchemeHandler",
+      "line": 108
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "HideObjectByID",
+      "line": 118
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "GetElementByIdGetAttribute",
+      "line": 129
+    },
+    {
+      "file": "EDJP.Observatory/UIBlankView.cs",
+      "method": "SetElementContent",
+      "line": 140
+    }
+  ],
+  "original_contracts": {
+    "toolbar": [
+      "main",
+      "unsold",
+      "about",
+      "popout",
+      "zoom",
+      "settings"
+    ],
+    "content_pages": [
+      "main",
+      "unsold",
+      "about"
+    ],
+    "zoom": {
+      "min": 50,
+      "max": 600,
+      "step": 5,
+      "reset": 100,
+      "anchor": "Cursor.Position",
+      "size": [
+        505,
+        54
+      ]
+    },
+    "numeric_group_separator": " ",
+    "unsold_columns": [
+      "Date",
+      "System",
+      "Value"
+    ],
+    "unsold_date_format": "dd-MMM-yy HH:mm",
+    "native_output_disabled": "Native Output Disabled",
+    "route_solver": {
+      "exact_threshold_including_start": 13,
+      "time_limit_seconds": 2,
+      "free_end": true,
+      "neighbor_list_size": 12,
+      "target_gap_percent": 2,
+      "stagnation_limit": 200
+    }
+  }
+}

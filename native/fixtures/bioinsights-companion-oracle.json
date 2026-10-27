@@ -1,0 +1,907 @@
+{
+  "source": "UIHandler.RequirementAsString, FormatReq, StarTypeFromCode; BioInsights 1.3.444.1052",
+  "source_dll_sha256": "50e61de9db4c7cdb3c42c01cec9135bd9841747014c2a95a8fa6bfd23912e2ca",
+  "procedure": "Pure extracted formatting methods run against complete installed codex.json catalogue, invariant culture; no original DLL is loaded. Stub data types and equivalent FirstLetterToUpper plus exact Regex.SplitCamelCase; original flattened methods and primitive wrappers retained. Synthetic decompiler local-default initializers hoisted to method entry so dispatcher gotos do not reset IL locals.",
+  "requirements_html": {
+    "Codex_Ent_Aleoids_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 175K AND Temperature: < 180K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.016 Atm"
+    ],
+    "Codex_Ent_Aleoids_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 180K AND Temperature: < 190K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.025 Atm"
+    ],
+    "Codex_Ent_Aleoids_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 190K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.055 Atm"
+    ],
+    "Codex_Ent_Aleoids_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.013 Atm"
+    ],
+    "Codex_Ent_Aleoids_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 170K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.013 Atm"
+    ],
+    "Codex_Ent_Bacterial_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Neon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 20K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 139K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.2578G AND Gravity < 0.61G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.079 Atm"
+    ],
+    "Codex_Ent_Bacterial_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 152K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.039G AND Gravity < 0.373G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Bacterial_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 145K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 400K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.039G AND Gravity < 0.605G )"
+    ],
+    "Codex_Ent_Bacterial_10_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 67K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 109K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: MethaneRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 73K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 145K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.0249G AND Gravity < 0.6G )"
+    ],
+    "Codex_Ent_Bacterial_12_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 132K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 499K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 392K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 452K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: WaterRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 220K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 330K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.039G AND Gravity < 0.6G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body"
+    ],
+    "Codex_Ent_Bacterial_08_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Nitrogen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 43K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 150K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.05G AND Gravity < 0.6G )"
+    ],
+    "Codex_Ent_Bacterial_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Helium<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 20K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 21K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.4G AND Gravity < 0.55G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.067 Atm"
+    ],
+    "Codex_Ent_Bacterial_11_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Neon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: NeonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Helium<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: WaterRich",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Nitrogen Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Ammonia Based",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.6G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body"
+    ],
+    "Codex_Ent_Bacterial_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Neon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: NeonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Helium<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Carbon Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Methane Based",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.6G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body"
+    ],
+    "Codex_Ent_Bacterial_07_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Volcanism: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Gravity >= 0.04G<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 300K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Volcanism: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Gravity >= 0.04G<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 300K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Volcanism: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Gravity >= 0.04G<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 390K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: WaterRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Volcanism: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Gravity >= 0.04G<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 300K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.61G )"
+    ],
+    "Codex_Ent_Bacterial_13_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Water Based",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.04G AND Gravity < 0.612G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Icy body"
+    ],
+    "Codex_Ent_Bacterial_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 50K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 243K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.515G )"
+    ],
+    "Codex_Ent_Bacterial_09_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 145K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 245K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.24G AND Gravity < 0.515G )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.014 Atm"
+    ],
+    "Codex_Ent_Cactoid_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 180K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.026 Atm"
+    ],
+    "Codex_Ent_Cactoid_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.013 Atm"
+    ],
+    "Codex_Ent_Cactoid_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Cactoid_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 180K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.025 Atm"
+    ],
+    "Codex_Ent_Cactoid_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 392K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 450K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Water )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 160K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 166K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: SulphurDioxide )"
+    ],
+    "Codex_Ent_Clypeus_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 190K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.65)% )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 455K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Water )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.054 Atm"
+    ],
+    "Codex_Ent_Clypeus_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 190K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.65)% )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 455K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Water )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.05 Atm"
+    ],
+    "Codex_Ent_Clypeus_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 190K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.65)% )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 455K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Water )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.052 Atm"
+    ],
+    "Codex_Ent_Conchas_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 152K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 177K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Ammonia )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; ",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0134 Atm"
+    ],
+    "Codex_Ent_Conchas_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Nitrogen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 42K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 51K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Nitrogen )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.05G",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.005 Atm"
+    ],
+    "Codex_Ent_Conchas_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 150K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 199K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.5)% )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.002 Atm"
+    ],
+    "Codex_Ent_Conchas_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 180K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0254 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.5)% )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 78K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 103K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0125 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0201 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Methane )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 452.2K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0527 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Water )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 163K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 177K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.013 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Only Ammonia )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G"
+    ],
+    "Codex_Ent_Electricae_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.275G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: NeonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: ArgonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon",
+      "&nbsp;&nbsp;&#x25CF; Parent: A<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Parent: White Dwarf<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Parent: Neutron<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Parent: B<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Parent: Black Hole"
+    ],
+    "Codex_Ent_Electricae_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.025G AND Gravity < 0.275G )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: NeonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: ArgonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon",
+      "&nbsp;&nbsp;&#x25CF; Near: Nebula<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Near: Planetary Nebula"
+    ],
+    "Codex_Ent_Fonticulus_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Argon",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 50K AND Temperature: < 150K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: Argon (>= 50)%",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G"
+    ],
+    "Codex_Ent_Fonticulus_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Methane",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 82.5K AND Temperature: < 109K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: Methane (>= 99.9)%",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.058G",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.03 Atm"
+    ],
+    "Codex_Ent_Fonticulus_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Oxygen",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 142K AND Temperature: < 200K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: Oxygen (>= 50)%",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.23G AND Gravity < 0.2755G )",
+      "&nbsp;&nbsp;&#x25CF; ( Pressure >= 0.012 Atm AND Pressure < 0.08 Atm )"
+    ],
+    "Codex_Ent_Fonticulus_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Nitrogen",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 50K AND Temperature: < 81K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: Nitrogen (>= 99.9)%",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.19G AND Gravity < 0.2755G )"
+    ],
+    "Codex_Ent_Fonticulus_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 56K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 75K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: NeonRich )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 50K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 57K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Neon )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.245G AND Gravity < 0.2755G )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.045 Atm"
+    ],
+    "Codex_Ent_Fonticulus_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: ArgonRich",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 60K AND Temperature: < 120K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: Nitrogen (>= 50)%",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.2G AND Gravity < 0.2755G )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.019 Atm"
+    ],
+    "Codex_Ent_Shrubs_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 145K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.0027 Atm"
+    ],
+    "Codex_Ent_Shrubs_07_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 130K AND Temperature: < 215K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0105 Atm"
+    ],
+    "Codex_Ent_Shrubs_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 146K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.0027 Atm"
+    ],
+    "Codex_Ent_Shrubs_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Shrubs_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Shrubs_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 146K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: CarbonDioxide )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 152K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 175K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Ammonia )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 410K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere: Water )"
+    ],
+    "Codex_Ent_Shrubs_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Water",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 399K AND Temperature: < 452K )",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.052 Atm"
+    ],
+    "Codex_Ent_Fumerolas_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.029G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Water Based"
+    ],
+    "Codex_Ent_Fumerolas_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.025G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Carbon Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Methane Based"
+    ],
+    "Codex_Ent_Fumerolas_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Iron Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Silicate Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Rocky Based"
+    ],
+    "Codex_Ent_Fumerolas_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.025G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Nitrogen Based<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Ammonia Based"
+    ],
+    "Codex_Ent_Fungoids_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.0587G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Nitrogen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 50K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 70K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 50K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 135K )"
+    ],
+    "Codex_Ent_Fungoids_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 160K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 177K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0134 Atm )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 80K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 110K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0129 Atm )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 180K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 200K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.5)%<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0254 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 395K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 455K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.052 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm )"
+    ],
+    "Codex_Ent_Fungoids_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.032G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 67K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 109K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: Ammonia (>= 99.4)%<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 152K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 177K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.013015 Atm )"
+    ],
+    "Codex_Ent_Fungoids_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky ice body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.041G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 78K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 110K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0125 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 390K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 452K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.056 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Atmosphere contains: CarbonDioxide (>= 97.5)%<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 180K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 196K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure >= 0.0259 Atm<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Pressure < 0.0987 Atm )"
+    ],
+    "Codex_Ent_Osseus_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 180K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.025 Atm"
+    ],
+    "Codex_Ent_Osseus_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Ammonia<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Methane",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body"
+    ],
+    "Codex_Ent_Osseus_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 180K AND Temperature: < 190K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.025 Atm"
+    ],
+    "Codex_Ent_Osseus_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 190K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.058 Atm"
+    ],
+    "Codex_Ent_Osseus_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Methane<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: MethaneRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: ArgonRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Nitrogen",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body"
+    ],
+    "Codex_Ent_Osseus_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.015 Atm"
+    ],
+    "Codex_Ent_Recepta_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.0415G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 132K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 272.5K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 195K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 175K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: SulphurDioxide (>= 1.05)%"
+    ],
+    "Codex_Ent_Recepta_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.0415G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 132K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 272.5K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 195K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 175K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: SulphurDioxide (>= 1.05)%"
+    ],
+    "Codex_Ent_Recepta_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.0415G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 132K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 272.5K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 195K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: >= 151K<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND Temperature: < 175K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere contains: SulphurDioxide (>= 1.05)%"
+    ],
+    "Codex_Ent_Stratum_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 165K AND Temperature: < 375K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.26G AND Gravity < 0.55G )"
+    ],
+    "Codex_Ent_Stratum_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 190K",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Oxygen AND Atmosphere contains: SulphurDioxide (>= 0.05)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.04G AND Gravity < 0.6G )"
+    ],
+    "Codex_Ent_Stratum_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 165K AND Temperature: < 190K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Oxygen AND Atmosphere contains: SulphurDioxide (>= 0.05)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.04G AND Gravity < 0.49G )"
+    ],
+    "Codex_Ent_Stratum_08_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 190K",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.04G AND Gravity < 0.55G )"
+    ],
+    "Codex_Ent_Stratum_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 165K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.039G AND Gravity < 0.34G )",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.013 Atm"
+    ],
+    "Codex_Ent_Stratum_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 165K AND Temperature: < 190K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.04G AND Gravity < 0.48G )"
+    ],
+    "Codex_Ent_Stratum_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 165K",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxideRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide AND Temperature: < 450K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Ammonia AND Temperature: < 177K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Water AND Temperature: >= 394K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.0359G AND Gravity < 0.6G )"
+    ],
+    "Codex_Ent_Stratum_07_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 165K",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Oxygen<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Water<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: CarbonDioxide AND Temperature: < 450K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: SulphurDioxide AND Temperature: < 450K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Ammonia AND Temperature: < 178K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: ArgonRich AND Temperature: < 250K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Atmosphere: Argon AND Temperature: < 250K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.0456G AND Gravity < 0.61G )"
+    ],
+    "Codex_Ent_Tubus_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.153G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 195.1K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.003 Atm"
+    ],
+    "Codex_Ent_Tubus_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.153G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 196.1K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.003 Atm"
+    ],
+    "Codex_Ent_Tubus_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.153G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 195.3K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: CarbonDioxideRich",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.003 Atm"
+    ],
+    "Codex_Ent_Tubus_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.153G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Ammonia",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0134 Atm"
+    ],
+    "Codex_Ent_Tubus_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.153G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 160K AND Temperature: < 189K )",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Atmosphere: Ammonia"
+    ],
+    "Codex_Ent_Tussocks_08_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide AND Atmosphere contains: CarbonDioxide (>= 97.5)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 175K AND Temperature: < 180K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.042G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.016 Atm"
+    ],
+    "Codex_Ent_Tussocks_15_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Argon<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Temperature: < 110K AND Atmosphere: Methane )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 80K AND Temperature: < 129K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.032G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body"
+    ],
+    "Codex_Ent_Tussocks_11_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide AND Atmosphere contains: CarbonDioxide (>= 97.5)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 179K AND Temperature: < 190K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.027 Atm"
+    ],
+    "Codex_Ent_Tussocks_05_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia AND Atmosphere contains: Only Ammonia )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Tussocks_04_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia AND Atmosphere contains: Ammonia (>= 99.4)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0134 Atm"
+    ],
+    "Codex_Ent_Tussocks_10_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: Ammonia AND Atmosphere contains: Ammonia (>= 99.4)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 152K AND Temperature: < 177K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0133 Atm"
+    ],
+    "Codex_Ent_Tussocks_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide AND Atmosphere contains: CarbonDioxide (>= 96.5)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 161K AND Temperature: < 170K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Pressure >= 0.0031 Atm AND Pressure < 0.0523 Atm )"
+    ],
+    "Codex_Ent_Tussocks_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; ( Atmosphere: CarbonDioxide AND Atmosphere contains: CarbonDioxide (>= 97.5)% )",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 145K AND Temperature: < 154K )",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.039G",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Pressure >= 0.0027 Atm AND Pressure < 0.0115 Atm )"
+    ],
+    "Codex_Ent_Tussocks_06_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 145K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.0027 Atm"
+    ],
+    "Codex_Ent_Tussocks_09_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 145K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.0027 Atm"
+    ],
+    "Codex_Ent_Tussocks_07_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 168K AND Temperature: < 178K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Pressure >= 0.01 Atm AND Pressure < 0.0705 Atm )"
+    ],
+    "Codex_Ent_Tussocks_13_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: SulphurDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 132K AND Temperature: < 167K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure < 0.0105 Atm"
+    ],
+    "Codex_Ent_Tussocks_12_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 191K AND Temperature: < 196K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.058 Atm"
+    ],
+    "Codex_Ent_Tussocks_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: CarbonDioxide",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 155K AND Temperature: < 160K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Pressure >= 0.0027 Atm AND Pressure < 0.022 Atm )"
+    ],
+    "Codex_Ent_Tussocks_14_Name": [
+      "&nbsp;&nbsp;&#x25CF; Atmosphere Density: Thin",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 0.2755G",
+      "&nbsp;&nbsp;&#x25CF; Atmosphere: Water",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 392K AND Temperature: < 450K )",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Pressure >= 0.052 Atm"
+    ],
+    "Codex_Ent_Seed_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 200K AND Temperature: < 500K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.028G AND Gravity < 4.2G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any"
+    ],
+    "Codex_Ent_SeedABCD_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 200K AND Temperature: < 330K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.042G AND Gravity < 0.42G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Minor<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Volcanism: Regular AND Volcanism: Iron Based )",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_SeedABCD_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; ( Planet Type: High metal content body AND Temperature: < 1000K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Planet Type: Metal rich body AND Temperature: >= 1000K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.034G AND Gravity < 2.35G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Not Major",
+      "&nbsp;&nbsp;&#x25CF; In: Ostrinum Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_SeedABCD_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 100K AND Temperature: < 255K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.035G AND Gravity < 0.4G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_SeedEFGH_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 300K AND Temperature: < 500K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.029G AND Gravity < 0.47G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any"
+    ],
+    "Codex_Ent_SeedEFGH_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 300K AND Temperature: < 500K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.035G AND Gravity < 2.92G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_SeedEFGH_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; ( Temperature: >= 300K AND Temperature: < 500K )",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.047G AND Gravity < 2.6G )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Not Minor",
+      "&nbsp;&nbsp;&#x25CF; In: Lindigoticum Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_SeedEFGH_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; ( Gravity >= 0.039G AND Gravity < 3.9G )",
+      "&nbsp;&nbsp;&#x25CF; ( Planet Type: High metal content body AND Temperature: < 1000K )<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR ( Planet Type: Metal rich body AND Temperature: >= 1000K )",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; In: Puniceum Brain Trees area",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_Ground_Struct_Ice_Name": [
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.027G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 2G",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 273K",
+      "&nbsp;&nbsp;&#x25CF; Distance From Main Star: > 12000LS",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; System Contains: A Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: F Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: G Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: K Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: C Star",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Ammonia world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water world<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with ammonia based life<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Water giant"
+    ],
+    "Codex_Ent_Vents_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 4.5G",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 1000K",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Major",
+      "&nbsp;&nbsp;&#x25CF; System Contains: A Star",
+      "&nbsp;&nbsp;&#x25CF; System Contains: Earthlike body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: Gas giant with water based life"
+    ],
+    "Codex_Ent_Cone_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.0249G",
+      "&nbsp;&nbsp;&#x25CF; Gravity < 3.462G",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 440K",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Near: Nebula"
+    ],
+    "Codex_Ent_SphereEFGH_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.036G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: B Star"
+    ],
+    "Codex_Ent_SphereEFGH_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 164K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.036G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: A Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: B Star"
+    ],
+    "Codex_Ent_SphereEFGH_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.036G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: O Star"
+    ],
+    "Codex_Ent_SphereEFGH_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Metal rich body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 191K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.036G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: B Star"
+    ],
+    "Codex_Ent_Sphere_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.042G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: B Star"
+    ],
+    "Codex_Ent_SphereABCD_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.042G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: A Star<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR System Contains: B Star"
+    ],
+    "Codex_Ent_SphereABCD_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Icy body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.042G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: O Star"
+    ],
+    "Codex_Ent_SphereABCD_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.042G",
+      "&nbsp;&nbsp;&#x25CF; System Contains: B Star"
+    ],
+    "Codex_Ent_Tube_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: Rocky ice body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Rocky<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Silicate Based",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeEFGH_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeEFGH_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Major",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.036G"
+    ],
+    "Codex_Ent_TubeEFGH_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeEFGH_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Major",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeABCD_01_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Any",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeABCD_02_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Rocky<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Volcanism: Silicate Based",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.044G"
+    ],
+    "Codex_Ent_TubeABCD_03_Name": [
+      "&nbsp;&nbsp;&#x25CF; In: Sinuous Tubers area<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR In: Region 2",
+      "&nbsp;&nbsp;&#x25CF; Temperature: >= 200K",
+      "&nbsp;&nbsp;&#x25CF; Temperature: < 500K",
+      "&nbsp;&nbsp;&#x25CF; Planet Type: Rocky body<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x25CB; OR Planet Type: High metal content body",
+      "&nbsp;&nbsp;&#x25CF; Volcanism: Major",
+      "&nbsp;&nbsp;&#x25CF; Gravity >= 0.04G"
+    ]
+  },
+  "source_file_sha256": "3b9d4100cc1aaa4a9604eac58b729ba3e9239e6aec944a3523f9fb40a8d69975",
+  "catalogue_sha256": "2ecd356864d50bde924b8f2d53712607b3b6e3bd32adc880de68a2c8af8adaf7",
+  "standalone_source_sha256": "b1dfa46a65d3450727b56829081a5e21a7db42ba6e043fe4d22f1d6c7c1bf486"
+}

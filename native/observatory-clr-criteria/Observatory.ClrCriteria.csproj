@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RuntimeFrameworkVersion>8.0.33</RuntimeFrameworkVersion>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>observatory-clr-criteria</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+    <NoWarn>$(NoWarn);8632</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../../ObservatoryExplorer/CustomCriteriaManager.cs" Link="Original/CustomCriteriaManager.cs" />
+    <Compile Include="../../ObservatoryExplorer/CriteriaLoadException.cs" Link="Original/CriteriaLoadException.cs" />
+    <Compile Include="../../ObservatoryExplorer/ExplorerSettings.cs" Link="Original/ExplorerSettings.cs" />
+    <Compile Include="../../ObservatoryCore/Utils/JournalReader.cs" Link="Original/JournalReader.cs" />
+    <PackageReference Include="NLua" Version="1.7.3" />
+    <ProjectReference Include="framework/ObservatoryFramework.csproj" />
+    <RuntimeHostConfigurationOption Include="System.Reflection.Metadata.MetadataUpdater.IsSupported" Value="false" />
+  </ItemGroup>
+</Project>

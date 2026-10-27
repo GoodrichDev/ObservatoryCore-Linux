@@ -1,0 +1,450 @@
+{
+  "Settings": {
+    "BorderWidth": 1,
+    "RowSpacing": 0
+  },
+  "Colors": {
+    "DefaultBackground": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "DefaultText": {
+      "R": 255,
+      "G": 255,
+      "B": 255
+    },
+    "Row1Background": {
+      "R": 48,
+      "G": 48,
+      "B": 48
+    },
+    "Row2Background": {
+      "R": 16,
+      "G": 16,
+      "B": 16
+    },
+    "TitleBackground": {
+      "R": 234,
+      "G": 250,
+      "B": 255
+    },
+    "TitleText": {
+      "R": 48,
+      "G": 48,
+      "B": 48
+    },
+    "HeaderBackground": {
+      "R": 19,
+      "G": 51,
+      "B": 66
+    },
+    "HeaderText": {
+      "R": 202,
+      "G": 234,
+      "B": 239
+    },
+    "LinkText": {
+      "R": 124,
+      "G": 252,
+      "B": 0
+    },
+    "NotPresentText": {
+      "R": 127,
+      "G": 127,
+      "B": 127
+    },
+    "ImportantText": {
+      "R": 255,
+      "G": 63,
+      "B": 63
+    },
+    "Border": {
+      "R": 63,
+      "G": 63,
+      "B": 63
+    },
+    "ButtonBar": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "ButtonFace": {
+      "R": 127,
+      "G": 127,
+      "B": 127
+    },
+    "Button": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "ButtonFaceHighlight": {
+      "R": 160,
+      "G": 160,
+      "B": 160
+    }
+  },
+  "Symbols": {
+    "PersonalCodexEntry": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDE3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTAwIDEwMCkiIHg9IjUwIiB5PSI1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMkJENPTE9SJCQiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSI4Ii8+Cjwvc3ZnPg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 0,
+        "G": 120,
+        "B": 215
+      },
+      "Description": "Possible New Personal Codex Entry",
+      "TextOverride": "\u2666",
+      "TextOverrideColor": {
+        "R": 31,
+        "G": 135,
+        "B": 219
+      }
+    },
+    "Mark": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01OS4wMzQ5LDYwaC00Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDEyLDU5LjAzNDl2LTQ2LjA3QS45Njc5Ljk2NzksMCwwLDEsMTIuOTY1MSwxMmg0Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDYwLDEyLjk2NTF2NDYuMDdBLjk2NzkuOTY3OSwwLDAsMSw1OS4wMzQ5LDYwWiIgZmlsbD0iIzAwNzhENyIvPgo8cGF0aCBkPSJNNTkuMDM0OSw2MGgtNDYuMDdBLjk2NzkuOTY3OSwwLDAsMSwxMiw1OS4wMzQ5di00Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDEyLjk2NTEsMTJoNDYuMDdBLjk2NzkuOTY3OSwwLDAsMSw2MCwxMi45NjUxdjQ2LjA3QS45Njc5Ljk2NzksMCwwLDEsNTkuMDM0OSw2MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "Possible Marked Species",
+      "TextOverride": "\u25fc",
+      "TextOverrideColor": {
+        "R": 31,
+        "G": 135,
+        "B": 219
+      }
+    },
+    "HighValue": {
+      "Content": "\\1F4B0",
+      "ContentType": "Text",
+      "Description": "High Value"
+    },
+    "Material": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyAgdmlld0JveD0iLTIwMCAtMjAwIDkyMS4xMyA3ODgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnPjxwYXRoIGZpbGw9IiMkJENPTE9SJCQiIGQ9Im01MTguNDUgNDAgMTU1Ljc1IDI1NC0xNTUuNzUgMjU0aC0zMTUuNzhsLTE1NS43Ni0yNTQgMTU1Ljc2LTI1NGgzMTUuNzhtMjIuMzk0LTQwaC0zNjAuNTZsLTE4MC4yOCAyOTQgMTgwLjI4IDI5NGgzNjAuNTZsMTgwLjI4LTI5NHptLTE4MC41MSAyMTIuNDIgMTM3LjIyIDEzNi41MiA5Ny4yMTItMjguMjU4LTEwNy42MS0xMTQuNjN6bTgxLjgxMSA4MS4zNTctMTM2LjUyIDEzNy4yMiAyOC4yNTkgOTcuMjEyIDExNC42My0xMDcuNjF6bS04MS4zNTcgODEuODEtMTM3LjIyLTEzNi41Mi05Ny4yMTMgMjguMjU5IDEwNy42MSAxMTQuNjN6bS04MS44MS04MS4zNTYgMTM2LjUyLTEzNy4yMi0yOC4yNTktOTcuMjEzLTExNC42MyAxMDcuNjF6Ii8+CjwvZz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 255,
+        "G": 111,
+        "B": 0
+      },
+      "Description": "Variant Colour determined by Surface Material"
+    },
+    "StarType": {
+      "Content": "PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9Ii0yMDAgLTIwMCAxMjAwIDEyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGw9IiMkJENPTE9SJCQiIGQ9Im01MDAuMDUgNS45NzA3LTE3LjUyMyA1My4yMjEtMTA1IDMxOC45LTM3NC4zMSAxMjIuMDQgMzc0LjMxIDEyMi4wNCAxMjIuNTIgMzcyLjEyIDEyMi41Mi0zNzIuMTIgMzc0LjMxLTEyMi4wNC0zNzQuMzEtMTIyLjA0em0yLjA5NzcgMTg1Ljk5IDc3LjM5OCAyMzUuMDcgMjM1Ljk1IDc2LjkyNi0yMzUuOTUgNzYuOTI0LTc3LjM5OCAyMzUuMDctNzcuNC0yMzUuMDctMjM1Ljk1LTc2LjkyNCAyMzUuOTUtNzYuOTI2eiIgc3Ryb2tlLXdpZHRoPSIxLjAwNDciLz4KPC9zdmc+",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 255,
+        "G": 111,
+        "B": 0
+      },
+      "Description": "Variant Colour determined by Star Class"
+    },
+    "Unknown": {
+      "Content": "",
+      "ContentType": "Text",
+      "Description": "Unknown"
+    },
+    "NotPredicted": {
+      "Content": "PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjIuODggMTExLjU0Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NmMWYyNTt9LmNscy0ye2ZpbGw6I2ZlYzkwMTtmaWxsLXJ1bGU6ZXZlbm9kZDt9LmNscy0ze2ZpbGw6IzAxMDEwMTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPndhcm5pbmc8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIuMzUsODQuNDIsNDUuMjgsMTAuMmwuMTctLjI3aDBBMjMsMjMsMCwwLDEsNTIuNSwyLjY5LDE3LDE3LDAsMCwxLDYxLjU3LDBhMTYuNywxNi43LDAsMCwxLDkuMTEsMi42OSwyMi43OSwyMi43OSwwLDAsMSw3LDcuMjZxLjE5LjMyLjM2LjYzbDQyLjIzLDczLjM0LjI0LjQ0aDBhMjIuNDgsMjIuNDgsMCwwLDEsMi4zNywxMC4xOSwxNy42MywxNy42MywwLDAsMS0yLjE3LDguMzUsMTUuOTQsMTUuOTQsMCwwLDEtNi45Myw2LjZjLS4xOS4xLS4zOS4xOC0uNTguMjZhMjEuMTksMjEuMTksMCwwLDEtOS4xMSwxLjc1djBIMTcuNjFjLS4yMiwwLS40NCwwLS42NSwwYTE4LjA3LDE4LjA3LDAsMCwxLTYuMi0xLjE1QTE2LjQyLDE2LjQyLDAsMCwxLDMsMTA0LjI0YTE3LjUzLDE3LjUzLDAsMCwxLTMtOS41NywyMywyMywwLDAsMSwxLjU3LTguNzQsNy42Niw3LjY2LDAsMCwxLC43Ny0xLjUxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTksODguNzUsNTIuMTIsMTQuMTZjNS4yNC04LjI1LDEzLjU0LTguNDYsMTguODcsMGw0Mi40Myw3My42OWMzLjM5LDYuODEsMS43MSwxNi05LjMzLDE1Ljc3SDE3LjYxQzEwLjM1LDEwMy44LDUuNjcsOTcuNDMsOSw4OC43NVoiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik01Ny41Nyw4My43OEE1LjUzLDUuNTMsMCwwLDEsNjEsODIuMmE1LjYsNS42LDAsMCwxLDIuNC4zNiw1LjcsNS43LDAsMCwxLDIsMS4zLDUuNTYsNS41NiwwLDAsMSwxLjU0LDUsNi4yMyw2LjIzLDAsMCwxLS40MiwxLjM1LDUuNTcsNS41NywwLDAsMS01LjIyLDMuMjYsNS43Miw1LjcyLDAsMCwxLTIuMjctLjUzQTUuNTEsNS41MSwwLDAsMSw1Ni4yOCw5MGE1LjE4LDUuMTgsMCwwLDEtLjM2LTEuMjcsNS44Myw1LjgzLDAsMCwxLS4wNi0xLjMxaDBhNi41Myw2LjUzLDAsMCwxLC41Ny0yLDQuNyw0LjcsMCwwLDEsMS4xNC0xLjU2Wm04LjE1LTEwLjI0Yy0uMTksNC43OS04LjMxLDQuOC04LjQ5LDAtLjgyLTguMjEtMi45Mi0yOS4zNC0yLjg2LTM3LjA1LjA3LTIuMzgsMi0zLjc5LDQuNTYtNC4zM2ExMi44MywxMi44MywwLDAsMSw1LDBjMi42MS41Niw0LjY1LDIsNC42NSw0LjQ0di4yNEw2NS43Miw3My41NFoiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "Description": "Biological was not predicted"
+    },
+    "Tick": {
+      "Content": "PHN2ZyBpZD0iZW1vamkiIHZpZXdCb3g9IjAgMCA3MiA3MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBpZD0iY29sb3IiPgogICAgPHBhdGggZmlsbD0iI2IxRkYzMyIgZD0ibTYxLjUgMjMuMy04LjAxMy04LjAxMy0yNS43MSAyNS43MS05LjI2LTkuMjYtOC4wMTMgOC4wMTMgMTcuNDIgMTcuNDR6Ii8+CiAgPC9nPgogIDxnIGlkPSJsaW5lIj4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTEwLjUgMzkuNzYgMTcuNDIgMTcuNDQgMzMuNTgtMzMuODktOC4wMTMtOC4wMTMtMjUuNzEgMjUuNzEtOS4yNi05LjI2eiIvPgogIDwvZz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "Species is confirmed present"
+    },
+    "Cross": {
+      "Content": "\\00274C",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 0,
+        "B": 0
+      },
+      "Description": "Species is not present"
+    },
+    "Aborted": {
+      "Content": "\\0025CB\\0025CB\\0025CB",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 0,
+        "B": 0
+      },
+      "Description": "Sample collection aborted"
+    },
+    "Likely": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTUwIDExNS40IDIyMi44OCI+PHBhdGggZmlsbD0iIyQkQ09MT1IkJCIgZD0iTTI0Ljk0LDY3Ljg4QTE0LjY2LDE0LjY2LDAsMCwxLDQuMzgsNDdMNDcuODMsNC4yMWExNC42NiwxNC42NiwwLDAsMSwyMC41NiwwTDExMSw0Ni4xNUExNC42NiwxNC42NiwwLDAsMSw5MC40Niw2Ny4wNmwtMTgtMTcuNjktLjI5LDU5LjE3Yy0uMSwxOS4yOC0yOS40MiwxOS0yOS4zMy0uMjVMNDMuMTQsNTAsMjQuOTQsNjcuODhaIi8+PC9zdmc+",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 0,
+        "G": 255,
+        "B": 0
+      },
+      "Description": "Variant is likely",
+      "TextOverride": "\u00e9",
+      "TextOverrideFont": "WingDings",
+      "TextOverrideColor": {
+        "R": 0,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "Maybe": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBpbWFnZS1yZW5kZXJpbmc9Im9wdGltaXplUXVhbGl0eSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHZpZXdCb3g9IjAgLTI1NiA1MTIgMTAyNCI+PHBhdGggZmlsbD0iIyQkQ09MT1IkJCIgZD0iTTExNi4wNTcgMGgyNzkuODg3QzQ1OS43NzUgMCA1MTIgNTIuMjI1IDUxMiAxMTYuMDU2djI3OS44ODdDNTEyIDQ1OS43NzQgNDU5Ljc3NSA1MTIgMzk1Ljk0NCA1MTJIMTE2LjA1N0M1Mi4yMjYgNTEyIDAgNDU5Ljc3NCAwIDM5NS45NDNWMTE2LjA1NkMwIDUyLjIyNSA1Mi4yMjYgMCAxMTYuMDU3IDB6Ii8+PC9zdmc+",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      },
+      "Description": "Variant is possible",
+      "TextOverride": "n",
+      "TextOverrideFont": "WingDings",
+      "TextOverrideColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "Unlikely": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTUwIDExNS40IDIyMi44OCI+PHBhdGggZmlsbD0iIyQkQ09MT1IkJCIgZD0iTTI0Ljk0LDU1QTE0LjY2LDE0LjY2LDAsMCwwLDQuMzgsNzUuOTFsNDMuNDUsNDIuNzZhMTQuNjYsMTQuNjYsMCwwLDAsMjAuNTYsMEwxMTEsNzYuNzNBMTQuNjYsMTQuNjYsMCwwLDAsOTAuNDYsNTUuODJsLTE4LDE3LjY5LS4yOS01OS4xN2MtLjEtMTkuMjgtMjkuNDItMTktMjkuMzMuMjRsLjI5LDU4LjM0TDI0Ljk0LDU1WiIvPjwvc3ZnPg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 255,
+        "G": 0,
+        "B": 0
+      },
+      "Description": "Variant is extremely unlikely",
+      "TextOverride": "\u00ea",
+      "TextOverrideFont": "WingDings",
+      "TextOverrideColor": {
+        "R": 255,
+        "G": 0,
+        "B": 0
+      }
+    },
+    "PossibleCodexEntry": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDE3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTAwIDEwMCkiIHg9IjUwIiB5PSI1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMkJENPTE9SJCQiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSI4Ii8+Cjwvc3ZnPg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 255,
+        "G": 111,
+        "B": 0
+      },
+      "Description": "Possible New Galactic Codex Entry",
+      "TextOverride": "\u2666",
+      "TextOverrideColor": {
+        "R": 246,
+        "G": 117,
+        "B": 42
+      }
+    },
+    "PossibleCodexEntryNeverSeen": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDE3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTAwIDEwMCkiIHg9IjUwIiB5PSI1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMkJENPTE9SJCQiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSI4Ii8+Cjwvc3ZnPg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 200,
+        "G": 20,
+        "B": 200
+      },
+      "Description": "Possible New Galactic Codex Entry (never seen before in any region)",
+      "TextOverride": "\u2666",
+      "TextOverrideColor": {
+        "R": 200,
+        "G": 20,
+        "B": 200
+      }
+    },
+    "BiologicalLogged": {
+      "Content": "\\0025CF\\0025CB\\0025CB",
+      "ContentType": "Text",
+      "Description": "1 out of 3 samples collected"
+    },
+    "BiologicalSampled": {
+      "Content": "\\0025CF\\0025CF\\0025CB",
+      "ContentType": "Text",
+      "Description": "2 out of 3 samples collected"
+    },
+    "BiologicalComplete": {
+      "Content": "\\0025CF\\0025CF\\0025CF",
+      "ContentType": "Text",
+      "Description": "Sample collection complete"
+    },
+    "ColourIsMissing": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTIyLjg4IDEyMi44OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIyLjg4IDEyMi44OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO308L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGZpbGw9IiMkJENPTE9SJCQiIGQ9Ik0xMjIuODgsNjEuNDRDMTIyLjg4LDI3LjUxLDk1LjM3LDAsNjEuNDQsMEMyNy41MSwwLDAsMjcuNTEsMCw2MS40NGMwLDMzLjkzLDI3LjUxLDYxLjQ0LDYxLjQ0LDYxLjQ0IEM5NS4zNywxMjIuODgsMTIyLjg4LDk1LjM3LDEyMi44OCw2MS40NEwxMjIuODgsNjEuNDR6IE02OC43OSw3NC41OEg1MS4zdi0xLjc1YzAtMi45NywwLjMyLTUuMzksMS03LjI1IGMwLjY4LTEuODcsMS42OC0zLjU1LDMuMDEtNS4xYzEuMzQtMS41NCw0LjM1LTQuMjMsOS4wMS04LjExYzIuNDgtMi4wMywzLjczLTMuODgsMy43My01LjU2YzAtMS43MS0wLjUxLTMuMDEtMS41LTMuOTUgYy0xLTAuOTMtMi41MS0xLjQtNC41NC0xLjRjLTIuMTksMC0zLjk4LDAuNzMtNS40LDIuMTZjLTEuNDMsMS40NC0yLjM0LDMuOTctMi43NCw3LjU2bC0xNy44OC0yLjIyYzAuNjEtNi41NywzLTExLjg2LDcuMTUtMTUuODUgYzQuMTctNC4wMiwxMC41NS02LjAxLDE5LjE0LTYuMDFjNi43LDAsMTIuMSwxLjQsMTYuMjEsNC4xOWM1LjYsMy43OCw4LjM4LDguODIsOC4zOCwxNS4xYzAsMi42Mi0wLjczLDUuMTQtMi4xNiw3LjU2IGMtMS40NCwyLjQ0LTQuMzksNS4zOS04Ljg1LDguODhjLTMuMDksMi40OC01LjA1LDQuNDQtNS44Niw1LjkzQzY5LjE5LDcwLjI0LDY4Ljc5LDcyLjE5LDY4Ljc5LDc0LjU4TDY4Ljc5LDc0LjU4eiBNNTAuNjgsNzkuMjUgaDE4Ljc2djE2LjUzSDUwLjY4Vjc5LjI1TDUwLjY4LDc5LjI1eiIvPjwvZz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 175,
+        "G": 175,
+        "B": 0
+      },
+      "Description": "No Composition Scan"
+    },
+    "Canonn": {
+      "Content": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHPSURBVDhPddNLiI1hGAfw75zUoFAuSRijibKRJslgochGLCxkYUXkVhYymsglJIxSFmRjb6GUlFssiGQWVsptyiUWKMSwcfz+Z843zRzjqd953vd7r9/7fqdS/CdqB4rl0vaBWnGxcqy40ygPi2ojDwuDp0pbyATb2OTZNPmfqO9A4yRpEWN4ySpeW/WKnPY10gJu0ko/j7R/qmicoXKSh/xiFtn+an6wlPXMJH3eM45l7B3lJx1um+2SnNWmSBOZz2aWcFb7Lnkw9PstdeYM+piTh43IFrODtRxhJe0GHGeCchlz6csrZJLz5KR71bP1DuWj8mB4flDKZDncyWxkR1XHPwon2KdTTnosr2iOF9wiE3dx2NhaeY2ZpIUe5lGjOXJjz9jNT0ZTVK2ahm4yc/nOQ8+kjHb6rfpBzkLdef3soINvGp7wXDl33qKxh1baOOXZBj5S6NcrfWFhJphNBtZD41f2K+aDyjsf4ir3eEMZOZO23MJ0hdPc5zupL+Ydl3lADvYG13nLeDrpKj/lXEsG5VPOKjmHp3ZyTU77Oinncpd8kTnEx9o/j/hvNCDXeYadpM859hhQP4OhMeIECZOskLYO1IoLBmf1piiKv0XRg0cC+ZZuAAAAAElFTkSuQmCC",
+      "ContentType": "Base64PNG",
+      "Description": "Species seen in Canonn database"
+    },
+    "Horizons": {
+      "Content": "iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAYAAAD0xERiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhP3ZKxa1NRFMbPbd+LjVSSQFDTTIVCEEG0GBBqEYcacHVpt/4XHUopZKuTKCi46NCpLQhOOghdnKSUdHBxkSIKQptQ2mBfkvf1d8OjQ8wTHPWD753v3nPO986979m/jY50DU4ky1SMJPE3nEoPJI16zaMGb3rdlYon0h2vB5FqFppVZLacLKuw4gUNT7JmF7z+I1pSjuMUvO5JJSZrxtI88RPxJayjG/1iwPSXf0rDjdscgYbn8ClmN2h8D/EXKfEuidwquSrxFXFlX+IQKaBgnMIN+pA69AYD+AEjaupJSzoYI4PLJA3b/dYhwOgZH6IQDUzlkmgUlFksIu/D6Z6sEPX4erGflosnGXD7GUjsUvMd7pB6x2I941z73Oz1F2V+9WxmbMQeXgrsXiRzrY59bcfW7MR2EuCTDayYC6ycD+0KL9mJYtsqXbQPsyXX9B5uaVdF4iN4O5Z9O47t44umNWzODkgz1xC8UX5hwq5fDe1u6GyKiT6zu+nNHiP24Nu1W+7I1/4N6Oe3sxqc7W/87zA7AyFIBshlbnG/AAAAAElFTkSuQmCC",
+      "ContentType": "Base64PNG",
+      "Description": "Species is a Horizons biological (no variants)"
+    },
+    "HMC": {
+      "Content": "HMC",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 217,
+        "G": 185,
+        "B": 155
+      },
+      "Description": "High Metal Content World",
+      "IsLabel": true
+    },
+    "RB": {
+      "Content": "ROCKY",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 168,
+        "G": 168,
+        "B": 168
+      },
+      "Description": "Rocky Body",
+      "IsLabel": true
+    },
+    "IB": {
+      "Content": "ICY",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 168,
+        "G": 255,
+        "B": 255
+      },
+      "Description": "Icy Body",
+      "IsLabel": true
+    },
+    "RIB": {
+      "Content": "RIB",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 168
+      },
+      "Description": "Rocky Icy Body",
+      "IsLabel": true
+    },
+    "MR": {
+      "Content": "MR",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 96,
+        "G": 96,
+        "B": 96
+      },
+      "Description": "Metal-Rich World",
+      "IsLabel": true
+    },
+    "CurrentBody": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0xOS41ODE2LDU1LjYwNjJjLjQ4NDguMTc4MiwxLjAzMDMuMjk3LDEuNTc1OC4yOTcuODQ4NSwwLDEuNjk3LS4yOTcsMi40MjQyLS43NzIybDMwLTE1Ljk3OTMuMzAzLS4yOTdjLjc4NzktLjc3MjIsMS4yMTIxLTEuNzIyNywxLjIxMjEtMi43OTE5cy0uNDI0Mi0yLjA3OTEtMS4yMTIxLTIuNzkxOWwtLjMwMy0uMjk3LTMwLTE2LjA5ODFjLTEuMDkwOS0uODMxNi0yLjY2NjctMS4wMDk4LTQtLjQ3NTItMS41MTUyLjU5NC0yLjQ4NDgsMi4wNzkxLTIuNDg0OCwzLjY4M3YzMS44Mzk3YzAsMS42MDM5Ljk2OTYsMy4wODg5LDIuNDg0OCwzLjY4MjlaIiBmaWxsPSJub25lIiBzdHJva2U9IiMkJENPTE9SJCQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTAiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 119,
+        "G": 204,
+        "B": 85
+      },
+      "Description": "Current Body"
+    },
+    "BioCount": {
+      "Content": "",
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "Description": "Number of unique genus on body",
+      "IsLabel": true
+    },
+    "BioCountMismatch": {
+      "Content": "",
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 32,
+        "B": 32
+      },
+      "Description": "Too few genus predicted",
+      "IsLabel": true
+    },
+    "BioCountAutoscan": {
+      "Content": "autoscan",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 32,
+        "B": 32
+      },
+      "Description": "Body autoscanned, bio count missing",
+      "IsLabel": true
+    },
+    "OptionOn": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yIDVjMC0xLjY1NjggMS4zNDMyLTMgMy0zaDIyYzEuNjU2OSAwIDMgMS4zNDMyIDMgM3YyMmMwIDEuNjU2OS0xLjM0MzEgMy0zIDNoLTIyYy0xLjY1NjggMC0zLTEuMzQzMS0zLTN2LTIyeiIgZmlsbD0iI0ZGRkZGRiIgLz4KPHBhdGggZD0ibTUgN2MwLTEuMTA0NiAwLjg5NTQzLTIgMi0yaDE4YzEuMTA0NiAwIDIgMC44OTU0MyAyIDJ2MThjMCAxLjEwNDYtMC44OTU0IDItMiAyaC0xOGMtMS4xMDQ2IDAtMi0wLjg5NTQtMi0ydi0xOHoiIGZpbGw9IiMkJENPTE9SJCQiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "",
+      "ContentColorKey": "HeaderText"
+    },
+    "OptionOff": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yIDVjMC0xLjY1NjggMS4zNDMyLTMgMy0zaDIyYzEuNjU2OSAwIDMgMS4zNDMyIDMgM3YyMmMwIDEuNjU2OS0xLjM0MzEgMy0zIDNoLTIyYy0xLjY1NjggMC0zLTEuMzQzMS0zLTN2LTIyeiIgZmlsbD0iI0ZGRkZGRiIgLz4KPHBhdGggZD0ibTUgN2MwLTEuMTA0NiAwLjg5NTQzLTIgMi0yaDE4YzEuMTA0NiAwIDIgMC44OTU0MyAyIDJ2MThjMCAxLjEwNDYtMC44OTU0IDItMiAyaC0xOGMtMS4xMDQ2IDAtMi0wLjg5NTQtMi0ydi0xOHoiIGZpbGw9IiMkJENPTE9SJCQiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "",
+      "ContentColorKey": "DefaultBackground"
+    },
+    "KoFi": {
+      "Content": "PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTA0LjM2IDUwNC4zNiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMGI5ZmU7fS5jbHMtMntmaWxsOiNmZmY7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDoxLjE0cHg7fS5jbHMtM3tmaWxsOiNmZjVlNWI7fS5jbHMtNHtmaWxsOnVybCgjbGluZWFyLWdyYWRpZW50KTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjE2My42IiB5MT0iMjMxOS4zOSIgeDI9IjIxNi43MiIgeTI9IjI0ODIuNDciIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC4yNiAtMjIxOS42OCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZjRlYTMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZjVlNWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+a28tZmk8L3RpdGxlPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iMjUyLjE4IiBjeT0iMjUyLjE4IiByPSIyNTIuMTgiLz48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEtMiI+PGcgaWQ9IkxheWVyXzEtMyIgZGF0YS1uYW1lPSJMYXllciAxLTMiPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTM4MC4xOSwyNzYuNUExOTYuMjYsMTk2LjI2LDAsMCwxLDM1MiwyNzcuNzhWMTg1LjYyaDE5LjJhMzguMzcsMzguMzcsMCwwLDEsMzIsMTUuMzYsNDUuNjUsNDUuNjUsMCwwLDEsMTAuMjQsMjkuNDRBNDIuODcsNDIuODcsMCwwLDEsMzgwLjE5LDI3Ni41Wm03OS4zNy02NGE4My44Niw4My44NiwwLDAsMC0zNy4xMy01Ny42MUE5OC4yMyw5OC4yMywwLDAsMCwzNjYuMTEsMTM3SDg0LjQ5YTE2LjM3LDE2LjM3LDAsMCwwLTE0LjA4LDE1LjM2djMuODRzLTEuMjgsMTI0LjE3LDEuMjgsMTkyYTQyLjExLDQyLjExLDAsMCwwLDQyLjI0LDM5LjY4czEyOS4yOSwwLDE5MC43My0xLjI4aDljMzUuODQtOSwzOC40LTQyLjI0LDM4LjQtNjAuMTZDNDIyLjQzLDMyOSw0NzIuMzYsMjc5LjA2LDQ1OS41NiwyMTIuNVoiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0yMDguNjYsMzM0LjExYzMuODQsMS4yOCw1LjEyLDAsNS4xMiwwczQ0LjgtNDEsNjUuMjgtNjUuMjljMTcuOTItMjEuNzYsMTkuMi01Ni4zMi0xMS41Mi03MC40cy01Ni4zMiwxNS4zNi01Ni4zMiwxNS4zNmE1MC40NCw1MC40NCwwLDAsMC03MC40MS03LjY4bC0xLjI4LDEuMjhjLTE1LjM2LDE2LjY0LTEwLjI0LDQ0LjgsMS4yOCw2MC4xNmE3NzEuODcsNzcxLjg3LDAsMCwwLDY1LjI5LDY0WiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTIxMS4yMiwzMzUuMzlhNC43NSw0Ljc1LDAsMCwwLDMuODQtMS4yOHM0NC44LTQxLDY1LjI4LTY1LjI5YzE3LjkyLTIxLjc2LDE5LjItNTYuMzItMTEuNTItNzAuNHMtNTYuMzIsMTUuMzYtNTYuMzIsMTUuMzZhNTAuNDQsNTAuNDQsMCwwLDAtNzAuNDEtNy42OGwtMS4yOCwxLjI4Yy0xNS4zNiwxNi42NC0xMC4yNCw0NC44LDEuMjgsNjAuMTZhNzk5LjU4LDc5OS41OCwwLDAsMCw2Ni41Nyw2NS4yOUMyMDguNjYsMzM1LjM5LDIwOS45NCwzMzUuMzksMjExLjIyLDMzNS4zOVoiLz48L2c+PC9nPjwvc3ZnPg==",
+      "ContentType": "Base64SVG",
+      "Description": "Ko-Fi"
+    }
+  }
+}

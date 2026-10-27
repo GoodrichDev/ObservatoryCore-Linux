@@ -1,0 +1,20 @@
+[
+  {
+    "plugin": "ObservatoryExplorer",
+    "assembly_sha256": "bd8110aa7f57695ad2a68cb23f75250ee56570dd75638750bb78fbf328d050f4",
+    "source_line": 92,
+    "load_method": "public void Load(IObservatoryCore observatoryCore)\n\t{\n\t\t//IL_0024: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_002e: Expected Obj, but got Unknown\n\t\texplorer = new Explorer(this, observatoryCore);\n\t\tresultsGrid.Add(new ExplorerUIResults());\n\t\tpluginUI = new PluginUI(resultsGrid);\n\t\tCore = observatoryCore;\n\t}"
+  },
+  {
+    "plugin": "ObservatoryBotanist",
+    "assembly_sha256": "5681266721b707fb6a603df6ebefbda8850bc229eb8a577cc9119aa26abbc86a",
+    "source_line": 348,
+    "load_method": "public void Load(IObservatoryCore observatoryCore)\n\t{\n\t\t//IL_0024: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_002e: Expected Obj, but got Unknown\n\t\tGridCollection = new ObservableCollection<object>();\n\t\tBotanistGrid item = new BotanistGrid();\n\t\tGridCollection.Add(item);\n\t\tpluginUI = new PluginUI(GridCollection);\n\t\tBioPlanets = new Dictionary<BodyAddress, BioPlanetDetail>();\n\t\tCore = observatoryCore;\n\t}"
+  },
+  {
+    "plugin": "ObservatoryCommunicator",
+    "assembly_sha256": "819f29486c5cd2622dde162d99496d71501bc96e34c91d2a39dd1f32b74af095",
+    "source_line": 143,
+    "load_method": "public void Load(IObservatoryCore observatoryCore)\n\t{\n\t\t//IL_002f: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_0039: Expected Obj, but got Unknown\n\t\t//IL_0061: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_006b: Expected Obj, but got Unknown\n\t\t//IL_0093: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_009d: Expected Obj, but got Unknown\n\t\t//IL_00c5: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_00cf: Expected Obj, but got Unknown\n\t\t//IL_00f7: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_0101: Expected Obj, but got Unknown\n\t\t//IL_0129: Unknown result type (might be due to invalid IL or missing references)\n\t\t//IL_0133: Expected Obj, but got Unknown\n\t\t_core = observatoryCore;\n\t\t_ui.Actions.Add(new PluginAction(\"Local\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"local\", chk);\n\t\t}), (ActionType)1, _settings.ShowLocal));\n\t\t_ui.Actions.Add(new PluginAction(\"System\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"starsystem\", chk);\n\t\t}), (ActionType)1, _settings.ShowSystem));\n\t\t_ui.Actions.Add(new PluginAction(\"Private\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"private\", chk);\n\t\t}), (ActionType)1, _settings.ShowPrivate));\n\t\t_ui.Actions.Add(new PluginAction(\"Wing\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"wing\", chk);\n\t\t}), (ActionType)1, _settings.ShowWing));\n\t\t_ui.Actions.Add(new PluginAction(\"Squadron\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"squadron\", chk);\n\t\t}), (ActionType)1, _settings.ShowSquadron));\n\t\t_ui.Actions.Add(new PluginAction(\"NPC\", (Action<bool>)((bool chk) =>\n\t\t{\n\t\t\tCheckBoxChanged(\"npc\", chk);\n\t\t}), (ActionType)1, _settings.ShowNPC));\n\t}"
+  }
+]

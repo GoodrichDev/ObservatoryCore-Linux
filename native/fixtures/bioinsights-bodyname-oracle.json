@@ -1,0 +1,46 @@
+{
+  "source": "EDJP.Observatory.Utils.NotificationBodyName4arg BioInsights 1.3.444.1052",
+  "method": "Exact extracted pure method and primitive wrappers, isTTS=false/includeSSMLtag=false; SSMLify inactive helperstub only. No original DLLloaded.",
+  "cases": [
+    {
+      "body": "Test",
+      "system": "Test",
+      "result": "Main Star"
+    },
+    {
+      "body": "Test A",
+      "system": "Test",
+      "result": "Body A"
+    },
+    {
+      "body": "Test A 1",
+      "system": "Test",
+      "result": "Body A 1"
+    },
+    {
+      "body": "Test 1",
+      "system": "Test",
+      "result": "Body 1"
+    },
+    {
+      "body": "Test A 1 a",
+      "system": "Test",
+      "result": "Body A 1 a"
+    },
+    {
+      "body": "Test A Belt Cluster 1",
+      "system": "Test",
+      "result": "Belt A Cluster 1"
+    },
+    {
+      "body": "Other 1",
+      "system": "Test",
+      "result": "Other 1"
+    },
+    {
+      "body": "Test 1 A Ring",
+      "system": "Test",
+      "result": "Ring 1 A"
+    }
+  ]
+}

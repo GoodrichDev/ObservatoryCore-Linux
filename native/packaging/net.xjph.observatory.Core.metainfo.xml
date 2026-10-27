@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>net.xjph.observatory.Core</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Observatory Core</name>
+  <summary>Elite Dangerous journal monitoring and exploration assistance</summary>
+  <description>
+    <p>A native Rust desktop application for monitoring Elite Dangerous journals on Linux. Explorer identifies interesting scans, Botanist tracks biological sampling, and Communicator displays sent and received messages.</p>
+    <p>Includes native BioInsights, Evaluator, Hecate and StellarOverlay workers, journal replay, persistent findings, CSV export and Lua extensions.</p>
+  </description>
+  <launchable type="desktop-id">observatory-core.desktop</launchable>
+  <url type="homepage">https://observatory.xjph.net/</url>
+  <content_rating type="oars-1.1"/>
+  <provides><binary>observatory-core</binary></provides>
+</component>

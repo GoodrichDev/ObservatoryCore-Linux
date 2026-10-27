@@ -1,0 +1,435 @@
+
+html, body {
+    overflow: auto;
+    font-family: verdana, sans-serif;
+    background-color: #$$DEFAULTBACKGROUND$$;
+    color: #$$DEFAULTTEXT$$;
+    cursor: default;
+    -ms-content-zooming: none;
+    scrollbar-face-color: #$$ROW2BACKGROUND$$;
+    scrollbar-shadow-color: #$$DEFAULTTEXT$$;
+    scrollbar-arrow-color: #$$DEFAULTTEXT$$;
+    scrollbar-track-color: #$$ROW1BACKGROUND$$;
+    overflow-x: hidden;
+}
+
+    
+img {
+    border: 0px;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+.border {
+    border: 1px solid #$$BORDER$$;
+}
+
+.bold {
+    font-weight: bold;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+
+table {
+    /*border-collapse: collapse;*/
+    /*border: 0px solid #FF0000;*/
+    border-collapse: separate;
+    border-spacing: 0px $$ROWSPACING$$px;
+    border: 0px solid #$$BORDER$$;
+}
+
+
+td {
+    /*font-family: Segoe UI Emoji, Wingdings; */
+    /*font-family: Century Gothic;*/
+    font-family: Segoe UI Emoji;
+    border: 0px solid #$$BORDER$$;
+    font-size: 15px;
+    cursor: default;
+}
+    td {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+    }
+
+
+th, tr, td {
+    white-space: nowrap;
+    vertical-align: central;
+}
+
+th {
+    white-space: nowrap;
+    background-color: #$$TITLEBACKGROUND$$;
+    color: #$$TITLETEXT$$;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    vertical-align: central;
+    font-family: Segoe UI Emoji;
+    cursor: default;
+    height: $$ROWHEIGHT$$px;
+}
+
+.padleft {
+    padding-left: 15px;
+}
+
+.indent {
+    width: 20px;
+    max-width: 20px;
+}
+
+
+.header {
+    background-color: #$$HEADERBACKGROUND$$;
+    color: #$$HEADERTEXT$$;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    height: $$ROWHEIGHT$$px;
+    font-family: Verdana, sans-serif;
+    /*
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    */
+}
+
+/* bugfix - leave here, don't adjust 1px to variable*/
+.headerfix {
+    border-right: 2px solid #$$HEADERBACKGROUND$$;
+}
+
+.roundleft {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.roundright {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+td.row1 {
+    background-color: #$$ROW1BACKGROUND$$;
+    height: $$ROWHEIGHT$$px;
+
+}
+
+td.row2 {
+    background-color: #$$ROW2BACKGROUND$$;
+    height: $$ROWHEIGHT$$px;
+}
+
+td.highlight {
+    background-color: #$$HIGHLIGHTBACKGROUND$$;
+}
+
+
+th.banner {
+    background-color: #$$HEADERBACKGROUND$$;
+    color: #$$HEADERTEXT$$;
+}
+
+
+span.visitorder {
+    font-family: 'Times New Roman', Times, serif;
+    color: #$$WORTHMAPPINGTEXT$$;
+}
+
+.px {
+    position: relative;
+    height: 1px;
+}
+/* overly complex input styling */
+.custom-checkbox {
+    position: relative;
+}
+    .custom-checkbox input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 15px;
+        width: 50px; /* Expand the checkbox so that it covers */
+        z-index: 1; /* the label and span, increase z-index to bring it over */
+        opacity: 0; /* the label and set opacity to 0 to hide it. */
+    }
+
+        .custom-checkbox input + label {
+            position: relative;
+            left: 0;
+            top: 0;
+            padding-left: 25px;
+            color: black;
+        }
+
+            .custom-checkbox input + label span {
+                position: absolute; /* a small box to display as checkbox */
+                left: 0;
+                top: 0;
+                height: 14px;
+                width: 14px;
+                border-radius: 2px;
+                border: 2px solid #$$DEFAULTTEXT$$;
+                background-color: #$$DEFAULTBACKGROUND$$;
+            }
+
+        .custom-checkbox input:checked + label { /* change label color when checked */
+            color: #$$WORTHMAPPINGTEXT$$;
+        }
+
+            .custom-checkbox input:checked + label span { /* change span box color when checked */
+                background-color: #$$WORTHMAPPINGTEXT$$;
+            }
+
+/* end of overly complex input styling */
+
+/**
+
+input[type='checkbox']:checked {
+    background-color: #$$WORTHMAPPINGTEXT$$;
+}
+
+input[type='checkbox'] {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 16px !important;
+    height: 16px !important;
+    appearance: none;
+    border-radius: 10%;
+    border: 0px solid gray;
+    box-shadow: none;
+    font-size: 1em;
+    background-color: darkgray;
+}
+    */
+
+/*
+.ICY, .RIB, .HMC, .MR, .ROCKY, .GG1, .GG2, .GG3, .GG4, .GG5, .GGWL, .GGAL, .WW, .STAR, .HRGG, .HGG, .ELW, .WG, .AW {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    width: 40px;
+    display: inline;
+    text-align: center;
+    font-size: 13px;
+    vertical-align: central;
+}
+    */
+
+/*
+span.HMC {
+    color: #000000;
+    background-color: #d9b99b;
+}*/
+/*
+span.AW {
+    color: #000000;
+    background-color: #dd7106;
+    font-weight: bold;
+}*/
+/*
+span.ICY {
+    color: #000000;
+    background-color: #A8FFFF;
+}
+
+span.RIB {
+    color: #000000;
+    background-color: #FFFFA8;
+}
+
+span.MR {
+    color: #ffffff;
+    background-color: #606060;
+}
+
+span.ROCKY {
+    color: #000000;
+    background-color: #A8A8A8;
+}
+
+span.GG1, span.GG2, span.GG3, span.GG4, span.GG5, span.GGWL, span.GGAL {
+    color: #FFFFFF;
+    background-color: #900090;
+}
+
+span.HRGG, span.HGG, span.WG {
+    color: #FFFFFF;
+    background-color: #009090;
+}
+
+span.WW {
+    color: #FFFFFF;
+    background-color: #0C76BD;
+}
+
+span.ELW {
+    color: #404040;
+    background-color: #30F030;
+    font-weight: bold;
+}
+
+span.STAR {
+    color: #000000;
+    background-color: #ffa708;
+    font-weight: bold;
+}*/
+
+
+/**
+span.WasDiscovered, span.WasMapped {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif color;
+    background-color: yellow;
+    color: black;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    display: inline;
+    text-align: center;
+}
+    */
+/**
+.FilterDefault, .FilterMapped, .FilterAll, .FilterDefaultSelected, .FilterMappedSelected, .FilterAllSelected {
+    font-family: Webdings;
+}
+.FilterDefault, .FilterMapped, .FilterAll {
+    color: darkgray;
+}
+.FilterDefaultSelected, .FilterMappedSelected, .FilterAllSelected {
+    color: deepskyblue;
+}
+    */
+
+a.filter:link, a.filter:visited {
+    text-decoration: none;
+}
+
+/*
+a.filter:hover {
+    background-color: #ffffff;
+    color: black;
+} */
+
+a.filter:hover {
+    /* background-color: #$$LINKTEXT$$; */
+    color: #$$DEFAULTBACKGROUND$$;
+}
+
+a.link:link, a.link:visited {
+    color: #$$LINKTEXT$$;
+    text-decoration: none;
+}
+
+a.link:hover {
+    background-color: #$$LINKTEXT$$;
+    color: #$$DEFAULTBACKGROUND$$;
+}
+/*
+span.NextBody {
+    font-family: Segoe UI Emoji;
+    color: #77cc55;
+}*/
+
+
+td.w50 {
+    min-width: 50px;
+}
+
+td.w30 {
+    min-width: 30px;
+}
+
+
+span.thanks {
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+span.h1thanks {
+    font-family: Verdana;
+    font-size: 24px;
+}
+/**
+a.ko:link, a.ko:visited {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+a.ko:hover {
+    background-color: deepskyblue;
+    color: black;
+}*/
+
+
+
+.webapp, .disconnected {
+    display: none;
+}
+
+.alert {
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.alert-danger {
+    background-color: #F56358;
+}
+
+.alert-success {
+    background-color: #2EB885;
+}
+
+.alert-warning {
+    background-color: #FFA92B;
+}
+
+.alert-info {
+    background-color: #46A7F5;
+}
+
+.alertbtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    transform: translate(0px, -3px);
+}
+
+    .alertbtn:hover {
+        color: black;
+    }
+

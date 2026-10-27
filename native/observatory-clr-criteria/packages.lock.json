@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net8.0": {
+      "NLua": {
+        "type": "Direct",
+        "requested": "[1.7.3, )",
+        "resolved": "1.7.3",
+        "contentHash": "9GdqLw+DpB8ISI6LQlKqFHcsFel8iPnoAE/As6ElmRtJ7lqbVEJ2vD8EkHDuEgW0T8FSKidn6/lH7Uok/XnGMQ==",
+        "dependencies": {
+          "KeraLua": "1.4.1"
+        }
+      },
+      "KeraLua": {
+        "type": "Transitive",
+        "resolved": "1.4.1",
+        "contentHash": "SHfGjaWED+nHxMWbIqAVN90bs5xLnOOojuQaSSzZqJAKXSzcDi94ikr/7GQxM1/4ny/tKnnGHSKkOQyZ65572Q=="
+      },
+      "observatoryframework": {
+        "type": "Project"
+      }
+    },
+    "net8.0/linux-x64": {
+      "KeraLua": {
+        "type": "Transitive",
+        "resolved": "1.4.1",
+        "contentHash": "SHfGjaWED+nHxMWbIqAVN90bs5xLnOOojuQaSSzZqJAKXSzcDi94ikr/7GQxM1/4ny/tKnnGHSKkOQyZ65572Q=="
+      }
+    }
+  }
+}

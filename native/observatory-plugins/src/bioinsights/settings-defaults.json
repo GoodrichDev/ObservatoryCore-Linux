@@ -1,0 +1,124 @@
+{
+  "ZoomLevel": 100,
+  "ThemeSettings": {
+    "ThemeIndex": 1,
+    "ThemeMode": 0,
+    "ThemeFullName": [
+      "Original",
+      "Elite Orange"
+    ],
+    "ThemeFileName": [
+      "theme.json",
+      "theme-orange.json"
+    ]
+  },
+  "PersonalCodexPossibleAny": true,
+  "PersonalCodexPossibleCurrent": false,
+  "Notifications": {
+    "PersonalCodex": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "Marked": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "HighValue": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "Distance": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "OnScanDetails": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "NewGalactic": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "Samples": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "AtmosphericBody": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "AtmosphericBodyWithBios": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "NonAtmosphericBodyWithBios": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    },
+    "RadiantStarUpdates": {
+      "Popup": true,
+      "Voice": true,
+      "Plugin": false
+    }
+  },
+  "HecateUseDB": true,
+  "HecateUseSpansh": true,
+  "NativeOutput": " Enabled",
+  "HideNotPresent": false,
+  "ShowBodyFields": false,
+  "ExpandOutput": true,
+  "HideAutoscans": false,
+  "HideAutoscansNoPredictions": true,
+  "ShowHeaders": true,
+  "ShowTotal": false,
+  "ShowSplitters": false,
+  "MaximumSystemsReadAll": 100,
+  "ButtonSize": "  Normal",
+  "PopoutAlwaysShow": true,
+  "PopoutShowNoFocus": true,
+  "PopoutShowLeftPanel": true,
+  "PopoutShowRightPanel": true,
+  "PopoutShowDSSMode": true,
+  "PopoutShowRolePanel": true,
+  "PopoutShowSysMap": true,
+  "PopoutShowFSSMode": true,
+  "PopoutOpacity": 100,
+  "PopoutHideUnlessSupercruiseOrSrv": false,
+  "PopoutHidePopulated": false,
+  "StellarOverlaySendFSSNotification": true,
+  "StellarOverlaySendDSSNotification": true,
+  "StellarOverlayUseRadar": true,
+  "FSSNotificationFontSize": 12,
+  "FSSNotificationOpacity": 80,
+  "FSSNotificationXPos": 2,
+  "FSSNotificationYPos": 2,
+  "DSSNotificationXPos": 2,
+  "DSSNotificationYPos": 98,
+  "FSSNotificationBorderWidth": 2,
+  "FSSNotificationTTL": 6000,
+  "UseCustomNotificationColours": false,
+  "TitleColorHex": "FFFF7B3A",
+  "BackgroundColorHex": "B0000000",
+  "BorderColorHex": "FFFF3D3A",
+  "ColorHex": "FFFF6300",
+  "MinBodyValueMillions": 20,
+  "MinIndividualBiologicalValueMillions": 12,
+  "DataDirectory": null,
+  "InstallUpdates": true,
+  "InstallBetas": false,
+  "UseCannonData": false,
+  "SaveSystemData": true,
+  "DebugBody": "",
+  "VerboseLogging": false,
+  "SendDebugData": true
+}

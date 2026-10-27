@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "ObservatoryNotification4",
+    "SHA256": "af75829eb00315df34d555ccda83539a034e45e58b69d91b5781a61120afa00f",
+    "Bytes": 103468,
+    "MatchesNative": true
+  },
+  {
+    "Name": "ObservatoryNotification5",
+    "SHA256": "3c1b50ea471ab6710922e1607573d86469357b0d6ce24905f01e6c181f1003f6",
+    "Bytes": 229420,
+    "MatchesNative": true
+  },
+  {
+    "Name": "ObservatoryNotification2",
+    "SHA256": "9aa3ea6bcb99cf60454ed234a5b03b5052a278d37399c18c248f913bd0a5e720",
+    "Bytes": 186412,
+    "MatchesNative": true
+  },
+  {
+    "Name": "ObservatoryNotification3",
+    "SHA256": "78ec58a9ab2cdc3bffe6b10b5508bd65173d56e31e64fde9a90148d0d72c80f2",
+    "Bytes": 139308,
+    "MatchesNative": true
+  },
+  {
+    "Name": "ObservatoryNotification0",
+    "SHA256": "3031abd6d1174d1e62c5dfd4f47fca91f1240a004af4c3b966aad3627fe6a889",
+    "Bytes": 113708,
+    "MatchesNative": true
+  },
+  {
+    "Name": "ObservatoryNotification1",
+    "SHA256": "0e10a90279e6a9d8773ad4e4fd4624722b98ec9cfaf29663903bc651a4016bce",
+    "Bytes": 93228,
+    "MatchesNative": true
+  }
+]

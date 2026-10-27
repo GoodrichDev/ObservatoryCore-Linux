@@ -1,0 +1,1049 @@
+{
+  "provenance": {
+    "runtime": "Linux .NET 8.0.33 / NLua 1.7.3 / KeraLua 1.4.1; DOTNET_ReadyToRun=0 for original Windows R2R Framework image",
+    "original_framework_identity": "ObservatoryFramework, Version=1.10.26274.2239, Culture=neutral, PublicKeyToken=null",
+    "original_framework_sha256": "cdca8ae5ff361c2ab208da635814c5a6c97c58dc101b4e0a99c399564bfda1e1",
+    "original_source_sha256": {
+      "CustomCriteriaManager.cs": "558fdcbde17ebfaed8a7dec74b2ad47f0221d14e40c7406a83476d224112241b",
+      "ExplorerSettings.cs": "92c169ebbf27e10b106c4b3e7dd261280a8b351d4d95053807248ac7b4629169",
+      "CriteriaLoadException.cs": "2c97bcf36cb0ffda29e93bdbe892428d96202d0e5e564db30f760da02a255171"
+    },
+    "driver_sha256": "8655aaff2047a120522560bdbbdb269d80d4dd0cc91598429e83c92f7737a33a",
+    "inputs_sha256": "20933377ae1ece239ddb80f10758b0623ec8bc628ffba47ed1c2b2fac06233ec",
+    "scope": "Original installed Framework DLL with unchanged decompiled installed Explorer criteria manager, settings and exception; synthetic inputs only"
+  },
+  "cases": [
+    {
+      "id": "framework-types",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "types",
+              "detail": "Observatory.Framework.Files.Journal.Scan;Observatory.Framework.Files.Journal.ScanBaryCentre;ValueTuple`2;Planet;1",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "framework-datetime",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "date",
+              "detail": "2026-10-27T01:02:03;System.DateTime;Monday",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "collection-methods",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "collections",
+              "detail": "ImmutableList`1;1;true;1;2;true;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "collection-callback",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "callbacks",
+              "detail": "carbon;true;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "clr-imports",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "imports",
+              "detail": "CLR:9;2026-10-28;2.0",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "clr-collections-enum",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "enum",
+              "detail": "2;true;Planet;Monday;System.DayOfWeek",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "framework-import",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "framework-import",
+              "detail": "Observatory.Framework.Files.Journal.Scan;Observatory.Framework.Files.ParameterTypes.Ring;false",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "framework-own-methods",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "framework-methods",
+              "detail": "allied;cordial;unfriendly;hostile;synthetic;false;false;true;true;Scan",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "clr-ref-out-conversion",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "ref-out",
+              "detail": "true;42;false;0;1234",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "framework-assembly-identity",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "assembly",
+              "detail": "ObservatoryFramework, Version=1.10.26274.2239, Culture=neutral, PublicKeyToken=null",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "event-identity",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "identity",
+              "detail": "true;true;CLR Oracle 1",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "identity",
+              "detail": "true;true;CLR Oracle 1",
+              "body": "CLR Oracle 1 b"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "retained-callback-gc",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "retained",
+              "detail": "iron;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "retained",
+              "detail": "iron;false",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "clr-exception-disable",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "A .NET exception occurred in user-code",
+              "detail": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": [
+            {
+              "message": "A .NET exception occurred in user-code",
+              "detail": "while processing custom criteria 'ObservatoryComplexHandler1=clr-exception-disable' on scan:\n{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}\nTo correct this problem, make changes to the Lua source file, save it and either re-run read-all or scan another body. It will be automatically reloaded.\n",
+              "exception_type": "NLua.Exceptions.LuaScriptException"
+            }
+          ]
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "json-setter-exception",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "Error setting property: Exception has been thrown by the target of an invocation.\nstack traceback:\n\t[C]: in metamethod 'newindex'\n\t[string \"chunk\"]:2: in function 'ObservatoryComplexHandler1'",
+              "detail": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": [
+            {
+              "message": "Error setting property: Exception has been thrown by the target of an invocation.\nstack traceback:\n\t[C]: in metamethod 'newindex'\n\t[string \"chunk\"]:2: in function 'ObservatoryComplexHandler1'",
+              "detail": "while processing custom criteria 'ObservatoryComplexHandler1=json-setter-exception' on scan:\n{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}\nTo correct this problem, make changes to the Lua source file, save it and either re-run read-all or scan another body. It will be automatically reloaded.\n",
+              "exception_type": "NLua.Exceptions.LuaScriptException"
+            }
+          ]
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "callback-exception-disable",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "A .NET exception occurred in user-code",
+              "detail": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": [
+            {
+              "message": "A .NET exception occurred in user-code",
+              "detail": "while processing custom criteria 'ObservatoryComplexHandler1=callback-exception-disable' on scan:\n{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}\nTo correct this problem, make changes to the Lua source file, save it and either re-run read-all or scan another body. It will be automatically reloaded.\n",
+              "exception_type": "NLua.Exceptions.LuaScriptException"
+            }
+          ]
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "callback-notify",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "2026-10-26 01:02:03",
+              "title": "CLR title",
+              "detail": "Observatory.Framework.Files.ParameterTypes.StarPosition",
+              "extended_detail": "2026-10-26T01:02:03",
+              "body_id": null
+            },
+            {
+              "time": "2026-10-26 01:02:03",
+              "title": "Body title",
+              "detail": "detail",
+              "extended_detail": "extended",
+              "body_id": 2
+            }
+          ],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "allbodies-dictionary",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "2026-10-26 01:02:03",
+              "title": "allbodies",
+              "detail": "true;Scan;true",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "readall-recreates-clr-state",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "state",
+              "detail": "1",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "state",
+              "detail": "12",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "state",
+              "detail": "1",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "state",
+              "detail": "1",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "path-readall-shared-settings",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "old-path",
+              "detail": "global",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "path",
+              "detail": "old",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "old-path",
+              "detail": "global",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "path",
+              "detail": "old",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "new-path",
+              "detail": "global",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "path",
+              "detail": "new",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mtime-reload-recovers-failing-criteria",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "[string \"chunk\"]:2: synthetic criterion failure\nstack traceback:\n\t[C]: in function 'error'\n\t[string \"chunk\"]:2: in function 'ObservatoryComplexHandler1'",
+              "detail": "{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": [
+            {
+              "message": "[string \"chunk\"]:2: synthetic criterion failure\nstack traceback:\n\t[C]: in function 'error'\n\t[string \"chunk\"]:2: in function 'ObservatoryComplexHandler1'",
+              "detail": "while processing custom criteria 'ObservatoryComplexHandler1=mtime-reload-recovers-failing-criteria' on scan:\n{\"timestamp\":\"2026-10-26T01:02:03Z\",\"event\":\"Scan\",\"SystemAddress\":42,\"StarSystem\":\"CLR Oracle\",\"BodyID\":2,\"BodyName\":\"CLR Oracle 1 a\",\"Parents\":[{\"Planet\":1},{\"Star\":0}],\"Radius\":1234.5,\"Materials\":[{\"Name\":\"iron\",\"Percent\":12.5},{\"Name\":\"carbon\",\"Percent\":2}],\"Rings\":[{\"Name\":\"CLR Oracle 1 a A Ring\",\"RingClass\":\"eRingClass_Rocky\",\"MassMT\":3.5,\"InnerRad\":2000,\"OuterRad\":4000}]}\nTo correct this problem, make changes to the Lua source file, save it and either re-run read-all or scan another body. It will be automatically reloaded.\n",
+              "exception_type": "NLua.Exceptions.LuaScriptException"
+            }
+          ]
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "reloaded",
+              "detail": "x",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [
+            {
+              "time": "",
+              "title": "reload",
+              "detail": "global",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "reloaded",
+              "detail": "xx",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "reload",
+              "detail": "global",
+              "extended_detail": "",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "reloaded",
+              "detail": "x",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "reloaded",
+              "detail": "latest",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mutable-scan-parent-history",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "mutated",
+              "detail": "mutated current body;4321.0;mutated parent body",
+              "body": "mutated current body"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "retained-mutation",
+              "detail": "mutated current body;4321.0;true;mutated parent body;99.0",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mutated-id-preserves-original-history-key",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "original-key",
+              "detail": "1;17;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "original-key",
+              "detail": "1;17;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mutable-parent-projection",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "parent-projection",
+              "detail": "Star;1;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "parent-projection",
+              "detail": "Star;1;true",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mutable-signal-identity-original-key",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "signal-mutation",
+              "detail": "9;999",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "2026-10-26 01:02:03",
+              "title": "signal-identity",
+              "detail": "false",
+              "extended_detail": "3",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "signal-mutation",
+              "detail": "9;999",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "idle-timer-callback",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "timer-started",
+              "detail": "",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "idle-timer",
+              "detail": "callback",
+              "extended_detail": "ElapsedEventArgs",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "idle-timer-mutates-retained-scan",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "timer-started",
+              "detail": "",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [
+            {
+              "time": "",
+              "title": "idle-mutation",
+              "detail": "timer-mutated body",
+              "extended_detail": "888.0",
+              "body_id": null
+            }
+          ],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "after-timer",
+              "detail": "timer-mutated body;888.0",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    },
+    {
+      "id": "mutable-nonfinite-clr-numbers",
+      "responses": [
+        {
+          "ok": true,
+          "results": [],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "nonfinite",
+              "detail": "-nan;inf;-inf;-nan",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        },
+        {
+          "ok": true,
+          "results": [
+            {
+              "title": "nonfinite",
+              "detail": "-nan;inf;-inf;-nan",
+              "body": "CLR Oracle 1 a"
+            }
+          ],
+          "notifications": [],
+          "diagnostics": []
+        }
+      ]
+    }
+  ]
+}

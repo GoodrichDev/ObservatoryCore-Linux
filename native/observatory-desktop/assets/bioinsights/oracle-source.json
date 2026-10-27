@@ -1,0 +1,5 @@
+{
+  "source": "installed UIHandler.AddHTMLTableHeaders",
+  "decoded_source_sha256": "3b9d4100cc1aaa4a9604eac58b729ba3e9239e6aec944a3523f9fb40a8d69975",
+  "normalization": "Only synthesized initlocals StringBuilder declaration moved to method entry; helper methods copied without changes. No plugin assembly loaded."
+}

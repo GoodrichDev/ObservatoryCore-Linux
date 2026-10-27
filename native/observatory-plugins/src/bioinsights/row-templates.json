@@ -1,0 +1,452 @@
+[
+  {
+    "type": "Unknown",
+    "seen": "NotSeen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotSeen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotSeen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotSeen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotSeen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "Seen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "Seen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "Seen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "Seen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "Seen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotPresent",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotPresent",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotPresent",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotPresent",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Unknown",
+    "seen": "NotPresent",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotSeen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotSeen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotSeen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotSeen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotSeen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "Seen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "Seen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "Seen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "Seen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "Seen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[NotPredicted]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotPresent",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotPresent",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotPresent",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotPresent",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "NotPredicted",
+    "seen": "NotPresent",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotSeen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotSeen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotSeen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotSeen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotSeen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "Seen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "Seen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "Seen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "Seen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "Seen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Material]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotPresent",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotPresent",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotPresent",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotPresent",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "SurfaceMaterial",
+    "seen": "NotPresent",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span> or [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotSeen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotSeen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotSeen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotSeen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotSeen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "Seen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "Seen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "Seen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "Seen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "Seen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[StarType]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotPresent",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotPresent",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotPresent",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotPresent",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "ParentStar",
+    "seen": "NotPresent",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotSeen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotSeen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotSeen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotSeen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotSeen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;&nbsp;</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "Seen",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "Seen",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "Seen",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "Seen",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "Seen",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">[Horizons]</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Tick]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotPresent",
+    "samples": "No",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\"></td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotPresent",
+    "samples": "Logged",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalLogged]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotPresent",
+    "samples": "Sampled",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalSampled]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotPresent",
+    "samples": "Complete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[BiologicalComplete]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  },
+  {
+    "type": "Horizons",
+    "seen": "NotPresent",
+    "samples": "Incomplete",
+    "html": "<tr><td>&nbsp;&nbsp;</td><td class=\"row1\">[PersonalCodexEntry]Bacterium</td><td class=\"row1 norightmargin\">&nbsp;</td><td class=\"row1 noleftmargin\"><a class=\"species row1\" href=\"http://localhost/bioinsights/codexcompanion/0/0\">Alcyoneum</a></td><td class=\"row1\">&nbsp;[Cross]</td><td class=\"row1\">[Aborted]</td><td colspan=2 class=\"row1\">[PersonalCodexEntry][Likely]<span title=\"source reason\"\">Emerald</span>, [Mark][Unlikely]<span title=\"source reason\"\">Red</span></td><td class=\"row1\">1.66M</td><td colspan=2 class=\"row1\">500m</td></tr>"
+  }
+]

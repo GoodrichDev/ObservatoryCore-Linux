@@ -1,0 +1,6 @@
+UpdateAvailable|alert-info||An update is available
+UpdateDownloaded|alert-info||An update has been downloaded - restart Observatory to install
+ReadAllCompleted|alert-success||Read All completed
+ReadAllCancelled|alert-danger||Read All cancelled
+UpdateInstalled|alert-success||Update installed
+PluginInstalled|alert-success||Evaluator plugin installed

@@ -1,0 +1,259 @@
+{
+  "Light": {
+    "Default.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "ControlText"
+    },
+    "Default.BackColor": {
+      "R": 240,
+      "G": 240,
+      "B": 240,
+      "A": 255,
+      "Name": "Control"
+    },
+    "Button.BackColor": {
+      "R": 227,
+      "G": 227,
+      "B": 227,
+      "A": 255,
+      "Name": "ControlLight"
+    },
+    "ComboBox.BackColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "ComboBox.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "DataGridView.BackgroundColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "DataGridView.GridColor": {
+      "R": 100,
+      "G": 100,
+      "B": 100,
+      "A": 255,
+      "Name": "WindowFrame"
+    },
+    "LinkLabel.ActiveLinkColor": {
+      "R": 255,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "Red"
+    },
+    "LinkLabel.DisabledLinkColor": {
+      "R": 133,
+      "G": 133,
+      "B": 133,
+      "A": 255
+    },
+    "LinkLabel.LinkColor": {
+      "R": 0,
+      "G": 0,
+      "B": 255,
+      "A": 255
+    },
+    "LinkLabel.VisitedLinkColor": {
+      "R": 128,
+      "G": 0,
+      "B": 128,
+      "A": 255
+    },
+    "ListView.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "ListView.BackColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "NumericUpDown.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "NumericUpDown.BackColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "TrackBar.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "UpDownButtons.BackColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "UpDownButtons.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "UpDownEdit.BackColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "Name": "Window"
+    },
+    "UpDownEdit.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "WindowText"
+    },
+    "ColourableTabControl.TabColor": {
+      "R": 227,
+      "G": 227,
+      "B": 227,
+      "A": 255,
+      "Name": "ControlLight"
+    },
+    "ColourableTabControl.SelectedTabColor": {
+      "R": 240,
+      "G": 240,
+      "B": 240,
+      "A": 255,
+      "Name": "Control"
+    },
+    "SplitContainer.BackColor": {
+      "R": 227,
+      "G": 227,
+      "B": 227,
+      "A": 255,
+      "Name": "ControlLight"
+    }
+  },
+  "Dark": {
+    "Default.ForeColor": {
+      "R": 211,
+      "G": 211,
+      "B": 211,
+      "A": 255,
+      "Name": "LightGray"
+    },
+    "Default.BackColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "Black"
+    },
+    "Button.ForeColor": {
+      "R": 211,
+      "G": 211,
+      "B": 211,
+      "A": 255,
+      "Name": "LightGray"
+    },
+    "Button.BackColor": {
+      "R": 105,
+      "G": 105,
+      "B": 105,
+      "A": 255,
+      "Name": "DimGray"
+    },
+    "DataGridView.BackgroundColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "Black"
+    },
+    "DataGridView.GridColor": {
+      "R": 105,
+      "G": 105,
+      "B": 105,
+      "A": 255,
+      "Name": "DimGray"
+    },
+    "TabPage.ForeColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "Black"
+    },
+    "ColourableTabControl.TabColor": {
+      "R": 105,
+      "G": 105,
+      "B": 105,
+      "A": 255,
+      "Name": "DimGray"
+    },
+    "ColourableTabControl.SelectedTabColor": {
+      "R": 169,
+      "G": 169,
+      "B": 169,
+      "A": 255,
+      "Name": "DarkGray"
+    },
+    "LinkLabel.ActiveLinkColor": {
+      "R": 255,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "Name": "Red"
+    },
+    "LinkLabel.DisabledLinkColor": {
+      "R": 133,
+      "G": 133,
+      "B": 133,
+      "A": 255
+    },
+    "LinkLabel.LinkColor": {
+      "R": 160,
+      "G": 160,
+      "B": 255,
+      "A": 255
+    },
+    "LinkLabel.VisitedLinkColor": {
+      "R": 128,
+      "G": 0,
+      "B": 128,
+      "A": 255
+    },
+    "SplitContainer.BackColor": {
+      "R": 105,
+      "G": 105,
+      "B": 105,
+      "A": 255,
+      "Name": "DimGray"
+    }
+  }
+}

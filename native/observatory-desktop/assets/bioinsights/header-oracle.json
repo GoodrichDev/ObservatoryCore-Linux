@@ -1,0 +1,50 @@
+[
+  {
+    "show_headers": false,
+    "show_body_fields": false,
+    "show_total": false,
+    "html": ""
+  },
+  {
+    "show_headers": false,
+    "show_body_fields": false,
+    "show_total": true,
+    "html": "<tr><th class=\"banner right\" colspan=11>Unsold Data: 123 456 789</th></tr><tr><td colspan=11>&nbsp;</td>"
+  },
+  {
+    "show_headers": false,
+    "show_body_fields": true,
+    "show_total": false,
+    "html": ""
+  },
+  {
+    "show_headers": false,
+    "show_body_fields": true,
+    "show_total": true,
+    "html": "<tr><th class=\"banner right\" colspan=11>Unsold Data: 123 456 789</th></tr><tr><td colspan=11>&nbsp;</td>"
+  },
+  {
+    "show_headers": true,
+    "show_body_fields": false,
+    "show_total": false,
+    "html": "<tr><th class=\"banner\" colspan=11>CMDR Reference Commander</th></tr><tr><th class=\"body\" colspan=4>Body</th><th class=\"bodytype\" colspan=1>Type</th><th colspan=1 class=\"signals\">Signals</th><th colspan=3 class=\"body\">Radiant Star</th><th colspan=2 class=\"value\">Body Value</th></tr><tr><td>&nbsp;</td><th class=\"border\">Genus</th><th colspan=2 class=\"border\">Species</th><th colspan=2 class=\"border\">Status</th><th colspan=2 class=\"border\">Variants</th><th class=\"left border\">Value</th><th colspan=2 class=\"left border\">Dist</th></tr>"
+  },
+  {
+    "show_headers": true,
+    "show_body_fields": false,
+    "show_total": true,
+    "html": "<tr><th class=\"banner\" colspan=11>CMDR Reference Commander</th></tr><tr><th class=\"banner right\" colspan=11>Unsold Data: 123 456 789</th></tr><tr><th class=\"body\" colspan=4>Body</th><th class=\"bodytype\" colspan=1>Type</th><th colspan=1 class=\"signals\">Signals</th><th colspan=3 class=\"body\">Radiant Star</th><th colspan=2 class=\"value\">Body Value</th></tr><tr><td>&nbsp;</td><th class=\"border\">Genus</th><th colspan=2 class=\"border\">Species</th><th colspan=2 class=\"border\">Status</th><th colspan=2 class=\"border\">Variants</th><th class=\"left border\">Value</th><th colspan=2 class=\"left border\">Dist</th></tr>"
+  },
+  {
+    "show_headers": true,
+    "show_body_fields": true,
+    "show_total": false,
+    "html": "<tr><th class=\"banner\" colspan=11>CMDR Reference Commander</th></tr><tr><th class=\"body\" colspan=4>Body</th><th class=\"bodytype\" colspan=1>Type</th><th colspan=1 class=\"signals\">Signals</th><th colspan=3 class=\"body\">Radiant Star</th><th colspan=2 class=\"value\">Body Value</th></tr><tr><td>&nbsp;</td><th colspan=3 class=\"extra border\">Atmosphere Type</th><th colspan=2 class=\"extra border\">Pressure</th><th colspan=2 class=\"extra border\">Volcanism</th><th class=\"extra border\"> Gravity</th><th colspan=2 class=\"extra border\">Temp</th><tr><td>&nbsp;</td><th class=\"border\">Genus</th><th colspan=2 class=\"border\">Species</th><th colspan=2 class=\"border\">Status</th><th colspan=2 class=\"border\">Variants</th><th class=\"left border\">Value</th><th colspan=2 class=\"left border\">Dist</th></tr>"
+  },
+  {
+    "show_headers": true,
+    "show_body_fields": true,
+    "show_total": true,
+    "html": "<tr><th class=\"banner\" colspan=11>CMDR Reference Commander</th></tr><tr><th class=\"banner right\" colspan=11>Unsold Data: 123 456 789</th></tr><tr><th class=\"body\" colspan=4>Body</th><th class=\"bodytype\" colspan=1>Type</th><th colspan=1 class=\"signals\">Signals</th><th colspan=3 class=\"body\">Radiant Star</th><th colspan=2 class=\"value\">Body Value</th></tr><tr><td>&nbsp;</td><th colspan=3 class=\"extra border\">Atmosphere Type</th><th colspan=2 class=\"extra border\">Pressure</th><th colspan=2 class=\"extra border\">Volcanism</th><th class=\"extra border\"> Gravity</th><th colspan=2 class=\"extra border\">Temp</th><tr><td>&nbsp;</td><th class=\"border\">Genus</th><th colspan=2 class=\"border\">Species</th><th colspan=2 class=\"border\">Status</th><th colspan=2 class=\"border\">Variants</th><th class=\"left border\">Value</th><th colspan=2 class=\"left border\">Dist</th></tr>"
+  }
+]

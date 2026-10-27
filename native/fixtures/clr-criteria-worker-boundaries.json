@@ -1,0 +1,50 @@
+{
+  "scope": "Read-only installed worker entry-handler inspection; no vendor startup or personal criteria executed",
+  "core_dispatch": {
+    "source": "ObservatoryCore/PluginManagement/PluginEventHandler.cs:46-54",
+    "finding": "The same JournalBase instance is passed to each worker in iteration order. Typed mutations can be visible to later consumers; Json remains the original independently retained journal string."
+  },
+  "workers": [
+    {
+      "name": "BioInsights",
+      "installed_source": "bio/BioInsights/BioInsights.cs",
+      "entry_lines": [4605, 4619],
+      "typed_scan_handler_line": 2243,
+      "typed_getter_lines": {"PlanetClass": 16745, "BodyName": 16795, "Radius": 16958},
+      "raw_json_usage_lines": [3756, 5761, 16895],
+      "finding": "Enqueues the same JournalBase object, casts it to Scan, and reads typed fields. The located Scan Json getter call supplies verbose logging."
+    },
+    {
+      "name": "Evaluator",
+      "installed_source": "evaluator/Evaluator/Evaluator.cs",
+      "entry_line": 950,
+      "scan_cast_line": 1013,
+      "typed_getter_lines": {"PlanetClass": 7638, "BodyName": 7678, "Radius": 7903},
+      "raw_json_usage_line": 2586,
+      "finding": "Casts the incoming object to Scan and consumes typed getters. The located raw JSON deserialization in the entry handler parses extra CarrierJump flags."
+    },
+    {
+      "name": "Hecate",
+      "installed_source": "hecate/Hecate/HecateWorker.cs",
+      "entry_line": 2906,
+      "async_state_journal_field_line": 793,
+      "raw_json_append_lines": [1045, 1050],
+      "raw_json_getter_line": 2037,
+      "archive_write_line": 2966,
+      "finding": "The asynchronous entry state retains the original typed object for routing and system metadata, while journal archival appends its original Json string into journalText. Stellar calculations reached through archive reparse must retain those raw bytes."
+    },
+    {
+      "name": "Botanist",
+      "installed_source": "botanist/Observatory.Botanist/Botanist.cs",
+      "entry_line": 118,
+      "finding": "The entry handler switches over typed JournalBase subclasses, including SAASignalsFound and ScanOrganic."
+    },
+    {
+      "name": "Communicator",
+      "installed_source": "communicator/Observatory.Communicator/Communicator.cs",
+      "entry_line": 87,
+      "finding": "The entry handler reads typed LoadGame, SendText and ReceiveText properties; it does not consume Scan."
+    }
+  ],
+  "limits": "Static entry-handler evidence establishes typed versus raw boundaries. It does not establish exact cross-worker scheduling for asynchronously queued events."
+}

@@ -1,0 +1,670 @@
+{
+  "Settings": {
+    "RowSpacing": 0,
+    "UseHighlightRow": false,
+    "RowHeight": 24
+  },
+  "Colors": {
+    "DefaultBackground": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "DefaultText": {
+      "R": 255,
+      "G": 255,
+      "B": 255
+    },
+    "Row1Background": {
+      "R": 40,
+      "G": 48,
+      "B": 40
+    },
+    "Row2Background": {
+      "R": 8,
+      "G": 16,
+      "B": 8
+    },
+    "LinkText": {
+      "R": 252,
+      "G": 124,
+      "B": 0
+    },
+    "HeaderBackground": {
+      "R": 8,
+      "G": 75,
+      "B": 8
+    },
+    "HeaderText": {
+      "R": 255,
+      "G": 255,
+      "B": 255
+    },
+    "TitleBackground": {
+      "R": 29,
+      "G": 150,
+      "B": 65
+    },
+    "TitleText": {
+      "R": 191,
+      "G": 255,
+      "B": 191
+    },
+    "Border": {
+      "R": 38,
+      "G": 80,
+      "B": 27
+    },
+    "WorthMappingText": {
+      "R": 22,
+      "G": 220,
+      "B": 0
+    },
+    "HighlightBackground": {
+      "R": 55,
+      "G": 0,
+      "B": 0
+    },
+    "ButtonBar": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "ButtonFace": {
+      "R": 80,
+      "G": 80,
+      "B": 80
+    },
+    "Button": {
+      "R": 0,
+      "G": 0,
+      "B": 0
+    },
+    "ButtonFaceHighlight": {
+      "R": 127,
+      "G": 127,
+      "B": 127
+    }
+  },
+  "Symbols": {
+    "ICY": {
+      "Content": "ICY",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 168,
+        "G": 255,
+        "B": 255
+      },
+      "Description": "Icy body",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "RIB": {
+      "Content": "RIB",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 168
+      },
+      "Description": "Rocky ice Body",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "HMC": {
+      "Content": "HMC",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 217,
+        "G": 185,
+        "B": 155
+      },
+      "Description": "High metal content body",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "MR": {
+      "Content": "MR",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 96,
+        "G": 96,
+        "B": 96
+      },
+      "Description": "Metal-rich world",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "ROCKY": {
+      "Content": "ROCKY",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 168,
+        "G": 168,
+        "B": 168
+      },
+      "Description": "Rocky body",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GG1": {
+      "Content": "GG1",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Sudarsky class I gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GG2": {
+      "Content": "GG2",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Sudarsky class II gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GG3": {
+      "Content": "GG3",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Sudarsky class III gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GG4": {
+      "Content": "GG4",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Sudarsky class IV gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GG5": {
+      "Content": "GG5",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Sudarsky class V gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GGWL": {
+      "Content": "GGWL",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Gas giant with water based life",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "GGAL": {
+      "Content": "GGAL",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 144,
+        "G": 0,
+        "B": 144
+      },
+      "Description": "Gas giant with ammonia based life",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "HRGG": {
+      "Content": "HRGG",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 0,
+        "G": 144,
+        "B": 144
+      },
+      "Description": "Helium rich gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "HGG": {
+      "Content": "HG",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 0,
+        "G": 144,
+        "B": 144
+      },
+      "Description": "Helium gas giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "WG": {
+      "Content": "WG",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 0,
+        "G": 144,
+        "B": 144
+      },
+      "Description": "Water giant",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "WW": {
+      "Content": "WW",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 12,
+        "G": 118,
+        "B": 189
+      },
+      "Description": "Water world",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "ELW": {
+      "Content": "ELW",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 64,
+        "G": 64,
+        "B": 64
+      },
+      "ContentBackColor": {
+        "R": 48,
+        "G": 240,
+        "B": 48
+      },
+      "Description": "Earth-like world",
+      "IsLabel": true,
+      "FontWeight": "bold",
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "AW": {
+      "Content": "AW",
+      "ContentType": "Text",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "ContentBackColor": {
+        "R": 221,
+        "G": 113,
+        "B": 6
+      },
+      "Description": "Ammonia world",
+      "IsLabel": true,
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "STAR": {
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 167,
+        "B": 8
+      },
+      "IsLabel": true,
+      "FontWeight": "bold",
+      "PaddingLeft": 10,
+      "PaddingRight": 10
+    },
+    "WorthMapping": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yIDVjMC0xLjY1NjggMS4zNDMyLTMgMy0zaDIyYzEuNjU2OSAwIDMgMS4zNDMyIDMgM3YyMmMwIDEuNjU2OS0xLjM0MzEgMy0zIDNoLTIyYy0xLjY1NjggMC0zLTEuMzQzMS0zLTN2LTIyeiIgZmlsbD0iI0ZGRkZGRiIgLz4KPHBhdGggZD0ibTUgN2MwLTEuMTA0NiAwLjg5NTQzLTIgMi0yaDE4YzEuMTA0NiAwIDIgMC44OTU0MyAyIDJ2MThjMCAxLjEwNDYtMC44OTU0IDItMiAyaC0xOGMtMS4xMDQ2IDAtMi0wLjg5NTQtMi0ydi0xOHoiIGZpbGw9IiMkJENPTE9SJCQiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "Body is worth mapping / visiting",
+      "ContentColorKey": "WorthMappingText"
+    },
+    "NotWorthMapping": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yIDVjMC0xLjY1NjggMS4zNDMyLTMgMy0zaDIyYzEuNjU2OSAwIDMgMS4zNDMyIDMgM3YyMmMwIDEuNjU2OS0xLjM0MzEgMy0zIDNoLTIyYy0xLjY1NjggMC0zLTEuMzQzMS0zLTN2LTIyeiIgZmlsbD0iI0ZGRkZGRiIgLz4KPHBhdGggZD0ibTUgN2MwLTEuMTA0NiAwLjg5NTQzLTIgMi0yaDE4YzEuMTA0NiAwIDIgMC44OTU0MyAyIDJ2MThjMCAxLjEwNDYtMC44OTU0IDItMiAyaC0xOGMtMS4xMDQ2IDAtMi0wLjg5NTQtMi0ydi0xOHoiIGZpbGw9IiMkJENPTE9SJCQiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "",
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      }
+    },
+    "Mapped": {
+      "Content": "PHN2ZyBpZD0iZW1vamkiIHZpZXdCb3g9IjAgMCA3MiA3MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBpZD0iY29sb3IiPgogICAgPHBhdGggZmlsbD0iI2IxRkYzMyIgZD0ibTYxLjUgMjMuMy04LjAxMy04LjAxMy0yNS43MSAyNS43MS05LjI2LTkuMjYtOC4wMTMgOC4wMTMgMTcuNDIgMTcuNDR6Ii8+CiAgPC9nPgogIDxnIGlkPSJsaW5lIj4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTEwLjUgMzkuNzYgMTcuNDIgMTcuNDQgMzMuNTgtMzMuODktOC4wMTMtOC4wMTMtMjUuNzEgMjUuNzEtOS4yNi05LjI2eiIvPgogIDwvZz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "Body has been mapped (by you)"
+    },
+    "Terraformable": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yMi4zOSA2LjQ1Yy0yLjI5IDAtNC4zMiAxLjA4LTUuNjMgMi43NXYtMC40N2gtMC4wMWMtMC4yMi0zLjc1LTMuMzMtNi43My03LjE0LTYuNzNoLTcuNjFjMCAzLjk1IDMuMiA3LjE1IDcuMTUgNy4xNWg1LjE5djEyLjQ2aDIuNDJ2LThoNi4wOWMzLjk1IDAgNy4xNS0zLjIgNy4xNS03LjE1aC03LjYxdi0wLjAxeiIgZmlsbD0iIzg2RDcyRiIvPgo8cGF0aCBkPSJtMTUuNTUgMjFjLTQuOTY0NyAwLTguOTg5OSA0LjAyNTItOC45ODk5IDguOTg5OWgxNy45OWMwLTQuOTY0Ny00LjAyNTEtOC45ODk5LTguOTk5OC04Ljk4OTl6IiBmaWxsPSIjNkQ0NTM0Ii8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "Body is terraformable"
+    },
+    "IsHighValue": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yMi43ODggMjAuNTZjLTAuMDQtMi42LTEuOTEtNi40Ni02Ljg5LTYuNDYtMi44NSAwLTMuMjQtMS43NC0zLjI3LTIuMzkgMC4wMy0wLjgxIDAuNC0yLjY5IDMuMjMtMi42OSAyLjk0IDAgMy4yOCAyLjA3IDMuMzEgMi43MSAwLjAzIDAuOTkgMC44OCAxLjg0IDEuODUgMS43NSAxLTAuMDIgMS43OS0wLjg1IDEuNzYtMS44NS0wLjA1LTIuMTctMS40OS01LjI0LTUuMS02LjAzbDAuMDMtMS43N2MwLjAxLTEtMC43OS0xLjgyLTEuNzktMS44M2gtMC4wMmMtMC45OSAwLTEuOCAwLjgtMS44MSAxLjc5bC0wLjAyIDEuOGMtMy42NCAwLjc3LTUuMDQgMy44OC01LjA2IDYuMTEgMC4wNCAyLjQyIDEuOTEgNi4wMiA2Ljg5IDYuMDIgMi44MSAwIDMuMjEgMi4wNCAzLjI3IDIuOC0wLjA4IDAuNDktMC41NCAyLjI4LTMuMjcgMi4yOC0yLjc3IDAtMy4yMS0xLjg2LTMuMjgtMi40MS0wLjA5LTEtMC45NS0xLjcyLTEuOTctMS42NC0xIDAuMDktMS43MyAwLjk3LTEuNjQgMS45NiAwLjE1IDEuNzEgMS40NCA0Ljc1IDUuMDcgNS41MnYyLjA3YzAgMSAwLjgxIDEuODEgMS44MSAxLjgxczEuODItMC44MSAxLjgyLTEuODF2LTIuMDdjMy42My0wLjc2IDQuOTItMy43OCA1LjA3LTUuNDhsMC4wMS0wLjF2LTAuMDl6IiBmaWxsPSIjJCRDT0xPUiQkIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "Body has a high value",
+      "ContentColor": {
+        "R": 0,
+        "G": 210,
+        "B": 106
+      }
+    },
+    "IsLandable": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnPgo8cGF0aCBkPSJtNyA1Mi4wNjFjLTIuMjQ4NS0xLjg1MjgtMy04LjI1NTYtMy0xMS4zOTcgMC0yLjc4OTYgMS4xMzA3LTEwLjMxNSAyLjk1ODgtMTIuMTQzIDAgMCAyLjY1ODYtMS4xMzI0IDQuMDQxMiAwIDQuNTI4OCAzLjcwOTIgMTMuNjU4IDEyLjIxNSAyNS4wMDQgMCAwIDAgMTcuNTc3IDguMzQyMSAyMi4zMiA5LjU0NTggOC4xNDI3IDIuMDY2OCA4LjQxNjcgNC4xMTk3IDguNDE2NyA2LjgyMjMgMCA4LjY1MTUtMTAuMDg0IDcuNTM5MS0xNi44MSA3LjE3MTgtMy43MDY4LTAuMjAyNS0zOC44MDEgMC4yMjU0LTQyLjkzLTFlLTQiIGZpbGw9IiM5QjlCOUEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0ibTcgNDUuODg0czE2LjEzNC0xLjUyODcgMjUuNDk2IDEuMDQyNiAyOC4zNDYgMC4yMjk5IDI4LjM0NiAwLjIyOTlsNS4yNjgxLTAuMDI2MXMtMC45MzY2IDUuNzg5Ni01LjUyMyA1Ljc4OTYtNTQuNTg2LTEuNzkxNC01NC41ODYtMS43OTE0LTMuMzgyMy00LjY5MDYgMS01LjI0NDZ6IiBmaWxsPSIjRDBDRkNFIi8+CjwvZz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIj4KPHBhdGggZD0ibTcgNTIuMDYxYy0yLjI0ODUtMS44NTI4LTMtOC4yNTU2LTMtMTEuMzk3IDAtMi43ODk2IDEuMTMwNy0xMC4zMTUgMi45NTg4LTEyLjE0MyAwIDAgMi42NTg2LTEuMTMyNCA0LjA0MTIgMCA0LjUyODggMy43MDkyIDEzLjY1OCAxMi4yMTUgMjUuMDA0IDAgMCAwIDE3LjU3NyA4LjM0MjEgMjIuMzIgOS41NDU4IDguMTQyNyAyLjA2NjggOC40MTY3IDQuMTE5NyA4LjQxNjcgNi44MjIzIDAgOC42NTE1LTEwLjA4NCA3LjUzOTEtMTYuODEgNy4xNzE4LTMuNzA2OC0wLjIwMjUtMzguODAxIDAuMjI1NC00Mi45My0xZS00Ii8+CjxwYXRoIGQ9Im04IDQ2LjgxNnMxNS4xMzQtMi40NjA4IDI0LjQ5NiAwLjExMDUgMjguMzQ2IDEuMjI5OSAyOC4zNDYgMS4yMjk5Ii8+CjxsaW5lIHgxPSI0MC40NDIiIHgyPSIzNS4zNyIgeTE9IjM1Ljk1OCIgeTI9IjQxLjg5NiIvPgo8bGluZSB4MT0iNDUuNTI2IiB4Mj0iNDEuOTk0IiB5MT0iMzcuNzYxIiB5Mj0iNDEuODk2Ii8+CjxwYXRoIGQ9Im03IDUyLjA2MWMtMi4yNDg1LTEuODUyOC0zLTguMjU1Ni0zLTExLjM5NyAwLTIuNzg5NiAxLjEzMDctMTAuMzE1IDIuOTU4OC0xMi4xNDMgMCAwIDIuNjU4Ni0xLjEzMjQgNC4wNDEyIDAgNC41Mjg4IDMuNzA5MiAxMy42NTggMTIuMjE1IDI1LjAwNCAwIDAgMCAxNy41NzcgOC4zNDIxIDIyLjMyIDkuNTQ1OCA4LjE0MjcgMi4wNjY4IDguNDE2NyA0LjExOTcgOC40MTY3IDYuODIyMyAwIDguNjUxNS0xMC4wODQgNy41MzkxLTE2LjgxIDcuMTcxOC0zLjcwNjgtMC4yMDI1LTM4LjgwMSAwLjIyNTQtNDIuOTMtMWUtNCIvPgo8L2c+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "Body is landable"
+    },
+    "HasBiologicals": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0yMi4yMDcgMi4yOTI5YzAuMzkwNSAwLjM5MDUzIDAuMzkwNSAxLjAyMzcgMCAxLjQxNDItMC4wNDk1IDAuMDQ5NTItMC4wOTc4IDAuMDk4NzktMC4xNDUgMC4xNDc4M2wzLjA0MTUgMy4wNDE1djAuNjM5NDRsLTAuNzA3MiAwLjA2NzY2LTIuOTg5NC0yLjk4OTVjLTAuNDUzNSAwLjU5NDExLTAuNzM5MiAxLjE1MTktMC45MDcgMS42Nzg5bDIuNjAzNSAyLjYwMzV2MC43NjQ1OWwtMC43MDcxLTAuMDU3NDgtMi4wOTg3LTIuMDk4NmMtNGUtNCAwLjAxNzY2LTdlLTQgMC4wMzUyOS04ZS00IDAuMDUyODgtMC4wMTMxIDEuMTg1MiAwLjQyOTkgMi4zNDkxIDAuOTk3MyAzLjY3MzIgMC4wNDg1IDAuMTEyOSAwLjA5ODEgMC4yMjc2IDAuMTQ4NCAwLjM0MzggMC4xOTMzIDAuNDQ2Ny0wLjQ0MjYgMS40MjUyLTAuNDQyNiAxLjQyNTJsMS41ODU5IDJjMC4wMjE5IDAuMTQzMyAwLjAzOTIgMC4yODcyIDAuMDUxMyAwLjQzMTQgMC4xMzU4IDEuNjA5MS0wLjM2MDQgMy4yMDYtMS45MyA0Ljc3NTYtMS41Njg3IDEuNTY4Ny0zLjE4NCAyLjA4NjUtNC44MTYxIDIuMDEwNi0wLjk3NDEtMC4wNDUzLTEuOTQtMC4zMDU5LTIuODUyLTAuNjEyNGwtMS4wMzkxIDAuMzk0OC0xLjI3NTYtMS4yMmMtMS4wNjY2LTAuMzU4NS0yLjA1NzYtMC42MDQ3LTMuMDU2OS0wLjU2MjItMC4wNzU0NCAwLjAwMzMtMC4xNTEzMyAwLjAwODEtMC4yMjc3MSAwLjAxNDlsMi4xNjM3IDIuMTYzNy0wLjEwMzU1IDAuNzA3MWgtMC42MDM1NmwtMi42MjA0LTIuNjIwNGMtMC40NDA5NSAwLjE1NC0wLjg5Nzk4IDAuMzgzNC0xLjM3MzMgMC43MTI1bDIuOTUwOCAyLjk1MDh2MC42MDQzbC0wLjcwNzExIDAuMTAyOC0zLjAzMjItMy4wMzIyYy0wLjEzNDI2IDAuMTIwMi0wLjI2OTk2IDAuMjQ4Ni0wLjQwNzEyIDAuMzg1OC0wLjM5MDUzIDAuMzkwNS0xLjAyMzcgMC4zOTA1LTEuNDE0MiAwLTAuMzkwNTItMC4zOTA1LTAuMzkwNTItMS4wMjM3IDAtMS40MTQyIDEuNzc4Mi0xLjc3ODMgMy41Mzg3LTIuNDk4NyA1LjI4OTYtMi41NzMyIDAuODM3NDEtMC4wMzU3IDEuNjQ3MyAwLjA3OTEgMi40MTc1IDAuMjY0NGwxLTAuNDg0MXMxLjI1NTcgMS4xOTk0IDEuMjc1MSAxLjIwNjRsMC4yNTQyIDAuMDkyOGMxLjA4NjkgMC4zOTcgMi4wMjcgMC43NDAzIDIuOTMzMiAwLjg3MDNsLTEuODE2LTEuODE2di0wLjcwNzFoMC43MDcxbDIuNTIyIDIuNTIyYzAuNTc0OS0wLjA5OTYgMS4xNjItMC4zNDE3IDEuNzc1Ny0wLjgxMDFsLTMuMDA0OC0zLjAwNDgtMC4wNjI3LTAuNzA3MWgwLjc2OThsMy4wNDE5IDMuMDQxOWMwLjY1ODctMC42ODU0IDEuMDA2NC0xLjMxOTcgMS4xNjEtMS45MjQ4bC0yLjY2LTIuNjU5OXYtMC43MDcxaDAuNzA3MWwyLjAyMTcgMi4wMjE3Yy0wLjA1NTEtMC40NDIzLTAuMTc0My0wLjg4ODUtMC4zMzYtMS4zNTU2bDAuMzM2LTEuNjc5OC0xLjE2OTMtMC4zNjRjLTAuNTU3Ni0xLjMwMDktMS4xNzcyLTIuODI0NC0xLjE1OS00LjQ4MjkgMC4wMTg5LTEuNzI1OSAwLjcxODYtMy40NjU2IDIuNDk1OS01LjI0MyAwLjM5MDUtMC4zOTA1MiAxLjAyMzctMC4zOTA1MiAxLjQxNDIgMHoiIGZpbGw9IiNGODMxMkYiLz4KPHBhdGggZD0ibTI0LjM5NiA3LjYwMzYgMi45OTE2IDIuOTkxN2MtMC41ODM5IDAuNDUxMi0xLjEzNDIgMC43NDY0LTEuNjU1NiAwLjkzMDFsLTIuNjI4OS0yLjYyODktMC43MDcxIDAuNzA3MSAyLjE2OTEgMi4xNjkxYy0wLjA1MjQgMC4wMDQxLTAuMTA0NiAwLjAwNzItMC4xNTY0IDAuMDA5NS0xLjE5MTIgMC4wNTI0LTIuMzU3LTAuMzM4NC0zLjY3ODItMC44NDE3LTAuMTEyOS0wLjA0My0wLjIyNzQtMC4wODctMC4zNDM0LTAuMTMxNy0xLjE2ODktMC40NDk5LTIuNDk2My0wLjk2MDkxLTMuODU1MS0xLjAyNjQtMS41OTctMC4wNzY5Ny0zLjE3ODggMC40NDk1OS00LjczOTYgMi4wMTA1LTEuNTUyNSAxLjU1MjUtMi4xMDg4IDMuMTE5NC0yLjA4OTcgNC43MDM1IDAuMDA4MTIgMC42NzQgMC4xMjI3NSAxLjM0MDggMC4yODQ0NSAxLjk4NDcgMC43ODg5OCAwLjE4ODkgMS41MzY1IDAuNDUyMiAyLjIyOTIgMC43MDQxbDAuMDc0NyAwLjAyNzJjLTAuMzI4OC0xLjAwMS0wLjU3OC0xLjg3MTgtMC41ODg1LTIuNzQwMS0yZS00IC0wLjAyMDgtM2UtNCAtMC4wNDE2LTNlLTQgLTAuMDYyNWwxLjk0MzggMS45NDM4IDAuNzA3MS0wLjcwNzEtMi40NTc0LTIuNDU3NGMwLjE3MTgtMC41MTU0IDAuNDc0LTEuMDUxIDAuOTY4OC0xLjYxN2wyLjc4MTUgMi43ODE1IDAuNzA3MS0wLjcwNzEtMi43ODEtMi43ODFjMC43MjY5LTAuNjMxNiAxLjQwMDUtMC45MzE2IDIuMDQ1NC0xLjA0MDNsMi4yNzg1IDIuMjc4NCAwLjcwNzEtMC43MDcxLTEuNTQ2OC0xLjU0NjhjMC44MjI4IDAuMTQxNSAxLjY3NjMgMC40NjggMi42NjY5IDAuODQ3bDNlLTMgMC4wMDExYzAuMDk2MSAwLjAzNjggMC4xOTM1IDAuMDc0MSAwLjI5MjMgMC4xMTE3IDEuMzAzNyAwLjQ5NjcgMi44MjU1IDEuMDQzNCA0LjQ3OCAwLjk3MDggMS43MTE4LTAuMDc1MyAzLjQzODktMC44MDIgNS4yMTAxLTIuNTczMiAwLjM5MDUtMC4zOTA1IDAuMzkwNS0xLjAyMzcgMC0xLjQxNDItMC4zOTA1LTAuMzkwNTItMS4wMjM3LTAuMzkwNTItMS40MTQyIDAtMC4wNDk1IDAuMDQ5NS0wLjA5ODggMC4wOTc4NS0wLjE0NzggMC4xNDUwOGwtMy4wNDE1LTMuMDQxNS0wLjcwNzEgMC43MDcxMXoiIGZpbGw9IiM0NkE0RkIiLz4KPHBhdGggZD0ibTEyIDIxLjUtMC45NjY3IDAuMzMzNWMwLjIyNTUgMC44MDE4IDAuMzY4NSAxLjU2MzYgMC4zNDA4IDIuMzMzNWwtMS43NzA1LTEuNzcwNS0wLjcwNzExIDAuNzA3MSAyLjI4IDIuMjhjLTAuMTM0NCAwLjQ1MTktMC4zNDYgMC45MjUtMC42NjM3IDEuNDIyMWwtMi42NTkyLTIuNjU5Mi0wLjcwNzExIDAuNzA3MSAyLjc2NTYgMi43NjU2Yy0wLjE4NDI2IDAuMjE5OS0wLjM4OTk1IDAuNDQ0NC0wLjYxOTIxIDAuNjczNy0wLjM5MDUyIDAuMzkwNS0wLjM5MDUyIDEuMDIzNyAwIDEuNDE0MiAwLjM5MDUzIDAuMzkwNSAxLjAyMzcgMC4zOTA1IDEuNDE0MiAwIDEuNzY1Mi0xLjc2NTIgMi41MTg3LTMuNDggMi42NDkzLTUuMTc3MyAwLjA0MzEtMC41NjAxIDAuMDE2Ni0xLjEwNTUtMC4wNTQyLTEuNjMyOWwtMS4zMDIyLTEuMzk2OXoiIGZpbGw9IiM0NkE0RkIiLz4KPHBhdGggZD0ibTEwLjcwMyAyMC43NzNjMC4xMjM1IDAuMzcyNiAwLjIzODQgMC43MzM0IDAuMzM3IDEuMDg2NSAwLjY0MTIgMC40NDk4IDEuNDQ4MyAwLjg5MTEgMi4yNjUzIDEuMDY0Mi0wLjA1OTUtMC40NTI4LTAuMTUxOS0wLjg5MjMtMC4yNjE0LTEuMzE2NS0wLjM5NTMtMC4xMzI4LTAuNzgwNS0wLjI3NDMtMS4xNTE4LTAuNDEwNi0wLjEyMTEtMC4wNDQ1LTAuMjQxMi0wLjA4ODYtMC4zNTkyLTAuMTMxNS0wLjI4MjQtMC4xMDI3LTAuNTU4Ny0wLjIwMTItMC44Mjk5LTAuMjkyMSAwIDFlLTQgLTFlLTQgMCAwIDB6IiBmaWxsPSIjMDA4NENFIi8+CjxwYXRoIGQ9Im0xOS43NTIgMTIuNzA3YzAuMDg4IDAuMDMzNyAwLjE3NzEgMC4wNjc3IDAuMjY3MyAwLjEwMjEgMC42Nzg5IDAuMjU4NiAxLjQxNjcgMC41MzA4IDIuMjAxNCAwLjcyMiAwLjE2MjYgMC40ODk5IDAuMjk1NiAwLjk5MzEgMC4zNzA3IDEuNTAyNy0wLjU5NzYtMC40Njk1LTEuNjEyNC0wLjgwMzUtMi4zMDExLTAuOTY5OS0wLjE0ODgtMC40MzAxLTAuMzMzOS0wLjg3NzktMC41MzgzLTEuMzU2OXoiIGZpbGw9IiNDQTBCNEEiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "Biologicals confirmed present"
+    },
+    "HasVolcanism": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0xNy4xNyA2YzEuMTA0NiAwIDItMC44OTU0MyAyLTJzLTAuODk1NC0yLTItMmMtMS4xMDQ1IDAtMiAwLjg5NTQzLTIgMnMwLjg5NTUgMiAyIDJ6IiBmaWxsPSIjOUI5QjlCIi8+CjxwYXRoIGQ9Im0xOS4xNyA4YzEuMTA0NiAwIDItMC44OTU0MyAyLTJzLTAuODk1NC0yLTItMmMtMS4xMDQ1IDAtMiAwLjg5NTQzLTIgMnMwLjg5NTUgMiAyIDJ6IiBmaWxsPSIjRDNEM0QzIi8+CjxwYXRoIGQ9Im0xOS44NSA2aC0zLjY4YzAtMS4xMDQ2LTAuODk1NC0yLTItMi0xLjEwNDUgMC0yIDAuODk1NDMtMiAyaC0xLjE3Yy0xLjEwNDYgMC0yIDAuODk1NDMtMiAyczAuODk1NDMgMiAyIDJoMS41MzI1YzAuMjk2MSAwIDAuNDY3NSAwLjE5NjYgMC40Njc1IDAuNDY3NXYyLjUzMjVoNnYtMi41MzI1YzAtMC4yNjY1IDAuMjA3OS0wLjQ2NzUgMC40Njc1LTAuNDY3NWgyLjUzMjVjMS4xMDQ2IDAgMi0wLjg5NTQzIDItMnMtMC44OTU0LTItMi0yaC0yLjE1eiIgZmlsbD0iI0U2RTZFNiIvPgo8cGF0aCBkPSJtMTkuNjEzIDE0LjM2Ny05LjQ4MDQgMC42MjUtNS45OTA1IDEyLjg3NWMtMC40NjI2NCAwLjk5NDQgMC4yNjMzMSAyLjEzMjggMS4zNiAyLjEzMjhoMjBzLTQuOTE4OC0xNC4wNDQtNS44ODk0LTE1LjYzM3oiIGZpbGw9IiMzMjFCNDEiLz4KPHBhdGggZD0iTTI1LjExMTEgMzBMMjIuNjI0MSAyMy42MDQ4QzIyLjI0NzggMjIuNjM3MyAyMS4zMTYyIDIyIDIwLjI3ODEgMjJDMTkuNTA2MiAyMiAxOC44MTIgMjEuNTMgMTguNTI1MyAyMC44MTMzTDE3IDE3VjE0LjYxODNMMjEuNjEzMyAxNC4zNjcyTDI3Ljg2MzkgMjcuODY5OUMyOC4zMjQxIDI4Ljg2NCAyNy41OTgxIDMwIDI2LjUwMjcgMzBIMjUuMTExMVoiIGZpbGw9IiM1MzM1NjYiLz4KPHBhdGggZD0ibTEwIDE2di0wLjU1NjNjMC0wLjIxNjEgMC4yNTQ1LTAuNzQxNCAwLjI1NDUtMC43NDE0czAuNzcwNC0xLjY2NyAxLjAyMjYtMi4yNjI0YzAuMTM5Ni0wLjMyOTUgMC4zODM3LTAuODk2OSAwLjc2MzUtMS4yMTE3IDAuMzA2Mi0wLjI1MzkgMC43MzE3LTAuMjk0MSAxLjAyMjYtMC4yOTQxIDAuMzg4NiAwIDMuNDk0MyAwLjAyMzQgNS45MzY4IDAuMDQyNCAwLjY1NjcgMC4wMDUxIDAuOTk4NyAwLjE2MzggMS40MjIgMC44MDk2IDAuNjAwNyAxLjI5MTkgMS4yMDEzIDIuNTgzOSAxLjIwMTMgMi41ODM5czAuMzc2NyAwLjkwNjYgMC4zNzY3IDEuMzgyNnYyLjI0NzRjMCAwLjU1MjMtMC40NDc3IDEtMSAxcy0xLTAuNDQ3Ny0xLTEtMC40NDc3LTEtMS0xLTEgMC40NDc3LTEgMXYyYzAgMC41NTIzLTAuNDQ3NyAxLTEgMXMtMS0wLjQ0NzctMS0xdi0xYzAtMC41NTIzLTAuNDQ3Ny0xLTEtMXMtMSAwLjQ0NzctMSAxdjdjMCAwLjU1MjMtMC40NDc3IDEtMSAxcy0xLTAuNDQ3Ny0xLTF2LThjMC0wLjY0MzUtMC4zODcxLTEtMS0xcy0xLTAuNDQ3Ny0xLTF6IiBmaWxsPSIjRkY2NzIzIi8+CjxwYXRoIGQ9Im0xNiAxMC42YzEuNjU2OSAwIDMtMS4zNDMyIDMtMyAwLTEuNjU2OS0xLjM0MzEtMy0zLTNzLTMgMS4zNDMxLTMgM2MwIDEuNjU2OCAxLjM0MzEgMyAzIDN6IiBmaWxsPSIjRjRGNEY0Ii8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "Body has volcanism"
+    },
+    "BioInsightsPersonalCodex": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNC40NzUgMzYuMDUzKSByb3RhdGUoLTQ1KSIgeD0iMTkuMTU4IiB5PSIxOC4zNzYiIHdpZHRoPSIzNC4yNDkiIGhlaWdodD0iMzQuMjQ5IiBmaWxsPSIjMDA3OEQ3Ii8+CjxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNC40NzUgMzYuMDUzKSByb3RhdGUoLTQ1KSIgeD0iMTkuMTU4IiB5PSIxOC4zNzYiIHdpZHRoPSIzNC4yNDkiIGhlaWdodD0iMzQuMjQ5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "BioInsights reports body may contain a new personal codex entry"
+    },
+    "BioInsightsGalacticCodex": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNC40NzUgMzYuMDUzKSByb3RhdGUoLTQ1KSIgeD0iMTkuMTU4IiB5PSIxOC4zNzYiIHdpZHRoPSIzNC4yNDkiIGhlaWdodD0iMzQuMjQ5IiBmaWxsPSIjRjc2MzBDIi8+CjxyZWN0IHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNC40NzUgMzYuMDUzKSByb3RhdGUoLTQ1KSIgeD0iMTkuMTU4IiB5PSIxOC4zNzYiIHdpZHRoPSIzNC4yNDkiIGhlaWdodD0iMzQuMjQ5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "BioInsights reports body may contain a new galactic codex entry"
+    },
+    "BioInsightsMarked": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01OS4wMzQ5LDYwaC00Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDEyLDU5LjAzNDl2LTQ2LjA3QS45Njc5Ljk2NzksMCwwLDEsMTIuOTY1MSwxMmg0Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDYwLDEyLjk2NTF2NDYuMDdBLjk2NzkuOTY3OSwwLDAsMSw1OS4wMzQ5LDYwWiIgZmlsbD0iIzAwNzhENyIvPgo8cGF0aCBkPSJNNTkuMDM0OSw2MGgtNDYuMDdBLjk2NzkuOTY3OSwwLDAsMSwxMiw1OS4wMzQ5di00Ni4wN0EuOTY3OS45Njc5LDAsMCwxLDEyLjk2NTEsMTJoNDYuMDdBLjk2NzkuOTY3OSwwLDAsMSw2MCwxMi45NjUxdjQ2LjA3QS45Njc5Ljk2NzksMCwwLDEsNTkuMDM0OSw2MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "BioInsights reports body may contain a marked biological"
+    },
+    "BioInsightsHighValue": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0xNy40NCAzLjM4NWMwLjMzIDAuMzggMC44OSAwLjQ1IDEuMyAwLjE2IDAuOC0wLjU3IDEuODQgMC4yOSAxLjQzIDEuMTdsLTIuNDIgMi43N2gtMy44N2wtMi40NC0yLjhjLTAuNDEtMC44OSAwLjYzLTEuNzUgMS40My0xLjE4bDAuMDcgMC4wNWMwLjQxIDAuMjkgMC45NyAwLjIxIDEuMjktMC4xN2wwLjg3LTEuMDRjMC4zOC0wLjQ2IDEuMDktMC40NiAxLjQ3IDBsMC44NyAxLjA0em0tMTMuNDQgMTcuODRjMC02LjU0IDUuMy0xMS44NCAxMS44NC0xMS44NHMxMS44NCA1LjMgMTEuODMgMTEuODRjMCA0LjgzLTMuOTIgOC43NS04Ljc1IDguNzVoLTYuMTdjLTQuODMgMC04Ljc1LTMuOTItOC43NS04Ljc1eiIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRjNDMDdCIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPHBhdGggZD0ibTE0LjEyIDcuNDY0OGgzLjQ0YzAuNjEgMCAxLjExIDAuNSAxLjExIDEuMTFzLTAuNSAxLjExLTEuMTEgMS4xMWgtMy40NGMtMC42MSAwLTEuMTEtMC41LTEuMTEtMS4xMXMwLjUtMS4xMSAxLjExLTEuMTF6bTEuNzIwMSAxMS44OGgwLjA3YzEuNSAwLjA0IDIuNyAxLjI2IDIuNyAyLjc2IDAgMS4yOC0wLjg3IDIuMzUtMi4wNSAyLjY3djEuMTJjMCAwLjQtMC4zMiAwLjcyLTAuNzIgMC43MnMtMC43Mi0wLjMyLTAuNzItMC43MnYtMS4xMmMtMS4xOC0wLjMyLTIuMDUtMS4zOS0yLjA1LTIuNjcgMC0wLjQgMC4zMi0wLjcyIDAuNzItMC43MnMwLjcyIDAuMzIgMC43MiAwLjcyYzAgMC43NCAwLjU5IDEuMzMgMS4zMiAxLjMzczEuMzMtMC42IDEuMzMtMS4zMy0wLjYtMS4zMy0xLjMzLTEuMzNoLTAuMDdjLTEuNDktMC4wNC0yLjY5LTEuMjYtMi42OS0yLjc2IDAtMS4yOCAwLjg3LTIuMzUgMi4wNS0yLjY3di0xLjEyYzAtMC40IDAuMzItMC43MiAwLjcyLTAuNzJzMC43MiAwLjMyIDAuNzIgMC43MnYxLjEyYzEuMTggMC4zMiAyLjA1IDEuMzkgMi4wNSAyLjY3IDAgMC40LTAuMzIgMC43Mi0wLjcyIDAuNzJzLTAuNzItMC4zMi0wLjcyLTAuNzJjMC0wLjczLTAuNi0xLjMzLTEuMzMtMS4zM3MtMS4zMyAwLjYtMS4zMyAxLjMzIDAuNiAxLjMzIDEuMzMgMS4zM3oiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzhDNTU0MyIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=",
+      "ContentType": "Base64SVG",
+      "Description": "BioInsights reports body may contain high value biologicals"
+    },
+    "WasDiscovered": {
+      "Content": "D",
+      "ContentType": "Text",
+      "Description": "Body was previously discovered",
+      "Font": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+      "IsLabel": true,
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "WasMapped": {
+      "Content": "M",
+      "ContentType": "Text",
+      "Description": "Body was previously discovered and mapped",
+      "Font": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+      "IsLabel": true,
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "WasFootfalled": {
+      "Content": "F",
+      "ContentType": "Text",
+      "Description": "Body has already been footfalled",
+      "Font": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+      "IsLabel": true,
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "PluginWorthVisiting": {
+      "Content": "P",
+      "ContentType": "Text",
+      "Description": "Another plugin marked this body worth mapping",
+      "Font": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+      "IsLabel": true,
+      "ContentColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "ContentBackColor": {
+        "R": 200,
+        "G": 150,
+        "B": 45
+      }
+    },
+    "FilterDefault": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 128,
+        "G": 128,
+        "B": 128
+      },
+      "Description": "Set body filter to default"
+    },
+    "FilterMapped": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 128,
+        "G": 128,
+        "B": 128
+      },
+      "Description": "Set body filter to mapped or worth mapping bodies only"
+    },
+    "FilterAll": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 128,
+        "G": 128,
+        "B": 128
+      },
+      "Description": "Set body filter to all bodies"
+    },
+    "FilterDefaultSelected": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 0,
+        "G": 191,
+        "B": 255
+      },
+      "Description": "Set body filter to default"
+    },
+    "FilterMappedSelected": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 0,
+        "G": 191,
+        "B": 255
+      },
+      "Description": "Set body filter to mapped or worth mapping bodies only"
+    },
+    "FilterAllSelected": {
+      "Content": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOCAzNiI+PGNpcmNsZSBmaWxsPSIjJCRDT0xPUiQkIiBjeD0iMTQiIGN5PSIxOCIgcj0iMTQiLz48L3N2Zz4=",
+      "ContentType": "Base64SVG",
+      "ContentColor": {
+        "R": 0,
+        "G": 191,
+        "B": 255
+      },
+      "Description": "Set body filter to all bodies"
+    },
+    "NextBody": {
+      "Content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNzIgNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0xOS41ODE2LDU1LjYwNjJjLjQ4NDguMTc4MiwxLjAzMDMuMjk3LDEuNTc1OC4yOTcuODQ4NSwwLDEuNjk3LS4yOTcsMi40MjQyLS43NzIybDMwLTE1Ljk3OTMuMzAzLS4yOTdjLjc4NzktLjc3MjIsMS4yMTIxLTEuNzIyNywxLjIxMjEtMi43OTE5cy0uNDI0Mi0yLjA3OTEtMS4yMTIxLTIuNzkxOWwtLjMwMy0uMjk3LTMwLTE2LjA5ODFjLTEuMDkwOS0uODMxNi0yLjY2NjctMS4wMDk4LTQtLjQ3NTItMS41MTUyLjU5NC0yLjQ4NDgsMi4wNzkxLTIuNDg0OCwzLjY4M3YzMS44Mzk3YzAsMS42MDM5Ljk2OTYsMy4wODg5LDIuNDg0OCwzLjY4MjlaIiBmaWxsPSJub25lIiBzdHJva2U9IiMkJENPTE9SJCQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTAiLz4KPC9zdmc+Cg==",
+      "ContentType": "Base64SVG",
+      "Description": "Next body to visit",
+      "ContentColorKey": "DefaultText"
+    },
+    "OK": {
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 124,
+        "G": 252,
+        "B": 0
+      }
+    },
+    "Warn0": {
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 255,
+        "G": 255,
+        "B": 0
+      }
+    },
+    "Warn1": {
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 255,
+        "G": 101,
+        "B": 0
+      }
+    },
+    "Alert": {
+      "ContentType": "None",
+      "ContentColor": {
+        "R": 255,
+        "G": 30,
+        "B": 0
+      }
+    }
+  }
+}

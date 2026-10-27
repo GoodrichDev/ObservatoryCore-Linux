@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Observatory Core
+Comment=Monitor Elite Dangerous journals and exploration discoveries
+Exec=observatory-core
+Icon=observatory-core
+Terminal=false
+Categories=Game;
+Keywords=Elite;Dangerous;Exploration;Journal;
+StartupWMClass=observatory-core

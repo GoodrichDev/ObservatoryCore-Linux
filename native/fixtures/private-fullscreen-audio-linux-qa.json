@@ -1,0 +1,430 @@
+{
+  "date": "2026-10-26",
+  "environment": "Ubuntu 22.04 x86-64 under WSL2; isolated PulseAudio 15.99; headless Sway 1.7 and Weston 9.0; private Xvfb",
+  "scope": "Real production audio helper and application dispatch; synthetic fullscreen/input clients only",
+  "actual_elite_or_proton_tested": false,
+  "physical_audio_output_tested": false,
+  "user_desktop_accessed_by_reproduction_scripts": false,
+  "player_files_accessed_by_reproduction_scripts": false,
+  "reproduction_scripts": [
+    "native/scripts/actual_audio_acceptance.py",
+    "native/scripts/actual_fullscreen_acceptance.py"
+  ],
+  "audio": {
+    "scope": "production native helpers plus full headless journal dispatch; private PulseAudio null sink",
+    "physical_audio_output_tested": false,
+    "actual_game_tested": false,
+    "desktop_accessed_by_this_script": false,
+    "test_binary_sha256": "d356385060cdac54ff13191d8daeaafd3fbd6092706f3e7dd1aed49d8f598e1a",
+    "app_binary_sha256": "9d8af27a8dfb9ed3c6719a89e800d9174722f31555ecc7e510bd8484302c2970",
+    "helper_playbacks": 14,
+    "speech_syntheses": 2,
+    "monitor_phases": {
+      "chime-0": {
+        "started_unix_seconds": 1793063310.0467136,
+        "frames": 64423,
+        "seconds": 1.3421458333333334,
+        "nonzero_samples": 91260,
+        "peak": 0.011688232421875,
+        "rms": 0.0013214483205824328
+      },
+      "chime-1": {
+        "started_unix_seconds": 1793063313.2996545,
+        "frames": 65547,
+        "seconds": 1.3655625,
+        "nonzero_samples": 73062,
+        "peak": 0.013214111328125,
+        "rms": 0.0020001967479668483
+      },
+      "chime-2": {
+        "started_unix_seconds": 1793063314.6771226,
+        "frames": 103782,
+        "seconds": 2.162125,
+        "nonzero_samples": 171378,
+        "peak": 0.00982666015625,
+        "rms": 0.0012335155886629525
+      },
+      "chime-3": {
+        "started_unix_seconds": 1793063318.824785,
+        "frames": 90761,
+        "seconds": 1.8908541666666667,
+        "nonzero_samples": 102598,
+        "peak": 0.013916015625,
+        "rms": 0.0018402587891603358
+      },
+      "chime-4": {
+        "started_unix_seconds": 1793063320.7291155,
+        "frames": 57777,
+        "seconds": 1.2036875,
+        "nonzero_samples": 76360,
+        "peak": 0.007843017578125,
+        "rms": 0.0012747864416798533
+      },
+      "chime-5": {
+        "started_unix_seconds": 1793063323.9326344,
+        "frames": 127320,
+        "seconds": 2.6525,
+        "nonzero_samples": 212220,
+        "peak": 0.010223388671875,
+        "rms": 0.0016466104326550138
+      },
+      "ssml": {
+        "started_unix_seconds": 1793063328.5794795,
+        "frames": 208690,
+        "seconds": 4.347708333333333,
+        "nonzero_samples": 270162,
+        "peak": 0.007080078125,
+        "rms": 0.0008137896521278702
+      },
+      "queued-instant": {
+        "started_unix_seconds": 1793063332.9258194,
+        "frames": 115091,
+        "seconds": 2.3977291666666667,
+        "nonzero_samples": 188524,
+        "peak": 0.02252197265625,
+        "rms": 0.007878532424508424,
+        "expected_tone_band_magnitudes": {
+          "523": 95.60095021146158,
+          "659": 183.46839786955917,
+          "880": 161.37903651394078
+        }
+      },
+      "missing-and-invalid": {
+        "started_unix_seconds": 1793063335.3251173,
+        "frames": 16320,
+        "seconds": 0.34,
+        "nonzero_samples": 0,
+        "peak": 0.0,
+        "rms": 0.0
+      },
+      "cancellation": {
+        "started_unix_seconds": 1793063335.6611822,
+        "frames": 21011,
+        "seconds": 0.43772916666666667,
+        "nonzero_samples": 15266,
+        "peak": 0.02001953125,
+        "rms": 0.00853070002343034,
+        "cancel_before_first_monitor_buffer": false,
+        "cancel_before_first_nonzero_pcm": false,
+        "observed_real_helper": {
+          "executable": "/usr/bin/pacat",
+          "unix_seconds": 1793063335.83004
+        }
+      },
+      "application-dispatch": {
+        "started_unix_seconds": 1793063336.107743,
+        "frames": 502542,
+        "seconds": 10.469625,
+        "nonzero_samples": 252788,
+        "peak": 0.009979248046875,
+        "rms": 0.0006735061002241749
+      }
+    },
+    "probe": {
+      "cancelled": [
+        {
+          "cancelled": true,
+          "ok": false,
+          "plugin": null,
+          "request_id": "cancel",
+          "skipped": false
+        }
+      ],
+      "completion_times": [
+        {
+          "event": {
+            "cancelled": false,
+            "ok": true,
+            "plugin": null,
+            "request_id": "instant",
+            "skipped": false
+          },
+          "unix_seconds": 1793063333.3602984
+        },
+        {
+          "event": {
+            "cancelled": false,
+            "ok": true,
+            "plugin": null,
+            "request_id": "a",
+            "skipped": false
+          },
+          "unix_seconds": 1793063334.6060305
+        },
+        {
+          "event": {
+            "cancelled": false,
+            "ok": true,
+            "plugin": null,
+            "request_id": "b",
+            "skipped": false
+          },
+          "unix_seconds": 1793063335.06419
+        }
+      ],
+      "embedded_chimes": 6,
+      "helper_pid_reaped": true,
+      "invalid": [
+        {
+          "cancelled": false,
+          "error": "Audio command exited exit status: 1",
+          "ok": false,
+          "plugin": null,
+          "request_id": "invalid",
+          "skipped": false
+        }
+      ],
+      "invalid_errors": [
+        "Audio command exited exit status: 1"
+      ],
+      "missing": [
+        {
+          "cancelled": false,
+          "ok": true,
+          "plugin": null,
+          "request_id": "missing",
+          "skipped": true
+        }
+      ],
+      "physical_audio_output_tested": false,
+      "queued_and_instant": [
+        {
+          "cancelled": false,
+          "ok": true,
+          "plugin": null,
+          "request_id": "instant",
+          "skipped": false
+        },
+        {
+          "cancelled": false,
+          "ok": true,
+          "plugin": null,
+          "request_id": "a",
+          "skipped": false
+        },
+        {
+          "cancelled": false,
+          "ok": true,
+          "plugin": null,
+          "request_id": "b",
+          "skipped": false
+        }
+      ],
+      "shutdown_ms": 5.911587,
+      "sink": "observatory_qa_null",
+      "ssml": true
+    },
+    "application_completion": {
+      "cancelled": false,
+      "ok": true,
+      "plugin": "Private Audio Acceptance",
+      "request_id": "acceptance.audio:app-file",
+      "skipped": false
+    },
+    "playback_quiescent": true,
+    "live_playback_helpers_after": 0,
+    "no_player_files_accessed": true
+  },
+  "wayland": {
+    "actual_game_tested": false,
+    "synthetic_foreground_client": true,
+    "user_desktop_accessed": false,
+    "physical_audio_connected": false,
+    "platform": "linux",
+    "app_binary_sha256": "9d8af27a8dfb9ed3c6719a89e800d9174722f31555ecc7e510bd8484302c2970",
+    "cases": {
+      "wayland-scale1": {
+        "passive": {
+          "scale": 1,
+          "samples": 202,
+          "focus_violations": 0,
+          "first_violation": null,
+          "game": {
+            "clicks": 9,
+            "focused": true,
+            "seconds": 10.060651761999999,
+            "text": "abcd"
+          },
+          "overlay": {
+            "capability_error": null,
+            "foreign_seen_game": true,
+            "foreign_seen_other": true,
+            "main_focused": false,
+            "max_layers": 5,
+            "phase": 22,
+            "seconds": 10.00571089
+          },
+          "bitmap_magenta_pixels": 4608,
+          "green_pixels": 4636,
+          "core_text_pixels": 2656,
+          "radar_white_text_pixels": 687
+        },
+        "negative_control": {
+          "scale": 1,
+          "samples": 203,
+          "focus_violations": 203,
+          "first_violation": [
+            {
+              "id": 9,
+              "app_id": null,
+              "name": "Unsafe negative control"
+            }
+          ],
+          "game": {
+            "clicks": 0,
+            "focused": true,
+            "seconds": 10.024048971,
+            "text": ""
+          },
+          "overlay": {
+            "capability_error": null,
+            "main_focused": true,
+            "max_layers": 0,
+            "phase": 22,
+            "seconds": 10.004664037
+          }
+        }
+      },
+      "wayland-scale2": {
+        "passive": {
+          "scale": 2,
+          "samples": 203,
+          "focus_violations": 0,
+          "first_violation": null,
+          "game": {
+            "clicks": 9,
+            "focused": true,
+            "seconds": 10.083973476,
+            "text": "abcd"
+          },
+          "overlay": {
+            "capability_error": null,
+            "foreign_seen_game": true,
+            "foreign_seen_other": true,
+            "main_focused": false,
+            "max_layers": 5,
+            "phase": 22,
+            "seconds": 10.006585268
+          },
+          "bitmap_magenta_pixels": 14464,
+          "green_pixels": 14656,
+          "core_text_pixels": 9776,
+          "radar_white_text_pixels": 602
+        },
+        "negative_control": {
+          "scale": 2,
+          "samples": 208,
+          "focus_violations": 208,
+          "first_violation": [
+            {
+              "id": 29,
+              "app_id": "observatory-overlay-probe",
+              "name": "Observatory overlay probe"
+            }
+          ],
+          "game": {
+            "clicks": 0,
+            "focused": true,
+            "seconds": 10.091519665,
+            "text": ""
+          },
+          "overlay": {
+            "capability_error": null,
+            "main_focused": true,
+            "max_layers": 0,
+            "phase": 22,
+            "seconds": 10.003077317
+          }
+        }
+      },
+      "no-layer-shell": {
+        "capability_error": "Wayland passive notifications unavailable: Wayland compositor does not support wlr-layer-shell; passive notifications cannot use xdg_toplevel safely",
+        "main_focused": false,
+        "max_layers": 0,
+        "phase": 22,
+        "seconds": 10.002618262,
+        "exit_code": 0,
+        "xdg_toplevel_creations": 1
+      }
+    }
+  },
+  "x11": {
+    "actual_game_tested": false,
+    "synthetic_foreground_client": true,
+    "user_desktop_accessed": false,
+    "physical_audio_connected": false,
+    "platform": "linux",
+    "app_binary_sha256": "9d8af27a8dfb9ed3c6719a89e800d9174722f31555ecc7e510bd8484302c2970",
+    "cases": {
+      "stellar": {
+        "display": "private X11",
+        "foreground_samples": 794,
+        "focus_changes": 0,
+        "mapped_surfaces": [
+          {
+            "title": "StellarOverlay Information [\"3100\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          },
+          {
+            "title": "StellarOverlay Radar [\"2113\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          },
+          {
+            "title": "StellarOverlay [\"C755\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          },
+          {
+            "title": "StellarOverlay Information [\"3100\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          },
+          {
+            "title": "StellarOverlay Radar [\"2113\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          }
+        ],
+        "cycles": [
+          "show",
+          "update",
+          "cancel",
+          "recreate",
+          "expire"
+        ],
+        "synthetic_only": true,
+        "negative_control": false,
+        "core_fallback": false
+      },
+      "core-fallback": {
+        "display": "private X11",
+        "foreground_samples": 797,
+        "focus_changes": 0,
+        "mapped_surfaces": [
+          {
+            "title": "Observatory Core Notification [\"1367\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          },
+          {
+            "title": "Observatory Core Notification [\"1367\"]",
+            "passive_before_map": true,
+            "notification_type": true
+          }
+        ],
+        "cycles": [
+          "show",
+          "update",
+          "cancel",
+          "recreate",
+          "expire"
+        ],
+        "synthetic_only": true,
+        "negative_control": false,
+        "core_fallback": true
+      }
+    }
+  }
+}

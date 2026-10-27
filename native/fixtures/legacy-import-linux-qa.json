@@ -1,0 +1,26 @@
+{
+  "binary_sha256": "ea1e1f3601b7b24493b0d748f31da1a9c4f27feb4f8db262bac4595b5df0e4fc",
+  "original_files_unchanged": 37,
+  "original_settings_unchanged": true,
+  "import_runs": [
+    {
+      "files": 6,
+      "rows_added": 3311,
+      "commanders": 1,
+      "codex_entries": 30
+    },
+    {
+      "files": 6,
+      "rows_added": 0,
+      "commanders": 1,
+      "codex_entries": 30
+    }
+  ],
+  "native_profile_temporary": true,
+  "plugin_settings_present": 4,
+  "date": "2026-10-26",
+  "private_contents_retained": false,
+  "source_mode": "read-only installed profile",
+  "database_comparison": "All logical tables in four Hecate databases compared exactly; private table hashes retained only in local diagnostic receipt.",
+  "reproduce": "native/scripts/verify_local_legacy_import.py"
+}

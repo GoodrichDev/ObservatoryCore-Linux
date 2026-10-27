@@ -1,0 +1,688 @@
+{
+  "visits": [
+    {
+      "batch": false,
+      "preread": false,
+      "maximum": 0,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": false,
+      "maximum": 1,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": false,
+      "maximum": 2,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": false,
+      "maximum": 1000,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": true,
+      "maximum": 0,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": true,
+      "maximum": 1,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": true,
+      "maximum": 2,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": false,
+      "preread": true,
+      "maximum": 1000,
+      "addresses": [
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": false,
+      "maximum": 0,
+      "addresses": [
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": false,
+      "maximum": 1,
+      "addresses": [
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": false,
+      "maximum": 2,
+      "addresses": [
+        1,
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": false,
+      "maximum": 1000,
+      "addresses": [
+        1,
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": true,
+      "maximum": 0,
+      "addresses": [
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": true,
+      "maximum": 1,
+      "addresses": [
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": true,
+      "maximum": 2,
+      "addresses": [
+        1,
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    },
+    {
+      "batch": true,
+      "preread": true,
+      "maximum": 1000,
+      "addresses": [
+        1,
+        2,
+        1
+      ],
+      "current": 1,
+      "messages": [
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd",
+        "EvaluatorSysAdd"
+      ]
+    }
+  ],
+  "totals": [
+    {
+      "current": 0,
+      "total": -1,
+      "flag": -1,
+      "unsold": -1,
+      "display": -1
+    },
+    {
+      "current": 0,
+      "total": -1,
+      "flag": 0,
+      "unsold": -1,
+      "display": -1
+    },
+    {
+      "current": 0,
+      "total": -1,
+      "flag": 1,
+      "unsold": -1,
+      "display": -1
+    },
+    {
+      "current": 0,
+      "total": 0,
+      "flag": -1,
+      "unsold": 0,
+      "display": 0
+    },
+    {
+      "current": 0,
+      "total": 0,
+      "flag": 0,
+      "unsold": 0,
+      "display": 0
+    },
+    {
+      "current": 0,
+      "total": 0,
+      "flag": 1,
+      "unsold": 0,
+      "display": 0
+    },
+    {
+      "current": 0,
+      "total": 10,
+      "flag": -1,
+      "unsold": 10,
+      "display": 10
+    },
+    {
+      "current": 0,
+      "total": 10,
+      "flag": 0,
+      "unsold": 10,
+      "display": 10
+    },
+    {
+      "current": 0,
+      "total": 10,
+      "flag": 1,
+      "unsold": 10,
+      "display": 10
+    },
+    {
+      "current": 0,
+      "total": 12345,
+      "flag": -1,
+      "unsold": 12345,
+      "display": 12345
+    },
+    {
+      "current": 0,
+      "total": 12345,
+      "flag": 0,
+      "unsold": 12345,
+      "display": 12345
+    },
+    {
+      "current": 0,
+      "total": 12345,
+      "flag": 1,
+      "unsold": 12345,
+      "display": 12345
+    },
+    {
+      "current": 0,
+      "total": 99999,
+      "flag": -1,
+      "unsold": 99999,
+      "display": 99999
+    },
+    {
+      "current": 0,
+      "total": 99999,
+      "flag": 0,
+      "unsold": 99999,
+      "display": 99999
+    },
+    {
+      "current": 0,
+      "total": 99999,
+      "flag": 1,
+      "unsold": 99999,
+      "display": 99999
+    },
+    {
+      "current": 0,
+      "total": 100000,
+      "flag": -1,
+      "unsold": 100000,
+      "display": 100000
+    },
+    {
+      "current": 0,
+      "total": 100000,
+      "flag": 0,
+      "unsold": 100000,
+      "display": 100000
+    },
+    {
+      "current": 0,
+      "total": 100000,
+      "flag": 1,
+      "unsold": 100000,
+      "display": 100000
+    },
+    {
+      "current": 0,
+      "total": 300000,
+      "flag": -1,
+      "unsold": 300000,
+      "display": 300000
+    },
+    {
+      "current": 0,
+      "total": 300000,
+      "flag": 0,
+      "unsold": 300000,
+      "display": 300000
+    },
+    {
+      "current": 0,
+      "total": 300000,
+      "flag": 1,
+      "unsold": 300000,
+      "display": 300000
+    },
+    {
+      "current": 12345,
+      "total": -1,
+      "flag": -1,
+      "unsold": -1,
+      "display": 12344
+    },
+    {
+      "current": 12345,
+      "total": -1,
+      "flag": 0,
+      "unsold": -1,
+      "display": 12344
+    },
+    {
+      "current": 12345,
+      "total": -1,
+      "flag": 1,
+      "unsold": -1,
+      "display": 12344
+    },
+    {
+      "current": 12345,
+      "total": 0,
+      "flag": -1,
+      "unsold": 0,
+      "display": 12345
+    },
+    {
+      "current": 12345,
+      "total": 0,
+      "flag": 0,
+      "unsold": 0,
+      "display": 12345
+    },
+    {
+      "current": 12345,
+      "total": 0,
+      "flag": 1,
+      "unsold": 0,
+      "display": 12345
+    },
+    {
+      "current": 12345,
+      "total": 10,
+      "flag": -1,
+      "unsold": 10,
+      "display": 12355
+    },
+    {
+      "current": 12345,
+      "total": 10,
+      "flag": 0,
+      "unsold": 10,
+      "display": 12355
+    },
+    {
+      "current": 12345,
+      "total": 10,
+      "flag": 1,
+      "unsold": 10,
+      "display": 12355
+    },
+    {
+      "current": 12345,
+      "total": 12345,
+      "flag": -1,
+      "unsold": 12345,
+      "display": 24690
+    },
+    {
+      "current": 12345,
+      "total": 12345,
+      "flag": 0,
+      "unsold": 12345,
+      "display": 24690
+    },
+    {
+      "current": 12345,
+      "total": 12345,
+      "flag": 1,
+      "unsold": 0,
+      "display": 12345
+    },
+    {
+      "current": 12345,
+      "total": 99999,
+      "flag": -1,
+      "unsold": 99999,
+      "display": 112344
+    },
+    {
+      "current": 12345,
+      "total": 99999,
+      "flag": 0,
+      "unsold": 99999,
+      "display": 112344
+    },
+    {
+      "current": 12345,
+      "total": 99999,
+      "flag": 1,
+      "unsold": 87654,
+      "display": 99999
+    },
+    {
+      "current": 12345,
+      "total": 100000,
+      "flag": -1,
+      "unsold": 100000,
+      "display": 112345
+    },
+    {
+      "current": 12345,
+      "total": 100000,
+      "flag": 0,
+      "unsold": 100000,
+      "display": 112345
+    },
+    {
+      "current": 12345,
+      "total": 100000,
+      "flag": 1,
+      "unsold": 87655,
+      "display": 100000
+    },
+    {
+      "current": 12345,
+      "total": 300000,
+      "flag": -1,
+      "unsold": 300000,
+      "display": 312345
+    },
+    {
+      "current": 12345,
+      "total": 300000,
+      "flag": 0,
+      "unsold": 300000,
+      "display": 312345
+    },
+    {
+      "current": 12345,
+      "total": 300000,
+      "flag": 1,
+      "unsold": 287655,
+      "display": 300000
+    },
+    {
+      "current": 100000,
+      "total": -1,
+      "flag": -1,
+      "unsold": -1,
+      "display": 99999
+    },
+    {
+      "current": 100000,
+      "total": -1,
+      "flag": 0,
+      "unsold": -1,
+      "display": 99999
+    },
+    {
+      "current": 100000,
+      "total": -1,
+      "flag": 1,
+      "unsold": -1,
+      "display": 99999
+    },
+    {
+      "current": 100000,
+      "total": 0,
+      "flag": -1,
+      "unsold": 0,
+      "display": 100000
+    },
+    {
+      "current": 100000,
+      "total": 0,
+      "flag": 0,
+      "unsold": 0,
+      "display": 100000
+    },
+    {
+      "current": 100000,
+      "total": 0,
+      "flag": 1,
+      "unsold": 0,
+      "display": 100000
+    },
+    {
+      "current": 100000,
+      "total": 10,
+      "flag": -1,
+      "unsold": 10,
+      "display": 100010
+    },
+    {
+      "current": 100000,
+      "total": 10,
+      "flag": 0,
+      "unsold": 10,
+      "display": 100010
+    },
+    {
+      "current": 100000,
+      "total": 10,
+      "flag": 1,
+      "unsold": 10,
+      "display": 100010
+    },
+    {
+      "current": 100000,
+      "total": 12345,
+      "flag": -1,
+      "unsold": 12345,
+      "display": 112345
+    },
+    {
+      "current": 100000,
+      "total": 12345,
+      "flag": 0,
+      "unsold": 12345,
+      "display": 112345
+    },
+    {
+      "current": 100000,
+      "total": 12345,
+      "flag": 1,
+      "unsold": 12345,
+      "display": 112345
+    },
+    {
+      "current": 100000,
+      "total": 99999,
+      "flag": -1,
+      "unsold": 99999,
+      "display": 199999
+    },
+    {
+      "current": 100000,
+      "total": 99999,
+      "flag": 0,
+      "unsold": 99999,
+      "display": 199999
+    },
+    {
+      "current": 100000,
+      "total": 99999,
+      "flag": 1,
+      "unsold": 99999,
+      "display": 199999
+    },
+    {
+      "current": 100000,
+      "total": 100000,
+      "flag": -1,
+      "unsold": 100000,
+      "display": 200000
+    },
+    {
+      "current": 100000,
+      "total": 100000,
+      "flag": 0,
+      "unsold": 100000,
+      "display": 200000
+    },
+    {
+      "current": 100000,
+      "total": 100000,
+      "flag": 1,
+      "unsold": 0,
+      "display": 100000
+    },
+    {
+      "current": 100000,
+      "total": 300000,
+      "flag": -1,
+      "unsold": 300000,
+      "display": 400000
+    },
+    {
+      "current": 100000,
+      "total": 300000,
+      "flag": 0,
+      "unsold": 300000,
+      "display": 400000
+    },
+    {
+      "current": 100000,
+      "total": 300000,
+      "flag": 1,
+      "unsold": 200000,
+      "display": 300000
+    }
+  ],
+  "afterDelete": {
+    "unsold": 0,
+    "current": 12345,
+    "display": 12345
+  }
+}

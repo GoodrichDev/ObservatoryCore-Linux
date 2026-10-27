@@ -1,0 +1,172 @@
+{
+  "synthetic_data_only": true,
+  "public_network": false,
+  "core_sha256": "7a6a8bd46dc14da506a475eb7caefe11e459b10f41788faa18bb8f39e7648341",
+  "worker_sha256": "e7ca372e66c5bbce2ae2b0a35ca298527031556d38b0c3f714728b22d0bf6f27",
+  "projection_normalization_ignored": [
+    "sampled_ms",
+    "created_ms",
+    "expires_ms",
+    "opacity"
+  ],
+  "checks": {
+    "automatic_manual_and_disabled_policy": {
+      "installed": [
+        "BioInsights",
+        "StellarOverlay"
+      ],
+      "beta_downloaded": false,
+      "disabled_flags_preserved": true
+    },
+    "beta_opt_in": {
+      "Evaluator": "beta",
+      "disabled_Hecate_preserved": true
+    },
+    "atomic_stage_preserves_active_workers": {
+      "pids": {
+        "Evaluator": 216443,
+        "Hecate": 216446,
+        "BioInsights": 216440,
+        "StellarOverlay": 216449
+      },
+      "old_executable_inode_retained": true,
+      "other_artifacts_unchanged": true,
+      "activation_deferred_until_restart": true
+    },
+    "restart_activates_all_four": {
+      "worker_metadata": {
+        "BioInsights": {
+          "native_version": "2.0.0",
+          "platform": "x86_64-unknown-linux-gnu",
+          "plugin": "BioInsights",
+          "protocol": 1,
+          "source_version": "1.3.444.1052"
+        },
+        "Evaluator": {
+          "native_version": "2.0.0",
+          "platform": "x86_64-unknown-linux-gnu",
+          "plugin": "Evaluator",
+          "protocol": 1,
+          "source_version": "1.3.444.637"
+        },
+        "Hecate": {
+          "native_version": "2.0.0",
+          "platform": "x86_64-unknown-linux-gnu",
+          "plugin": "Hecate",
+          "protocol": 1,
+          "source_version": "1.3.444.761"
+        },
+        "StellarOverlay": {
+          "native_version": "2.0.0",
+          "platform": "x86_64-unknown-linux-gnu",
+          "plugin": "StellarOverlay",
+          "protocol": 1,
+          "source_version": "1.3.228.387"
+        }
+      },
+      "new_pids": {
+        "Hecate": 216477,
+        "BioInsights": 216471,
+        "Evaluator": 216474,
+        "StellarOverlay": 216480
+      }
+    },
+    "full_pipeline_equivalence": {
+      "compared": [
+        "plugins",
+        "plugin_views",
+        "bio_summary",
+        "eval_summary",
+        "overlay",
+        "findings",
+        "ledger"
+      ],
+      "ledger": {
+        "exploration": 50594,
+        "biology": 19010800,
+        "visits": 1
+      },
+      "canonical_sha256": "aa7984bfd058bbcf303235ed4a3d2150749922effe48a1b9f3b304fa3d11fafe",
+      "rows": {
+        "BioInsights": 4,
+        "Evaluator": 2,
+        "Hecate": 0,
+        "StellarOverlay": 0
+      }
+    },
+    "reject_corrupt": {
+      "previous_install_unchanged": true,
+      "errors": [
+        "BioInsights native update: Native worker download checksum or size does not match manifest"
+      ]
+    },
+    "reject_bad-elf": {
+      "previous_install_unchanged": true,
+      "errors": [
+        "BioInsights native update: Downloaded plugin is not a native 64-bit Linux ELF"
+      ]
+    },
+    "reject_wrong-protocol": {
+      "previous_install_unchanged": true,
+      "errors": [
+        "BioInsights native update: Native worker metadata protocol/plugin mismatch"
+      ]
+    },
+    "reject_wrong-version": {
+      "previous_install_unchanged": true,
+      "errors": [
+        "BioInsights native update: Native worker version does not match manifest"
+      ]
+    },
+    "runtime_failure_isolation": {
+      "personal_checkpoint_unchanged": true,
+      "Evaluator_processed_new_body": true,
+      "Stellar_remained_functional": true,
+      "errors": [
+        "BioInsights state: BioInsights state save skipped: native worker is unavailable",
+        "Native worker: BioInsights native worker failed: Native worker exited or closed stdout"
+      ]
+    }
+  },
+  "feed_requests": [
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/stellaroverlay-r2-stable",
+    "/native-plugins.json",
+    "/bioinsights-r2-stable",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/evaluator-r3-beta",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/hecate-r2-stable",
+    "/native-plugins.json",
+    "/bioinsights-r3-stable",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/negative-corrupt",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/negative-bad-elf",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/negative-wrong-protocol",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/negative-wrong-version",
+    "/native-plugins.json",
+    "/native-plugins.json",
+    "/native-plugins.json"
+  ]
+}

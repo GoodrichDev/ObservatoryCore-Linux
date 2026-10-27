@@ -1,0 +1,1 @@
+namespace System.Windows.Forms{public class ListViewItem{public System.Collections.Generic.List<SubItem>SubItems=new();public ListViewItem(string text){SubItems.Add(new SubItem{Text=text});}}public class SubItem{public string Text;}}namespace Observatory.Framework.Interfaces{public interface IObservatoryComparer{int SortColumn{get;set;}int Order{get;set;}}}

@@ -1,0 +1,939 @@
+{
+  "component": "BioInsights",
+  "reference_version": "1.3.444.1052",
+  "audit_status": "Source-reviewed implementation plus finite differential tests. Host integration is listed separately; this is not an exhaustive proof over every possible journal/orbital graph.",
+  "source_hashes": {
+    "BioInsights/BioInsights.cs": "87a7b897eaedc0d6e2c7b7e5738a78a2e9f1a2b0afce4e098f9834d6a3becb7a",
+    "BioInsights/BioInsightsSettings.cs": "f8c660686d14e86750aac1e7a4d78d1d096a1f4450a508b91a045a7c5135a4d4",
+    "BioInsights/UIHandler.cs": "3b9d4100cc1aaa4a9604eac58b729ba3e9239e6aec944a3523f9fb40a8d69975",
+    "BioInsights/AlertBuilder.cs": "c70f5fc1addf63f972b961c516dac174069cdf0b057843b0f75c465f9342ec2f",
+    "BioInsights/BiologicalCodexEntry.cs": "a0001c9381a6583fdc0a4f1bc0d4d7d70295e55a1fb364b9ba31297db9b5d565",
+    "BioInsights/DistanceNotifier.cs": "4fc0f1b6586d1874ab69afab2f5a553a58f9e4168806f6dfc9781aeb40ff4bd6",
+    "BioInsights.SystemDetails/BSystem.cs": "42bd03186c66eb11de5f46651273b3b8e0e401bd05c3a94fbf0bc1a70cc4062f",
+    "CodexLib/CodexChecker.cs": "dc89403c41099764c96022b0b49a115d5a0be159d19bd43bc20610be158a53d1",
+    "EDJP.Observatory/BaseUIHandler.cs": "c4821315defbaae39c332e8c1bb35a4dfa2d773de89c7617ce78c627c6887dad"
+  },
+  "settings": [
+    {
+      "name": "ZoomLevel",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 100,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ThemeSettings",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": {
+        "ThemeIndex": 1,
+        "ThemeMode": 0,
+        "ThemeFullName": [
+          "Original",
+          "Elite Orange"
+        ],
+        "ThemeFileName": [
+          "theme.json",
+          "theme-orange.json"
+        ]
+      },
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PersonalCodexPossibleAny",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PersonalCodexPossibleCurrent",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "Notifications",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": {
+        "PersonalCodex": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "Marked": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "HighValue": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "Distance": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "OnScanDetails": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "NewGalactic": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "Samples": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "AtmosphericBody": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "AtmosphericBodyWithBios": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "NonAtmosphericBodyWithBios": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        },
+        "RadiantStarUpdates": {
+          "Popup": true,
+          "Voice": true,
+          "Plugin": false
+        }
+      },
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "HecateUseDB",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "HecateUseSpansh",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "NativeOutput",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": " Enabled",
+      "status": "implemented_source_mode_and_host_adapter",
+      "evidence": "RAW IL !NativeOutput.StartsWith(Disabled) controls Initialise(bool): Enabled constructs PluginWebBrowser; Disabled reveals the original anchored Arial20pt label. Startup-latched native host and actual both-renderer disabled/persistence/focus controls are verified by bioinsights-native-output-oracle.json and fixtures/bioinsights-visual-linux-qa.json."
+    },
+    {
+      "name": "HideNotPresent",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ShowBodyFields",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ExpandOutput",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "HideAutoscans",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "HideAutoscansNoPredictions",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ShowHeaders",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ShowTotal",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ShowSplitters",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "MaximumSystemsReadAll",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 100,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ButtonSize",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "  Normal",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutAlwaysShow",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowNoFocus",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowLeftPanel",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowRightPanel",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowDSSMode",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowRolePanel",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowSysMap",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutShowFSSMode",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutOpacity",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 100,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutHideUnlessSupercruiseOrSrv",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "PopoutHidePopulated",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "StellarOverlaySendFSSNotification",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "StellarOverlaySendDSSNotification",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "StellarOverlayUseRadar",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationFontSize",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 12,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationOpacity",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 80,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationXPos",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 2,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationYPos",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 2,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "DSSNotificationXPos",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 2,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "DSSNotificationYPos",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 98,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationBorderWidth",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 2,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "FSSNotificationTTL",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 6000,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "UseCustomNotificationColours",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "TitleColorHex",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "FFFF7B3A",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "BackgroundColorHex",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "B0000000",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "BorderColorHex",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "FFFF3D3A",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "ColorHex",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "FFFF6300",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "MinBodyValueMillions",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 20,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "MinIndividualBiologicalValueMillions",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": 12,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "DataDirectory",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": null,
+      "status": "host_readonly_property",
+      "evidence": "Original property reflects Core.PluginDataFolder; native host supplies path and imports legacy data read-only."
+    },
+    {
+      "name": "InstallUpdates",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "host_native_update_adapter",
+      "evidence": "Original Windows EOP updater is platform-specific. Native compatible-manifest/ELF adapter enforces actual policy/hash/metadata/stage/restart outcomes, verified by fixtures/native-updater-e2e-linux-qa.json; no vendor public Linux feed is claimed."
+    },
+    {
+      "name": "InstallBetas",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "host_native_update_adapter",
+      "evidence": "Original Windows EOP updater is platform-specific. Native compatible-manifest/ELF adapter enforces actual policy/hash/metadata/stage/restart outcomes, verified by fixtures/native-updater-e2e-linux-qa.json; no vendor public Linux feed is claimed."
+    },
+    {
+      "name": "UseCannonData",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "source_inert",
+      "evidence": "Installed source retains property without active behavior consumer."
+    },
+    {
+      "name": "SaveSystemData",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "source_inert",
+      "evidence": "Installed source retains property without active behavior consumer."
+    },
+    {
+      "name": "DebugBody",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": "",
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "VerboseLogging",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": false,
+      "status": "implemented_source_default",
+      "evidence": "Independent original constructor55-value capture fixtures/bioinsights-settings-oracle.json; related behavior grouped below."
+    },
+    {
+      "name": "SendDebugData",
+      "source": "BioInsightsSettings.cs public property/constructor",
+      "default": true,
+      "status": "source_dormant",
+      "evidence": "Installed ErrorReport queue has no producer; exits before POST. Value retained; no fabricated upload. Native local DebugBody/VerboseLogging diagnostics drain to host."
+    }
+  ],
+  "events": [
+    {
+      "name": "Commander",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_no_op",
+      "evidence": "Source Commander callback has no functional handler; identity comes from LoadGame."
+    },
+    {
+      "name": "LoadGame",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "Location",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "FSDJump",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "CarrierJump",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "StartJump",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Scan",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "ScanBaryCentre",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "FSSBodySignals",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "SAASignalsFound",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "SAAScanComplete",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "FSSAllBodiesFound",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "ApproachBody",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "SupercruiseExit",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "SupercruiseEntry",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Touchdown",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Liftoff",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "LaunchSRV",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "DockSRV",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Embark",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Disembark",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "ReceiveText",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "ScanOrganic",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "CodexEntry",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "SellOrganicData",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Source specific handler reviewed against Rust transitions. Native synthetic tests cover predictions, filters, samples, sightings, footfall, sale, death and preread. These are not independent captures of every private handler branch."
+    },
+    {
+      "name": "Died",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "DockingRequested",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Docked",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    },
+    {
+      "name": "Shutdown",
+      "source": "BioInsights.processJournalEvent / specific handler",
+      "status": "source_reviewed_and_tested",
+      "evidence": "Independent original dispatcher29x128 flags; native radar actions18x128 exact. Worker state replay tests cover jumps/surface/commander."
+    }
+  ],
+  "messages": [
+    {
+      "name": "Ready",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "First sender/version retained; ready_peer protocol test, no invented startup side effects."
+    },
+    {
+      "name": "LoadSystemResponse",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Current ID64, parallel FIDs, only source LoadData scan types; live scan priority; quiet support ingest; state preservation tests."
+    },
+    {
+      "name": "SpanshSystemResponse",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Current ID64, only source scan types; cannot impersonate commander/DSS or overwrite newer live scan."
+    },
+    {
+      "name": "RegisterPluginCustomColoursResponse",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Atomic four-color response plus register/unregister payload/default-color regression test."
+    },
+    {
+      "name": "SetServerAddress",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Only Hecate sender accepted; exact server/port expands original app.js websocket URL."
+    },
+    {
+      "name": "BioInsightsGetDataResponse",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Source six-field vault rows/bonus/total; pending correlated web responses and FID state."
+    },
+    {
+      "name": "BioInsightsGetTotalResponse",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Authoritative current-FID-only total, numeric/F-prefix source conversion test."
+    },
+    {
+      "name": "WebRequest",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Source document/assets/routes with correlated RequestID; actual listener owned by Hecate."
+    },
+    {
+      "name": "WebSocketRequest",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "ClientID correlation; source content/reload/hide responses. No invented unsolicited main-table broadcasts."
+    },
+    {
+      "name": "LegacyPluginMessage",
+      "source": "BioInsights.HandlePluginMessage / specific handler",
+      "status": "implemented_and_tested",
+      "evidence": "Source handler only logs command identity; native local diagnostic, no legacy command execution."
+    }
+  ],
+  "routes": [
+    {
+      "name": "main",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "unsold",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "about",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "codexcompanion",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "ccmark",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "ccshow",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "toggleunsold",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "popout",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "zoom",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "settings",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "alert",
+      "source": "UIHandler.HandleURL / BaseUIHandler.HandleURL",
+      "native_status": "implemented",
+      "web_status": "implemented",
+      "evidence": "Original-resource HTML and native action tests. Main/About/Unsold/Codex stay in same viewport; only explicit popout/settings/zoom return host action. HTTP source hides those host-only buttons; /alert/id hides banner without changing native route."
+    },
+    {
+      "name": "hecatenag",
+      "source": "UIHandler.HandleURL6362/6521 and html.hecate.html",
+      "native_status": "implemented_native_adapter",
+      "web_status": "implemented_native_adapter",
+      "evidence": "Source dependency explanation and Skip; explicit Enable Hecate calls Core.InstallNativePlugin{Plugin:Hecate,Dependency:true}. Bundled Linux worker replaces Windows EOP download. Waits actual Ready; regression test verifies no fake completion, Ready and Skip."
+    },
+    {
+      "name": "gethecate",
+      "source": "UIHandler.HandleURL6362/6521 and html.hecate.html",
+      "native_status": "implemented_native_adapter",
+      "web_status": "implemented_native_adapter",
+      "evidence": "Source dependency explanation and Skip; explicit Enable Hecate calls Core.InstallNativePlugin{Plugin:Hecate,Dependency:true}. Bundled Linux worker replaces Windows EOP download. Waits actual Ready; regression test verifies no fake completion, Ready and Skip."
+    },
+    {
+      "name": "skiphecate",
+      "source": "UIHandler.HandleURL6362/6521 and html.hecate.html",
+      "native_status": "implemented_native_adapter",
+      "web_status": "implemented_native_adapter",
+      "evidence": "Source dependency explanation and Skip; explicit Enable Hecate calls Core.InstallNativePlugin{Plugin:Hecate,Dependency:true}. Bundled Linux worker replaces Windows EOP download. Waits actual Ready; regression test verifies no fake completion, Ready and Skip."
+    }
+  ],
+  "actions": [
+    {
+      "name": "ConfigureNotifications",
+      "status": "implemented",
+      "evidence": "Original11 categories/masks; source8-mask differential test."
+    },
+    {
+      "name": "ConfigureTheming",
+      "status": "implemented",
+      "evidence": "Original2 themes/custom full color+symbol overrides; source theme test and host JSON import."
+    },
+    {
+      "name": "ConfigureStellarOverlay",
+      "status": "implemented",
+      "evidence": "Source dimensions/controls/default palette and missing-peer Error dialog."
+    },
+    {
+      "name": "AdvancedPopoutSettings",
+      "status": "implemented",
+      "evidence": "Original13 controls, independent73728 source visibility combinations."
+    },
+    {
+      "name": "WipeUnsoldData",
+      "status": "implemented",
+      "evidence": "Current-FID source Hecate delete and local total reset, other commander records preserved."
+    },
+    {
+      "name": "ExportContent",
+      "status": "implemented",
+      "evidence": "No source Bio ExportContent/ICustomExport implementation. Original customUI export is no-op; native diagnostic export is an extension."
+    }
+  ],
+  "persistence": [
+    {
+      "name": "CCSeen.bin / BISeen.bin / CCMark.bin",
+      "source": "PluginDataFolder/FID/name; BiologicalCodexEntry version100",
+      "status": "implemented_source_adapter",
+      "evidence": "Independent original binary vectors, malformed input/duplicate rules, commander separation and native snapshot reload."
+    },
+    {
+      "name": "dnotifier.json",
+      "source": "PluginDataFolder/FID/dnotifier.json; DistanceNotifierJSON",
+      "status": "implemented_source_adapter",
+      "evidence": "Source SystemID64/ScanPosition/MinimumDistance/RadiusKM schema and 1/2-sample resume tests. RadiusKM source stores meters."
+    },
+    {
+      "name": "Hecate-owned unsold data / total",
+      "status": "implemented",
+      "evidence": "Source original commands/six-field rows/FID-scoped authoritative total; tests."
+    },
+    {
+      "name": "popout.json",
+      "source": "PluginDataFolder/popout.json; BaseUIHandler3251/3272",
+      "schema": "{Location:{X,Y},Size:{Width,Height},IsOnTop,ShowTitleBar,HideButtons}",
+      "status": "implemented_host_adapter",
+      "evidence": "legacy_data imports original Location/Size/IsOnTop/ShowTitleBar/HideButtons; runtime/UI persist native custom-popout chrome and geometry. The 18 source import tests include exact custom palettes/popouts and source DB WAL preservation; Core graphical receipt verifies saved generic popout restart separately."
+    },
+    {
+      "name": "custom{ThemeIndex}.json",
+      "source": "PluginDataFolder/custom{ThemeIndex}.json; BaseThemeSettings.CustomColoursFilename",
+      "status": "implemented_host_import",
+      "native_schema": "ThemeSettings.Colors, ThemeMode1; complete symbol/color dictionary retained.",
+      "evidence": "legacy_data source palette import preserves complete symbol/color dictionaries and ThemeMode1; native librsvg renders actual substituted SVG bytes."
+    }
+  ],
+  "verification": {
+    "constructor": "Independent55-value source constructor capture.",
+    "headers": "8 source cases",
+    "body_headers": "12 source cases",
+    "species_rows": "75 source cases",
+    "requirements": "663 original formatter blocks /117 species",
+    "popout_visibility": "73728 original cases",
+    "notifications": "11 source categories x8 channel masks +8 body-name formatting captures",
+    "bitmap": "64 original GenerateAlert drawing-call traces; all rows and source symbol geometry.",
+    "radar": "Original dispatcher29x128; native exact18x128 relevant actions.",
+    "predictions": {
+      "oracle": "fixtures/capture-bio-predictions.py + bioinsights-predictions-oracle.cs/.json",
+      "cases": 4026,
+      "positive_species": 117,
+      "fields": "Genus,Species,Value,Distance,VariantType,all colors/reasons/likelihoods/ShowInUI",
+      "scope": "Entire original CodexChecker source with synthetic contexts plus source final one-step star requirement confidence change. Includes numeric boundaries, no/incomplete stars and multiple parents."
+    },
+    "stellar_context": {
+      "oracle": "fixtures/capture-bio-radiant.py + bioinsights-radiant-oracle.cs/.json",
+      "cases": 241,
+      "source": "Entire original BSystem source with inert logger/data-only DTOs",
+      "fields": "Full resulting predictions, chosen radiant body/type, every source-star distance",
+      "scope": "All5 reachable source modes; single/giant/carbon/degenerate classes, hints, moons/deepmoons, binaries/nestedbarycentres/missingparents/remotecompanions. Finite fixture coverage."
+    },
+    "worker_tests": "See dist/final-validation.json for the current whole-workspace result; the source-specific captures below are independent of that count.",
+    "desktop_tests": "Actual native renderer and source-layout tests plus real application interactions; see native/BIOINSIGHTS_VISUAL_QA.md and fixtures/bioinsights-visual-linux-qa.json.",
+    "lint": "Whole-workspace all-target clippy with warnings denied; exact run in dist/final-validation.json.",
+    "companion_pages": {
+      "oracle": "fixtures/capture-bio-codex-page.py + bioinsights-codex-page-oracle.json",
+      "cases": 607,
+      "pages": 139,
+      "scope": "Complete original buildBasePage/buildGenusPage/buildSpeciesPage/buildVariantsTable and pure transitive helpers with source CodexLib. All117species,21genus routes, personal marks and zero/one/two/all/region42-only seen masks. Source static markup captured into production templates; gallery chooser and map bitmap are explicit inert fixture seams, exercised separately in native/browser paths."
+    },
+    "about_unsold": {
+      "oracle": "Same source-only page harness, original GenerateAboutPage and GenerateUnsoldDataPage",
+      "about": "Complete original markup, live theme descriptions/symbols tested forbothinstalled themes",
+      "unsold_cases": 8,
+      "closed_gaps": [
+        "Species detail has no navigation columns; four-column cch header and original requirements/gallery layout",
+        "Variants original Mark-before-Seen order, original links/IDs, display count source upper-bound excludesregion42",
+        "About actual legend tail and Thanks-before-assistance order",
+        "Unsold Total first plus blank row, intrinsic tablewidth, firststripe2, full dd-MMM-yyyy HH:mm date, source classes/IDs",
+        "Same-page WebKit preserves current gallery selection and scroll while map/marks update"
+      ]
+    },
+    "embedded_dom_updates": "Actual WebKit private-Xvfb test receipt dist/embedded-browser-update/receipt.json: gallery node identity+credits+URI preserved, mark update applied, scroll200 retained, scripts run once, theme CSS updated.",
+    "species_css": {
+      "fixture": "fixtures/bioinsights-species-css.json",
+      "cases": 20,
+      "scope": "Both themes; three species at three widths plus gallery-caption branches. Original WebKit source rows are exact; native table spans, nested columns and production gallery/map rectangles differ by less than 1/16 CSS pixel. Font registry is warmed before comparison."
+    }
+  },
+  "remaining_host_checks": [
+    "Controlled actual Elite Dangerous / Proton fullscreen organic-sampling and long-session acceptance has not been performed. Synthetic game focus and native application interaction evidence must not be described as actual Elite gameplay proof.",
+    "Clean-distribution system package installation and audible hardware voice/device output remain environment acceptance checks. SAPI voices/DirectWrite/WinForms are native platform adaptations, not a Windows binary ABI.",
+    "No vendor Linux update feed is available in the inspected original sources. The native compatible-manifest/ELF update mechanism is implemented and locally exercised; a public feed must be supplied by a publisher."
+  ],
+  "completion_policy": "No broad complete-parity claim from a successful build or catalogue loading alone. Active implementation, finite tests and remaining host/live checks are recorded explicitly; source-inert fields and native platform adapters are named.",
+  "verified_host_integration": [
+    "Production runtime sends SourceReadAllState on start/end/cancel/error and SourceUIAlert only from actual update/install outcomes. Core actual ReadAll/Cancel interaction receipt: dist/core-parity-ui/clicks.json.",
+    "Core.InstallNativePlugin explicitly enables the actual bundled Hecate worker and publishes real Ready identity/version messages. Nine production Core API tests include Ready disabled/self/version gates.",
+    "NativeOutput is latched at startup. Disabled shows the original anchored Arial20pt Native Output Disabled label after loading; optional Linux WebKit renderer is independent. Actual both-renderer zoom/persistence/focus/disabled checks are pinned by fixtures/bioinsights-visual-linux-qa.json.",
+    "Real GTK/WebKit DOM test preserves gallery identity/selection/credits and scroll on same-page updates; actual reparenting-X11 parent lookup test passes. See dist/embedded-browser-update/receipt.json and dist/embedded-browser-parent/receipt.json.",
+    "Independent native ELF worker updates stage atomically, activate all four only after restart and preserve complete builtin/remote projections. Actual local-server pipeline, rejection and SIGKILL-isolation proof: fixtures/native-updater-e2e-linux-qa.json.",
+    "Passive notification focus proof covers real X11 and supported Wayland layer-shell surfaces with focused synthetic game input, including a focus-stealing negative control. Unsupported compositors report a capability error; no focus-taking popup fallback. See fixtures/passive-notification-linux-qa.json."
+  ]
+}

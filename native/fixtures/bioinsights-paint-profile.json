@@ -1,0 +1,13 @@
+{
+  "profile": "BioInsights UI CPU layout, paint and tessellation",
+  "build": "release",
+  "input": {"events":45145,"journal_files":53,"remote_lookups":false,"read_only":true},
+  "warmup_frames":20,
+  "frames_per_size":140,
+  "results":[
+    {"width":1700,"height":900,"mean_ms":0.3541668857142856,"p95_ms":0.599857,"max_ms":0.750327,"paint_batches":344},
+    {"width":3440,"height":1368,"mean_ms":0.446671257142857,"p95_ms":0.680993,"max_ms":1.198166,"paint_batches":533}
+  ],
+  "limits":["CPU measurement only; excludes GPU presentation and end-to-end input latency.","This machine and local dataset only; no universal frame-rate guarantee."],
+  "reproduce":"Generate an isolated snapshot with OBSERVATORY_PROFILE_DUMP in profile_publication_and_snapshot_clone. Set OBSERVATORY_UI_PROFILE_INPUT to that local file and run cargo test --release --locked -p observatory-desktop profile_bioinsights_paint -- --ignored --nocapture. Optional OBSERVATORY_UI_PROFILE_OUTPUT saves aggregate timings."
+}

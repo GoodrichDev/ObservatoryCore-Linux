@@ -1,0 +1,352 @@
+{
+  "source_plugin": "BioInsights 1.3.444.1052",
+  "source_dll_sha256": "50e61de9db4c7cdb3c42c01cec9135bd9841747014c2a95a8fa6bfd23912e2ca",
+  "method": "Independent transcription and verbatim excerpts from offline decompiled installed source; no native Rust implementation used as oracle and no original DLL executed. Route templates represent the original integer enum URLs.",
+  "source_hashes": {
+    "/home/loic/.cache/observatory-readable/bio/BioInsights/UIHandler.cs": "3b9d4100cc1aaa4a9604eac58b729ba3e9239e6aec944a3523f9fb40a8d69975",
+    "/home/loic/.cache/observatory-readable/bio/EDJP.Observatory/FZoomSelector.cs": "b1f3fb5239b742728d58fbf1ca335f614d70163f9d49ad5d6c50c6b2a99f58b7"
+  },
+  "toolbar": [
+    {
+      "key": "main",
+      "tooltip": "Main Window",
+      "route": "/main",
+      "presentation": "same_bioinsights_content_view"
+    },
+    {
+      "key": "unsold",
+      "tooltip": "Show Current Data",
+      "route": "/unsold",
+      "presentation": "same_bioinsights_content_view"
+    },
+    {
+      "key": "about",
+      "tooltip": "About",
+      "route": "/about",
+      "presentation": "same_bioinsights_content_view"
+    },
+    {
+      "key": "codexcompanion",
+      "tooltip": "Codex Companion",
+      "route": "/codexcompanion",
+      "presentation": "same_bioinsights_content_view"
+    },
+    {
+      "key": "popout",
+      "tooltip": "Popout Window",
+      "route": "/popout",
+      "presentation": "explicit_popout"
+    },
+    {
+      "key": "zoom",
+      "tooltip": "Zoom",
+      "route": "/zoom",
+      "presentation": "transient_zoom_selector"
+    },
+    {
+      "key": "settings",
+      "tooltip": "Settings",
+      "route": "/settings",
+      "presentation": "host_plugin_settings_dialog"
+    }
+  ],
+  "content_routes": [
+    {
+      "route": "/main",
+      "operation": [
+        "SetCurrentPage(\"main\")",
+        "ShowPage(\"main\")",
+        "worker.UpdateUI()"
+      ]
+    },
+    {
+      "route": "/unsold",
+      "operation": [
+        "GenerateUnsoldDataPage()",
+        "SetCurrentPage(parts[0])",
+        "ShowPage(parts[0])"
+      ]
+    },
+    {
+      "route": "/about",
+      "operation": [
+        "GenerateAboutPage()",
+        "SetCurrentPage(parts[0])",
+        "ShowPage(parts[0])"
+      ]
+    },
+    {
+      "route": "/codexcompanion/{genus?}/{species?}/{colour?}",
+      "operation": [
+        "GenerateCCPage(parts)",
+        "SetCurrentPage(parts[0])",
+        "ShowPage(parts[0])"
+      ]
+    }
+  ],
+  "inline_actions": [
+    {
+      "route": "/ccmark/{genus}/{species}/{colour}",
+      "effects": [
+        "Toggle CodexEntriesMarked entry in AllRegions",
+        "SaveFile",
+        "SetElementContent(\"mark-g-s-c\",insertSwitchImage(marked))"
+      ],
+      "websocket_event": {
+        "event": "content",
+        "id": "mark-g-s-c",
+        "content": "original switch image HTML"
+      }
+    },
+    {
+      "route": "/ccshow/{genus}/{species}/{colour}",
+      "effects": [
+        "SetElementContent(\"regionmap\",insertRegionMap(species.Regions,personalSeenRegions))",
+        "SetElementContent(\"regionmapname\",speciesFullName + optionalVariantSuffix)"
+      ],
+      "websocket_events": [
+        {
+          "event": "content",
+          "id": "regionmap"
+        },
+        {
+          "event": "content",
+          "id": "regionmapname"
+        }
+      ]
+    },
+    {
+      "route": "/toggleunsold/{id}/{next0or1}",
+      "effects": [
+        "SendToPlugin(Hecate,BioInsightsSetBonus,{ID:int,Value:bool})",
+        "GenerateUnsoldDataPage()"
+      ],
+      "websocket_event": {
+        "event": "reload"
+      }
+    }
+  ],
+  "zoom": {
+    "minimum": 50,
+    "maximum": 600,
+    "small_change": 5,
+    "large_change": 25,
+    "tick_frequency": 5,
+    "reset": 100,
+    "size": [
+      505,
+      54
+    ],
+    "anchor": "Cursor.Position",
+    "on_change": "handler.SetZoom(value)",
+    "on_deactivate": [
+      "handler.SaveSettings()",
+      "Close()"
+    ]
+  },
+  "unsold": {
+    "columns": [
+      "Date",
+      "Body",
+      "Species",
+      "Base Value",
+      "First Logged",
+      "Expected Value"
+    ],
+    "date_format": "dd-MMM-yyyy HH:mm",
+    "value_formula": "baseValue * (firstLogged ? 5 : 1)",
+    "grouping": "alternate row colour when BodyName changes; insert spacing row",
+    "source_plugin": "Hecate",
+    "requires_plugin_message": "This requires the Hecate - Data Vault plugin",
+    "species_name": "GetLocalGenusSpeciesName: Odyssey genus+species, Horizons species only"
+  },
+  "companion": {
+    "genus_sections": [
+      "Odyssey Genuses",
+      "Horizons Genuses"
+    ],
+    "detail_fields": [
+      "Species full name",
+      "Description",
+      "Colony Range",
+      "Base Value",
+      "First Logged",
+      "Requirements",
+      "Regions",
+      "Variant Colours",
+      "Variants",
+      "Gallery and CMDR credit",
+      "Possible/Seen region map"
+    ],
+    "requirements_order": [
+      "Genus.Requirements",
+      "Species.Requirements",
+      "Species.PostRequirements"
+    ],
+    "variant_columns": [
+      "Colour",
+      "Radiant Star or Surface Material or blank for Horizons",
+      "Seen?",
+      "BioForge",
+      "Mark"
+    ],
+    "seen_display": [
+      "No",
+      "1 region",
+      "N regions"
+    ],
+    "main_variant_click": "No action: original main colours are spans, only species names are codex links",
+    "gallery_dimensions": [
+      480,
+      270
+    ],
+    "bioscan_dimensions": [
+      135,
+      135
+    ]
+  },
+  "verified_original_ui_settings": {
+    "ThemeIndex": 1,
+    "Theme": "Elite Orange",
+    "ZoomLevel": 100,
+    "ButtonSize": "  Normal",
+    "ExpandOutput": true,
+    "ShowHeaders": true,
+    "ShowTotal": false,
+    "ShowBodyFields": false,
+    "HideNotPresent": false,
+    "HideAutoscans": false,
+    "HideAutoscansNoPredictions": true,
+    "ShowSplitters": false,
+    "MaximumSystemsReadAll": 100,
+    "NativeOutput": " Enabled"
+  },
+  "source_excerpts": {
+    "toolbar": {
+      "file": "UIHandler.cs",
+      "start_line": 366,
+      "end_line": 410,
+      "text": "\tprotected override List<UIButton> UIButtons\n\t{\n\t\t[MethodImpl(MethodImplOptions.NoInlining)]\n\t\tget\n\t\t{\n\t\t\treturn new List<UIButton>\n\t\t\t{\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"main\",\n\t\t\t\t\tTooltip = \"Main Window\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"unsold\",\n\t\t\t\t\tTooltip = \"Show Current Data\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"about\",\n\t\t\t\t\tTooltip = \"About\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"codexcompanion\",\n\t\t\t\t\tTooltip = \"Codex Companion\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"popout\",\n\t\t\t\t\tTooltip = \"Popout Window\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"zoom\",\n\t\t\t\t\tTooltip = \"Zoom\"\n\t\t\t\t},\n\t\t\t\tnew UIButton\n\t\t\t\t{\n\t\t\t\t\tKey = \"settings\",\n\t\t\t\t\tTooltip = \"Settings\"\n\t\t\t\t}\n\t\t\t};\n\t\t}\n\t}"
+    },
+    "navigation_menu": {
+      "file": "UIHandler.cs",
+      "start_line": 5105,
+      "end_line": 5124,
+      "text": "\t\tNavigate = new Dictionary<string, string>\n\t\t{\n\t\t\t{\n\t\t\t\t\"Main Window\",\n\t\t\t\t\"/main\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"Show Current Data\",\n\t\t\t\t\"/unsold\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"About\",\n\t\t\t\t\"/about\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"Codex Companion\",\n\t\t\t\t\"/codexcompanion\"\n\t\t\t}\n\t\t};\n\t\tbase._002Ector();"
+    },
+    "species_link": {
+      "file": "UIHandler.cs",
+      "start_line": 8341,
+      "end_line": 8353,
+      "text": "\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"\");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(rowclass);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\" noleftmargin\\\"><a class=\\\"species \");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(rowclass);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" href=\\\"\");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(BaseURL);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/codexcompanion/\");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted((int)v.GenusType);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted((int)v.SpeciesType);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\">\");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(v.Species);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</a></td>\");"
+    },
+    "variant_plain_text": {
+      "file": "UIHandler.cs",
+      "start_line": 8748,
+      "end_line": 8755,
+      "text": "\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<span title=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206A_202C_206C_206B_200E_206A_202D_200C_202E_206B_206A_206C_206C_202A_202E_206A_202A_200E_206E_200C_202B_200C_202A_206A_206C_202C_202D_206A_206A_200F_206B_202E_206D_200D_200C_206C_200F_202D_200E_206D_202E(current));\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206B_206D_206F_202C_202A_202B_206B_206F_200B_202A_200E_206B_206C_200D_202E_200B_202E_200E_206A_200B_206C_206B_206E_202A_200C_206A_206C_200B_200B_200F_202E_206D_200B_200B_202B_206B_202E_200C_206A_202C_202E(current) ? \"class=\\\"NotPresentItalic\\\"\" : \"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\">\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206A_202E_200F_200D_200B_200F_206E_200C_202A_200F_200B_202E_206C_206F_206C_200E_200B_206C_200C_202C_206B_202E_202C_206A_206A_200C_200C_206A_206E_200F_202E_206A_202C_206C_206E_200C_202A_206F_200F_202E_202E(current));\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</span>\");\n\t\t\t\t\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder2, ref appendInterpolatedStringHandler);"
+    },
+    "variant_show_in_ui": {
+      "file": "UIHandler.cs",
+      "start_line": 8957,
+      "end_line": 8968,
+      "text": "\t\t\t\t\t\t\t\t\tif (!_200B_206F_206A_200C_202B_206E_206C_202A_206E_206A_206B_200C_200D_200D_200F_206B_200D_202E_200B_200E_206A_206D_206C_202C_206D_200F_202A_200D_202C_202A_206D_206C_202A_206F_200B_200C_206C_202B_202C_202C_202E(current))\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\tnum12 = -1328681670;\n\t\t\t\t\t\t\t\t\t\tnum13 = num12;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\tnum12 = -521053196;\n\t\t\t\t\t\t\t\t\t\tnum13 = num12;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tnum3 = num12 ^ ((int)num2 * -45689354);\n\t\t\t\t\t\t\t\t\tcontinue;"
+    },
+    "mark_link": {
+      "file": "UIHandler.cs",
+      "start_line": 2006,
+      "end_line": 2024,
+      "text": "\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"cc row\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(num7);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"><a href=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(BaseWSURL);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/ccmark/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value3);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" id=\\\"mark-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value3);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\">\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(insertSwitchImage(flag));\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</td>\");"
+    },
+    "seen_link": {
+      "file": "UIHandler.cs",
+      "start_line": 2029,
+      "end_line": 2045,
+      "text": "\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"cc row\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(num7);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"><a href=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(BaseWSURL);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/ccshow/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value3);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" id=\\\"show-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value3);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" class=\\\"cc\\\">\");"
+    },
+    "bioforge_links": {
+      "file": "UIHandler.cs",
+      "start_line": 2219,
+      "end_line": 2246,
+      "text": "\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"cc row\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(num7);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"><a href=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(\"https://bioforge.canonn.tech/?entryid=\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206B_200F_206B_202D_202B_200F_200D_200F_206A_200B_206E_206D_200C_200B_200D_206D_200C_206A_206E_206A_202B_206D_200D_200D_200D_202D_206B_206F_206A_200E_206E_202E_202C_200F_206C_202D_202D_206E_202B_206A_202E(BioInsights.CodexChecker, genus, species));\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\" - \");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(current2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" class=\\\"cc\\\" target=\\\"_blank\\\">Launch</a>\");\n\t\t\t\t\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder5, ref appendInterpolatedStringHandler);\n\t\t\t\t\t\t\t\t\tnum8 = 232223305;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tcase 1u:\n\t\t\t\t\t\t\t\t\tflag = BioInsights.CodexEntriesMarked.ExistsInRegions(genus, species, current2) == BiologicalCodexEntry.AllRegions;\n\t\t\t\t\t\t\t\t\tvalue = (int)genus;\n\t\t\t\t\t\t\t\t\tnum8 = (int)(num2 * 1629467465) ^ -1558581475;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\tcase 26u:\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tstringBuilder2 = stringBuilder;\n\t\t\t\t\t\t\t\t\tStringBuilder stringBuilder4 = stringBuilder2;\n\t\t\t\t\t\t\t\t\tStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(67, 3, stringBuilder2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"cc row\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(num7);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"><a href=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(\"https://bioforge.canonn.tech/?entryid=\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206B_200F_206B_202D_202B_200F_200D_200F_206A_200B_206E_206D_200C_200B_200D_206D_200C_206A_206E_206A_202B_206D_200D_200D_200D_202D_206B_206F_206A_200E_206E_202E_202C_200F_206C_202D_202D_206E_202B_206A_202E(BioInsights.CodexChecker, genus, species));\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" class=\\\"cc\\\" target=\\\"_blank\\\">Launch</a>\");"
+    },
+    "unsold_columns": {
+      "file": "UIHandler.cs",
+      "start_line": 6758,
+      "end_line": 6782,
+      "text": "\t\t\t\tswitch ((num2 = (uint)(num ^ 0x7D989E8E)) % 7)\n\t\t\t\t{\n\t\t\t\tcase 3u:\n\t\t\t\t\tbreak;\n\t\t\t\tcase 1u:\n\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, \"<tr><th class=\\\"unsold\\\">Date</th><th class=\\\"unsold\\\">Body</th><th class=\\\"unsold\\\">Species</th>\");\n\t\t\t\t\tnum = 1320513593;\n\t\t\t\t\tcontinue;\n\t\t\t\tcase 6u:\n\t\t\t\t\tvalue = \"row1\";\n\t\t\t\t\tnum = 1380773178;\n\t\t\t\t\tcontinue;\n\t\t\t\tcase 4u:\n\t\t\t\t\tnum5 = 1;\n\t\t\t\t\tnum = (int)((num2 * 415005512) ^ 0x3E7FDFC6);\n\t\t\t\t\tcontinue;\n\t\t\t\tcase 0u:\n\t\t\t\t\tunsoldtotal = 0uL;\n\t\t\t\t\ttext = \"unicorns\";\n\t\t\t\t\tnum = 1270376265;\n\t\t\t\t\tcontinue;\n\t\t\t\tcase 2u:\n\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, \"<th class=\\\"unsold\\\">Base Value</th><th class=\\\"unsold\\\">First<br/>Logged</th><th class=\\\"unsold\\\">Expected Value</th></tr>\");\n\t\t\t\t\tnum = 1888280762;\n\t\t\t\t\tcontinue;"
+    },
+    "unsold_toggle_link": {
+      "file": "UIHandler.cs",
+      "start_line": 6845,
+      "end_line": 6866,
+      "text": "\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"unsold \");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\"><a id=\\\"link-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(current.Item1);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" href=\\\"\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(BaseWSURL);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/toggleunsold/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(current.Item1);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value2);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\">\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(value3);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</a>\");\n\t\t\t\t\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder6, ref appendInterpolatedStringHandler);\n\t\t\t\t\t\t\t\t\tstringBuilder4 = stringBuilder;\n\t\t\t\t\t\t\t\t\tStringBuilder stringBuilder7 = stringBuilder4;\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(45, 2, stringBuilder4);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<span class=\\\"hidden\\\" id=\\\"bonus-\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(current.Item1);\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\">\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(current.Item6 ? \"1\" : \"0\");\n\t\t\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</span></td>\");"
+    },
+    "unsold_bonus_value": {
+      "file": "UIHandler.cs",
+      "start_line": 6960,
+      "end_line": 6964,
+      "text": "\t\t\t\t\t\t\t\tcase 20u:\n\t\t\t\t\t\t\t\t\tnum6 = (ulong)current.Item5 * (ulong)((!current.Item6) ? 1 : 5);\n\t\t\t\t\t\t\t\t\tnum3 = 836754695;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\tcase 15u:"
+    },
+    "detail_value_labels": {
+      "file": "UIHandler.cs",
+      "start_line": 1309,
+      "end_line": 1321,
+      "text": "\t\t\t\t\tStringBuilder stringBuilder2 = stringBuilder3;\n\t\t\t\t\tStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(87, 1, stringBuilder3);\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<span class=\\\"h3cc cctitle\\\">Colony Range:</span><span class=\\\"h3cc\\\"> \");\n\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(_206A_200E_202A_202E_202E_200E_202D_202C_206C_202B_206C_202C_206F_206D_200F_206D_206F_206C_202A_206A_206E_206E_202D_206C_200B_202C_206B_206F_202B_206F_202C_200F_200C_206F_200D_200F_200D_202C_206B_202B_202E(genus));\n\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"m</span><br /><br />\");\n\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder2, ref appendInterpolatedStringHandler);\n\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, \"<span class=\\\"h3cc cctitle\\\">Requirements</span><br />\");\n\t\t\t\t\tnum = -1060835772;\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\t\t\t\tcase 11u:\n\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, _200E_202D_200E_202A_202E_206A_206E_206A_200E_200B_200C_200D_200C_206F_202C_202C_202A_202B_202E_206D_200C_200F_200F_206C_206E_200B_206F_206F_206A_200B_206F_206E_202E_202E_206C_202E_206F_200B_202B_206C_202E(\"<span class=\\\"h3cc cctitle\\\">Base Value:</span><span class=\\\"h3cc\\\"> \", _206D_202B_202C_200D_202A_200E_202D_206C_202A_206E_202A_206D_202D_200E_206F_202D_202E_206E_206C_206E_200D_200F_200F_206F_206B_200C_206A_202D_202E_200D_200C_206D_202B_206F_206B_200C_202E_202A_206B_202D_202E(species).ToString(\"n\", nfi), \"</span><br /><br />\"));\n\t\t\t\t\tnum = -119193229;"
+    },
+    "detail_first_logged": {
+      "file": "UIHandler.cs",
+      "start_line": 1362,
+      "end_line": 1364,
+      "text": "\t\t\t\tcase 5u:\n\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, _200E_202D_200E_202A_202E_206A_206E_206A_200E_200B_200C_200D_200C_206F_202C_202C_202A_202B_202E_206D_200C_200F_200F_206C_206E_200B_206F_206F_206A_200B_206F_206E_202E_202E_206C_202E_206F_200B_202B_206C_202E(\"<span class=\\\"h3cc cctitle\\\">First Logged:</span><span class=\\\"h3cc\\\"> \", (_206D_202B_202C_200D_202A_200E_202D_206C_202A_206E_202A_206D_202D_200E_206F_202D_202E_206E_206C_206E_200D_200F_200F_206F_206B_200C_206A_202D_202E_200D_200C_206D_202B_206F_206B_200C_202E_202A_206B_202D_202E(species) * 5).ToString(\"n\", nfi), \"</span><br /><br />\"));\n\t\t\t\t\tstringBuilder3 = stringBuilder;"
+    },
+    "detail_requirements": {
+      "file": "UIHandler.cs",
+      "start_line": 1372,
+      "end_line": 1508,
+      "text": "\t\t\t\t\t{\n\t\t\t\t\t\tusing (List<Requirement>.Enumerator enumerator = _200F_200E_200F_202C_206F_200F_200C_202B_200C_202B_206F_202B_202C_202D_200B_202A_206A_206E_200C_200E_202B_202E_206C_202A_206C_206A_200F_200E_206D_200C_202D_206E_200C_206F_202D_206A_202E_206B_206E_206C_202E(_206E_200E_200B_206C_202D_202E_206C_206A_206E_200E_202D_200E_202B_200C_202B_206B_206E_200E_206C_200C_202A_200D_202E_200F_200B_206F_200C_206D_202B_206E_202A_206E_202D_202D_206B_202C_206D_202B_200D_202A_202E(_206F_202B_206D_206D_206D_202A_200D_206C_202C_206F_202A_200B_206F_206F_200E_206E_200E_200F_202C_206B_206B_200C_200D_206E_202C_200D_202D_206E_200B_206A_206C_202C_202C_206F_206F_206F_206D_202D_200F_200C_202E(BioInsights.CodexChecker))[gx]).GetEnumerator())\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tIL_0392:\n\t\t\t\t\t\t\t\tint num3;\n\t\t\t\t\t\t\t\tint num4;\n\t\t\t\t\t\t\t\tif (enumerator.MoveNext())\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum3 = -1775150846;\n\t\t\t\t\t\t\t\t\tnum4 = num3;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum3 = -1197255577;\n\t\t\t\t\t\t\t\t\tnum4 = num3;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tswitch ((num2 = (uint)(num3 ^ -1057863078)) % 5)\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tcase 4u:\n\t\t\t\t\t\t\t\t\t\tnum3 = -1775150846;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tdefault:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_035c;\n\t\t\t\t\t\t\t\t\tcase 3u:\n\t\t\t\t\t\t\t\t\t\tcurrent = enumerator.Current;\n\t\t\t\t\t\t\t\t\t\tnum3 = -821818205;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tcase 1u:\n\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\tcase 0u:\n\t\t\t\t\t\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, _206E_200B_206B_202D_200D_200D_202A_200B_206D_206C_200C_206E_206F_202D_206F_202B_202B_206D_200F_206A_202C_202C_200D_206B_202B_200B_202B_200F_200C_202E_206D_206A_200D_200C_200E_202B_202A_206D_200F_200E_202E(RequirementAsString(current), \"<br />\"));\n\t\t\t\t\t\t\t\t\t\tnum3 = -812433588;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tcase 2u:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_035c;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tgoto IL_0392;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tend_IL_035c:\n\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tusing (List<Requirement>.Enumerator enumerator = _206C_206C_206C_202E_206F_200F_202A_202A_200F_202D_206F_200E_200B_206B_200C_200C_206C_200D_202A_206F_202E_202D_202D_200F_206D_206B_202B_200D_200B_206B_202B_206C_206F_200F_202A_200D_206B_202B_202D_202A_202E(_202C_202C_200F_202A_206D_206A_200B_206C_202C_200C_206A_200F_206D_206A_206C_202B_202A_206E_206F_206C_202B_206F_206B_202A_206C_200D_200F_202B_200C_206C_206C_200B_200D_202C_200C_206C_206F_206A_202A_206F_202E(_206E_200E_200B_206C_202D_202E_206C_206A_206E_200E_202D_200E_202B_200C_202B_206B_206E_200E_206C_200C_202A_200D_202E_200F_200B_206F_200C_206D_202B_206E_202A_206E_202D_202D_206B_202C_206D_202B_200D_202A_202E(_206F_202B_206D_206D_206D_202A_200D_206C_202C_206F_202A_200B_206F_206F_200E_206E_200E_200F_202C_206B_206B_200C_200D_206E_202C_200D_202D_206E_200B_206A_206C_202C_202C_206F_206F_206F_206D_202D_200F_200C_202E(BioInsights.CodexChecker))[gx])[sx]).GetEnumerator())\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tIL_044c:\n\t\t\t\t\t\t\t\tint num5;\n\t\t\t\t\t\t\t\tint num6;\n\t\t\t\t\t\t\t\tif (!enumerator.MoveNext())\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum5 = -465907942;\n\t\t\t\t\t\t\t\t\tnum6 = num5;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum5 = -1148995461;\n\t\t\t\t\t\t\t\t\tnum6 = num5;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tswitch ((num2 = (uint)(num5 ^ -1057863078)) % 5)\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tcase 0u:\n\t\t\t\t\t\t\t\t\t\tnum5 = -1148995461;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tdefault:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_0416;\n\t\t\t\t\t\t\t\t\tcase 1u:\n\t\t\t\t\t\t\t\t\t\tcurrent2 = enumerator.Current;\n\t\t\t\t\t\t\t\t\t\tnum5 = -1670706064;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tcase 4u:\n\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\tcase 2u:\n\t\t\t\t\t\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, _206E_200B_206B_202D_200D_200D_202A_200B_206D_206C_200C_206E_206F_202D_206F_202B_202B_206D_200F_206A_202C_202C_200D_206B_202B_200B_202B_200F_200C_202E_206D_206A_200D_200C_200E_202B_202A_206D_200F_200E_202E(RequirementAsString(current2), \"<br />\"));\n\t\t\t\t\t\t\t\t\t\tnum5 = -2047801566;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tcase 3u:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_0416;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tgoto IL_044c;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tend_IL_0416:\n\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\tusing (List<Requirement>.Enumerator enumerator = _206D_200D_200F_200D_200D_200E_206A_202B_206A_202E_202D_206C_202A_202D_200B_200F_206D_202A_200E_200B_202C_200C_206F_200E_202E_206A_206F_200D_200E_206D_202C_200D_200F_200C_206A_202E_206B_200B_206A_202E_202E(_202C_202C_200F_202A_206D_206A_200B_206C_202C_200C_206A_200F_206D_206A_206C_202B_202A_206E_206F_206C_202B_206F_206B_202A_206C_200D_200F_202B_200C_206C_206C_200B_200D_202C_200C_206C_206F_206A_202A_206F_202E(_206E_200E_200B_206C_202D_202E_206C_206A_206E_200E_202D_200E_202B_200C_202B_206B_206E_200E_206C_200C_202A_200D_202E_200F_200B_206F_200C_206D_202B_206E_202A_206E_202D_202D_206B_202C_206D_202B_200D_202A_202E(_206F_202B_206D_206D_206D_202A_200D_206C_202C_206F_202A_200B_206F_206F_200E_206E_200E_200F_202C_206B_206B_200C_200D_206E_202C_200D_202D_206E_200B_206A_206C_202C_202C_206F_206F_206F_206D_202D_200F_200C_202E(BioInsights.CodexChecker))[gx])[sx]).GetEnumerator())\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\tIL_0522:\n\t\t\t\t\t\t\t\tint num7;\n\t\t\t\t\t\t\t\tint num8;\n\t\t\t\t\t\t\t\tif (!enumerator.MoveNext())\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum7 = -159389563;\n\t\t\t\t\t\t\t\t\tnum8 = num7;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tnum7 = -1974598285;\n\t\t\t\t\t\t\t\t\tnum8 = num7;\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\twhile (true)\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tswitch ((num2 = (uint)(num7 ^ -1057863078)) % 4)\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tcase 2u:\n\t\t\t\t\t\t\t\t\t\tnum7 = -1974598285;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tdefault:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_04d0;\n\t\t\t\t\t\t\t\t\tcase 1u:\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\tRequirement current3 = enumerator.Current;\n\t\t\t\t\t\t\t\t\t\t_206D_206F_206D_206A_200F_206C_206C_206D_206C_202C_206B_206D_206C_206D_206B_206C_200E_206D_206B_202B_202C_206B_200B_202C_206A_202A_206D_202E_202C_202D_200B_206E_202C_206C_206C_206D_206E_206C_200C_202E_202E(stringBuilder, _206E_200B_206B_202D_200D_200D_202A_200B_206D_206C_200C_206E_206F_202D_206F_202B_202B_206D_200F_206A_202C_202C_200D_206B_202B_200B_202B_200F_200C_202E_206D_206A_200D_200C_200E_202B_202A_206D_200F_200E_202E(RequirementAsString(current3), \"<br />\"));\n\t\t\t\t\t\t\t\t\t\tnum7 = -288434186;\n\t\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tcase 0u:\n\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\tcase 3u:\n\t\t\t\t\t\t\t\t\t\tgoto end_IL_04d0;\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tgoto IL_0522;\n\t\t\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t\t\t\tend_IL_04d0:\n\t\t\t\t\t\t\t\t\tbreak;"
+    },
+    "bioscan_image": {
+      "file": "UIHandler.cs",
+      "start_line": 2335,
+      "end_line": 2372,
+      "text": "\tprivate string insertBioScanImage2(GenusType genus)\n\t{\n\t\tstring text = _200B_202A_202E_206E_200F_206B_200B_200D_206B_206A_202C_200F_206F_200E_202D_200C_206A_202D_206C_200D_202C_202E_202C_202E_202D_200F_206A_206A_206F_200F_202E_206A_202D_202A_206E_202C_202C_202D_202A_200D_202E(BioInsights.CodexChecker, genus);\n\t\tif (_202B_206A_202E_202C_202B_200B_206B_200D_200E_202B_200E_206F_206C_200C_200B_206B_206A_206F_202C_200C_206A_202B_202E_200E_200B_202B_206A_200C_206E_200C_206B_202A_206B_200F_206A_200C_200E_200B_206A_200F_202E(text, \"\"))\n\t\t{\n\t\t\tgoto IL_001c;\n\t\t}\n\t\tgoto IL_00a6;\n\t\tIL_001c:\n\t\tint num = 1707021924;\n\t\tgoto IL_0021;\n\t\tIL_0021:\n\t\tuint num2;\n\t\tUri uri = default;\n\t\tswitch ((num2 = (uint)(num ^ 0x4A653171)) % 4)\n\t\t{\n\t\tcase 2u:\n\t\t\tbreak;\n\t\tcase 1u:\n\t\t{\n\t\t\tLogger logger = base.logger;\n\t\t\tDefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(38, 1);\n\t\t\tdefaultInterpolatedStringHandler.AppendLiteral(\"unknown genus in insertBioScanImage [\");\n\t\t\tdefaultInterpolatedStringHandler.AppendFormatted(genus);\n\t\t\tdefaultInterpolatedStringHandler.AppendLiteral(\"]\");\n\t\t\tlogger.WriteLog(defaultInterpolatedStringHandler.ToStringAndClear());\n\t\t\treturn \"&nbsp;\";\n\t\t}\n\t\tcase 3u:\n\t\t\tgoto IL_00a6;\n\t\tdefault:\n\t\t\treturn _200E_202D_200E_202A_202E_206A_206E_206A_200E_200B_200C_200D_200C_206F_202C_202C_202A_202B_202E_206D_200C_200F_200F_206C_206E_200B_206F_206F_206A_200B_206F_206E_202E_202E_206C_202E_206F_200B_202B_206C_202E(\"<img src=\\\"\", _202D_202E_202B_202E_202B_202D_200E_202E_202E_206D_202B_206D_200E_200B_206D_206E_206D_206C_200C_206F_206E_206B_202C_206E_200C_200D_200C_206C_206D_200B_200E_202B_200C_200B_200B_200F_206D_206C_206D_202C_202E(uri), \"\\\" width=135 height=135 />\");\n\t\t}\n\t\tgoto IL_001c;\n\t\tIL_00a6:\n\t\turi = _202A_200E_206B_206B_206F_206D_202C_202D_202B_202E_202B_206C_200B_202E_206D_206A_200C_206A_206D_202E_200E_200F_202E_202D_206A_200C_200F_206B_202B_206F_206D_200D_200B_200D_202B_206A_202A_200C_206F_202B_202E(_200E_202D_200E_202A_202E_206A_206E_206A_200E_200B_200C_200D_200C_206F_202C_202C_202A_202B_202E_206D_200C_200F_200F_206C_206E_200B_206F_206F_206A_200B_206F_206E_202E_202E_206C_202E_206F_200B_202B_206C_202E(\"https://elitetools.github.io/bioscans/\", _206B_200D_206D_200C_206D_206C_202A_202D_200D_200F_202B_202B_202C_200E_206B_202B_200B_202D_200F_206C_200C_202E_202A_206B_200D_206A_200D_200D_206B_200C_206F_202B_202B_200B_206F_202E_202C_206D_200E_206B_202E(text, \" \", \"\"), \".png\"));\n\t\tnum = 739801657;\n\t\tgoto IL_0021;"
+    },
+    "gallery_credit": {
+      "file": "UIHandler.cs",
+      "start_line": 1564,
+      "end_line": 1568,
+      "text": "\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<br /><span class=\\\"h3cc\\\">\");\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(manifestLine.Name);\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</span><br /><i>CMDR \");\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(manifestLine.Cmdr);\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"</i>\");"
+    },
+    "gallery_dimensions": {
+      "file": "UIHandler.cs",
+      "start_line": 1627,
+      "end_line": 1633,
+      "text": "\t\t\t\t\t\t\tstringBuilder3 = stringBuilder;\n\t\t\t\t\t\t\tStringBuilder stringBuilder8 = stringBuilder3;\n\t\t\t\t\t\t\tStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new StringBuilder.AppendInterpolatedStringHandler(57, 1, stringBuilder3);\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<td class=\\\"cc center\\\"><img src=\\\"\");\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(manifestLine.Uri);\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"\\\" width=480 height=270 />\");\n\t\t\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder8, ref appendInterpolatedStringHandler);"
+    },
+    "detail_return": {
+      "file": "UIHandler.cs",
+      "start_line": 1681,
+      "end_line": 1684,
+      "text": "\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"<div class=\\\"close\\\"><a href=\\\"\");\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendFormatted(BaseURL);\n\t\t\t\t\t\t\tappendInterpolatedStringHandler.AppendLiteral(\"/main\\\" class=\\\"cc\\\">&#x22d8;</a></div>\");\n\t\t\t\t\t\t\t_200B_206E_206C_206F_200E_206B_202E_202C_200F_202D_206B_206F_200B_200D_206A_202D_206A_200B_206E_202D_200E_206B_202C_202A_200D_200C_206D_202D_202D_202D_206F_202A_206F_206B_206B_202A_202D_206C_200E_206F_202E(stringBuilder5, ref appendInterpolatedStringHandler);"
+    },
+    "handle_unsold_toggle": {
+      "file": "UIHandler.cs",
+      "start_line": 5548,
+      "end_line": 5580,
+      "text": "\tpublic bool handleBioinsightsUnsold(string id, string val, Guid? client)\n\t{\n\t\tint result = 0;\n\t\tbool flag = int.TryParse(id, out result);\n\t\tif (flag)\n\t\t{\n\t\t\tbool flag2 = _202B_206A_202E_202C_202B_200B_206B_200D_200E_202B_200E_206F_206C_200C_200B_206B_206A_206F_202C_200C_206A_202B_202E_200E_200B_202B_206A_200C_206E_200C_206B_202A_206B_200F_206A_200C_200E_200B_206A_200F_202E(val, \"1\");\n\t\t\tDictionary<string, object> dictionary = new Dictionary<string, object>\n\t\t\t{\n\t\t\t\t{\n\t\t\t\t\t\"ID\",\n\t\t\t\t\tresult\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"Value\",\n\t\t\t\t\tflag2\n\t\t\t\t}\n\t\t\t};\n\t\t\t_202D_202A_202E_206E_202C_206E_200E_200F_206B_200F_202E_202B_206D_200C_202A_206F_200C_202E_202A_200F_202D_200D_206C_206E_200F_202C_202E_200D_200D_202B_206F_202D_206D_200B_206C_202E_202A_200B_202A_200E_202E(core, (IObservatoryPlugin)(object)BioInsights, PluginID.Hecate, _202A_200D_206D_206A_202C_202C_200D_200B_200B_202B_202B_202C_202A_202C_202D_202B_206D_206B_202B_206D_202B_200F_206D_200C_202B_202B_206C_200F_200F_206B_202E_200C_202C_202C_206C_200D_206E_200B_200F_202E_202E(\"BioInsightsSetBonus\", dictionary, (Guid?)null));\n\t\t\tGenerateUnsoldDataPage();\n\t\t\tif (client.HasValue)\n\t\t\t{\n\t\t\t\tDictionary<string, object> jsonobj = new Dictionary<string, object> { \n\t\t\t\t{\n\t\t\t\t\t\"event\",\n\t\t\t\t\t\"reload\"\n\t\t\t\t} };\n\t\t\t\tSendHecateWSResponse(jsonobj, client.Value);\n\t\t\t}\n\t\t}\n\t\treturn flag;\n\t}\n"
+    },
+    "cc_mark_side_effects": {
+      "file": "UIHandler.cs",
+      "start_line": 4707,
+      "end_line": 4869,
+      "text": "\tpublic bool handleCCMark(string g, string s, string c, Guid? client)\n\t{\n\t\ttry\n\t\t{\n\t\t\tint.TryParse(g, out var result);\n\t\t\tGenusType genus = default;\n\t\t\tSpeciesType species = default;\n\t\t\tVariantColour variant = default;\n\t\t\tDictionary<string, object> jsonobj = default;\n\t\t\tstring text = default;\n\t\t\tstring text2 = default;\n\t\t\tDefaultInterpolatedStringHandler defaultInterpolatedStringHandler = default;\n\t\t\tbool flag = default;\n\t\t\twhile (true)\n\t\t\t{\n\t\t\t\tIL_0009:\n\t\t\t\tint num = -1253285367;\n\t\t\t\twhile (true)\n\t\t\t\t{\n\t\t\t\t\tuint num2;\n\t\t\t\t\tswitch ((num2 = (uint)(num ^ -892992273)) % 20)\n\t\t\t\t\t{\n\t\t\t\t\tcase 4u:\n\t\t\t\t\t\tbreak;\n\t\t\t\t\tdefault:\n\t\t\t\t\t\tgoto end_IL_000e;\n\t\t\t\t\tcase 13u:\n\t\t\t\t\t{\n\t\t\t\t\t\tint num5;\n\t\t\t\t\t\tint num6;\n\t\t\t\t\t\tif (BioInsights.CodexEntriesMarked.ExistsInRegions(genus, species, variant) == BiologicalCodexEntry.AllRegions)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum5 = -471313471;\n\t\t\t\t\t\t\tnum6 = num5;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum5 = -980825592;\n\t\t\t\t\t\t\tnum6 = num5;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tnum = num5 ^ ((int)num2 * -2147376908);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tcase 17u:\n\t\t\t\t\t\tvariant = (VariantColour)result;\n\t\t\t\t\t\tnum = (int)((num2 * 1275433497) ^ 0x652734E);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 7u:\n\t\t\t\t\t\tjsonobj = new Dictionary<string, object>\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"event\",\n\t\t\t\t\t\t\t\t\"content\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"id\",\n\t\t\t\t\t\t\t\ttext\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"content\",\n\t\t\t\t\t\t\t\ttext2\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t};\n\t\t\t\t\t\tnum = -816262550;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 3u:\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendFormatted(s);\n\t\t\t\t\t\tnum = -698891097;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 15u:\n\t\t\t\t\t{\n\t\t\t\t\t\tint num3;\n\t\t\t\t\t\tint num4;\n\t\t\t\t\t\tif (client.HasValue)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum3 = -1468516456;\n\t\t\t\t\t\t\tnum4 = num3;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum3 = -1099769427;\n\t\t\t\t\t\t\tnum4 = num3;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tnum = num3 ^ (int)(num2 * 574520276);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tcase 11u:\n\t\t\t\t\t\tBioInsights.CodexEntriesMarked.AddEntry(genus, species, variant, BiologicalCodexEntry.AllRegions);\n\t\t\t\t\t\tBioInsights.CodexEntriesMarked.SaveFile();\n\t\t\t\t\t\tnum = -1253304641;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 5u:\n\t\t\t\t\t\tSendHecateWSResponse(jsonobj, client.Value);\n\t\t\t\t\t\tnum = (int)(num2 * 1077492962) ^ -1297271077;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 18u:\n\t\t\t\t\t\tBioInsights.CodexEntriesMarked.RemoveEntry(genus, species, variant, BiologicalCodexEntry.AllRegions);\n\t\t\t\t\t\tBioInsights.CodexEntriesMarked.SaveFile();\n\t\t\t\t\t\tnum = ((int)num2 * -869001688) ^ -53009062;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 6u:\n\t\t\t\t\t\ttext2 = insertSwitchImage(flag);\n\t\t\t\t\t\tpluginOutput.SetElementContent(text, text2);\n\t\t\t\t\t\tnum = -2094452508;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 19u:\n\t\t\t\t\t\ttext = defaultInterpolatedStringHandler.ToStringAndClear();\n\t\t\t\t\t\tnum = (int)(num2 * 389723969) ^ -839529667;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 2u:\n\t\t\t\t\t\tgenus = (GenusType)result;\n\t\t\t\t\t\tnum = (int)(num2 * 26008685) ^ -884321692;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 1u:\n\t\t\t\t\t\tint.TryParse(s, out result);\n\t\t\t\t\t\tspecies = (SpeciesType)result;\n\t\t\t\t\t\tnum = ((int)num2 * -1953001352) ^ 0x1EEAF453;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 16u:\n\t\t\t\t\t\tdefaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(7, 3);\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendLiteral(\"mark-\");\n\t\t\t\t\t\tnum = -758117819;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 8u:\n\t\t\t\t\t\tflag = true;\n\t\t\t\t\t\tnum = (int)(num2 * 1444486308) ^ -364726099;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 12u:\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendLiteral(\"-\");\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendFormatted(c);\n\t\t\t\t\t\tnum = -371522204;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 10u:\n\t\t\t\t\t\tdefaultInterpolatedStringHandler.AppendFormatted(g);\n\t\t\t\t\t\tnum = (int)(num2 * 1963781084) ^ -1711137916;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 9u:\n\t\t\t\t\t\tflag = false;\n\t\t\t\t\t\tnum = (int)(num2 * 280768406) ^ -1519406013;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 0u:\n\t\t\t\t\t\tint.TryParse(c, out result);\n\t\t\t\t\t\tnum = (int)((num2 * 1117076055) ^ 0x55EE77B2);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 14u:\n\t\t\t\t\t\tgoto end_IL_000e;\n\t\t\t\t\t}\n\t\t\t\t\tgoto IL_0009;\n\t\t\t\t\tcontinue;\n\t\t\t\t\tend_IL_000e:\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tcatch (Exception ex)\n\t\t{\n\t\t\tlogger.WriteException(\"[handleCCMark]\", ex);\n\t\t}\n\t\treturn true;\n\t}\n"
+    },
+    "cc_show_side_effects": {
+      "file": "UIHandler.cs",
+      "start_line": 4871,
+      "end_line": 5010,
+      "text": "\tpublic bool handleCCShow(string g, string s, string c, Guid? client)\n\t{\n\t\ttry\n\t\t{\n\t\t\t_200B_200C_206A_206B_206E_200C_200D_206C_206A_200B_202E_206A_200B_202E_202C_200F_200D_206F_200F_200F_206B_202D_200D_202B_206A_202D_202A_202A_200B_206A_202C_206D_202D_206F_202A_200E_202E_206F_200E_206C_202E((Control)(object)Panel, true);\n\t\t\tint result = default;\n\t\t\tGenusType genusType = default;\n\t\t\tSpeciesType speciesType = default;\n\t\t\tstring text = default;\n\t\t\tSpecies species = default;\n\t\t\tVariantColour variant = default;\n\t\t\tstring text2 = default;\n\t\t\tGenus genus = default;\n\t\t\tDictionary<string, object> jsonobj2 = default;\n\t\t\tDictionary<string, object> jsonobj = default;\n\t\t\twhile (true)\n\t\t\t{\n\t\t\t\tIL_000c:\n\t\t\t\tint num = -1413908445;\n\t\t\t\twhile (true)\n\t\t\t\t{\n\t\t\t\t\tuint num2;\n\t\t\t\t\tswitch ((num2 = (uint)(num ^ -681822338)) % 13)\n\t\t\t\t\t{\n\t\t\t\t\tcase 6u:\n\t\t\t\t\t\tbreak;\n\t\t\t\t\tdefault:\n\t\t\t\t\t\tgoto end_IL_0011;\n\t\t\t\t\tcase 3u:\n\t\t\t\t\t\tint.TryParse(g, out result);\n\t\t\t\t\t\tnum = (int)(num2 * 1622677627) ^ -54137000;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 2u:\n\t\t\t\t\t\tgenusType = (GenusType)result;\n\t\t\t\t\t\tint.TryParse(s, out result);\n\t\t\t\t\t\tnum = ((int)num2 * -1457226590) ^ -1007189981;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 12u:\n\t\t\t\t\t\tspeciesType = (SpeciesType)result;\n\t\t\t\t\t\tint.TryParse(c, out result);\n\t\t\t\t\t\tnum = ((int)num2 * -41101710) ^ 0x322EDE8B;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 0u:\n\t\t\t\t\t\ttext = insertRegionMap(_202B_202A_200E_202A_206D_202B_200F_200C_202A_206F_202E_206E_200F_202D_200E_202D_202A_202B_202E_206F_200E_200F_200B_200C_202D_200B_202C_200C_200B_200F_206B_202A_200C_202D_206F_202E_206E_202C_206B_200C_202E(species), BioInsights.CodexEntriesSeen.ExistsInRegions(genusType, speciesType, variant));\n\t\t\t\t\t\ttext2 = _206E_200B_206B_202D_200D_200D_202A_200B_206D_206C_200C_206E_206F_202D_206F_202B_202B_206D_200F_206A_202C_202C_200D_206B_202B_200B_202B_200F_200C_202E_206D_206A_200D_200C_200E_202B_202A_206D_200F_200E_202E(_206B_200F_206B_202D_202B_200F_200D_200F_206A_200B_206E_206D_200C_200B_200D_206D_200C_206A_206E_206A_202B_206D_200D_200D_200D_202D_206B_206F_206A_200E_206E_202E_202C_200F_206C_202D_202D_206E_202B_206A_202E(BioInsights.CodexChecker, genusType, speciesType), _206A_206C_202E_206E_206C_206F_202C_206F_206D_202A_200F_200D_202D_206E_206B_200D_200C_200E_206E_206B_206A_200D_206A_202D_206A_206F_206F_206A_200D_200F_202C_200B_200C_206B_202E_202C_200B_200B_200F_200E_202E(genus) ? \"\" : _206E_200B_206B_202D_200D_200D_202A_200B_206D_206C_200C_206E_206F_202D_206F_202B_202B_206D_200F_206A_202C_202C_200D_206B_202B_200B_202B_200F_200C_202E_206D_206A_200D_200C_200E_202B_202A_206D_200F_200E_202E(\" - \", variant.ToString()));\n\t\t\t\t\t\tpluginOutput.SetElementContent(\"regionmap\", text);\n\t\t\t\t\t\tnum = -1479594413;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 9u:\n\t\t\t\t\t\tspecies = _202C_202C_200F_202A_206D_206A_200B_206C_202C_200C_206A_200F_206D_206A_206C_202B_202A_206E_206F_206C_202B_206F_206B_202A_206C_200D_200F_202B_200C_206C_206C_200B_200D_202C_200C_206C_206F_206A_202A_206F_202E(_206E_200E_200B_206C_202D_202E_206C_206A_206E_200E_202D_200E_202B_200C_202B_206B_206E_200E_206C_200C_202A_200D_202E_200F_200B_206F_200C_206D_202B_206E_202A_206E_202D_202D_206B_202C_206D_202B_200D_202A_202E(_206F_202B_206D_206D_206D_202A_200D_206C_202C_206F_202A_200B_206F_206F_200E_206E_200E_200F_202C_206B_206B_200C_200D_206E_202C_200D_202D_206E_200B_206A_206C_202C_202C_206F_206F_206F_206D_202D_200F_200C_202E(BioInsights.CodexChecker))[genusType])[speciesType];\n\t\t\t\t\t\tgenus = _206E_200E_200B_206C_202D_202E_206C_206A_206E_200E_202D_200E_202B_200C_202B_206B_206E_200E_206C_200C_202A_200D_202E_200F_200B_206F_200C_206D_202B_206E_202A_206E_202D_202D_206B_202C_206D_202B_200D_202A_202E(_206F_202B_206D_206D_206D_202A_200D_206C_202C_206F_202A_200B_206F_206F_200E_206E_200E_200F_202C_206B_206B_200C_200D_206E_202C_200D_202D_206E_200B_206A_206C_202C_202C_206F_206F_206F_206D_202D_200F_200C_202E(BioInsights.CodexChecker))[genusType];\n\t\t\t\t\t\tnum = ((int)num2 * -1770052574) ^ 0x35B3B34;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 4u:\n\t\t\t\t\t{\n\t\t\t\t\t\tpluginOutput.SetElementContent(\"regionmapname\", text2);\n\t\t\t\t\t\tint num3;\n\t\t\t\t\t\tif (client.HasValue)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum = -1045696702;\n\t\t\t\t\t\t\tnum3 = num;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tnum = -955983012;\n\t\t\t\t\t\t\tnum3 = num;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tcase 10u:\n\t\t\t\t\t\tSendHecateWSResponse(jsonobj2, client.Value);\n\t\t\t\t\t\tnum = (int)(num2 * 708114237) ^ -1961266331;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 5u:\n\t\t\t\t\t\tSendHecateWSResponse(jsonobj, client.Value);\n\t\t\t\t\t\tnum = ((int)num2 * -162860021) ^ 0x920D186;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 1u:\n\t\t\t\t\t\tvariant = (VariantColour)result;\n\t\t\t\t\t\tnum = (int)(num2 * 1326640098) ^ -1783439313;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 8u:\n\t\t\t\t\t\tjsonobj2 = new Dictionary<string, object>\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"event\",\n\t\t\t\t\t\t\t\t\"content\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"id\",\n\t\t\t\t\t\t\t\t\"regionmapname\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"content\",\n\t\t\t\t\t\t\t\ttext2\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t};\n\t\t\t\t\t\tnum = -33942573;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 11u:\n\t\t\t\t\t\tjsonobj = new Dictionary<string, object>\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"event\",\n\t\t\t\t\t\t\t\t\"content\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"id\",\n\t\t\t\t\t\t\t\t\"regionmap\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"content\",\n\t\t\t\t\t\t\t\ttext\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t};\n\t\t\t\t\t\tnum = -289441221;\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\tcase 7u:\n\t\t\t\t\t\tgoto end_IL_0011;\n\t\t\t\t\t}\n\t\t\t\t\tgoto IL_000c;\n\t\t\t\t\tcontinue;\n\t\t\t\t\tend_IL_0011:\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tcatch (Exception ex)\n\t\t{\n\t\t\tlogger.WriteException(\"[handleCCShow]\", ex);\n\t\t}\n\t\tfinally\n\t\t{\n\t\t\t_200B_200C_206A_206B_206E_200C_200D_206C_206A_200B_202E_206A_200B_202E_202C_200F_200D_206F_200F_200F_206B_202D_200D_202B_206A_202D_202A_202A_200B_206A_202C_206D_202D_206F_202A_200E_202E_206F_200E_206C_202E((Control)(object)Panel, false);\n\t\t}\n\t\treturn true;\n\t}\n\n\t[MethodImpl(MethodImplOptions.NoInlining)]"
+    }
+  }
+}

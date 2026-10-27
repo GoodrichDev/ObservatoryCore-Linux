@@ -1,0 +1,202 @@
+[
+  {
+    "body": "Oracle gravity-29.4000009 1",
+    "title": "Landable with High Gravity",
+    "detail": "Surface gravity: 3.00g"
+  },
+  {
+    "body": "Oracle gravity-29.400002 1",
+    "title": "Landable with High Gravity",
+    "detail": "Surface gravity: 3.00g"
+  },
+  {
+    "body": "Oracle large-18000002 1",
+    "title": "Landable Large Planet",
+    "detail": "Radius: 18000km"
+  },
+  {
+    "body": "Oracle small-299999.98 1",
+    "title": "Small Object",
+    "detail": "Radius: 300km"
+  },
+  {
+    "body": "Oracle eccentricity-0.90000001 1",
+    "title": "Highly Eccentric Orbit",
+    "detail": "Eccentricity: 0.9"
+  },
+  {
+    "body": "Oracle eccentricity-0.90000003 1",
+    "title": "Highly Eccentric Orbit",
+    "detail": "Eccentricity: 0.9"
+  },
+  {
+    "body": "Oracle eccentricity-0.95 1",
+    "title": "Highly Eccentric Orbit",
+    "detail": "Eccentricity: 0.95"
+  },
+  {
+    "body": "Oracle rotation-28799.999 1",
+    "title": "Non-locked Body with Fast Rotation",
+    "detail": "Period: 8.0 hours"
+  },
+  {
+    "body": "Oracle rotation-12060.0001 1",
+    "title": "Non-locked Body with Fast Rotation",
+    "detail": "Period: 3.3 hours"
+  },
+  {
+    "body": "Oracle period-28799.999 1",
+    "title": "Fast Orbit",
+    "detail": "Orbital Period: 8.0 hours"
+  },
+  {
+    "body": "Oracle period-12060.0001 1",
+    "title": "Fast Orbit",
+    "detail": "Orbital Period: 3.3 hours"
+  },
+  {
+    "body": "Oracle close-orbit-2999999 1",
+    "title": "Close Orbit",
+    "detail": "Orbital Radius: 3,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle shepherd-20000000 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 10,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle shepherd-20000000 1",
+    "title": "Close Ring Proximity",
+    "detail": "Orbit: 20,000km, Radius: 1,000km, Distance from ring: -1,000km"
+  },
+  {
+    "body": "Oracle shepherd-19999999.9 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 10,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle shepherd-19999999.9 1",
+    "title": "Close Ring Proximity",
+    "detail": "Orbit: 20,000km, Radius: 1,000km, Distance from ring: -1,000km"
+  },
+  {
+    "body": "Oracle shepherd-19999998 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 10,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle shepherd-19999998 1",
+    "title": "Shepherd Moon",
+    "detail": "Orbit: 20,000km, Ring Radius: 20,000km"
+  },
+  {
+    "body": "Oracle shepherd-19999998 1",
+    "title": "Close Ring Proximity",
+    "detail": "Orbit: 20,000km, Radius: 1,000km, Distance from ring: -1,000km"
+  },
+  {
+    "body": "Oracle wide-6000000.5 1",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.02Ls / 5,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle near-ring-20000000 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 8,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle near-ring-19999999.9 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 8,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle near-ring-19999998 A",
+    "title": "Wide Ring",
+    "detail": "A Ring: Width: 0.03Ls / 8,000km, Parent Radius: 1,000km"
+  },
+  {
+    "body": "Oracle near-ring-19999998 1",
+    "title": "Close Ring Proximity",
+    "detail": "Orbit: 20,000km, Radius: 1,000km, Distance from ring: 10,000km"
+  },
+  {
+    "body": "Oracle binary-2500000 1",
+    "title": "Close binary relative to body size",
+    "detail": "Orbit: 2,500km, Radius: 1,000km, Partner: Oracle binary-2500000 A"
+  },
+  {
+    "body": "Oracle binary-2499999.99 1",
+    "title": "Close binary relative to body size",
+    "detail": "Orbit: 2,500km, Radius: 1,000km, Partner: Oracle binary-2499999.99 A"
+  },
+  {
+    "body": "Oracle binary-2499999.9 1",
+    "title": "Close binary relative to body size",
+    "detail": "Orbit: 2,500km, Radius: 1,000km, Partner: Oracle binary-2499999.9 A"
+  },
+  {
+    "body": "Oracle secondary-10.000000001 1",
+    "title": "Uncommon Secondary Star Type",
+    "detail": "Neutron Star, Distance: 10Ls"
+  },
+  {
+    "body": "Oracle secondary-10.1 1",
+    "title": "Uncommon Secondary Star Type",
+    "detail": "Neutron Star, Distance: 10Ls"
+  },
+  {
+    "body": "Oracle atmosphere-punctuation 1",
+    "title": "Landable with Atmosphere",
+    "detail": "Thin Argon, \"Trace\" Atmosphere"
+  },
+  {
+    "body": "Oracle class-punctuation 1",
+    "title": "High-Value Body",
+    "detail": "Undiscovered Terraformable EARTHLIKE Body, 0Ls"
+  },
+  {
+    "body": "Oracle nested-moon 1",
+    "title": "Nested Moon",
+    "detail": ""
+  },
+  {
+    "body": "Oracle biological-8 1",
+    "title": "Diverse Life",
+    "detail": "Biological Signals: 8"
+  },
+  {
+    "body": "Oracle colliding-0.5 1",
+    "title": "COLLIDING binary",
+    "detail": "Orbit: 1,000km, Radius: 1,000km, Partner: Oracle colliding-0.5 A"
+  },
+  {
+    "body": "Oracle colliding-0.49999999 1",
+    "title": "COLLIDING binary",
+    "detail": "Orbit: 1,000km, Radius: 1,000km, Partner: Oracle colliding-0.49999999 A"
+  },
+  {
+    "body": "Oracle colliding-0.49999997 1",
+    "title": "COLLIDING binary",
+    "detail": "Orbit: 1,000km, Radius: 1,000km, Partner: Oracle colliding-0.49999997 A"
+  },
+  {
+    "body": "Oracle gold-system",
+    "title": "All Premium Boost Materials In System",
+    "detail": ""
+  },
+  {
+    "body": "Oracle gold-system",
+    "title": "All Surface Materials In System",
+    "detail": ""
+  },
+  {
+    "body": "Oracle mapped-earthlike 1",
+    "title": "High-Value Body",
+    "detail": "Earthlike Body, 100Ls"
+  },
+  {
+    "body": "Oracle unmapped-water 1",
+    "title": "High-Value Body",
+    "detail": "Unmapped Water World, 102Ls"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "source": "Installed ObservatoryBioInsights.dll, UIHandler ctor IL0439-0457 and BaseUIHandler.Initialise IL05b0-0646 / IL0827 / IL09dd",
+  "source_sha256": "50e61de9db4c7cdb3c42c01cec9135bd9841747014c2a95a8fa6bfd23912e2ca",
+  "rule": "!NativeOutput.StartsWith(\"Disabled\")",
+  "common_dispatch_cases": [
+    21,
+    6,
+    23,
+    15,
+    0,
+    2,
+    16,
+    18
+  ],
+  "branch_counter": 468695583,
+  "cases": [
+    {
+      "setting": " Enabled",
+      "useNativeUI": true,
+      "next_counter": 1716809724,
+      "next_case": 17,
+      "constructor": "PluginWebBrowser",
+      "behavior": "Original custom HTML local output"
+    },
+    {
+      "setting": "Disabled",
+      "useNativeUI": false,
+      "next_counter": 890590535,
+      "next_case": 10,
+      "constructor": "UIBlankView",
+      "behavior": "Blank local output labeled Native Output Disabled; Hecate web output remains available"
+    }
+  ]
+}

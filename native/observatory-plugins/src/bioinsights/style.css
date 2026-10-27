@@ -1,0 +1,348 @@
+
+html, body {
+    overflow: auto;
+    font-family: verdana, sans-serif;
+    font-size: 16px;
+    background-color: #$$DEFAULTBACKGROUND$$;
+    color: #$$DEFAULTTEXT$$;
+    cursor: default;
+    -ms-content-zooming: none;
+    scrollbar-face-color: #$$ROW2BACKGROUND$$;
+    scrollbar-shadow-color: #$$DEFAULTTEXT$$;
+    scrollbar-arrow-color: #$$DEFAULTTEXT$$;
+    scrollbar-track-color: #$$ROW1BACKGROUND$$;
+    
+    
+    overflow-x: hidden;
+}
+
+img {
+    border: 0px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+.right {
+    text-align: right;
+    align-content: right;
+}
+
+.scroll {
+    overflow: auto;
+    /*height: 100px;*/
+}
+
+table {
+    /*border-collapse: collapse;*/
+    /*border: 0px solid #FF0000;*/
+    border-collapse: separate;
+    border-spacing: 0px $$ROWSPACING$$px;
+}
+
+
+table, td {
+    /*font-family: Segoe UI Emoji, Wingdings; */
+    /*font-family: Century Gothic;*/
+    font-family: Segoe UI Emoji;
+    border: 0px solid #$$BORDER$$;
+    font-size: 15px;
+    cursor: default;
+}
+    table,td {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+    }
+
+
+th, tr, td {
+    white-space: nowrap;
+    vertical-align: central;
+}
+
+hr {
+    border-color: #$$DEFAULTTEXT$$;
+}
+
+td.body, td.signals, td.value, td.planet, td.radiant {
+    font-weight: bold;
+    background-color: #$$HEADERBACKGROUND$$;
+    color: #$$HEADERTEXT$$;
+    font-size: 16px;
+    
+    vertical-align: top;
+
+}
+    td.signals, td.radiant, th.bodytype {
+        text-align: left;
+    }
+    td.value, td.extra {
+        text-align: right;
+    }
+    th.unsold,td.unsold {
+        font-size: 13px;
+    }
+
+    /* bugfix - leave here, don't adjust 1px to variable*/
+td.body {
+    border-right: 1px solid #$$HEADERBACKGROUND$$;
+}
+
+
+td.br {
+    border-right: $$BORDERWIDTH$$px solid #$$BORDER$$;
+}
+
+td.bl {
+    border-left: $$BORDERWIDTH$$px solid #$$BORDER$$;
+}
+
+th {
+    white-space: nowrap;
+    background-color: #$$TITLEBACKGROUND$$;
+    color: #$$TITLETEXT$$;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+    th.readall {
+        color: #$$IMPORTANTTEXT$$;
+        background-color: #$$HEADERBACKGROUND$$;
+        font-weight: bold;
+    }
+
+    th.border {
+        border: $$BORDERWIDTH$$px solid #$$BORDER$$;
+    }
+
+    th.body, th.signals, th.value, th.unsold, th.bodytype {
+        font-weight: bold;
+        border: $$BORDERWIDTH$$px solid #$$BORDER$$;
+    }
+    th.banner {
+        color: #$$HEADERTEXT$$;
+        background-color: #$$HEADERBACKGROUND$$;
+    }
+
+    th.signals, .left {
+        text-align: left;
+    }
+
+    th.value, th.extra {
+        text-align: right;
+    }
+
+    th.cmdr {
+        background-color: #$$HEADERBACKGROUND$$;
+        color: #$$HEADERTEXT$$;
+        border: $$BORDERWIDTH$$px solid #$$BORDER$$;
+    }
+
+td.row1 {
+    background-color: #$$ROW1BACKGROUND$$;
+}
+td.row2 {
+    background-color: #$$ROW2BACKGROUND$$;
+}
+
+    td.center {
+        text-align: center;
+    }
+
+    td.noleftmargin {
+        border-left-width: 0px;
+        padding-left: 0px;
+    }
+    td.norightmargin {
+        border-right-width: 0px;
+        padding-right: 0px;
+    }
+
+.roundleft {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.roundright {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+a.species:link, a.species:visited {
+    color: #$$DEFAULTTEXT$$;
+    text-decoration: none;
+}
+
+a.species:hover {
+    background-color: #$$DEFAULTTEXT$$;
+    color: #$$DEFAULTBACKGROUND$$;
+}
+
+.NotPresentItalic {
+    font-style: italic;
+    color: #$$NOTPRESENTTEXT$$;
+}
+
+a.NotPresentItalic:link, a.NotPresentItalic:visited {
+    color: #$$NOTPRESENTTEXT$$;
+}
+
+
+span.thanks {
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+span.h1thanks {
+    font-family: Verdana;
+    font-size: 24px;
+}
+
+span {
+    font-family: Segoe UI Emoji, Wingdings;
+    font-size: 15px;
+    /*vertical-align: central;*/
+}
+
+
+
+
+a.cc:link, a.cc:visited {
+    color: #$$LINKTEXT$$;
+    text-decoration: none;
+}
+a.cc:hover {
+    background-color: #$$LINKTEXT$$;
+    color: #$$DEFAULTBACKGROUND$$;
+}
+
+
+.ccw {
+    width: 120px;
+}
+
+table.cc {
+    float: left;
+    margin-left: 10px;
+    padding: 15px;
+    /*border: 1px solid #b0e0ff;*/
+}
+
+span.cc {
+    font-size: 13px;
+    font-family: verdana;
+}
+
+span.ccdesc {
+    white-space: pre-wrap;
+    font-size: 16px;
+    font-family: verdana;
+}
+
+th.cc, td.cc {
+    font-family: verdana;
+    vertical-align: top;
+}
+
+.vac {
+    vertical-align: middle;
+}
+
+td.highlight {
+    background-color: #$$HIGHLIGHTBACKGROUND$$;
+}
+
+span.cch {
+    height: 135px;   /* image height */
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 40px;
+    font-family: verdana;
+}
+
+th.cc {
+    vertical-align: central;
+    background-color: #$$DEFAULTBACKGROUND$$;
+    color: #$$DEFAULTTEXT$$;
+}
+
+td.cchighlight {
+    background-color: #$$LINKTEXT$$;
+    color: #$$DEFAULTBACKGROUND$$;
+    font-family: verdana;
+}
+
+span.h3cc {
+    vertical-align: bottom;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+span.cctitle {
+    color: #$$DEFAULTTEXT$$;
+}
+
+span.regionmap {
+    align-content: normal;
+}
+
+input.close {
+    background-color: #FF0000;
+    color: black;
+    font-family: Wingdings;
+    text-align: center;
+    padding: 0px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.alert {
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.alert-danger {
+    background-color: #F56358;
+}
+.alert-success {
+    background-color: #2EB885;
+}
+.alert-warning {
+    background-color: #FFA92B;
+}
+.alert-info {
+    background-color: #46A7F5;
+}
+
+.alertbtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    transform: translate(0px, -3px);
+}
+    
+.alertbtn:hover {
+    color: black;
+}
+
+

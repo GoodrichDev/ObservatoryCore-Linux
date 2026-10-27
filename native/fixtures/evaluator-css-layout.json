@@ -1,0 +1,2170 @@
+{
+  "reference": "Pinned installed Evaluator CSS and source-oracle validated HTML, rendered by actual WebKitGTK on a private Linux Xvfb display",
+  "synthetic_only": true,
+  "css_sha256": {
+    "style.css": "e65530e41b86e8b0212afcdc6c547db7d37543030f53ff428cc608520569e5a6",
+    "buttons.css": "2f0747cd828f2702296b3735389776b65b6d685c143eabde6a5f6f7b1ab534fe"
+  },
+  "projection": {
+    "summary": {
+      "Commander": "Native Smoke",
+      "DefaultNotificationColours": null,
+      "FID": "F4242",
+      "Filter": "Default",
+      "GuiFocus": 0,
+      "IsPreReading": false,
+      "Odyssey": true,
+      "ReadyPeers": {
+        "Hecate": "1.3.444.761"
+      },
+      "Route": "No more bodies to map",
+      "SystemAddress": 42,
+      "Systems": [
+        {
+          "Active": true,
+          "Current": true,
+          "DateTime": "2026-10-25T00:00:01Z",
+          "ID64": 42,
+          "PotentialValue": 50594,
+          "Route": [],
+          "ScannedBodies": 2,
+          "System": "Native Smoke",
+          "SystemValue": 50594,
+          "TotalBodies": 2,
+          "VisitID": 1
+        }
+      ],
+      "TransportMode": 2,
+      "UIAlerts": [],
+      "UnsoldData": [],
+      "UnsoldTotal": 50594,
+      "ZoomLevel": 100
+    },
+    "rows": [
+      {
+        "Atmospheric": false,
+        "BioCount": null,
+        "BioInsightsGalacticCodex": false,
+        "BioInsightsHighValue": false,
+        "BioInsightsMarked": false,
+        "BioInsightsPersonalCodex": false,
+        "Body": "A",
+        "BodyID": 0,
+        "BodyName": "Native Smoke A",
+        "CurrentValue": 14531,
+        "Distance": 0.0,
+        "Done": false,
+        "GeoCount": null,
+        "Gravity": 0.0,
+        "ID64": 42,
+        "IsHighValue": false,
+        "IsLandable": false,
+        "IsMapped": false,
+        "IsNextToVisit": false,
+        "IsStar": true,
+        "Map": false,
+        "Order": 0,
+        "PluginWorthVisiting": false,
+        "PotentialMaxValue": 14531,
+        "System": "Native Smoke",
+        "Terraformable": false,
+        "Type": "F",
+        "VisitID": 1,
+        "Volcanism": "",
+        "WasDiscovered": false,
+        "WasFootfalled": false,
+        "WasMapped": false
+      },
+      {
+        "Atmospheric": true,
+        "BioCount": 2,
+        "BioInsightsGalacticCodex": false,
+        "BioInsightsHighValue": false,
+        "BioInsightsMarked": false,
+        "BioInsightsPersonalCodex": false,
+        "Body": "A 1",
+        "BodyID": 1,
+        "BodyName": "Native Smoke A 1",
+        "CurrentValue": 34063,
+        "Distance": 499.0,
+        "Done": false,
+        "GeoCount": null,
+        "Gravity": 0.10197162129779283,
+        "ID64": 42,
+        "IsHighValue": false,
+        "IsLandable": true,
+        "IsMapped": false,
+        "IsNextToVisit": false,
+        "IsStar": false,
+        "Map": false,
+        "Order": 0,
+        "PluginWorthVisiting": false,
+        "PotentialMaxValue": 204783,
+        "System": "Native Smoke",
+        "Terraformable": false,
+        "Type": "High metal content body",
+        "VisitID": 1,
+        "Volcanism": "",
+        "WasDiscovered": false,
+        "WasFootfalled": false,
+        "WasMapped": false
+      }
+    ],
+    "settings": {
+      "MinimumBodyValue": 0
+    }
+  },
+  "dom": {
+    "width": 1170,
+    "body": {
+      "x": 8,
+      "y": 8,
+      "width": 1154,
+      "height": 322,
+      "top": 8,
+      "right": 1162,
+      "bottom": 330,
+      "left": 8
+    },
+    "bodyStyle": {
+      "fontFamily": "verdana, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "padding": "0px",
+      "margin": "8px",
+      "height": "322px",
+      "minWidth": "0px",
+      "maxWidth": "none",
+      "borderSpacing": "0px",
+      "width": "1154px",
+      "boxSizing": "content-box"
+    },
+    "buttons": {
+      "x": 8,
+      "y": 8,
+      "width": 1158,
+      "height": 40,
+      "top": 8,
+      "right": 1166,
+      "bottom": 48,
+      "left": 8
+    },
+    "buttonStyle": {
+      "fontFamily": "verdana, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "padding": "2px",
+      "margin": "0px",
+      "height": "36px",
+      "minWidth": "0px",
+      "maxWidth": "none",
+      "borderSpacing": "0px",
+      "width": "1154px",
+      "boxSizing": "content-box"
+    },
+    "buttonCells": [
+      {
+        "id": "main",
+        "rect": {
+          "x": 12,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 44,
+          "bottom": 44,
+          "left": 12
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      },
+      {
+        "id": "unsold",
+        "rect": {
+          "x": 50,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 82,
+          "bottom": 44,
+          "left": 50
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      },
+      {
+        "id": "about",
+        "rect": {
+          "x": 88,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 120,
+          "bottom": 44,
+          "left": 88
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      },
+      {
+        "id": "popout",
+        "rect": {
+          "x": 126,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 158,
+          "bottom": 44,
+          "left": 126
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      },
+      {
+        "id": "zoom",
+        "rect": {
+          "x": 164,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 196,
+          "bottom": 44,
+          "left": 164
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      },
+      {
+        "id": "settings",
+        "rect": {
+          "x": 202,
+          "y": 12,
+          "width": 32,
+          "height": 32,
+          "top": 12,
+          "right": 234,
+          "bottom": 44,
+          "left": 202
+        },
+        "style": {
+          "fontFamily": "Sans",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "2px 6px 3px",
+          "margin": "2px",
+          "height": "32px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px",
+          "width": "32px",
+          "boxSizing": "border-box"
+        }
+      }
+    ],
+    "content": {
+      "x": 8,
+      "y": 48,
+      "width": 1154,
+      "height": 282,
+      "top": 48,
+      "right": 1162,
+      "bottom": 330,
+      "left": 8
+    },
+    "tables": [
+      {
+        "rect": {
+          "x": 10,
+          "y": 53,
+          "width": 1152,
+          "height": 258,
+          "top": 53,
+          "right": 1162,
+          "bottom": 311,
+          "left": 10
+        },
+        "style": {
+          "fontFamily": "verdana, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "fontStyle": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "height": "258px",
+          "minWidth": "0px",
+          "maxWidth": "none",
+          "borderSpacing": "0px 2px",
+          "width": "1152px",
+          "boxSizing": "border-box"
+        },
+        "rows": [
+          {
+            "rect": {
+              "x": 10,
+              "y": 55,
+              "width": 1152,
+              "height": 28,
+              "top": 55,
+              "right": 1162,
+              "bottom": 83,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "CMDR Native Smoke",
+                "span": 10,
+                "rect": {
+                  "x": 10,
+                  "y": 55,
+                  "width": 1152.078125,
+                  "height": 28,
+                  "top": 55,
+                  "right": 1162.078125,
+                  "bottom": 83,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "1140.078125px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 85,
+              "width": 1152,
+              "height": 28,
+              "top": 85,
+              "right": 1162,
+              "bottom": 113,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "System",
+                "span": 4,
+                "rect": {
+                  "x": 10,
+                  "y": 85,
+                  "width": 381.765625,
+                  "height": 28,
+                  "top": 85,
+                  "right": 391.765625,
+                  "bottom": 113,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "369.765625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Progress",
+                "span": 1,
+                "rect": {
+                  "x": 391.765625,
+                  "y": 85,
+                  "width": 141.0625,
+                  "height": 28,
+                  "top": 85,
+                  "right": 532.828125,
+                  "bottom": 113,
+                  "left": 391.765625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "129.0625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Filter",
+                "span": 1,
+                "rect": {
+                  "x": 532.828125,
+                  "y": 85,
+                  "width": 116.796875,
+                  "height": 28,
+                  "top": 85,
+                  "right": 649.625,
+                  "bottom": 113,
+                  "left": 532.828125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "104.796875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "System Value",
+                "span": 3,
+                "rect": {
+                  "x": 649.625,
+                  "y": 85,
+                  "width": 286.265625,
+                  "height": 28,
+                  "top": 85,
+                  "right": 935.890625,
+                  "bottom": 113,
+                  "left": 649.625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "274.265625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Potential Value",
+                "span": 1,
+                "rect": {
+                  "x": 935.890625,
+                  "y": 85,
+                  "width": 226.1875,
+                  "height": 28,
+                  "top": 85,
+                  "right": 1162.078125,
+                  "bottom": 113,
+                  "left": 935.890625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "214.1875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 115,
+              "width": 1152,
+              "height": 28,
+              "top": 115,
+              "right": 1162,
+              "bottom": 143,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 10,
+                  "y": 115,
+                  "width": 42,
+                  "height": 28,
+                  "top": 115,
+                  "right": 52,
+                  "bottom": 143,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "20px",
+                  "borderSpacing": "0px 2px",
+                  "width": "32px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Body",
+                "span": 1,
+                "rect": {
+                  "x": 52,
+                  "y": 115,
+                  "width": 84.9375,
+                  "height": 28,
+                  "top": 115,
+                  "right": 136.9375,
+                  "bottom": 143,
+                  "left": 52
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "72.9375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Type",
+                "span": 1,
+                "rect": {
+                  "x": 136.9375,
+                  "y": 115,
+                  "width": 97.078125,
+                  "height": 28,
+                  "top": 115,
+                  "right": 234.015625,
+                  "bottom": 143,
+                  "left": 136.9375
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "85.078125px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Attributes",
+                "span": 1,
+                "rect": {
+                  "x": 234.015625,
+                  "y": 115,
+                  "width": 157.75,
+                  "height": 28,
+                  "top": 115,
+                  "right": 391.765625,
+                  "bottom": 143,
+                  "left": 234.015625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "145.75px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Distance",
+                "span": 1,
+                "rect": {
+                  "x": 391.765625,
+                  "y": 115,
+                  "width": 141.0625,
+                  "height": 28,
+                  "top": 115,
+                  "right": 532.828125,
+                  "bottom": 143,
+                  "left": 391.765625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "129.0625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Gravity",
+                "span": 1,
+                "rect": {
+                  "x": 532.828125,
+                  "y": 115,
+                  "width": 116.796875,
+                  "height": 28,
+                  "top": 115,
+                  "right": 649.625,
+                  "bottom": 143,
+                  "left": 532.828125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "104.796875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Visit / Map",
+                "span": 2,
+                "rect": {
+                  "x": 649.625,
+                  "y": 115,
+                  "width": 163.40625,
+                  "height": 28,
+                  "top": 115,
+                  "right": 813.03125,
+                  "bottom": 143,
+                  "left": 649.625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "151.40625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Current",
+                "span": 1,
+                "rect": {
+                  "x": 813.03125,
+                  "y": 115,
+                  "width": 122.859375,
+                  "height": 28,
+                  "top": 115,
+                  "right": 935.890625,
+                  "bottom": 143,
+                  "left": 813.03125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "110.859375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "Mapped",
+                "span": 1,
+                "rect": {
+                  "x": 935.890625,
+                  "y": 115,
+                  "width": 226.1875,
+                  "height": 28,
+                  "top": 115,
+                  "right": 1162.078125,
+                  "bottom": 143,
+                  "left": 935.890625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "214.1875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 145,
+              "width": 1152,
+              "height": 26,
+              "top": 145,
+              "right": 1162,
+              "bottom": 171,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "Native Smoke",
+                "span": 4,
+                "rect": {
+                  "x": 10,
+                  "y": 145,
+                  "width": 381.765625,
+                  "height": 26,
+                  "top": 145,
+                  "right": 391.765625,
+                  "bottom": 171,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "Verdana, sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "369.765625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "2 / 2",
+                "span": 1,
+                "rect": {
+                  "x": 391.765625,
+                  "y": 145,
+                  "width": 141.0625,
+                  "height": 26,
+                  "top": 145,
+                  "right": 532.828125,
+                  "bottom": 171,
+                  "left": 391.765625
+                },
+                "style": {
+                  "fontFamily": "Verdana, sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "131.0625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "",
+                "span": 1,
+                "rect": {
+                  "x": 532.828125,
+                  "y": 145,
+                  "width": 116.796875,
+                  "height": 26,
+                  "top": 145,
+                  "right": 649.625,
+                  "bottom": 171,
+                  "left": 532.828125
+                },
+                "style": {
+                  "fontFamily": "Verdana, sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "106.796875px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "A",
+                    "text": "",
+                    "rect": {
+                      "x": 572.5703125,
+                      "y": 150,
+                      "width": 12.4375,
+                      "height": 18,
+                      "top": 150,
+                      "right": 585.0078125,
+                      "bottom": 168,
+                      "left": 572.5703125
+                    },
+                    "style": {
+                      "fontFamily": "Verdana, sans-serif",
+                      "fontSize": "15px",
+                      "fontWeight": "700",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  },
+                  {
+                    "tag": "A",
+                    "text": "",
+                    "rect": {
+                      "x": 585.0078125,
+                      "y": 150,
+                      "width": 12.4375,
+                      "height": 18,
+                      "top": 150,
+                      "right": 597.4453125,
+                      "bottom": 168,
+                      "left": 585.0078125
+                    },
+                    "style": {
+                      "fontFamily": "Verdana, sans-serif",
+                      "fontSize": "15px",
+                      "fontWeight": "700",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  },
+                  {
+                    "tag": "A",
+                    "text": "",
+                    "rect": {
+                      "x": 597.4453125,
+                      "y": 150,
+                      "width": 12.4375,
+                      "height": 18,
+                      "top": 150,
+                      "right": 609.8828125,
+                      "bottom": 168,
+                      "left": 597.4453125
+                    },
+                    "style": {
+                      "fontFamily": "Verdana, sans-serif",
+                      "fontSize": "15px",
+                      "fontWeight": "700",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "50 594",
+                "span": 3,
+                "rect": {
+                  "x": 649.625,
+                  "y": 145,
+                  "width": 286.265625,
+                  "height": 26,
+                  "top": 145,
+                  "right": 935.890625,
+                  "bottom": 171,
+                  "left": 649.625
+                },
+                "style": {
+                  "fontFamily": "Verdana, sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "276.265625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "50 594",
+                "span": 1,
+                "rect": {
+                  "x": 935.890625,
+                  "y": 145,
+                  "width": 226.1875,
+                  "height": 26,
+                  "top": 145,
+                  "right": 1162.078125,
+                  "bottom": 171,
+                  "left": 935.890625
+                },
+                "style": {
+                  "fontFamily": "Verdana, sans-serif",
+                  "fontSize": "15px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "216.1875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 173,
+              "width": 1152,
+              "height": 28,
+              "top": 173,
+              "right": 1162,
+              "bottom": 201,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0\u00a0\u00a0\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 10,
+                  "y": 173,
+                  "width": 42,
+                  "height": 28,
+                  "top": 173,
+                  "right": 52,
+                  "bottom": 201,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "32px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "A",
+                "span": 1,
+                "rect": {
+                  "x": 52,
+                  "y": 173,
+                  "width": 84.9375,
+                  "height": 28,
+                  "top": 173,
+                  "right": 136.9375,
+                  "bottom": 201,
+                  "left": 52
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "74.9375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "\u00a0F\u00a0",
+                "span": 2,
+                "rect": {
+                  "x": 136.9375,
+                  "y": 173,
+                  "width": 254.828125,
+                  "height": 28,
+                  "top": 173,
+                  "right": 391.765625,
+                  "bottom": 201,
+                  "left": 136.9375
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "244.828125px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "SPAN",
+                    "text": "\u00a0F\u00a0",
+                    "rect": {
+                      "x": 141.9375,
+                      "y": 178,
+                      "width": 40,
+                      "height": 18,
+                      "top": 178,
+                      "right": 181.9375,
+                      "bottom": 196,
+                      "left": 141.9375
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "700",
+                      "fontStyle": "normal",
+                      "padding": "0px 10px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "0 LS",
+                "span": 1,
+                "rect": {
+                  "x": 391.765625,
+                  "y": 173,
+                  "width": 141.0625,
+                  "height": 28,
+                  "top": 173,
+                  "right": 532.828125,
+                  "bottom": 201,
+                  "left": 391.765625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "50px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "131.0625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 532.828125,
+                  "y": 173,
+                  "width": 116.796875,
+                  "height": 28,
+                  "top": 173,
+                  "right": 649.625,
+                  "bottom": 201,
+                  "left": 532.828125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "50px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "106.796875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "\u00a0",
+                "span": 2,
+                "rect": {
+                  "x": 649.625,
+                  "y": 173,
+                  "width": 163.40625,
+                  "height": 28,
+                  "top": 173,
+                  "right": 813.03125,
+                  "bottom": 201,
+                  "left": 649.625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "153.40625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "14 531",
+                "span": 1,
+                "rect": {
+                  "x": 813.03125,
+                  "y": 173,
+                  "width": 122.859375,
+                  "height": 28,
+                  "top": 173,
+                  "right": 935.890625,
+                  "bottom": 201,
+                  "left": 813.03125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "112.859375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "14 531",
+                "span": 1,
+                "rect": {
+                  "x": 935.890625,
+                  "y": 173,
+                  "width": 226.1875,
+                  "height": 28,
+                  "top": 173,
+                  "right": 1162.078125,
+                  "bottom": 201,
+                  "left": 935.890625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px 2px 15px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "206.1875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 203,
+              "width": 1152,
+              "height": 28,
+              "top": 203,
+              "right": 1162,
+              "bottom": 231,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0\u00a0\u00a0\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 10,
+                  "y": 203,
+                  "width": 42,
+                  "height": 28,
+                  "top": 203,
+                  "right": 52,
+                  "bottom": 231,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "32px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "A 1",
+                "span": 1,
+                "rect": {
+                  "x": 52,
+                  "y": 203,
+                  "width": 84.9375,
+                  "height": 28,
+                  "top": 203,
+                  "right": 136.9375,
+                  "bottom": 231,
+                  "left": 52
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "74.9375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "",
+                "span": 1,
+                "rect": {
+                  "x": 136.9375,
+                  "y": 203,
+                  "width": 97.078125,
+                  "height": 28,
+                  "top": 203,
+                  "right": 234.015625,
+                  "bottom": 231,
+                  "left": 136.9375
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "87.078125px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "SPAN",
+                    "text": "",
+                    "rect": {
+                      "x": 141.9375,
+                      "y": 208,
+                      "width": 54,
+                      "height": 18,
+                      "top": 208,
+                      "right": 195.9375,
+                      "bottom": 226,
+                      "left": 141.9375
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "fontStyle": "normal",
+                      "padding": "0px 10px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 234.015625,
+                  "y": 203,
+                  "width": 157.75,
+                  "height": 28,
+                  "top": 203,
+                  "right": 391.765625,
+                  "bottom": 231,
+                  "left": 234.015625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "147.75px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "SPAN",
+                    "text": "",
+                    "rect": {
+                      "x": 239.015625,
+                      "y": 209,
+                      "width": 16,
+                      "height": 18,
+                      "top": 209,
+                      "right": 255.015625,
+                      "bottom": 227,
+                      "left": 239.015625
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  },
+                  {
+                    "tag": "SPAN",
+                    "text": "",
+                    "rect": {
+                      "x": 255.015625,
+                      "y": 209,
+                      "width": 16,
+                      "height": 18,
+                      "top": 209,
+                      "right": 271.015625,
+                      "bottom": 227,
+                      "left": 255.015625
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "499 LS",
+                "span": 1,
+                "rect": {
+                  "x": 391.765625,
+                  "y": 203,
+                  "width": 141.0625,
+                  "height": 28,
+                  "top": 203,
+                  "right": 532.828125,
+                  "bottom": 231,
+                  "left": 391.765625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "50px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "131.0625px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "0.1 G",
+                "span": 1,
+                "rect": {
+                  "x": 532.828125,
+                  "y": 203,
+                  "width": 116.796875,
+                  "height": 28,
+                  "top": 203,
+                  "right": 649.625,
+                  "bottom": 231,
+                  "left": 532.828125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "50px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "106.796875px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "SPAN",
+                    "text": "0.1 G",
+                    "rect": {
+                      "x": 602.625,
+                      "y": 208,
+                      "width": 42,
+                      "height": 18,
+                      "top": 208,
+                      "right": 644.625,
+                      "bottom": 226,
+                      "left": 602.625
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "",
+                "span": 1,
+                "rect": {
+                  "x": 649.625,
+                  "y": 203,
+                  "width": 64.375,
+                  "height": 28,
+                  "top": 203,
+                  "right": 714,
+                  "bottom": 231,
+                  "left": 649.625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "54.375px",
+                  "boxSizing": "content-box"
+                },
+                "children": [
+                  {
+                    "tag": "A",
+                    "text": "",
+                    "rect": {
+                      "x": 654.625,
+                      "y": 209,
+                      "width": 16,
+                      "height": 18,
+                      "top": 209,
+                      "right": 670.625,
+                      "bottom": 227,
+                      "left": 654.625
+                    },
+                    "style": {
+                      "fontFamily": "\"Segoe UI Emoji\"",
+                      "fontSize": "15px",
+                      "fontWeight": "400",
+                      "fontStyle": "normal",
+                      "padding": "0px",
+                      "margin": "0px",
+                      "height": "auto",
+                      "minWidth": "0px",
+                      "maxWidth": "none",
+                      "borderSpacing": "0px 2px",
+                      "width": "auto",
+                      "boxSizing": "content-box"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 714,
+                  "y": 203,
+                  "width": 99.03125,
+                  "height": 28,
+                  "top": 203,
+                  "right": 813.03125,
+                  "bottom": 231,
+                  "left": 714
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "30px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "89.03125px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "34 063",
+                "span": 1,
+                "rect": {
+                  "x": 813.03125,
+                  "y": 203,
+                  "width": 122.859375,
+                  "height": 28,
+                  "top": 203,
+                  "right": 935.890625,
+                  "bottom": 231,
+                  "left": 813.03125
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "112.859375px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              },
+              {
+                "text": "204 783",
+                "span": 1,
+                "rect": {
+                  "x": 935.890625,
+                  "y": 203,
+                  "width": 226.1875,
+                  "height": 28,
+                  "top": 203,
+                  "right": 1162.078125,
+                  "bottom": 231,
+                  "left": 935.890625
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px 2px 15px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "206.1875px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 233,
+              "width": 1152,
+              "height": 28,
+              "top": 233,
+              "right": 1162,
+              "bottom": 261,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0",
+                "span": 10,
+                "rect": {
+                  "x": 10,
+                  "y": 233,
+                  "width": 1152.078125,
+                  "height": 28,
+                  "top": 233,
+                  "right": 1162.078125,
+                  "bottom": 261,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "16px",
+                  "fontWeight": "700",
+                  "fontStyle": "normal",
+                  "padding": "1px 5px",
+                  "margin": "0px",
+                  "height": "24px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "1140.078125px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 263,
+              "width": 1152,
+              "height": 22,
+              "top": 263,
+              "right": 1162,
+              "bottom": 285,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0",
+                "span": 10,
+                "rect": {
+                  "x": 10,
+                  "y": 263,
+                  "width": 1152.078125,
+                  "height": 22,
+                  "top": 263,
+                  "right": 1162.078125,
+                  "bottom": 285,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "18px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "1142.078125px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "rect": {
+              "x": 10,
+              "y": 287,
+              "width": 1152,
+              "height": 22,
+              "top": 287,
+              "right": 1162,
+              "bottom": 309,
+              "left": 10
+            },
+            "cells": [
+              {
+                "text": "\u00a0",
+                "span": 1,
+                "rect": {
+                  "x": 10,
+                  "y": 287,
+                  "width": 42,
+                  "height": 22,
+                  "top": 287,
+                  "right": 52,
+                  "bottom": 309,
+                  "left": 10
+                },
+                "style": {
+                  "fontFamily": "\"Segoe UI Emoji\"",
+                  "fontSize": "15px",
+                  "fontWeight": "400",
+                  "fontStyle": "normal",
+                  "padding": "2px 5px",
+                  "margin": "0px",
+                  "height": "18px",
+                  "minWidth": "0px",
+                  "maxWidth": "none",
+                  "borderSpacing": "0px 2px",
+                  "width": "32px",
+                  "boxSizing": "content-box"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "intrinsic": [
+      [
+        {
+          "text": "CMDR Native Smoke",
+          "span": 10,
+          "width": 761.859375
+        }
+      ],
+      [
+        {
+          "text": "System",
+          "span": 4,
+          "width": 254
+        },
+        {
+          "text": "Progress",
+          "span": 1,
+          "width": 93
+        },
+        {
+          "text": "Filter",
+          "span": 1,
+          "width": 77
+        },
+        {
+          "text": "System Value",
+          "span": 3,
+          "width": 188.734375
+        },
+        {
+          "text": "Potential Value",
+          "span": 1,
+          "width": 149.125
+        }
+      ],
+      [
+        {
+          "text": "\u00a0",
+          "span": 1,
+          "width": 30
+        },
+        {
+          "text": "Body",
+          "span": 1,
+          "width": 56
+        },
+        {
+          "text": "Type",
+          "span": 1,
+          "width": 64
+        },
+        {
+          "text": "Attributes",
+          "span": 1,
+          "width": 104
+        },
+        {
+          "text": "Distance",
+          "span": 1,
+          "width": 93
+        },
+        {
+          "text": "Gravity",
+          "span": 1,
+          "width": 77
+        },
+        {
+          "text": "Visit / Map",
+          "span": 2,
+          "width": 107.734375
+        },
+        {
+          "text": "Current",
+          "span": 1,
+          "width": 81
+        },
+        {
+          "text": "Mapped",
+          "span": 1,
+          "width": 149.125
+        }
+      ],
+      [
+        {
+          "text": "Native Smoke",
+          "span": 4,
+          "width": 254
+        },
+        {
+          "text": "2 / 2",
+          "span": 1,
+          "width": 93
+        },
+        {
+          "text": "",
+          "span": 1,
+          "width": 77
+        },
+        {
+          "text": "50 594",
+          "span": 3,
+          "width": 188.734375
+        },
+        {
+          "text": "50 594",
+          "span": 1,
+          "width": 149.125
+        }
+      ],
+      [
+        {
+          "text": "\u00a0\u00a0\u00a0\u00a0",
+          "span": 1,
+          "width": 30
+        },
+        {
+          "text": "A",
+          "span": 1,
+          "width": 56
+        },
+        {
+          "text": "\u00a0F\u00a0",
+          "span": 2,
+          "width": 168
+        },
+        {
+          "text": "0 LS",
+          "span": 1,
+          "width": 93
+        },
+        {
+          "text": "\u00a0",
+          "span": 1,
+          "width": 77
+        },
+        {
+          "text": "\u00a0",
+          "span": 2,
+          "width": 107.734375
+        },
+        {
+          "text": "14 531",
+          "span": 1,
+          "width": 81
+        },
+        {
+          "text": "14 531",
+          "span": 1,
+          "width": 149.125
+        }
+      ],
+      [
+        {
+          "text": "\u00a0\u00a0\u00a0\u00a0",
+          "span": 1,
+          "width": 30
+        },
+        {
+          "text": "A 1",
+          "span": 1,
+          "width": 56
+        },
+        {
+          "text": "",
+          "span": 1,
+          "width": 64
+        },
+        {
+          "text": "\u00a0",
+          "span": 1,
+          "width": 104
+        },
+        {
+          "text": "499 LS",
+          "span": 1,
+          "width": 93
+        },
+        {
+          "text": "0.1 G",
+          "span": 1,
+          "width": 77
+        },
+        {
+          "text": "",
+          "span": 1,
+          "width": 42.4375
+        },
+        {
+          "text": "\u00a0",
+          "span": 1,
+          "width": 65.296875
+        },
+        {
+          "text": "34 063",
+          "span": 1,
+          "width": 81
+        },
+        {
+          "text": "204 783",
+          "span": 1,
+          "width": 149.125
+        }
+      ],
+      [
+        {
+          "text": "\u00a0",
+          "span": 10,
+          "width": 761.859375
+        }
+      ],
+      [
+        {
+          "text": "\u00a0",
+          "span": 10,
+          "width": 761.859375
+        }
+      ],
+      [
+        {
+          "text": "\u00a0",
+          "span": 1,
+          "width": 30
+        }
+      ]
+    ]
+  }
+}

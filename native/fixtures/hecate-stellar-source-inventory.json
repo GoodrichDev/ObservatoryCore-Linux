@@ -1,0 +1,4314 @@
+{
+  "provenance": "Statically decompiled installed plugin source and decoded string constants; no vendor executable code was run. File hashes identify the exact reviewed text.",
+  "components": {
+    "Hecate": {
+      "files": [
+        {
+          "path": "Hecate/HecateWorker.cs",
+          "sha256": "c9fa7d3a81e72d84f28ece3f82abb55d17850c734a79403ab57160f65cb5c067",
+          "methods": [
+            {
+              "line": 2670,
+              "declaration": "public HecateWorker()",
+              "payload_keys": [],
+              "string_literals": [
+                "Buy me a coffee",
+                "Hecate",
+                "Hecate - Data Vault",
+                "Hecate is a background plugin that stores and retrieves data for other plugins",
+                "Matt G",
+                "Website",
+                "https://edjp.colacube.net/observatory",
+                "https://ko-fi.com/explorationtools"
+              ]
+            },
+            {
+              "line": 2712,
+              "declaration": "public override void Load(IObservatoryCore observatoryCore)",
+              "payload_keys": [],
+              "string_literals": [
+                " v",
+                ", Core v",
+                "---------------------------------------------------------------------",
+                "Server not running [",
+                "]",
+                "canonn",
+                "canonn.db",
+                "general.db",
+                "journals",
+                "journals.db",
+                "spansh",
+                "spansh.db"
+              ]
+            },
+            {
+              "line": 2891,
+              "declaration": "private void ServerTimer_Elapsed(object? sender, ElapsedEventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2895,
+              "declaration": "private void CanonnTimer_Elapsed(object? sender, ElapsedEventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2900,
+              "declaration": "private void SpanshTimer_Elapsed(object? sender, ElapsedEventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2906,
+              "declaration": "public override void JournalEvent<TJournal>(TJournal journal)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2943,
+              "declaration": "public void SetCurrentSystem(ulong theID64, string name, DateTime theDT, StarPosition pos, long population)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3000,
+              "declaration": "public override void ObservatoryReady()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3006,
+              "declaration": "public Task SpanshCache(ulong theID64)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3039,
+              "declaration": "public Task SpanshCache(ulong theID64, bool canonn)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3073,
+              "declaration": "public Task CanonnCache(ulong theID64)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3109,
+              "declaration": "public override void StartedReadAll(LogMonitorStateChangedEventArgs args)",
+              "payload_keys": [],
+              "string_literals": [
+                "Started ReadAll"
+              ]
+            },
+            {
+              "line": 3155,
+              "declaration": "public override void FinishedReadAll(LogMonitorStateChangedEventArgs args)",
+              "payload_keys": [],
+              "string_literals": [
+                "Finished Read All",
+                "JournalDBH Counters: ",
+                "N2",
+                "[Timings] ReadAll:",
+                "bioinsights_unsold",
+                "evaluator",
+                "evaluator_systems",
+                "s"
+              ]
+            },
+            {
+              "line": 3229,
+              "declaration": "public override void StartedPreRead(LogMonitorStateChangedEventArgs args)",
+              "payload_keys": [],
+              "string_literals": [
+                "Started PreRead"
+              ]
+            },
+            {
+              "line": 3235,
+              "declaration": "public override void FinishedPreRead(LogMonitorStateChangedEventArgs args)",
+              "payload_keys": [],
+              "string_literals": [
+                "Finished PreRead",
+                "Server Timer started [",
+                "ms]"
+              ]
+            },
+            {
+              "line": 3273,
+              "declaration": "public bool ResetAllBatabases()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3279,
+              "declaration": "public bool ResetDatabase(SystemDBH dbh)",
+              "payload_keys": [],
+              "string_literals": [
+                "[ResetDatabase]"
+              ]
+            },
+            {
+              "line": 3295,
+              "declaration": "public override void HandlePluginMessage(MessageSender sender, PluginMessage messageArgs)",
+              "payload_keys": [],
+              "string_literals": [
+                " message from ",
+                " v",
+                ": ",
+                "BioInsightsGetData",
+                "BioInsightsGetTotal",
+                "BioInsightsSetBonus",
+                "BioInsightsUnsoldAdd",
+                "BioInsightsUnsoldDelete",
+                "EvaluatorAdd",
+                "EvaluatorDelete",
+                "EvaluatorGetData",
+                "EvaluatorGetTotal",
+                "EvaluatorSysAdd",
+                "GetCurrentMerits",
+                "GetFID",
+                "GetSystemsVisitedFromList",
+                "HandlePluginMessage] received ",
+                "HandlePluginMessage] received unknown message from ",
+                "LegacyPluginMessage",
+                "LoadSystem",
+                "PIAddMerits",
+                "PIGetCycle",
+                "PIGetMerits",
+                "Ready",
+                "SpanshSystem",
+                "WebServerRegisterPlugin",
+                "WebSocketBroadcast",
+                "WebSocketResponse",
+                "[HandlePluginMessage]",
+                "message"
+              ]
+            },
+            {
+              "line": 4531,
+              "declaration": "public override void HandleReady(MessageSender sender)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 4560,
+              "declaration": "public void HandleLegacyPluginMessage(string sourceName, string sourceVersion, object messageArgs)",
+              "payload_keys": [],
+              "string_literals": [
+                " called legacy HandlePluginMessage [CMD: ",
+                " v",
+                "Command",
+                "UNDEFINED",
+                "]"
+              ]
+            },
+            {
+              "line": 4731,
+              "declaration": "public void HandleGetSystemsVisitedFromList(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "ID64s"
+              ],
+              "string_literals": [
+                " id64s",
+                " sent [GetSystemsVisitedFromList] with ",
+                " v",
+                "HandleGetSystemsVisitedFromList",
+                "ID64s",
+                "SystemsVisitedFromListResponse",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 4795,
+              "declaration": "public void HandleLoadSystem(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "DateTime",
+                "ID64"
+              ],
+              "string_literals": [
+                " v",
+                "DateTime",
+                "FIDs",
+                "HandleGetSystemsVisitedFromList",
+                "ID64",
+                "JournalEvents",
+                "LoadSystemResponse",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 4891,
+              "declaration": "public void HandleSpanshSystem(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 4926,
+              "declaration": "public void HandleEvaluatorAdd(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "BodyID",
+                "DateTime",
+                "FID",
+                "ID64",
+                "Name",
+                "Value"
+              ],
+              "string_literals": [
+                " v",
+                "BodyID",
+                "DateTime",
+                "FID",
+                "HandleEvaluatorAdd",
+                "ID64",
+                "Name",
+                "Value",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 4975,
+              "declaration": "public void HandleEvaluatorSysAdd(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "DateTime",
+                "FID",
+                "ID64",
+                "Name"
+              ],
+              "string_literals": [
+                " v",
+                "DateTime",
+                "FID",
+                "HandleEvaluatorSysAdd",
+                "ID64",
+                "Name",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5022,
+              "declaration": "public void HandleEvaluatorDelete(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "FID"
+              ],
+              "string_literals": [
+                " v",
+                "FID",
+                "HandleEvaluatorDelete",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5056,
+              "declaration": "public void HandleEvaluatorGetData(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "FID",
+                "Response"
+              ],
+              "string_literals": [
+                " v",
+                "Data",
+                "FID",
+                "HandleEvaluatorGetData",
+                "Processed",
+                "Response",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5107,
+              "declaration": "public void HandleEvaluatorGetTotal(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "FID",
+                "ForceSave",
+                "SubtractCurrent"
+              ],
+              "string_literals": [
+                " v",
+                "EvaluatorSetTotal",
+                "FID",
+                "ForceSave",
+                "HandleEvaluatorGetTotal",
+                "SubtractCurrent",
+                "Total",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5210,
+              "declaration": "public void HandleBioInsightsUnsoldAdd(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "BioName",
+                "BodyID",
+                "BodyName",
+                "DateTime",
+                "FID",
+                "ID64",
+                "Species",
+                "Value"
+              ],
+              "string_literals": [
+                " v",
+                "BioName",
+                "BodyID",
+                "BodyName",
+                "DateTime",
+                "FID",
+                "HandleBioInsightsUnsoldAdd",
+                "ID64",
+                "Species",
+                "Value",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5254,
+              "declaration": "public void HandleBioInsightsUnsoldDelete(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "FID"
+              ],
+              "string_literals": [
+                " v",
+                "FID",
+                "HandleBioInsightsUnsoldDelete",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5276,
+              "declaration": "public void HandleBioInsightsSetBonus(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "ID",
+                "Value"
+              ],
+              "string_literals": [
+                " v",
+                "HandleBioInsightsSetBonus",
+                "ID",
+                "Value",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5302,
+              "declaration": "public void HandleBioInsightsGetData(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "FID",
+                "Response"
+              ],
+              "string_literals": [
+                " entries",
+                " v",
+                "Data",
+                "FID",
+                "HandleEvaluatorGetData",
+                "Processed",
+                "Response",
+                "[HandleBioInsightsGetData] ",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5367,
+              "declaration": "public void HandleBioInsightsGetTotal(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "FID",
+                "ForceUpdate"
+              ],
+              "string_literals": [
+                " v",
+                "BioInsightsGetTotalResponse",
+                "FID",
+                "ForceUpdate",
+                "HandleBioInsightsGetTotal",
+                "Total",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5519,
+              "declaration": "public void HandleGetFID(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "Name"
+              ],
+              "string_literals": [
+                " v",
+                "FID",
+                "GetFIDResponse",
+                "HandleGetFID",
+                "Name",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5584,
+              "declaration": "public void HandleWebServerRegisterPlugin(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [],
+              "string_literals": [
+                " registered in web server"
+              ]
+            },
+            {
+              "line": 5650,
+              "declaration": "public void HandlePIAddMerits(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "Activity",
+                "Cycle",
+                "DateTime",
+                "Dupe",
+                "FID",
+                "Gained",
+                "Power",
+                "Session",
+                "System",
+                "TargetSystem",
+                "Total"
+              ],
+              "string_literals": [
+                " v",
+                "Activity",
+                "Cycle",
+                "DateTime",
+                "Dupe",
+                "FID",
+                "Gained",
+                "HandlePIAddMerits",
+                "Power",
+                "Session",
+                "System",
+                "TargetSystem",
+                "Total",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5697,
+              "declaration": "public void HandlePIGetMerits(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "FID",
+                "Power",
+                "Response"
+              ],
+              "string_literals": [
+                " v",
+                "Data",
+                "FID",
+                "HandlePIGetMerits",
+                "Power",
+                "Processed",
+                "Response",
+                "called with missing keys by ",
+                "true"
+              ]
+            },
+            {
+              "line": 5738,
+              "declaration": "public void HandlePIGetCycle(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "Cycle",
+                "FID",
+                "Power",
+                "Response"
+              ],
+              "string_literals": [
+                " v",
+                "Cycle",
+                "Data",
+                "FID",
+                "HandlePIGetCycle",
+                "Power",
+                "Processed",
+                "Response",
+                "called with missing keys by ",
+                "true"
+              ]
+            },
+            {
+              "line": 5768,
+              "declaration": "public void HandleGetCurrentMerits(MessageSender sender, Dictionary<string, object> payload, Guid messageid)",
+              "payload_keys": [
+                "Cycle",
+                "FID",
+                "Power",
+                "Session",
+                "Since",
+                "System",
+                "UpdateUI"
+              ],
+              "string_literals": [
+                " v",
+                "Cycle",
+                "FID",
+                "GetCurrentMeritsResponse",
+                "HandleGetPowerPlayData",
+                "Power",
+                "Session",
+                "Since",
+                "System",
+                "UpdateUI",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5837,
+              "declaration": "public void HandleWebSocketResponse(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "ClientID",
+                "Json"
+              ],
+              "string_literals": [
+                " v",
+                "ClientID",
+                "HandleWebSocketResponse",
+                "Json",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 5912,
+              "declaration": "public void HandleWebSocketBroadcast(MessageSender sender, Dictionary<string, object> payload)",
+              "payload_keys": [
+                "Json",
+                "Plugin"
+              ],
+              "string_literals": [
+                " v",
+                "HandleWebSocketBroadcast",
+                "Json",
+                "Plugin",
+                "called with missing keys by "
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "Name",
+              "line": 2616,
+              "attributes": []
+            },
+            {
+              "name": "ShortName",
+              "line": 2625,
+              "attributes": []
+            },
+            {
+              "name": "URLKey",
+              "line": 2634,
+              "attributes": []
+            },
+            {
+              "name": "Logger",
+              "line": 2643,
+              "attributes": []
+            },
+            {
+              "name": "IsLoaded",
+              "line": 2645,
+              "attributes": []
+            },
+            {
+              "name": "PluginUIType",
+              "line": 2647,
+              "attributes": []
+            },
+            {
+              "name": "Settings",
+              "line": 2649,
+              "attributes": []
+            },
+            {
+              "name": "AboutInfo",
+              "line": 2661,
+              "attributes": []
+            },
+            {
+              "name": "core",
+              "line": 2663,
+              "attributes": []
+            },
+            {
+              "name": "CurrentWorker",
+              "line": 2665,
+              "attributes": []
+            },
+            {
+              "name": "Guid",
+              "line": 2667,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": [
+            "ApproachBody",
+            "Bounty",
+            "CarrierJump",
+            "CarrierJumpRequest",
+            "CodexEntry",
+            "FSDJump",
+            "FSSAllBodiesFound",
+            "FSSBodySignals",
+            "LoadGame",
+            "Location",
+            "ReceiveText",
+            "SAAScanComplete",
+            "SAASignalsFound",
+            "Scan",
+            "ScanBaryCentre",
+            "ScanOrganic",
+            "ShipTargeted",
+            "StartJump",
+            "SupercruiseEntry",
+            "SupercruiseExit"
+          ]
+        },
+        {
+          "path": "Hecate/HecateSettings.cs",
+          "sha256": "9974866d061d3c4b234da12bc3027592b3a80a33c781bb9aadc5612d3dea2bab",
+          "methods": [
+            {
+              "line": 118,
+              "declaration": "public void ResetDB()",
+              "payload_keys": [],
+              "string_literals": [
+                "An error occurred resetting database, check log",
+                "Are you sure?",
+                "Database Reset",
+                "Journal database reset",
+                "Reset Error",
+                "Reset journal database?"
+              ]
+            },
+            {
+              "line": 175,
+              "declaration": "public void OpenServerSettingsAction()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 211,
+              "declaration": "public HecateSettings()",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [
+            {
+              "name": "ResetDatabase",
+              "line": 30,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Reset Journal Database\")]"
+              ]
+            },
+            {
+              "name": "OpenServerSettings",
+              "line": 35,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Web Server \u2666\")]",
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Open Web Server Settings\")]"
+              ]
+            },
+            {
+              "name": "ServerSettings",
+              "line": 38,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "InstallUpdates",
+              "line": 42,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Automatic Updates \u2666\")]",
+                "[SettingDisplayName(\"Automatically install updates\")]"
+              ]
+            },
+            {
+              "name": "InstallBetas",
+              "line": 45,
+              "attributes": [
+                "[SettingDisplayName(\"Install beta releases *NOT RECOMMENDED*\")]"
+              ]
+            },
+            {
+              "name": "VerboseLogging",
+              "line": 49,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Advanced \u2666\")]",
+                "[SettingDisplayName(\"Verbose Logging\")]"
+              ]
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "Hecate/ServerSettings.cs",
+          "sha256": "4ca07b242f172bff0570de47ce7e580a457c0bb2a216a1b7714088c89ea8be8a",
+          "methods": [
+            {
+              "line": 23,
+              "declaration": "public ServerSettings()",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "EnableWebServer",
+              "line": 7,
+              "attributes": []
+            },
+            {
+              "name": "ServerPort",
+              "line": 9,
+              "attributes": []
+            },
+            {
+              "name": "ServerLANIPAddress",
+              "line": 21,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "Hecate.Settings/FormServerSettings.cs",
+          "sha256": "3fc9d227a80e9ff2484e1b4368d8ed94bfcf44b6d7465716ef893b2a4d6b6d07",
+          "methods": [
+            {
+              "line": 61,
+              "declaration": "private void chkEnabled_CheckedChanged(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 65,
+              "declaration": "private void FormServerSettings_Load(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 93,
+              "declaration": "private void btnSave_Click(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                "/ user=Everyone",
+                "127.0.0.1",
+                ":",
+                "Firewall Rules",
+                "You may need to run the following command from an elevated command prompt (as admin) to allow the server to run on this address:\\r\\n\\r\\nnetsh http add urlacl url=http://"
+              ]
+            },
+            {
+              "line": 198,
+              "declaration": "protected override void Dispose(bool disposing)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 247,
+              "declaration": "private void InitializeComponent()",
+              "payload_keys": [],
+              "string_literals": [
+                "Enable Hecate Web Server",
+                "FormServerSettings",
+                "Hecate - Server Settings",
+                "Hecate Web Server (experimental, changes require restarting Observatory)",
+                "LAN Override IP Address (not recommended)",
+                "Save",
+                "Server Port (8000 - 59000)",
+                "btnSave",
+                "chkEnabled",
+                "groupBox1",
+                "label1",
+                "label2",
+                "txtIP",
+                "txtPort"
+              ]
+            }
+          ],
+          "properties": [],
+          "journal_event_types": []
+        },
+        {
+          "path": "Hecate/HecateServer2.cs",
+          "sha256": "a9e5f9872002fece934a7fc3a1e2c7e46422e54b3ffaac1e13ce54a6c9506cd3",
+          "methods": [
+            {
+              "line": 2296,
+              "declaration": "public HecateServer2()",
+              "payload_keys": [],
+              "string_literals": [
+                "debug",
+                "favicon.ico",
+                "status"
+              ]
+            },
+            {
+              "line": 2312,
+              "declaration": "public HecateServer2(string serveraddress, int port, HecateWorker theWorker, Logger theLogger)",
+              "payload_keys": [],
+              "string_literals": [
+                ":",
+                "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+                "debug",
+                "favicon.ico",
+                "http://",
+                "http://localhost:",
+                "localhost",
+                "status"
+              ]
+            },
+            {
+              "line": 2416,
+              "declaration": "public void RegisterPlugin(string pluginname, Guid guid)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                "ServerAddress",
+                "ServerPort",
+                "SetServerAddress",
+                "{Port}"
+              ]
+            },
+            {
+              "line": 2470,
+              "declaration": "public void Start()",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                "/",
+                "/favicon.ico",
+                "/status",
+                "/ws/{plugin}",
+                "/{id}/{*rest}",
+                "[WebServer]",
+                "[WebServer] Starting on "
+              ]
+            },
+            {
+              "line": 2775,
+              "declaration": "private string SanitizeName(string input)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                "[^a-z0-9-]"
+              ]
+            },
+            {
+              "line": 2818,
+              "declaration": "public Task SendToWebSocketClient(Guid clientId, string message)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2854,
+              "declaration": "public void BroadcastToWebSockets(string plugin, string json)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2939,
+              "declaration": "public void Stop()",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [
+            {
+              "name": "Port",
+              "line": 2289,
+              "attributes": []
+            },
+            {
+              "name": "Enabled",
+              "line": 2293,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "Hecate/DBH.cs",
+          "sha256": "61438cb47203eac73dda0879abcddcffc8ac62f2e589c31dea16fe6a463d45e9",
+          "methods": [
+            {
+              "line": 100,
+              "declaration": "public DBH()",
+              "payload_keys": [],
+              "string_literals": [
+                " WHERE fid = $fid AND power = $power AND (flags & ",
+                " p\\r\\n            LEFT OUTER JOIN ",
+                " s1 ON (s1.id64=p.targetsystem)\\r\\n            WHERE p.fid = $fid AND p.power = $power AND (flags & ",
+                ")==0 ",
+                ")==0\\r\\n                AND p.cycle = $cycle\\r\\n            GROUP BY COALESCE(s1.name,'unknown')\\r\\n            ",
+                "BiS",
+                "BiuCD",
+                "BiuD",
+                "BiuI",
+                "CenI",
+                "CmdrI",
+                "CmdrS",
+                "EvCD",
+                "EvCT",
+                "EvD",
+                "EvI",
+                "EvS",
+                "EvSI",
+                "PIMerI",
+                "PIMerS",
+                "SELECT COALESCE(SUM(e.value),0) FROM evaluator e WHERE e.fid = $fid",
+                "SELECT COALESCE(s.name,'unknown'), COALESCE(s.dtepoch,0), SUM(e.value) AS value FROM evaluator e LEFT OUTER JOIN evaluator_systems s ON (e.fid = s.fid AND e.id64 = s.id64) WHERE e.fid = $fid  GROUP BY s.name, s.dtepoch ORDER BY s.dtepoch",
+                "SELECT SUM(meritsgained) FROM ",
+                "SELECT u.id, u.dtepoch, u.bodyname, u.species, u.basevalue,  CASE WHEN b.bonus IS NULL OR b.bonus = 1 THEN 1 ELSE 0 END AS bonus  FROM bioinsights_unsold u  LEFT OUTER JOIN bioinsights_unsold_bonus b ON (b.fid = u.fid AND b.id64 = u.id64 AND b.bodyid = u.bodyid AND b.species = u.species)  WHERE u.fid=$fid ORDER BY dtepoch",
+                "SysI",
+                "\\r\\n            SELECT COALESCE(s1.name,'unknown'), \\r\\n                COALESCE(s2.name,'unknown'),p.cycle,p.session,p.activity,p.meritsgained,p.totalmerits,p.flags,p.dtepoch\\r\\n            FROM pp_merits_000 p\\r\\n            LEFT OUTER JOIN syslookup_000 s1 ON (s1.id64=p.system)\\r\\n            LEFT OUTER JOIN syslookup_000 s2 ON (s2.id64=p.targetsystem)\\r\\n            WHERE p.fid = $fid AND p.power = $power\\r\\n            ORDER BY p.dtepoch ASC, p.id ASC\\r\\n            ",
+                "\\r\\n            SELECT COALESCE(s1.name,'unknown'),SUM(p.meritsgained)\\r\\n            FROM ",
+                "bioinsights_unsold",
+                "bioinsights_unsold_bonus",
+                "census",
+                "commanders",
+                "evaluator",
+                "evaluator_systems",
+                "pp_merits",
+                "pp_merits_000",
+                "syslookup",
+                "syslookup_000"
+              ]
+            },
+            {
+              "line": 162,
+              "declaration": "public DBH(string thefile, Logger theLogger)",
+              "payload_keys": [],
+              "string_literals": [
+                " WHERE fid = $fid AND power = $power AND (flags & ",
+                " p\\r\\n            LEFT OUTER JOIN ",
+                " s1 ON (s1.id64=p.targetsystem)\\r\\n            WHERE p.fid = $fid AND p.power = $power AND (flags & ",
+                ")==0 ",
+                ")==0\\r\\n                AND p.cycle = $cycle\\r\\n            GROUP BY COALESCE(s1.name,'unknown')\\r\\n            ",
+                "BiS",
+                "BiuCD",
+                "BiuD",
+                "BiuI",
+                "CenI",
+                "CmdrI",
+                "CmdrS",
+                "EvCD",
+                "EvCT",
+                "EvD",
+                "EvI",
+                "EvS",
+                "EvSI",
+                "PIMerI",
+                "PIMerS",
+                "SELECT COALESCE(SUM(e.value),0) FROM evaluator e WHERE e.fid = $fid",
+                "SELECT COALESCE(s.name,'unknown'), COALESCE(s.dtepoch,0), SUM(e.value) AS value FROM evaluator e LEFT OUTER JOIN evaluator_systems s ON (e.fid = s.fid AND e.id64 = s.id64) WHERE e.fid = $fid  GROUP BY s.name, s.dtepoch ORDER BY s.dtepoch",
+                "SELECT SUM(meritsgained) FROM ",
+                "SELECT u.id, u.dtepoch, u.bodyname, u.species, u.basevalue,  CASE WHEN b.bonus IS NULL OR b.bonus = 1 THEN 1 ELSE 0 END AS bonus  FROM bioinsights_unsold u  LEFT OUTER JOIN bioinsights_unsold_bonus b ON (b.fid = u.fid AND b.id64 = u.id64 AND b.bodyid = u.bodyid AND b.species = u.species)  WHERE u.fid=$fid ORDER BY dtepoch",
+                "SysI",
+                "\\r\\n            SELECT COALESCE(s1.name,'unknown'), \\r\\n                COALESCE(s2.name,'unknown'),p.cycle,p.session,p.activity,p.meritsgained,p.totalmerits,p.flags,p.dtepoch\\r\\n            FROM pp_merits_000 p\\r\\n            LEFT OUTER JOIN syslookup_000 s1 ON (s1.id64=p.system)\\r\\n            LEFT OUTER JOIN syslookup_000 s2 ON (s2.id64=p.targetsystem)\\r\\n            WHERE p.fid = $fid AND p.power = $power\\r\\n            ORDER BY p.dtepoch ASC, p.id ASC\\r\\n            ",
+                "\\r\\n            SELECT COALESCE(s1.name,'unknown'),SUM(p.meritsgained)\\r\\n            FROM ",
+                "bioinsights_unsold",
+                "bioinsights_unsold_bonus",
+                "census",
+                "commanders",
+                "evaluator",
+                "evaluator_systems",
+                "pp_merits",
+                "pp_merits_000",
+                "syslookup",
+                "syslookup_000"
+              ]
+            },
+            {
+              "line": 253,
+              "declaration": "public void Initialise()",
+              "payload_keys": [],
+              "string_literals": [
+                "'",
+                "' does not exist",
+                ";Pooling=false;",
+                "Creating table '",
+                "Data Source=",
+                "Error detected removing '",
+                "Legacy table detected: '",
+                "[DBH] '",
+                "[SystemDBH]",
+                "bioinsights_unsold",
+                "bioinsights_unsold_bonus",
+                "census",
+                "commanders",
+                "evaluator",
+                "evaluator_systems",
+                "pp_merits_000",
+                "syslookup_000",
+                "unknown table '"
+              ]
+            },
+            {
+              "line": 914,
+              "declaration": "private bool CheckIfTableExists(string theTable)",
+              "payload_keys": [],
+              "string_literals": [
+                "';",
+                "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='"
+              ]
+            },
+            {
+              "line": 1005,
+              "declaration": "private void LogStats(string tableName)",
+              "payload_keys": [],
+              "string_literals": [
+                " record(s)",
+                "> has ",
+                "> has ErrorFlag",
+                "DB<"
+              ]
+            },
+            {
+              "line": 1065,
+              "declaration": "private int RecordCount(string tableName)",
+              "payload_keys": [],
+              "string_literals": [
+                ";",
+                "SELECT COUNT(*) FROM ",
+                "[RecordCount] exception"
+              ]
+            },
+            {
+              "line": 1118,
+              "declaration": "public void ResetCounters()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1186,
+              "declaration": "public void FlushAllCaches()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1218,
+              "declaration": "public void LogCounters()",
+              "payload_keys": [],
+              "string_literals": [
+                "  * ",
+                ": ",
+                "DBCounters:",
+                "DBTime: ",
+                "ms"
+              ]
+            },
+            {
+              "line": 1319,
+              "declaration": "public void Drop(string table)",
+              "payload_keys": [],
+              "string_literals": [
+                "' dropped",
+                "DROP TABLE ",
+                "Table '",
+                "[Truncate]"
+              ]
+            },
+            {
+              "line": 1396,
+              "declaration": "public void Vacuum()",
+              "payload_keys": [],
+              "string_literals": [
+                "Database vacuumed [",
+                "VACUUM",
+                "[Vacuum]",
+                "]"
+              ]
+            },
+            {
+              "line": 1449,
+              "declaration": "public void Truncate(string table)",
+              "payload_keys": [],
+              "string_literals": [
+                "'",
+                "' reset.",
+                "' truncated",
+                "DELETE FROM ",
+                "Sequence for '",
+                "Table '",
+                "[Truncate]",
+                "update sqlite_sequence set seq = 0 where name='"
+              ]
+            },
+            {
+              "line": 1564,
+              "declaration": "public void DropTables()",
+              "payload_keys": [],
+              "string_literals": [
+                "[DropTables]",
+                "bioinsights_unsold",
+                "census",
+                "commanders",
+                "evaluator",
+                "evaluator_systems",
+                "pp_merits_000",
+                "syslookup_000"
+              ]
+            },
+            {
+              "line": 1744,
+              "declaration": "public void TruncateAndDelete()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1749,
+              "declaration": "private void createIndex(string TABLE, string FIELDS)",
+              "payload_keys": [],
+              "string_literals": [
+                " ON ",
+                "' created",
+                "(",
+                ");",
+                ",",
+                "CREATE INDEX ",
+                "Index '",
+                "_",
+                "_idx"
+              ]
+            },
+            {
+              "line": 1853,
+              "declaration": "private void CreateBioInsightsUnsold()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE bioinsights_unsold(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                bodyid INTEGER(4) NOT NULL,\\r\\n                dtepoch INTEGER(8) NOT NULL,\\r\\n                bioname TEXT NOT NULL,\\r\\n                species INTEGER(2) NOT NULL,\\r\\n                basevalue INTEGER(8) NOT NULL,\\r\\n                bodyname TEXT NOT NULL,\\r\\n                UNIQUE(fid,id64,bodyid,species) ON CONFLICT REPLACE\\r\\n                )",
+                "Table 'bioinsights_unsold' created successfully.",
+                "bioinsights_unsold",
+                "dtepoch",
+                "fid"
+              ]
+            },
+            {
+              "line": 1922,
+              "declaration": "private void CreateBioInsightsUnsoldBonus()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE bioinsights_unsold_bonus(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                bodyid INTEGER(4) NOT NULL,\\r\\n                species INTEGER(2) NOT NULL,\\r\\n                bonus INTEGER(1) NOT NULL,\\r\\n                UNIQUE(fid,id64,bodyid,species) ON CONFLICT REPLACE\\r\\n                )",
+                "Table 'bioinsights_unsold_bonus' created successfully.",
+                "bioinsights_unsold_bonus",
+                "fid,id64,bodyid,species"
+              ]
+            },
+            {
+              "line": 1987,
+              "declaration": "public void BioInsightsUnsoldAdd(int fid, ulong id64, int bodyid, DateTime dt, string bioname, short species, long basevalue, string bodyname)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2083,
+              "declaration": "public void BioInsightsUnsoldSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " BioInsightsUnsold cache lines, ",
+                " saved [IsCaching=",
+                "$basevalue",
+                "$bioname",
+                "$bodyid",
+                "$bodyname",
+                "$dtepoch",
+                "$fid",
+                "$id64",
+                "$species",
+                "BiuI",
+                "INSERT INTO bioinsights_unsold(fid,id64,bodyid,dtepoch,bioname,species,basevalue,bodyname) VALUES($fid,$id64,$bodyid,$dtepoch,$bioname,$species,$basevalue,$bodyname)",
+                "[BioInsightsUnsoldSave] ",
+                "[DBH] ",
+                "]"
+              ]
+            },
+            {
+              "line": 2408,
+              "declaration": "public void BioInsightsSetBonus(int theId, bool theBonus)",
+              "payload_keys": [],
+              "string_literals": [
+                " SetBonus id ",
+                "$bonus",
+                "$id",
+                ", ",
+                "INSERT INTO bioinsights_unsold_bonus(fid,id64,bodyid,species,bonus) SELECT fid, id64, bodyid, species, $bonus FROM bioinsights_unsold WHERE id = $id",
+                "[BioInsightsSetBonus] ",
+                "[DBH] "
+              ]
+            },
+            {
+              "line": 2521,
+              "declaration": "public void BioInsightsUnsoldDelete(int fID)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "BiuCD",
+                "BiuD",
+                "DELETE FROM bioinsights_unsold WHERE fid = $fid",
+                "[BioInsightsUnsoldDelete] ",
+                "bioinsights_unsold"
+              ]
+            },
+            {
+              "line": 2688,
+              "declaration": "public List<(int id, DateTime dt, string bodyname, short species, int basevalue, bool bonus)> BioInsightsGetData(int fID)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "BiS",
+                "[EvaluatorGetData] exception"
+              ]
+            },
+            {
+              "line": 2865,
+              "declaration": "private void CreateEvaluatorTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE evaluator(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                bodyid INTEGER(4) NOT NULL,\\r\\n                value INTEGER(8) NOT NULL,\\r\\n                dtepoch INTEGER(8) NOT NULL,\\r\\n                bodyname TEXT NOT NULL,\\r\\n                UNIQUE(fid,id64,bodyid) ON CONFLICT REPLACE\\r\\n                )",
+                "Table 'evaluator' created successfully.",
+                "evaluator",
+                "fid"
+              ]
+            },
+            {
+              "line": 2933,
+              "declaration": "private void CreateEvaluatorSystemTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE evaluator_systems(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                dtepoch INTEGER(8) NOT NULL,\\r\\n                name TEXT NOT NULL,\\r\\n                UNIQUE(fid,id64) ON CONFLICT REPLACE\\r\\n                )",
+                "Table 'evaluator_systems' created successfully.",
+                "evaluator_systems",
+                "fid"
+              ]
+            },
+            {
+              "line": 2978,
+              "declaration": "public void EvaluatorSysAdd(int fid, ulong id64, string name, DateTime dt)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3056,
+              "declaration": "public void EvaluatorAdd(int fid, ulong id64, int bodyid, long value, string name, DateTime dt)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 3153,
+              "declaration": "public void EvaluatorSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " Ev cache lines, ",
+                " saved [IsCaching=",
+                "$bodyid",
+                "$dtepoch",
+                "$fid",
+                "$id64",
+                "$name",
+                "$value",
+                "EvI",
+                "INSERT INTO evaluator(fid,id64,bodyid,value,bodyname,dtepoch) VALUES($fid,$id64,$bodyid,$value,$name,$dtepoch)",
+                "[DBH] ",
+                "[EvaluatorSave] ",
+                "]"
+              ]
+            },
+            {
+              "line": 3460,
+              "declaration": "public void EvaluatorSysSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " EvS cache lines, ",
+                " saved [IsCaching=",
+                "$dtepoch",
+                "$fid",
+                "$id64",
+                "$name",
+                "EvSI",
+                "INSERT INTO evaluator_systems(fid,id64,name,dtepoch) VALUES($fid,$id64,$name,$dtepoch)",
+                "[DBH] ",
+                "[EvaluatorSysSave] ",
+                "]"
+              ]
+            },
+            {
+              "line": 3723,
+              "declaration": "public void EvaluatorDelete(int fID)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "DELETE FROM evaluator WHERE fid = $fid",
+                "EvCD",
+                "EvD",
+                "[EvaluatorDelete] ",
+                "evaluator"
+              ]
+            },
+            {
+              "line": 3873,
+              "declaration": "public long EvaluatorGetCommanderTotal(int fid, bool forceSave)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "EvCT",
+                "[EvaluatorGetCommanderTotal] exception"
+              ]
+            },
+            {
+              "line": 4068,
+              "declaration": "public List<(string name, DateTime dt, long value)> EvaluatorGetData(int fID)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "EvS",
+                "[EvaluatorGetData] exception"
+              ]
+            },
+            {
+              "line": 4291,
+              "declaration": "private void CreateCensusTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE census(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                name VARCHAR(128) NOT NULL,\\r\\n                lastseenepoch INTEGER(8) NOT NULL,\\r\\n                lastseensystem INTEGER(8) NOT NULL,\\r\\n                count INT NOT NULL DEFAULT 1,\\r\\n                UNIQUE(name)\\r\\n                )",
+                "Table 'census' created successfully.",
+                "census",
+                "name"
+              ]
+            },
+            {
+              "line": 4337,
+              "declaration": "private void CreateCommandersTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE commanders(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                name VARCHAR(128) NOT NULL,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                lastseenepoch INTEGER(8) NOT NULL,\\r\\n                UNIQUE(fid,name)\\r\\n                )",
+                "Table 'commanders' created successfully.",
+                "commanders",
+                "fid,name"
+              ]
+            },
+            {
+              "line": 4383,
+              "declaration": "private void CreateSysLookupTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE syslookup_000(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                name TEXT NOT NULL,\\r\\n                x REAL NOT NULL,\\r\\n                y REAL NOT NULL,\\r\\n                z REAL NOT NULL,\\r\\n                population INTEGER(8),\\r\\n                UNIQUE(id64) ON CONFLICT REPLACE\\r\\n                )",
+                "Table 'syslookup_000' created successfully.",
+                "id64",
+                "syslookup_000"
+              ]
+            },
+            {
+              "line": 4452,
+              "declaration": "public void CensusAdd(string name, DateTime dt, ulong id64)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 4548,
+              "declaration": "public void CensusSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " CenI cache lines, ",
+                " saved [IsCaching=",
+                "$id64",
+                "$lastseenepoch",
+                "$name",
+                "CenI",
+                "INSERT INTO census (name,lastseenepoch,lastseensystem)  VALUES($name,$lastseenepoch,$id64)  ON CONFLICT(name) DO UPDATE SET  count = count + 1,  lastseensystem = excluded.lastseensystem,  lastseenepoch = excluded.lastseenepoch  WHERE census.lastseenepoch + 7200 < excluded.lastseenepoch    OR census.lastseensystem <> excluded.lastseensystem",
+                "[CensusSave] ",
+                "[DBH] ",
+                "]"
+              ]
+            },
+            {
+              "line": 4791,
+              "declaration": "public void CommanderAdd(string name, int FID, DateTime dt)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 4887,
+              "declaration": "public void CommanderSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " CmdrI cache lines, ",
+                " saved [IsCaching=",
+                "$fid",
+                "$lastseenepoch",
+                "$name",
+                "CmdrI",
+                "INSERT INTO commanders (name,fid,lastseenepoch)  VALUES($name,$fid,$lastseenepoch)  ON CONFLICT(fid,name) DO UPDATE SET  lastseenepoch = excluded.lastseenepoch ",
+                "[CommanderSave] ",
+                "[DBH] ",
+                "]"
+              ]
+            },
+            {
+              "line": 5143,
+              "declaration": "public void SysLookupAdd(ulong id64, string name, double x, double y, double z, long population)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 5224,
+              "declaration": "public void SysLookupSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " SysI cache lines, ",
+                " saved [IsCaching=",
+                "$id64",
+                "$name",
+                "$population",
+                "$x",
+                "$y",
+                "$z",
+                "INSERT INTO syslookup_000(id64,name,x,y,z,population) VALUES($id64,$name,$x,$y,$z,$population)",
+                "SysI",
+                "[DBH] ",
+                "[SysLookupSave] ",
+                "]"
+              ]
+            },
+            {
+              "line": 5516,
+              "declaration": "public int GetFIDFromName(string name)",
+              "payload_keys": [],
+              "string_literals": [
+                "$name",
+                "CmdrS",
+                "SELECT fid FROM commanders WHERE name = $name ORDER BY lastseenepoch LIMIT 1",
+                "[GetFIDFromName] exception"
+              ]
+            },
+            {
+              "line": 5736,
+              "declaration": "private void CreatePowerInsightsMeritTable()",
+              "payload_keys": [],
+              "string_literals": [
+                "CREATE TABLE pp_merits_000(id INTEGER PRIMARY KEY, \\r\\n                system INTEGER(8) NOT NULL,\\r\\n                targetsystem INTEGER(8) NOT NULL,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                power INTEGER(1) NOT NULL,\\r\\n                cycle INTEGER(2) NOT NULL,\\r\\n                session INTEGER(8) NOT NULL,\\r\\n                activity INTEGER(2) NOT NULL,\\r\\n                meritsgained INTEGER(4) NOT NULL,\\r\\n                totalmerits INTEGER(4) NOT NULL,\\r\\n                flags INTEGER(2) NOT NULL,\\r\\n                dtepoch INTEGER(8) NOT NULL\\r\\n                )",
+                "Table 'pp_merits_000' created successfully.",
+                "cycle",
+                "dtepoch",
+                "fid",
+                "power",
+                "pp_merits_000"
+              ]
+            },
+            {
+              "line": 5804,
+              "declaration": "public void PowerInsightsMeritsAdd(ulong system, ulong targetsystem, int fid, sbyte power, short cycle, long session, short activity, int meritsgained, int totalmerits, DateTime dt, bool dupe)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 5919,
+              "declaration": "public void PowerInsightsMeritsSave()",
+              "payload_keys": [],
+              "string_literals": [
+                " PIMerI cache lines, ",
+                " saved [IsCaching=",
+                "$activity",
+                "$cycle",
+                "$dtepoch",
+                "$fid",
+                "$flags",
+                "$meritsgained",
+                "$power",
+                "$session",
+                "$system",
+                "$targetsystem",
+                "$totalmerits",
+                "INSERT INTO pp_merits_000(system,targetsystem,fid,power,cycle,session,activity,meritsgained,totalmerits,dtepoch,flags) VALUES($system,$targetsystem,$fid,$power,$cycle,$session,$activity,$meritsgained,$totalmerits,$dtepoch,$flags)",
+                "PIMerI",
+                "[DBH] ",
+                "[PowerInsightsMeritsSave] ",
+                "]"
+              ]
+            },
+            {
+              "line": 6293,
+              "declaration": "private long powerInsightsGetMerits(long fid, sbyte power, ulong? system, short? cycle, long? session, long? since)",
+              "payload_keys": [],
+              "string_literals": [
+                " AND cycle = $cycle ",
+                " AND dtepoch >= $since ",
+                " AND session = $session ",
+                " AND targetsystem = $system ",
+                "$cycle",
+                "$fid",
+                "$power",
+                "$session",
+                "$since",
+                "$system",
+                "PIMerS",
+                "[PowerInsightsGetMerits] exception"
+              ]
+            },
+            {
+              "line": 6672,
+              "declaration": "public Dictionary<string, int> PowerInsightsGetCycle(long fid, sbyte power, short cycle)",
+              "payload_keys": [],
+              "string_literals": [
+                "$cycle",
+                "$fid",
+                "$power",
+                "[powerInsightsGetCycle] exception"
+              ]
+            },
+            {
+              "line": 6881,
+              "declaration": "public Dictionary<string, object> PowerInsightsGetMerits(int fid, sbyte power, ulong system, short cycle, long session, long since)",
+              "payload_keys": [],
+              "string_literals": [
+                "SystemCycleMerits",
+                "SystemDailyMerits",
+                "SystemSessionMerits",
+                "TotalCycleMerits",
+                "TotalDailyMerits",
+                "TotalSessionMerits"
+              ]
+            },
+            {
+              "line": 6913,
+              "declaration": "public List<MeritResponse> PowerInsightsGetPlayerMerits(int fid, sbyte power)",
+              "payload_keys": [],
+              "string_literals": [
+                "$fid",
+                "$power",
+                "[PowerInsightsGetPlayerMerits] exception"
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "IsCaching",
+              "line": 93,
+              "attributes": []
+            },
+            {
+              "name": "IsInitialised",
+              "line": 95,
+              "attributes": []
+            },
+            {
+              "name": "HasError",
+              "line": 97,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "Hecate/SystemDBH.cs",
+          "sha256": "3b04ffad903b3bd44e765ea6df15f606ba0a1a46a9f8fb2943a76608e1443895",
+          "methods": [
+            {
+              "line": 116,
+              "declaration": "public SystemDBH()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 121,
+              "declaration": "public SystemDBH(string thefile, string thetable, Logger theLogger, bool useCompression)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 162,
+              "declaration": "public void Initialise()",
+              "payload_keys": [],
+              "string_literals": [
+                "'",
+                "' does not exist",
+                ";Pooling=false;",
+                "Creating table '",
+                "Data Source=",
+                "[SystemDBH]",
+                "[SystemDBH] '"
+              ]
+            },
+            {
+              "line": 298,
+              "declaration": "public void ResetCounters()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 310,
+              "declaration": "private void LogStats()",
+              "payload_keys": [],
+              "string_literals": [
+                " record(s)",
+                ";",
+                "> has ",
+                "SDB<",
+                "SELECT COUNT(*) FROM ",
+                "[LogStats] exception"
+              ]
+            },
+            {
+              "line": 414,
+              "declaration": "private bool CheckIfTableExists(string theTable)",
+              "payload_keys": [],
+              "string_literals": [
+                "';",
+                "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='"
+              ]
+            },
+            {
+              "line": 505,
+              "declaration": "private void CreateTable(string tableName)",
+              "payload_keys": [],
+              "string_literals": [
+                " (id64);",
+                "' created successfully.",
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT,\\r\\n                id64 INTEGER(8) NOT NULL,\\r\\n                fid INTEGER(4) NOT NULL,\\r\\n                data BLOB,\\r\\n                inserted DATETIME NOT NULL\\r\\n                )",
+                "CREATE INDEX ",
+                "CREATE TABLE ",
+                "Index '",
+                "Table '",
+                "_id64_idx ON ",
+                "_id64_idx' created successfully."
+              ]
+            },
+            {
+              "line": 623,
+              "declaration": "public void Truncate()",
+              "payload_keys": [],
+              "string_literals": [
+                "'",
+                "' reset.",
+                "' truncated",
+                "DELETE FROM ",
+                "Sequence for '",
+                "Table '",
+                "[Truncate]",
+                "update sqlite_sequence set seq = 0 where name='"
+              ]
+            },
+            {
+              "line": 760,
+              "declaration": "public void TruncateAndDelete()",
+              "payload_keys": [],
+              "string_literals": [
+                " deleted on attempt ",
+                "Unable to close or delete file ",
+                "[",
+                "[TruncateAndDelete]",
+                "]: "
+              ]
+            },
+            {
+              "line": 933,
+              "declaration": "public void Vacuum()",
+              "payload_keys": [],
+              "string_literals": [
+                "Database vacuumed [",
+                "VACUUM",
+                "[Vacuum]",
+                "]"
+              ]
+            },
+            {
+              "line": 1027,
+              "declaration": "public void Add(ulong theId64, int fid, StringBuilder theText, DateTime theDT)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1032,
+              "declaration": "public void Add(ulong theId64, int fid, string theText, DateTime theDT)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1167,
+              "declaration": "public void DeleteAndSave(ulong id64, int fid, string text, DateTime dt)",
+              "payload_keys": [],
+              "string_literals": [
+                " (id64,fid,data,inserted) VALUES($id64,$fid,$data,$inserted)",
+                " WHERE id64=@id64",
+                "$data",
+                "$fid",
+                "$id64",
+                "$inserted",
+                "@id64",
+                "DELETE FROM ",
+                "INSERT INTO ",
+                "[DeleteID64]"
+              ]
+            },
+            {
+              "line": 1306,
+              "declaration": "public void Save()",
+              "payload_keys": [],
+              "string_literals": [
+                " (id64,fid,data,inserted) VALUES($id64,$fid,$data,$inserted)",
+                " cache lines, ",
+                " saved [IsCaching=",
+                "$data",
+                "$fid",
+                "$id64",
+                "$inserted",
+                ",UseCompression=",
+                "INSERT INTO ",
+                "[SystemDBH] ",
+                "]"
+              ]
+            },
+            {
+              "line": 1577,
+              "declaration": "public void Add(ulong theId64, string theText)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1583,
+              "declaration": "private bool RowExists(ulong id64, DateTime theDT, SqliteTransaction trans)",
+              "payload_keys": [],
+              "string_literals": [
+                " WHERE id64=@id64 AND inserted=@dt",
+                "@dt",
+                "@id64",
+                "SELECT id64 FROM ",
+                "[RowExists]"
+              ]
+            },
+            {
+              "line": 1761,
+              "declaration": "public int? SecsOld(ulong id64)",
+              "payload_keys": [],
+              "string_literals": [
+                " WHERE id64=@id64",
+                "@id64",
+                "SELECT inserted FROM ",
+                "[SecsOld]"
+              ]
+            },
+            {
+              "line": 2011,
+              "declaration": "private bool RowExists(ulong id64, SqliteTransaction trans)",
+              "payload_keys": [],
+              "string_literals": [
+                " WHERE id64=@id64",
+                "@id64",
+                "SELECT id64 FROM ",
+                "[RowExists]"
+              ]
+            },
+            {
+              "line": 2140,
+              "declaration": "public List<ulong> GetSystemsVisitedFromList(List<ulong> id64s)",
+              "payload_keys": [],
+              "string_literals": [
+                "@id64list",
+                "[GetSystemsVisitedFromList] exception"
+              ]
+            },
+            {
+              "line": 2318,
+              "declaration": "public List<(string, int)> RetrieveSystemData(ulong id64, DateTime theDT)",
+              "payload_keys": [],
+              "string_literals": [
+                "@dt",
+                "@id64",
+                "[RetrieveSystemData] exception",
+                "\\r\\n",
+                "data"
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "IsCaching",
+              "line": 40,
+              "attributes": []
+            },
+            {
+              "name": "UseCompression",
+              "line": 42,
+              "attributes": []
+            },
+            {
+              "name": "HasError",
+              "line": 44,
+              "attributes": []
+            },
+            {
+              "name": "DBSaveThreshold",
+              "line": 46,
+              "attributes": []
+            },
+            {
+              "name": "IsInitialised",
+              "line": 48,
+              "attributes": []
+            },
+            {
+              "name": "CounterOutput",
+              "line": 50,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "com.github.fredjk_gh.PluginCommon.Data.Spansh.Converters/SpanshToJournal.cs",
+          "sha256": "202a9458c8255f146382b44b2f92aa23ce3264bd71a974ce415acf5036cf61bb",
+          "methods": [
+            {
+              "line": 317,
+              "declaration": "public static StarPosition ConvertSystemCoords(SystemCoords source)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 327,
+              "declaration": "public static ImmutableList<Parent> ConvertParents(List<ParentBody> parents)",
+              "payload_keys": [],
+              "string_literals": [
+                "Null",
+                "Planet",
+                "Star"
+              ]
+            },
+            {
+              "line": 473,
+              "declaration": "public static ImmutableList<MaterialComposition> ConvertMaterialComposition(List<CompositionItem> composition, bool convertCase = false)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                " "
+              ]
+            },
+            {
+              "line": 525,
+              "declaration": "public static Composition ConvertComposition(List<CompositionItem> composition)",
+              "payload_keys": [],
+              "string_literals": [
+                "Ice",
+                "Metal",
+                "Rock"
+              ]
+            },
+            {
+              "line": 555,
+              "declaration": "public static ImmutableList<Ring> ConvertRings(List<Asteroids> rings)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 584,
+              "declaration": "public static ImmutableList<Signal> ConvertBodySAASignals(List<NameIntItem> signals)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 611,
+              "declaration": "public static ImmutableList<Signal> ConvertRingCommoditySignals(List<NameIntItem> signals)",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            },
+            {
+              "line": 638,
+              "declaration": "public static ImmutableList<GenusType> ConvertGenuses(List<string> genuses)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 664,
+              "declaration": "public static string ConvertEconomy(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 669,
+              "declaration": "public static string ConvertGovernment(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 674,
+              "declaration": "public static string ConvertAllegiance(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 679,
+              "declaration": "public static string ConvertSecurity(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 684,
+              "declaration": "public static string ConvertGenus(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            },
+            {
+              "line": 712,
+              "declaration": "public static string ConvertBodySAASignal(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 717,
+              "declaration": "public static string ConvertRingType(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 722,
+              "declaration": "public static string ConvertCommodity(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            },
+            {
+              "line": 729,
+              "declaration": "public static string ConvertBodyType(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 735,
+              "declaration": "public static int ConvertSpectralClass(string spanshValue)",
+              "payload_keys": [],
+              "string_literals": [
+                "Unparseable Spectral Class: "
+              ]
+            },
+            {
+              "line": 806,
+              "declaration": "private static string IdFromName(Dictionary<string, IdName> map, string name)",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            }
+          ],
+          "properties": [],
+          "journal_event_types": []
+        }
+      ],
+      "message_commands": [
+        {
+          "name": "BioInsightsGetData",
+          "native_dispatch": true
+        },
+        {
+          "name": "BioInsightsGetTotal",
+          "native_dispatch": true
+        },
+        {
+          "name": "BioInsightsSetBonus",
+          "native_dispatch": true
+        },
+        {
+          "name": "BioInsightsUnsoldAdd",
+          "native_dispatch": true
+        },
+        {
+          "name": "BioInsightsUnsoldDelete",
+          "native_dispatch": true
+        },
+        {
+          "name": "EvaluatorAdd",
+          "native_dispatch": true
+        },
+        {
+          "name": "EvaluatorDelete",
+          "native_dispatch": true
+        },
+        {
+          "name": "EvaluatorGetData",
+          "native_dispatch": true
+        },
+        {
+          "name": "EvaluatorGetTotal",
+          "native_dispatch": true
+        },
+        {
+          "name": "EvaluatorSysAdd",
+          "native_dispatch": true
+        },
+        {
+          "name": "GetCurrentMerits",
+          "native_dispatch": true
+        },
+        {
+          "name": "GetFID",
+          "native_dispatch": true
+        },
+        {
+          "name": "GetSystemsVisitedFromList",
+          "native_dispatch": true
+        },
+        {
+          "name": "LegacyPluginMessage",
+          "native_dispatch": true
+        },
+        {
+          "name": "LoadSystem",
+          "native_dispatch": true
+        },
+        {
+          "name": "PIAddMerits",
+          "native_dispatch": true
+        },
+        {
+          "name": "PIGetCycle",
+          "native_dispatch": true
+        },
+        {
+          "name": "PIGetMerits",
+          "native_dispatch": true
+        },
+        {
+          "name": "Ready",
+          "native_dispatch": true
+        },
+        {
+          "name": "SpanshSystem",
+          "native_dispatch": true
+        },
+        {
+          "name": "WebServerRegisterPlugin",
+          "native_dispatch": true
+        },
+        {
+          "name": "WebSocketBroadcast",
+          "native_dispatch": true
+        },
+        {
+          "name": "WebSocketResponse",
+          "native_dispatch": true
+        }
+      ]
+    },
+    "StellarOverlay": {
+      "files": [
+        {
+          "path": "StellarOverlay/OverlayWorker.cs",
+          "sha256": "51e89cda6aa0662a45941eb87f1e2495a8029c7d1e695dc0bc2e159eb63a0c73",
+          "methods": [
+            {
+              "line": 1080,
+              "declaration": "private static extern nint GetForegroundWindow();",
+              "payload_keys": [],
+              "string_literals": [
+                "user32.dll"
+              ]
+            },
+            {
+              "line": 1083,
+              "declaration": "private static extern int GetWindowText(nint hWnd, StringBuilder text, int count);",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1086,
+              "declaration": "public OverlayWorker()",
+              "payload_keys": [],
+              "string_literals": [
+                "An overlay for Observatory to provide notifications and other things",
+                "Buy me a coffee",
+                "Matt G",
+                "Stellar Overlay",
+                "StellarOverlay",
+                "Website",
+                "https://edjp.colacube.net/observatory",
+                "https://ko-fi.com/explorationtools"
+              ]
+            },
+            {
+              "line": 1104,
+              "declaration": "public override void Load(IObservatoryCore observatoryCore)",
+              "payload_keys": [],
+              "string_literals": [
+                " v",
+                ", Core v",
+                ", Framework v",
+                "---------------------------------------------------------------------------"
+              ]
+            },
+            {
+              "line": 1223,
+              "declaration": "public override void ObservatoryReady()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1233,
+              "declaration": "public EliteOverlay InitialiseOverlay()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1239,
+              "declaration": "public void RemoveNotification(Guid theKey)",
+              "payload_keys": [],
+              "string_literals": [
+                "CANCEL"
+              ]
+            },
+            {
+              "line": 1290,
+              "declaration": "public Guid AddInstantNotification(NotificationArgs n)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1295,
+              "declaration": "public Guid AddInstantNotification(OvNotificationArgs ovn)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1301,
+              "declaration": "public void AddVisualAlert(VisAlertArgs v)",
+              "payload_keys": [],
+              "string_literals": [
+                "Adding Visual Alert: "
+              ]
+            },
+            {
+              "line": 1308,
+              "declaration": "public void RemoveVisualAlert(string key)",
+              "payload_keys": [],
+              "string_literals": [
+                "Removing Visual Alert: "
+              ]
+            },
+            {
+              "line": 1337,
+              "declaration": "public void CancelNotification(Guid guid)",
+              "payload_keys": [],
+              "string_literals": [
+                ">",
+                "[CancelNotification] <GUID<",
+                "[CancelNotification] Exception: "
+              ]
+            },
+            {
+              "line": 1386,
+              "declaration": "public void UpdateNotification(NotificationArgs notificationEventArgs)",
+              "payload_keys": [],
+              "string_literals": [
+                ">",
+                ">, <TTL:",
+                ">, <X:",
+                ">, <Y:",
+                "[UpdateNotification] <GUID<",
+                "[UpdateNotification] Exception: "
+              ]
+            },
+            {
+              "line": 1483,
+              "declaration": "public void OnNotificationEvent(NotificationArgs noti)",
+              "payload_keys": [],
+              "string_literals": [
+                ">",
+                ">, <TTL:",
+                ">, <X:",
+                ">, <Y:",
+                "[OnNotificationEvent] <GUID<",
+                "[OnNotificationEvent] Exception: "
+              ]
+            },
+            {
+              "line": 1684,
+              "declaration": "public void RegisterColour(string k, string col)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1724,
+              "declaration": "public void SetPluginUsesCustomColours(string plugin, bool theval)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1758,
+              "declaration": "private void OnTimedEventCheckFocus(object source, ElapsedEventArgs e)",
+              "payload_keys": [],
+              "string_literals": [
+                "CLIENT",
+                "Elite",
+                "Unicorn"
+              ]
+            },
+            {
+              "line": 1906,
+              "declaration": "public void RipDownOverlayAndReinitialise()",
+              "payload_keys": [],
+              "string_literals": [
+                "Creating new overlay",
+                "Disposing overlay"
+              ]
+            },
+            {
+              "line": 1945,
+              "declaration": "public void StatusChange(Status status)",
+              "payload_keys": [],
+              "string_literals": [
+                "StatusChange"
+              ]
+            },
+            {
+              "line": 1983,
+              "declaration": "public new void JournalEvent<TJournal>(TJournal journal) where TJournal : JournalBase",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1988,
+              "declaration": "public override void HandlePluginMessage(MessageSender sender, PluginMessage messageArgs)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2000,
+              "declaration": "public void HandleLegacyPluginMessage(string sourceName, string sourceVersion, object messageArgs)",
+              "payload_keys": [],
+              "string_literals": [
+                " called legacy HandlePluginMessage [CMD: ",
+                " v",
+                "Command",
+                "UNDEFINED",
+                "]"
+              ]
+            },
+            {
+              "line": 2171,
+              "declaration": "public void HandleShowBitmapNotification(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "EntryTransition",
+                "ExitTransition",
+                "Filename",
+                "ForceShow",
+                "ImageKey",
+                "Opacity",
+                "TTLms",
+                "XPos",
+                "YPos"
+              ],
+              "string_literals": [
+                " v",
+                "EntryTransition",
+                "ExitTransition",
+                "Filename",
+                "ForceShow",
+                "HandleShowBitmapNotification",
+                "HandleShowBitmapNotification -> ",
+                "ImageKey",
+                "Opacity",
+                "TTLms",
+                "XPos",
+                "YPos",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2247,
+              "declaration": "public void HandleSetDisplayOverrideTTL(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "TTL"
+              ],
+              "string_literals": [
+                " v",
+                "ForceDisplayTTL set to ",
+                "HandleSetDisplayOverrideTTL",
+                "TTL",
+                "called with missing keys by ",
+                "ms"
+              ]
+            },
+            {
+              "line": 2298,
+              "declaration": "public void HandleHideBitmapNotification(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "ImageKey"
+              ],
+              "string_literals": [
+                " v",
+                "HandleHideBitmapNotification -> ",
+                "HandleSetDisplayOverrideTTL",
+                "ImageKey",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2342,
+              "declaration": "public void HandleRegisterPluginCustomColours(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "GetDefaultColors"
+              ],
+              "string_literals": [
+                "BackgroundColor",
+                "BorderColor",
+                "GetDefaultColors",
+                "Key",
+                "RegisterPluginCustomColoursResponse",
+                "TextColor",
+                "TitleColor",
+                "_"
+              ]
+            },
+            {
+              "line": 2495,
+              "declaration": "public void HandleUnregisterPluginCustomColours(MessageSender sender)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2527,
+              "declaration": "public void HandleRadarSetPlanet(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "BodyID",
+                "Genuses",
+                "ID64",
+                "RadiusKM"
+              ],
+              "string_literals": [
+                " v",
+                "BodyID",
+                "Genuses",
+                "HandleRadarSetPlanet",
+                "ID64",
+                "RadiusKM",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2590,
+              "declaration": "public void HandleRadarHide(MessageSender sender)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2596,
+              "declaration": "public void HandleRadarAddPoint(RadarPointType type, MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "ContextID",
+                "Label",
+                "MeasureDistance",
+                "Radius",
+                "UseCurrentPosition",
+                "X",
+                "Y"
+              ],
+              "string_literals": [
+                "",
+                " v",
+                "ContextID",
+                "HandleRadarAddPoint",
+                "Label",
+                "MeasureDistance",
+                "Radius",
+                "UseCurrentPosition",
+                "X",
+                "Y",
+                "called with UseCurrentPosition=false but no X/Y coords by ",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2802,
+              "declaration": "public void HandleRadarAddWaypoint(MessageSender sender)",
+              "payload_keys": [],
+              "string_literals": [
+                ""
+              ]
+            },
+            {
+              "line": 2808,
+              "declaration": "public void HandleRadarContextID(RadarPointType type, MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "ContextID",
+                "MinDistance",
+                "SampleCount"
+              ],
+              "string_literals": [
+                " v",
+                "ContextID",
+                "HandleRadarContextID",
+                "MinDistance",
+                "SampleCount",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2891,
+              "declaration": "public void HandleRadarRemovePoint(RadarPointType type, MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "ContextID",
+                "NewContextID",
+                "SampleCount"
+              ],
+              "string_literals": [
+                " v",
+                "ContextID",
+                "HandleRadarRemovePoint",
+                "NewContextID",
+                "SampleCount",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2962,
+              "declaration": "public void HandleRadarForceHidden(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "Value"
+              ],
+              "string_literals": [
+                " v",
+                "HandleRadarForceShow",
+                "Value",
+                "called with missing keys by "
+              ]
+            },
+            {
+              "line": 2996,
+              "declaration": "public void HandleSetColonyRanges(MessageSender sender, Dictionary<string, object> args)",
+              "payload_keys": [
+                "Payload"
+              ],
+              "string_literals": [
+                " colony range(s) from ",
+                " v",
+                "HandleSetColonyRanges",
+                "Payload",
+                "Received ",
+                "called with missing keys by "
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "Name",
+              "line": 995,
+              "attributes": []
+            },
+            {
+              "name": "ShortName",
+              "line": 1004,
+              "attributes": []
+            },
+            {
+              "name": "URLKey",
+              "line": 1013,
+              "attributes": []
+            },
+            {
+              "name": "Guid",
+              "line": 1022,
+              "attributes": []
+            },
+            {
+              "name": "PluginUIType",
+              "line": 1024,
+              "attributes": []
+            },
+            {
+              "name": "Logger",
+              "line": 1026,
+              "attributes": []
+            },
+            {
+              "name": "Overlay",
+              "line": 1028,
+              "attributes": []
+            },
+            {
+              "name": "Core",
+              "line": 1030,
+              "attributes": []
+            },
+            {
+              "name": "GLogger",
+              "line": 1032,
+              "attributes": []
+            },
+            {
+              "name": "CurrentWorker",
+              "line": 1034,
+              "attributes": []
+            },
+            {
+              "name": "DebugLog",
+              "line": 1036,
+              "attributes": []
+            },
+            {
+              "name": "PluginUsesCustomColours",
+              "line": 1038,
+              "attributes": []
+            },
+            {
+              "name": "Colours",
+              "line": 1040,
+              "attributes": []
+            },
+            {
+              "name": "AboutInfo",
+              "line": 1042,
+              "attributes": []
+            },
+            {
+              "name": "OverridePopupNotifications",
+              "line": 1044,
+              "attributes": []
+            },
+            {
+              "name": "Settings",
+              "line": 1067,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/OverlaySettings.cs",
+          "sha256": "021737214bf543f0e5992504be87dc042decd34eb0ca3ffdde6219607d6fd01b",
+          "methods": [
+            {
+              "line": 248,
+              "declaration": "private void OpenRadarSettings()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 280,
+              "declaration": "private void NotificationSetting()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 320,
+              "declaration": "protected void DebugLogAction()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 326,
+              "declaration": "protected void DebugNotificationAction()",
+              "payload_keys": [],
+              "string_literals": [
+                "A test ",
+                "Debug Notification",
+                "StellarOverlay"
+              ]
+            },
+            {
+              "line": 391,
+              "declaration": "private Guid StringToGuid(string input)",
+              "payload_keys": [],
+              "string_literals": [
+                "wibble"
+              ]
+            },
+            {
+              "line": 469,
+              "declaration": "protected void DebugMessage1Action()",
+              "payload_keys": [],
+              "string_literals": [
+                "A test ",
+                "Debug Notification"
+              ]
+            },
+            {
+              "line": 488,
+              "declaration": "protected void DebugMessage2Action()",
+              "payload_keys": [],
+              "string_literals": [
+                "Debug test ",
+                "Notification ABC",
+                "\\r\\n",
+                "\\r\\nXXTest "
+              ]
+            },
+            {
+              "line": 512,
+              "declaration": "protected void DebugMessage3Action()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 518,
+              "declaration": "protected void DebugMessage4Action()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 524,
+              "declaration": "protected void DebugButtonAction()",
+              "payload_keys": [],
+              "string_literals": [
+                "c:\\\\temp\\\\webbrowser.png",
+                "wibble"
+              ]
+            },
+            {
+              "line": 590,
+              "declaration": "protected void ResetOverlay()",
+              "payload_keys": [],
+              "string_literals": [
+                "Creating new overlay",
+                "Disposing overlay",
+                "[Settings]",
+                "[Settings] NR:"
+              ]
+            },
+            {
+              "line": 639,
+              "declaration": "public OverlaySettings()",
+              "payload_keys": [],
+              "string_literals": [
+                "0 (Default)",
+                "Arial",
+                "B0000000",
+                "FF2E8EFF",
+                "FFFF6300",
+                "FFFF7B00"
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "Worker",
+              "line": 38,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "HandleObservatoryNotifications",
+              "line": 42,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Overlay Settings \u2666\")]",
+                "[SettingDisplayName(\"Handle Observatory Notifications\")]"
+              ]
+            },
+            {
+              "name": "DisplayOverride",
+              "line": 45,
+              "attributes": [
+                "[SettingDisplayName(\"Show popups when Elite is not active window\")]"
+              ]
+            },
+            {
+              "name": "DisplayMonitor",
+              "line": 58,
+              "attributes": [
+                "[SettingBackingValue(\"SelectedMonitor\")]"
+              ]
+            },
+            {
+              "name": "SelectedMonitor",
+              "line": 86,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "NotificationSettingsButton",
+              "line": 128,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Notification Options \u2666\")]",
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Change Notification Settings\")]"
+              ]
+            },
+            {
+              "name": "OpenRadarSettingsButton",
+              "line": 133,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Radar \u2666\")]",
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Change Radar Settings\")]"
+              ]
+            },
+            {
+              "name": "NotificationShape",
+              "line": 136,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "SelectedFont",
+              "line": 139,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "FontScaling",
+              "line": 142,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "TextAlignment",
+              "line": 145,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "TitleColorHex",
+              "line": 148,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "ColorHex",
+              "line": 151,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "BorderColorHex",
+              "line": 154,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "BackgroundColorHex",
+              "line": 157,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "BorderWidth",
+              "line": 160,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "CornerRounding",
+              "line": 163,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "XPadding",
+              "line": 166,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "YPadding",
+              "line": 169,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "EdgeIndentation",
+              "line": 172,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "VerticalSpacing",
+              "line": 175,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "MaxNotifications",
+              "line": 178,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "TTL",
+              "line": 181,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "DelayBetweenNotificationsMS",
+              "line": 184,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "MaxWidth",
+              "line": 187,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "FPS",
+              "line": 190,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "FromRight",
+              "line": 193,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "VerticalPositionPercent",
+              "line": 196,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "InstallUpdates",
+              "line": 200,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Automatic Updates \u2666\")]",
+                "[SettingDisplayName(\"Automatically install updates\")]"
+              ]
+            },
+            {
+              "name": "InstallBetas",
+              "line": 203,
+              "attributes": [
+                "[SettingDisplayName(\"Install beta releases *NOT RECOMMENDED*\")]"
+              ]
+            },
+            {
+              "name": "VerboseLogging",
+              "line": 207,
+              "attributes": [
+                "[SettingNewGroup(\"\u2666 Debug \u2666\")]",
+                "[SettingDisplayName(\"Enable Debug Logging\")]"
+              ]
+            },
+            {
+              "name": "RadarSettings",
+              "line": 210,
+              "attributes": [
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "DebugButton",
+              "line": 214,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]"
+              ]
+            },
+            {
+              "name": "DebugLogButton",
+              "line": 218,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Write Overlay State to Log\")]"
+              ]
+            },
+            {
+              "name": "DebugNotificationButton",
+              "line": 222,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingDisplayName(\"Spawn Debug Notifications\")]"
+              ]
+            },
+            {
+              "name": "DebugMessage1",
+              "line": 227,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]",
+                "[SettingDisplayName(\"Message on\")]"
+              ]
+            },
+            {
+              "name": "DebugMessage2",
+              "line": 232,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]",
+                "[SettingDisplayName(\"Message update\")]"
+              ]
+            },
+            {
+              "name": "DebugMessage3",
+              "line": 237,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]",
+                "[SettingDisplayName(\"Message off+on\")]"
+              ]
+            },
+            {
+              "name": "DebugMessage4",
+              "line": 242,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]",
+                "[SettingDisplayName(\"Message off\")]"
+              ]
+            },
+            {
+              "name": "FontList",
+              "line": 246,
+              "attributes": [
+                "[JsonIgnore]",
+                "[SettingIgnore]"
+              ]
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/RadarSettings.cs",
+          "sha256": "1a0ef9eae0c3a9a3d36d1b03e642552ef2cb3c8ca3cada903c4de93b0bef2372",
+          "methods": [
+            {
+              "line": 15,
+              "declaration": "public RadarSettings()",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [
+            {
+              "name": "Enabled",
+              "line": 5,
+              "attributes": []
+            },
+            {
+              "name": "PositionXPct",
+              "line": 7,
+              "attributes": []
+            },
+            {
+              "name": "PositionYPct",
+              "line": 9,
+              "attributes": []
+            },
+            {
+              "name": "SizePct",
+              "line": 11,
+              "attributes": []
+            },
+            {
+              "name": "FontScaling",
+              "line": 13,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/FormNotificationSettings.cs",
+          "sha256": "84bf9ed47e0ba0ce415fab61da0c297c7081ee85020ed9f88e8553b488ea8092",
+          "methods": [
+            {
+              "line": 147,
+              "declaration": "public FormNotificationSettings()",
+              "payload_keys": [],
+              "string_literals": [
+                "0 (Default)",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "line": 173,
+              "declaration": "public FormNotificationSettings(OverlaySettings theSettings, OverlayWorker theworker)",
+              "payload_keys": [],
+              "string_literals": [
+                "0 (Default)",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            {
+              "line": 200,
+              "declaration": "private void btnClose_Click(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 205,
+              "declaration": "private void FormNotificationSettings_Load(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 406,
+              "declaration": "private void btnApply_Click(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                " of ",
+                ") to test Overlay settings",
+                "A Test Notification ",
+                "A sample notification (",
+                "StellarOverlay",
+                "[Settings]",
+                "[Settings] NR:",
+                "\\nA multi-line test."
+              ]
+            },
+            {
+              "line": 497,
+              "declaration": "private void SaveSettings()",
+              "payload_keys": [],
+              "string_literals": [
+                "Arial",
+                "[SaveSettings]"
+              ]
+            },
+            {
+              "line": 577,
+              "declaration": "private int SanitizeTextToInt(TextBox tb, int lowerbound, int upperbound, int errorvalue)",
+              "payload_keys": [],
+              "string_literals": [
+                "{result}"
+              ]
+            },
+            {
+              "line": 654,
+              "declaration": "private void lblTitleColour_DoubleClick(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 727,
+              "declaration": "private void lblColour_DoubleClick(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": [
+                "FFFF00FF",
+                "lblBackgroundColour",
+                "lblBorderColour",
+                "lblTextColour",
+                "lblTitleColour"
+              ]
+            },
+            {
+              "line": 1009,
+              "declaration": "protected override void Dispose(bool disposing)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1058,
+              "declaration": "private void InitializeComponent()",
+              "payload_keys": [],
+              "string_literals": [
+                "(0-10)",
+                "(0-100)",
+                "(0-50)",
+                "(1-5)",
+                "(10-300)",
+                "Appear From:",
+                "Apply and Test",
+                "Background Colour",
+                "Border Colour",
+                "Border Width",
+                "Center",
+                "Close",
+                "Closed",
+                "Corner Rounding",
+                "Duration",
+                "Edge Indentation",
+                "Font Scaling",
+                "Font:",
+                "FormNotificationSettings",
+                "Left",
+                "Notification Staggering",
+                "Notification Style:",
+                "Open",
+                "Refresh Rate",
+                "Right",
+                "Simultaneous Notifications",
+                "Stellar Overlay - Notification Settings",
+                "Text Alignment:",
+                "Text Colour",
+                "Text Padding - Horizontal",
+                "Text Padding - Vertical",
+                "Title Colour",
+                "Vertical Position",
+                "Vertical Spacing",
+                "Width Split Threshold",
+                "[%] (0-100)",
+                "[%] (20-50)",
+                "[%] (50-200)",
+                "[ms] (0-1000)",
+                "[ms] (1000-15000)",
+                "btnApply",
+                "btnClose",
+                "cboxAlignment",
+                "cboxFont",
+                "cboxPosition",
+                "label1",
+                "label10",
+                "label11",
+                "label12",
+                "label13",
+                "label14",
+                "label15",
+                "label16",
+                "label17",
+                "label18",
+                "label19",
+                "label2",
+                "label20",
+                "label21",
+                "label22",
+                "label23",
+                "label24",
+                "label25",
+                "label26",
+                "label27",
+                "label28",
+                "label29",
+                "label3",
+                "label30",
+                "label31",
+                "label32",
+                "label33",
+                "label34",
+                "label4",
+                "label5",
+                "label6",
+                "label7",
+                "label8",
+                "label9",
+                "lblBackgroundColour",
+                "lblBorderColour",
+                "lblTextColour",
+                "lblTitleColour",
+                "rbtnClosed",
+                "rbtnOpen",
+                "txtBorderWidth",
+                "txtCornerRounding",
+                "txtDuration",
+                "txtEdgeIndentation",
+                "txtFPS",
+                "txtFontScaling",
+                "txtMaxWidth",
+                "txtNumNotifications",
+                "txtStaggering",
+                "txtVerticalPositionPct",
+                "txtVerticalSpacing",
+                "txtXPadding",
+                "txtYPadding"
+              ]
+            }
+          ],
+          "properties": [],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/FormRadarSettings.cs",
+          "sha256": "4bd46adaeffef5bfbd7ab8b786e18d6344658a8f5b0fe510557a71e4c5964b1d",
+          "methods": [
+            {
+              "line": 45,
+              "declaration": "public FormRadarSettings()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 50,
+              "declaration": "public FormRadarSettings(OverlaySettings theSettings, OverlayWorker theworker)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 62,
+              "declaration": "private void SaveSettings()",
+              "payload_keys": [],
+              "string_literals": [
+                "[SaveSettings]"
+              ]
+            },
+            {
+              "line": 101,
+              "declaration": "private int SanitizeTextToInt(TextBox tb, int lowerbound, int upperbound, int errorvalue)",
+              "payload_keys": [],
+              "string_literals": [
+                "{result}"
+              ]
+            },
+            {
+              "line": 181,
+              "declaration": "private void btnTest_Click(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 213,
+              "declaration": "private void btnSave_Click(object sender, EventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 218,
+              "declaration": "protected override void Dispose(bool disposing)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 267,
+              "declaration": "private void InitializeComponent()",
+              "payload_keys": [],
+              "string_literals": [
+                "Apply",
+                "Close",
+                "Font Scaling:",
+                "FormRadarSettings",
+                "Horizontal Position:",
+                "Size:",
+                "Stellar Overlay - Radar Settings",
+                "Vertical Position:",
+                "[%] (0-100)",
+                "[%] (20-100)",
+                "[%] (50-200)",
+                "btnSave",
+                "btnTest",
+                "label1",
+                "label2",
+                "label3",
+                "label4",
+                "label5",
+                "label6",
+                "label7",
+                "label8",
+                "txtFontScaling",
+                "txtHPos",
+                "txtSize",
+                "txtVPos"
+              ]
+            }
+          ],
+          "properties": [],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/Radar.cs",
+          "sha256": "b7d6e8bdb01333c71899da59ecbf17239660e834905a7a00eb7382ece5d8cd96",
+          "methods": [
+            {
+              "line": 277,
+              "declaration": "public Radar(Logger theLogger)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 303,
+              "declaration": "private void STimer_Elapsed(object sender, ElapsedEventArgs e)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 331,
+              "declaration": "public void UpdatePlayerPosition(double x, double y, double h)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 363,
+              "declaration": "public void SetGenusRanges(Dictionary<int, int> ranges)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 368,
+              "declaration": "public void SetSampleCount(int i)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 373,
+              "declaration": "public void RemovePoint(RadarPointType type, int id)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 382,
+              "declaration": "public void AddPoint(double x, double y, RadarPointType type, int id, float radius, string label, bool measure)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 419,
+              "declaration": "private void addPoint(RadarPoint p)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 425,
+              "declaration": "private void addPoint(double x, double y, RadarPointType type, int id, float radius, string label, bool measure)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                "WP"
+              ]
+            },
+            {
+              "line": 660,
+              "declaration": "public void UpdatePlayerPosition(Status status)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 778,
+              "declaration": "public void SetPlanet(ulong id64, int bodyid, float radiuskm)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 863,
+              "declaration": "public void UpdateGenuses(Dictionary<int, string> genuses)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 926,
+              "declaration": "public void Hide()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 931,
+              "declaration": "public void Initialise(Graphics gfx, BrushHandler tbh, OverlaySettings settings)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 996,
+              "declaration": "public void InitialiseFont(Graphics gfx)",
+              "payload_keys": [],
+              "string_literals": [
+                "@ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                "Consolas"
+              ]
+            },
+            {
+              "line": 1041,
+              "declaration": "public void ReInitialiseRadarPosition()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1102,
+              "declaration": "public void ForceShow(int millisecs)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1137,
+              "declaration": "public void Update(Graphics gfx)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1542,
+              "declaration": "public void SetContextID(int id, double? rad)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1587,
+              "declaration": "private void updatePositions()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1633,
+              "declaration": "public bool Draw(Graphics gfx, bool show)",
+              "payload_keys": [],
+              "string_literals": [
+                "  \u25cb\u25cb\u25cb",
+                "  \u25cf\u25cb\u25cb",
+                "  \u25cf\u25cf\u25cb",
+                " (",
+                " [",
+                ") @ ",
+                ",",
+                "CURRENT SAMPLE: ",
+                "KM",
+                "KM)",
+                "M)",
+                "N0",
+                "N2",
+                "N4",
+                "POSITION: (",
+                "SHIP",
+                "SRV",
+                "m]",
+                "radar",
+                "radar0",
+                "radar1",
+                "radar2",
+                "radarbg",
+                "radarbgdark",
+                "radarcyan",
+                "radargrey",
+                "radarship",
+                "radarwhite",
+                "\u00b0",
+                "\u2714 "
+              ]
+            },
+            {
+              "line": 2649,
+              "declaration": "private void UpdateRelativePosition(RadarPoint pt)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2810,
+              "declaration": "public void DebugLog()",
+              "payload_keys": [],
+              "string_literals": [
+                "  * ",
+                " [",
+                "), CID ",
+                ",",
+                ", (",
+                ", Head:",
+                ", Lat:",
+                ", Long:",
+                ", Planet Radius: ",
+                ", Points:",
+                ", Rad ",
+                "--- End of Radar ---",
+                "--- Start of Radar ---",
+                "Visible:",
+                "]"
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "Visible",
+              "line": 220,
+              "attributes": []
+            },
+            {
+              "name": "ForceHidden",
+              "line": 222,
+              "attributes": []
+            },
+            {
+              "name": "IsInitialised",
+              "line": 273,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/NotificationQueue.cs",
+          "sha256": "98582c1ab8475eb5f08ebd64116f8ed170e632f7dbd7de42f88c18702e3b2cbc",
+          "methods": [
+            {
+              "line": 94,
+              "declaration": "public NotificationQueue(OverlaySettings settings, Logger logger)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 207,
+              "declaration": "public void UpdateNotifications(Graphics gfx)",
+              "payload_keys": [],
+              "string_literals": [
+                "CANCEL",
+                "Collection was modified; enumeration operation may not execute.",
+                "[UpdateNotifications]",
+                "[UpdateNotifications] Queue was modifed during update, skipping cycle"
+              ]
+            },
+            {
+              "line": 957,
+              "declaration": "private int freeNotificationArea()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1045,
+              "declaration": "public bool Draw(Graphics gfx, bool show)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1268,
+              "declaration": "public void AddNotificationItem(Graphics gfx, NotificationArgs item, int scrptr)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1274,
+              "declaration": "public void AddNotificationItem(Graphics gfx, NotificationArgs item, ScreenReferencePosition? refpos, NotificationTransition intrans, NotificationTransition outtrans)",
+              "payload_keys": [],
+              "string_literals": [
+                "",
+                " ",
+                "\\r\\n"
+              ]
+            },
+            {
+              "line": 1704,
+              "declaration": "public void AddNotificationItem(Graphics gfx, OvNotificationArgs item, NotificationTransition intrans, NotificationTransition outtrans)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1911,
+              "declaration": "public void AddVisAlert(VisAlertArgs args)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1916,
+              "declaration": "public void RemoveVisAlert(string key)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1967,
+              "declaration": "public Guid InstantItemsAdd(NotificationArgs n)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1973,
+              "declaration": "public bool InstantItemsHasKey(Guid key)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1993,
+              "declaration": "public Guid InstantItemsAdd(OvNotificationArgs n)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2080,
+              "declaration": "public void Initialise(Graphics gfx, BrushHandler theBh, int theMaxWidth)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2160,
+              "declaration": "public void InitialiseFontHeight(Graphics gfx, int numqueues)",
+              "payload_keys": [],
+              "string_literals": [
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+              ]
+            },
+            {
+              "line": 2277,
+              "declaration": "private float getNotificationHeight()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2284,
+              "declaration": "public void Dispose()",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [
+            {
+              "name": "BorderWidth",
+              "line": 46,
+              "attributes": []
+            },
+            {
+              "name": "FontFamily",
+              "line": 48,
+              "attributes": []
+            },
+            {
+              "name": "FontSize",
+              "line": 50,
+              "attributes": []
+            },
+            {
+              "name": "FontHeight",
+              "line": 52,
+              "attributes": []
+            },
+            {
+              "name": "TextAlignment",
+              "line": 54,
+              "attributes": []
+            },
+            {
+              "name": "MaxWidth",
+              "line": 56,
+              "attributes": []
+            },
+            {
+              "name": "DefaultTTL",
+              "line": 58,
+              "attributes": []
+            },
+            {
+              "name": "IsInitialised",
+              "line": 60,
+              "attributes": []
+            },
+            {
+              "name": "ReinitialiseFont",
+              "line": 62,
+              "attributes": []
+            },
+            {
+              "name": "Normal",
+              "line": 64,
+              "attributes": []
+            },
+            {
+              "name": "Bold",
+              "line": 66,
+              "attributes": []
+            },
+            {
+              "name": "Color",
+              "line": 68,
+              "attributes": []
+            },
+            {
+              "name": "Queue",
+              "line": 70,
+              "attributes": []
+            },
+            {
+              "name": "QueueItems",
+              "line": 72,
+              "attributes": []
+            },
+            {
+              "name": "InstantQueue",
+              "line": 74,
+              "attributes": []
+            },
+            {
+              "name": "InstantItems",
+              "line": 76,
+              "attributes": []
+            },
+            {
+              "name": "ReferencePosition",
+              "line": 78,
+              "attributes": []
+            },
+            {
+              "name": "VisAlertQueue",
+              "line": 82,
+              "attributes": []
+            },
+            {
+              "name": "VisAlertItems",
+              "line": 84,
+              "attributes": []
+            },
+            {
+              "name": "BrushHandler",
+              "line": 86,
+              "attributes": []
+            },
+            {
+              "name": "ForceDisplayTTL",
+              "line": 88,
+              "attributes": []
+            },
+            {
+              "name": "ForceDisplay",
+              "line": 90,
+              "attributes": []
+            },
+            {
+              "name": "MinimumFontSize",
+              "line": 92,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/NotificationItem.cs",
+          "sha256": "e6f8ecc1cece5c4e66e3a6cd5c08d924367b71bc3a743a0ee0b8b64ee29a3f6b",
+          "methods": [
+            {
+              "line": 101,
+              "declaration": "public NotificationItem()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 128,
+              "declaration": "public NotificationItem(NotificationArgs args)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 133,
+              "declaration": "public NotificationItem(List<NotificationItemLine> theLines, Point theDimensions, long theTTLms, ScreenReferencePosition thePosition, NotificationTransition theTransitionIn, NotificationTransition theTransitionOut, int theBorderwidth, NotificationItemShape theShape, string? theSender, BrushHandler brushhandler)",
+              "payload_keys": [],
+              "string_literals": [
+                "_BackgroundColorKey",
+                "_BorderColorKey",
+                "_TextColorKey",
+                "_TitleColorKey",
+                "notification_background",
+                "notification_border",
+                "notification_text",
+                "notification_title"
+              ]
+            },
+            {
+              "line": 176,
+              "declaration": "public void Update(int width, int height)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 345,
+              "declaration": "public void Draw(Graphics gfx, NotificationQueue queue)",
+              "payload_keys": [],
+              "string_literals": [
+                ";",
+                "\\n"
+              ]
+            },
+            {
+              "line": 626,
+              "declaration": "public void Cancel()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 631,
+              "declaration": "public void Dispose()",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [
+            {
+              "name": "TTLms",
+              "line": 24,
+              "attributes": []
+            },
+            {
+              "name": "Dimensions",
+              "line": 26,
+              "attributes": []
+            },
+            {
+              "name": "Lines",
+              "line": 28,
+              "attributes": []
+            },
+            {
+              "name": "AliveTimeMs",
+              "line": 30,
+              "attributes": []
+            },
+            {
+              "name": "PositionX",
+              "line": 32,
+              "attributes": []
+            },
+            {
+              "name": "PositionY",
+              "line": 34,
+              "attributes": []
+            },
+            {
+              "name": "Sender",
+              "line": 36,
+              "attributes": []
+            },
+            {
+              "name": "BackgroundColorKey",
+              "line": 38,
+              "attributes": []
+            },
+            {
+              "name": "BorderColorKey",
+              "line": 40,
+              "attributes": []
+            },
+            {
+              "name": "TitleColorKey",
+              "line": 42,
+              "attributes": []
+            },
+            {
+              "name": "TextColorKey",
+              "line": 44,
+              "attributes": []
+            },
+            {
+              "name": "BorderWidth",
+              "line": 46,
+              "attributes": []
+            },
+            {
+              "name": "IsPersistent",
+              "line": 48,
+              "attributes": []
+            },
+            {
+              "name": "TTLRemaining",
+              "line": 50,
+              "attributes": []
+            },
+            {
+              "name": "IsExpired",
+              "line": 52,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/EliteOverlay.cs",
+          "sha256": "47a4a83c55aa67a34592531da926733b2822d5f232a880806f973df933f6caa9",
+          "methods": [
+            {
+              "line": 237,
+              "declaration": "public static extern int SetForegroundWindow(int hWnd);",
+              "payload_keys": [],
+              "string_literals": [
+                "user32.dll"
+              ]
+            },
+            {
+              "line": 240,
+              "declaration": "private static extern nint GetForegroundWindow();",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 243,
+              "declaration": "public EliteOverlay(OverlaySettings theSettings, int theAlpha, Logger theLogger)",
+              "payload_keys": [],
+              "string_literals": [
+                ",",
+                "Obervatory Overlay",
+                "Screen dimensions: ",
+                "Settings: "
+              ]
+            },
+            {
+              "line": 311,
+              "declaration": "public void UpdateStatus(Status status)",
+              "payload_keys": [],
+              "string_literals": [
+                "  * ",
+                ", ",
+                ", 0x",
+                ": ",
+                "ClearScreen",
+                "Counters:",
+                "Counters: <none>",
+                "DrawGraphics",
+                "Drawing",
+                "Graphics RecreateResources called!",
+                "Overlay Handles: ",
+                "Overlay Hashes: 0x",
+                "SkipFrame",
+                "X8",
+                "background"
+              ]
+            },
+            {
+              "line": 746,
+              "declaration": "public void LogState(OverlayWorker worker)",
+              "payload_keys": [],
+              "string_literals": [
+                " * BackgroundColorHex: ",
+                " * BorderColorHex: ",
+                " * BorderWidth: ",
+                " * ColorHex: ",
+                " * CornerRounding: ",
+                " * DelayBetweenNotificationsMS: ",
+                " * DisplayOverride: ",
+                " * EdgeIndentation: ",
+                " * FPS: ",
+                " * FontScaling: ",
+                " * FromRight: ",
+                " * HandleObservatoryNotifications: ",
+                " * InstallBetas: ",
+                " * InstallUpdates: ",
+                " * MaxNotifications: ",
+                " * MaxWidth: ",
+                " * NotificationShape: ",
+                " * SelectedFont: ",
+                " * SelectedMonitor: ",
+                " * TTL: ",
+                " * TextAlignment: ",
+                " * TitleColorHex: ",
+                " * VerboseLogging: ",
+                " * VerticalPositionPercent: ",
+                " * VerticalSpacing: ",
+                " * XPadding: ",
+                " * YPadding: ",
+                " * [",
+                " / ",
+                " elements",
+                "(",
+                ")",
+                "), Allocated:",
+                ",",
+                ", ",
+                ", (",
+                ", TTL: ",
+                ", [",
+                "--- * [Counters] * ---",
+                "--- * [Debug History] * ---",
+                "--- * [Queues] * ---",
+                "--- * [ReferencePositions] * ---",
+                "--- * [Settings] * ---",
+                "--- * [Window + GFX] * ---",
+                "--- End of Counters ---",
+                "--- End of Debug History ---",
+                "--- End of Queues ---",
+                "--- End of ReferencePositions ---",
+                "--- End of Settings ---",
+                "--- End of Window + GFX ---",
+                "---------- Start of DebugLog ---------- ",
+                "----------- End of DebugLog -----------",
+                ": ",
+                "DebugLog history has ",
+                "FPS: ",
+                "GFX FPSM: ",
+                "GFX Handle: ",
+                "GFX Hash: 0x",
+                "GFX IsDrawing: ",
+                "GFX IsInitialised: ",
+                "GFX null: ",
+                "Handle: ",
+                "Hash: 0x",
+                "NotificationInstantItems: ",
+                "NotificationInstantQueue: ",
+                "NotificationQueue: ",
+                "NotificationQueueItems: ",
+                "NotificationVisAlertItems: ",
+                "NotificationVisAlertQueue: ",
+                "Position: (",
+                "Size: ",
+                "X8",
+                "[LogState]",
+                "]",
+                "] TTL: ",
+                "] [",
+                "], Guid: ",
+                "], TTL: ",
+                "]: ",
+                "]: TTL: ",
+                "x"
+              ]
+            },
+            {
+              "line": 1684,
+              "declaration": "public void ForceAboveElite()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1732,
+              "declaration": "public void Stop()",
+              "payload_keys": [],
+              "string_literals": [
+                "Waiting for IsFinished...",
+                "Waiting for isDrawing...",
+                "[",
+                "ms waited]"
+              ]
+            },
+            {
+              "line": 1907,
+              "declaration": "public void IncrementCounter(string key)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1947,
+              "declaration": "public void Run()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 1981,
+              "declaration": "protected virtual void Dispose(bool disposing)",
+              "payload_keys": [],
+              "string_literals": [
+                "Dispose",
+                "Waiting for IsInitialized...",
+                "[",
+                "ms waited]"
+              ]
+            },
+            {
+              "line": 2151,
+              "declaration": "public void PlaceAboveCurrent()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 2158,
+              "declaration": "public void Dispose()",
+              "payload_keys": [],
+              "string_literals": [
+                " ms",
+                "Waited "
+              ]
+            }
+          ],
+          "properties": [
+            {
+              "name": "EliteIntPtr",
+              "line": 63,
+              "attributes": []
+            },
+            {
+              "name": "CurIntPtr",
+              "line": 65,
+              "attributes": []
+            },
+            {
+              "name": "ForceClear",
+              "line": 67,
+              "attributes": []
+            },
+            {
+              "name": "HasFocus",
+              "line": 69,
+              "attributes": []
+            },
+            {
+              "name": "DisplayOverride",
+              "line": 165,
+              "attributes": []
+            },
+            {
+              "name": "ShowMessageQueues",
+              "line": 214,
+              "attributes": []
+            },
+            {
+              "name": "NotificationQueue",
+              "line": 216,
+              "attributes": []
+            },
+            {
+              "name": "BrushHandler",
+              "line": 218,
+              "attributes": []
+            },
+            {
+              "name": "MaxNotifications",
+              "line": 220,
+              "attributes": []
+            },
+            {
+              "name": "Radar",
+              "line": 222,
+              "attributes": []
+            },
+            {
+              "name": "IsTopMost",
+              "line": 224,
+              "attributes": []
+            }
+          ],
+          "journal_event_types": []
+        },
+        {
+          "path": "StellarOverlay/BrushHandler.cs",
+          "sha256": "94a732d5388586a1ca3353d9c1da4b14fd6f728f313fac9abfc8167c0d4980dc",
+          "methods": [
+            {
+              "line": 15,
+              "declaration": "public BrushHandler()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 22,
+              "declaration": "public SolidBrush Brush(string theKey)",
+              "payload_keys": [],
+              "string_literals": [
+                "default"
+              ]
+            },
+            {
+              "line": 42,
+              "declaration": "public void Dispose()",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 88,
+              "declaration": "public bool HasBrush(string key)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 94,
+              "declaration": "public void Initialise(Graphics gfx, OverlaySettings settings)",
+              "payload_keys": [],
+              "string_literals": [
+                "5f1F1F1F",
+                "5f5F5F6F",
+                "FF00FFff",
+                "FF3FcF3F",
+                "FF7F7F7F",
+                "FFaFaF0F",
+                "FFbFbFbF",
+                "FFcF3F3F",
+                "FFeF5F5F",
+                "FFfFFFfF",
+                "background",
+                "default",
+                "notification_background",
+                "notification_border",
+                "notification_text",
+                "notification_title",
+                "radar",
+                "radar0",
+                "radar1",
+                "radar2",
+                "radarbg",
+                "radarbgdark",
+                "radarcyan",
+                "radargrey",
+                "radarship",
+                "radarwhite"
+              ]
+            },
+            {
+              "line": 223,
+              "declaration": "public void RegisterCustomBrushes(Graphics gfx)",
+              "payload_keys": [],
+              "string_literals": []
+            },
+            {
+              "line": 298,
+              "declaration": "private StellarOverlay.Drawing.Color StringToColor(string theText)",
+              "payload_keys": [],
+              "string_literals": []
+            }
+          ],
+          "properties": [],
+          "journal_event_types": []
+        }
+      ],
+      "message_commands": [
+        {
+          "name": "HideBitmapNotification",
+          "native_dispatch": true
+        },
+        {
+          "name": "LegacyPluginMessage",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarAddBiological",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarAddVehicle",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarAddWaypoint",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarForceHidden",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarHide",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarRemoveBiological",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarRemoveVehicle",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarSetContextID",
+          "native_dispatch": true
+        },
+        {
+          "name": "RadarSetPlanet",
+          "native_dispatch": true
+        },
+        {
+          "name": "Ready",
+          "native_dispatch": true
+        },
+        {
+          "name": "RegisterPluginCustomColours",
+          "native_dispatch": true
+        },
+        {
+          "name": "SetColonyRanges",
+          "native_dispatch": true
+        },
+        {
+          "name": "SetDisplayOverrideTTL",
+          "native_dispatch": true
+        },
+        {
+          "name": "ShowBitmapNotification",
+          "native_dispatch": true
+        },
+        {
+          "name": "UnregisterPluginCustomColours",
+          "native_dispatch": true
+        }
+      ]
+    }
+  }
+}

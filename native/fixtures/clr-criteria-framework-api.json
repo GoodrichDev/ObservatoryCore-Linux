@@ -1,0 +1,11 @@
+{
+  "original_identity": "ObservatoryFramework, Version=1.10.26274.2239, Culture=neutral, PublicKeyToken=null",
+  "rebuilt_identity": "ObservatoryFramework, Version=1.10.26274.2239, Culture=neutral, PublicKeyToken=null",
+  "original_sha256": "cdca8ae5ff361c2ab208da635814c5a6c97c58dc101b4e0a99c399564bfda1e1",
+  "original_types": 448,
+  "rebuilt_types": 448,
+  "missing_types": [],
+  "added_types": [],
+  "changed_types": [],
+  "scope": "All exported public types, declared public member signatures, type flags, base types, interfaces, constants, getter/setter visibility, parameter names/flags/defaults, and non-compiler type/member attributes; metadata reflection only"
+}

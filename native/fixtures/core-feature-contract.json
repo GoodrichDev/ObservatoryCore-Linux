@@ -1,0 +1,944 @@
+{
+  "reference": "Installed Observatory Core1.5.2",
+  "assemblies": {
+    "ObservatoryCore.dll": {
+      "sha256": "01cbe1af93e26d826dda4460cee62bc8a04c265a56e0beb5d20e8bc3b32b9a27"
+    },
+    "ObservatoryFramework.dll": {
+      "sha256": "cdca8ae5ff361c2ab208da635814c5a6c97c58dc101b4e0a99c399564bfda1e1"
+    }
+  },
+  "source_files": {
+    "Observatory.PluginManagement/PluginCore.cs": {
+      "sha256": "20ab7b970c77f1780304332e65bf8dd45beb4dc39c3c571b0719d321b3497dd5"
+    },
+    "Observatory.PluginManagement/PluginEventHandler.cs": {
+      "sha256": "0244906137af47407e91a8b83e55b51d003d125b82db668d77fb7ab986684f17"
+    },
+    "Observatory.UI/CoreForm.cs": {
+      "sha256": "e6d868048f8e74f6ece0a4609ec6f0f0d73cc8bae1087ce24e8b6e1c48d83d35"
+    },
+    "Observatory.UI/PluginContextMenu.cs": {
+      "sha256": "d7fc32ec0959ca8fcb05f8a2ecd7a6f4ab0eb065394e1ad17167195cf28dca8a"
+    },
+    "Observatory.UI/CoreContextMenu.cs": {
+      "sha256": "9384a400d71c47ef764cad232474cd596bf3aaeb2a8ca28ebf3368013a473f56"
+    },
+    "Observatory.UI/ColourableTabControl.cs": {
+      "sha256": "a626f759415713216307337dcc61a557f0420237fd7cff2fb084cddd74cb9949"
+    },
+    "Observatory.UI/PluginUIGrid.cs": {
+      "sha256": "aa1a28617f5263d4400f309fce193ebb793d8a0027c59eb6a4b004ca8351e345"
+    },
+    "Observatory.UI/ThemeManager.cs": {
+      "sha256": "77cc909f71d8ebaf5bcb56d9a9269e6bc611130f649523c3b0820234561b46ba"
+    },
+    "Observatory.UI/CoreSettings.cs": {
+      "sha256": "4c97c5a755d40081a4eb9e741747b68c91fad6462590a9f9a1696b2e6e4510c2"
+    },
+    "Observatory.UI/ReadAllForm.cs": {
+      "sha256": "480e9de83edb786a21aa9d360dd3b6c5e5b8722310d19dd08948421f76b63afc"
+    },
+    "Observatory.Utils/LogMonitor.cs": {
+      "sha256": "3356cb1f1a4f96b23207dccdaa7087d959e6ac22f8a2b7df542777f8dab74895"
+    },
+    "Observatory.Utils/ExportHandler.cs": {
+      "sha256": "a84cffa7f2687f4fd40ff909304fad0bff62eb9dd63b3ecc81c196aabcb12511"
+    },
+    "Observatory.Properties/Core.cs": {
+      "sha256": "c1970a89e7335257049ee5c69dd232ecdca7626b4523d6849c02e780adde7aa1"
+    }
+  },
+  "core_api": [
+    {
+      "line": 32,
+      "signature": "public string Version => Assembly.GetEntryAssembly()?.GetName().Version?.ToString() ?? \"0\";"
+    },
+    {
+      "line": 34,
+      "signature": "public System.Net.Http.HttpClient HttpClient => Observatory.Utils.HttpClient.Client;"
+    },
+    {
+      "line": 36,
+      "signature": "public LogMonitorState CurrentLogMonitorState => LogMonitor.GetInstance.CurrentState;"
+    },
+    {
+      "line": 38,
+      "signature": "public bool IsLogMonitorBatchReading => LogMonitorStateChangedEventArgs.IsBatchRead(LogMonitor.GetInstance.CurrentState);"
+    },
+    {
+      "line": 40,
+      "signature": "public string PluginStorageFolder"
+    },
+    {
+      "line": 72,
+      "signature": "public string UpdatedPluginsFolder => PluginManager.PluginPath;"
+    },
+    {
+      "line": 74,
+      "signature": "public event EventHandler<NotificationArgs>? Notification;"
+    },
+    {
+      "line": 76,
+      "signature": "public event EventHandler<NotificationArgs>? UpdateNotificationEvent;"
+    },
+    {
+      "line": 78,
+      "signature": "public event EventHandler<Guid>? CancelNotificationEvent;"
+    },
+    {
+      "line": 89,
+      "signature": "public Action<Exception, string> GetPluginErrorLogger(IObservatoryPlugin plugin)"
+    },
+    {
+      "line": 97,
+      "signature": "public Status GetStatus()"
+    },
+    {
+      "line": 102,
+      "signature": "public CargoFile GetCargo()"
+    },
+    {
+      "line": 107,
+      "signature": "public Guid SendNotification(string title, string text)"
+    },
+    {
+      "line": 116,
+      "signature": "public Guid SendNotification(NotificationArgs notificationArgs)"
+    },
+    {
+      "line": 150,
+      "signature": "public void CancelNotification(Guid id)"
+    },
+    {
+      "line": 159,
+      "signature": "public void UpdateNotification(Guid id, NotificationArgs notificationArgs)"
+    },
+    {
+      "line": 165,
+      "signature": "public void UpdateNotification(NotificationArgs notificationArgs)"
+    },
+    {
+      "line": 185,
+      "signature": "public void AddGridItem(IObservatoryWorker worker, object item)"
+    },
+    {
+      "line": 190,
+      "signature": "public void AddGridItems(IObservatoryWorker worker, IEnumerable<object> items, bool grouped = false)"
+    },
+    {
+      "line": 219,
+      "signature": "public void SetGridItems(IObservatoryWorker worker, IEnumerable<object> items)"
+    },
+    {
+      "line": 230,
+      "signature": "public void ClearGrid(IObservatoryWorker worker, object templateItem)"
+    },
+    {
+      "line": 235,
+      "signature": "public void ExecuteOnUIThread(Action action)"
+    },
+    {
+      "line": 336,
+      "signature": "public Task PlayAudioFile(string filePath, AudioOptions? options = null)"
+    },
+    {
+      "line": 341,
+      "signature": "public void SendPluginMessage(IObservatoryPlugin plugin, object message)"
+    },
+    {
+      "line": 346,
+      "signature": "public void SendPluginMessage(IObservatoryPlugin plugin, string targetShortName, object message)"
+    },
+    {
+      "line": 351,
+      "signature": "public void SendPluginMessage(IObservatoryPlugin plugin, PluginMessage message)"
+    },
+    {
+      "line": 356,
+      "signature": "public void SendPluginMessage(IObservatoryPlugin plugin, Guid targetId, PluginMessage message)"
+    },
+    {
+      "line": 361,
+      "signature": "public void RegisterControl(object control, Func<object, bool> applyTheme)"
+    },
+    {
+      "line": 366,
+      "signature": "public void RegisterControl(object control)"
+    },
+    {
+      "line": 371,
+      "signature": "public void UnregisterControl(object control)"
+    },
+    {
+      "line": 376,
+      "signature": "public string GetCurrentThemeName()"
+    },
+    {
+      "line": 381,
+      "signature": "public Dictionary<string, Color> GetCurrentThemeDetails()"
+    },
+    {
+      "line": 386,
+      "signature": "public void SaveSettings(IObservatoryPlugin plugin)"
+    },
+    {
+      "line": 391,
+      "signature": "public void OpenSettings(IObservatoryPlugin plugin)"
+    },
+    {
+      "line": 399,
+      "signature": "public void OpenAbout(IObservatoryPlugin plugin)"
+    },
+    {
+      "line": 407,
+      "signature": "public JournalEventArgs DeserializeEvent(string json, bool replay = false)"
+    },
+    {
+      "line": 412,
+      "signature": "public void FocusPlugin(string pluginName)"
+    },
+    {
+      "line": 432,
+      "signature": "public void DisplayMessageBox(string title, string message)"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "JournalFolder",
+      "type": "string",
+      "default_literal": "",
+      "line": 19
+    },
+    {
+      "name": "NativeNotify",
+      "type": "bool",
+      "default_literal": "True",
+      "line": 34
+    },
+    {
+      "name": "NativeNotifyFont",
+      "type": "string",
+      "default_literal": "",
+      "line": 49
+    },
+    {
+      "name": "NativeNotifyColour",
+      "type": "uint",
+      "default_literal": "4294944000",
+      "line": 64
+    },
+    {
+      "name": "NativeNotifyCorner",
+      "type": "int",
+      "default_literal": "0",
+      "line": 79
+    },
+    {
+      "name": "NativeNotifyScreen",
+      "type": "int",
+      "default_literal": "-1",
+      "line": 94
+    },
+    {
+      "name": "TryPrimeSystemContextOnStartMonitor",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 109
+    },
+    {
+      "name": "CoreVersion",
+      "type": "string",
+      "default_literal": "",
+      "line": 124
+    },
+    {
+      "name": "PluginSettings",
+      "type": "string",
+      "default_literal": "",
+      "line": 139
+    },
+    {
+      "name": "VoiceNotify",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 154
+    },
+    {
+      "name": "VoiceSelected",
+      "type": "string",
+      "default_literal": "",
+      "line": 169
+    },
+    {
+      "name": "VoiceVolume",
+      "type": "int",
+      "default_literal": "75",
+      "line": 184
+    },
+    {
+      "name": "VoiceRate",
+      "type": "int",
+      "default_literal": "0",
+      "line": 199
+    },
+    {
+      "name": "MainWindowSize",
+      "type": "Size",
+      "default_literal": "800, 500",
+      "line": 214
+    },
+    {
+      "name": "MainWindowPosition",
+      "type": "Point",
+      "default_literal": "100, 100",
+      "line": 229
+    },
+    {
+      "name": "NativeNotifyScale",
+      "type": "int",
+      "default_literal": "100",
+      "line": 244
+    },
+    {
+      "name": "NativeNotifyTimeout",
+      "type": "int",
+      "default_literal": "8000",
+      "line": 259
+    },
+    {
+      "name": "StartMonitor",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 274
+    },
+    {
+      "name": "ExportFolder",
+      "type": "string",
+      "default_literal": "",
+      "line": 289
+    },
+    {
+      "name": "StartReadAll",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 304
+    },
+    {
+      "name": "Theme",
+      "type": "string",
+      "default_literal": "Dark",
+      "line": 319
+    },
+    {
+      "name": "ColumnSizing",
+      "type": "string",
+      "default_literal": "",
+      "line": 334
+    },
+    {
+      "name": "PluginsEnabled",
+      "type": "string",
+      "default_literal": "",
+      "line": 349
+    },
+    {
+      "name": "SavedThemes",
+      "type": "string",
+      "default_literal": "",
+      "line": 364
+    },
+    {
+      "name": "LastTabIndex",
+      "type": "int",
+      "default_literal": "0",
+      "line": 379
+    },
+    {
+      "name": "ExportFormat",
+      "type": "int",
+      "default_literal": "0",
+      "line": 394
+    },
+    {
+      "name": "AudioVolume",
+      "type": "float",
+      "default_literal": "0.75",
+      "line": 409
+    },
+    {
+      "name": "AudioDevice",
+      "type": "string",
+      "default_literal": "",
+      "line": 424
+    },
+    {
+      "name": "NativeNotifyTransparent",
+      "type": "bool",
+      "default_literal": "True",
+      "line": 439
+    },
+    {
+      "name": "NativeNotifyFontScale",
+      "type": "int",
+      "default_literal": "100",
+      "line": 454
+    },
+    {
+      "name": "PopoutLocation",
+      "type": "string",
+      "default_literal": "",
+      "line": 469
+    },
+    {
+      "name": "ChimeEnabled",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 484
+    },
+    {
+      "name": "ChimeSelected",
+      "type": "int",
+      "default_literal": "0",
+      "line": 499
+    },
+    {
+      "name": "OpenPopouts",
+      "type": "string",
+      "default_literal": "",
+      "line": 514
+    },
+    {
+      "name": "TabOrder",
+      "type": "string",
+      "default_literal": "",
+      "line": 529
+    },
+    {
+      "name": "AltMonitor",
+      "type": "bool",
+      "default_literal": "False",
+      "line": 544
+    }
+  ],
+  "ui_handlers": [
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 96,
+      "signature": "private static void SuspendDrawing(Control control)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 104,
+      "signature": "private static void ResumeDrawing(Control control)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 113,
+      "signature": "public CoreForm()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 138,
+      "signature": "public void FocusPlugin(string pluginShortName)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 149,
+      "signature": "private void CreatePluginList()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 160,
+      "signature": "private TabPage? FindTabPageForPlugin(string pluginShortName)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 175,
+      "signature": "private void ToggleMonitorButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 191,
+      "signature": "private void ReadAllButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 205,
+      "signature": "private void SuspendSorting()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 226,
+      "signature": "private void ResumeSorting()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 239,
+      "signature": "private void CheckUpdate()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 292,
+      "signature": "private void AboutCore_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 297,
+      "signature": "private static void OpenURL(string url)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 305,
+      "signature": "private void ExportButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 313,
+      "signature": "private void ClearButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 322,
+      "signature": "private void CoreForm_Shown(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 345,
+      "signature": "private void CoreForm_FormClosing(object sender, FormClosingEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 367,
+      "signature": "private void CoreForm_Load(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 385,
+      "signature": "private void RestoreSavedTab()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 410,
+      "signature": "private void RestoreSavedPopouts()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 434,
+      "signature": "private void CoreTabControl_SelectedIndexChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 452,
+      "signature": "private static bool HasCustomExport(IObservatoryPlugin? plugin)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 457,
+      "signature": "private void CoreForm_ResizeBegin(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 462,
+      "signature": "private void CoreForm_ResizeEnd(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 467,
+      "signature": "private void CreatePluginTabs()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 487,
+      "signature": "private static void PluginExport(IObservatoryPlugin plugin)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 502,
+      "signature": "private void PluginClear(IObservatoryPlugin plugin)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 510,
+      "signature": "private void CoreTabControl_MouseClick(object sender, MouseEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 539,
+      "signature": "internal void OpenCoreSettings()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 550,
+      "signature": "internal void OpenPluginsFolder()"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 564,
+      "signature": "private void SettingsButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 569,
+      "signature": "private void PluginFolderButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreForm.cs",
+      "line": 583,
+      "signature": "private void InitializeComponent()"
+    },
+    {
+      "source": "Observatory.UI/PluginContextMenu.cs",
+      "line": 11,
+      "signature": "internal PluginContextMenu(IObservatoryPlugin plugin, TabPage? pluginTab = null)"
+    },
+    {
+      "source": "Observatory.UI/CoreContextMenu.cs",
+      "line": 9,
+      "signature": "internal CoreContextMenu(AboutInfo coreAboutInfo, Action coreSettingsDelegate, Action pluginsFolderDelegate)"
+    },
+    {
+      "source": "Observatory.UI/ColourableTabControl.cs",
+      "line": 22,
+      "signature": "public ColourableTabControl()"
+    },
+    {
+      "source": "Observatory.UI/ColourableTabControl.cs",
+      "line": 92,
+      "signature": "private void OnMouseDown(object? sender, MouseEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/ColourableTabControl.cs",
+      "line": 97,
+      "signature": "private void OnMouseMove(object? sender, MouseEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/ColourableTabControl.cs",
+      "line": 117,
+      "signature": "private TabPage? TabAt(Point position)"
+    },
+    {
+      "source": "Observatory.UI/ColourableTabControl.cs",
+      "line": 130,
+      "signature": "public void SwapTabs(TabPage a, TabPage b)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 40,
+      "signature": "public PluginUIGrid(IObservatoryPlugin plugin, List<ColumnSizing> columnSizings)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 260,
+      "signature": "private void PluginListView_Resize(object? sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 265,
+      "signature": "private void PluginListView_ColumnWidthChanged(object? sender, ColumnWidthChangedEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 270,
+      "signature": "private void HandleColSize(bool saveProps)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 311,
+      "signature": "private void PluginListView_ColumnClick(object? sender, ColumnClickEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 370,
+      "signature": "public void SuspendDrawing()"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 377,
+      "signature": "public void ResumeDrawing()"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 388,
+      "signature": "private void DrawBorder(Graphics graphics, Pen pen, Rectangle bounds)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 398,
+      "signature": "private void PluginListView_DrawColumnHeader(object? sender, DrawListViewColumnHeaderEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 436,
+      "signature": "private void PluginListView_DrawSubItem(object? sender, DrawListViewSubItemEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 501,
+      "signature": "private Color AlternatedColor(Color color, bool isEven)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 514,
+      "signature": "private Color SelectedColor(Color color, bool isSelected)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 527,
+      "signature": "private void PluginListView_KeyDown(object? sender, KeyEventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 561,
+      "signature": "private static Regex LowerUpper()"
+    },
+    {
+      "source": "Observatory.UI/PluginUIGrid.cs",
+      "line": 568,
+      "signature": "private static Regex UpperUpperLower()"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 237,
+      "signature": "private ThemeManager()"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 249,
+      "signature": "private static Dictionary<string, Color> DeserializeTheme(ThemeSerializationContainer themeContainer)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 260,
+      "signature": "private static Color DeserializeColor(ColorSerializationContainer colorContainer)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 269,
+      "signature": "private void LoadThemes()"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 292,
+      "signature": "private void AddTheme(string themeName, Dictionary<string, Color> theme)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 304,
+      "signature": "private void SaveTheme(ThemeSerializationContainer theme)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 329,
+      "signature": "private void ApplyTheme(object control, Func<object, bool> applyTheme)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 386,
+      "signature": "public void RegisterControl(object control)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 391,
+      "signature": "public void RegisterControl(object control, Func<object, bool> applyTheme)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 400,
+      "signature": "public void UnregisterControl(object? control)"
+    },
+    {
+      "source": "Observatory.UI/ThemeManager.cs",
+      "line": 408,
+      "signature": "public string AddTheme(string themeJson)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 145,
+      "signature": "public CoreSettings()"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 153,
+      "signature": "private void ColourButton_Click(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 165,
+      "signature": "private void PopupCheckbox_CheckedChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 171,
+      "signature": "private void DurationSpinner_ValueChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 177,
+      "signature": "private void ScaleSpinner_ValueChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 183,
+      "signature": "private void FontScaleSpinner_ValueChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 189,
+      "signature": "private void FontDropdown_SelectedIndexChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 195,
+      "signature": "private void CornerDropdown_SelectedIndexChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 201,
+      "signature": "private void DisplayDropdown_SelectedIndexChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 207,
+      "signature": "private void PopupTransparentCheckBox_CheckedChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 213,
+      "signature": "private void AudioVolumeSlider_Scroll(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 220,
+      "signature": "private void VoiceSpeedSlider_Scroll(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 226,
+      "signature": "private void VoiceCheckbox_CheckedChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 232,
+      "signature": "private void VoiceDropdown_SelectedIndexChanged(object _, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 245,
+      "signature": "private void AudioDeviceDropdown_SelectedIndexChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 258,
+      "signature": "private void AudioDeviceDropdown_Focused(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 268,
+      "signature": "private void PopulateDropdownOptions(bool voiceOnly = false)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 322,
+      "signature": "private void PopulateNativeSettings()"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 348,
+      "signature": "private static void TryLoadSetting(Control control, string property, object newValue, object? defaultValue = null)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 365,
+      "signature": "private void TestButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 379,
+      "signature": "private void VoiceTestButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 394,
+      "signature": "private void ThemeDropdown_SelectedIndexChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 406,
+      "signature": "private void ButtonAddTheme_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 433,
+      "signature": "private void LabelJournalPath_DoubleClick(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 456,
+      "signature": "private void StartMonitorCheckbox_CheckedChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 462,
+      "signature": "private void StartReadallCheckbox_CheckedChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 468,
+      "signature": "private void ExportFormatDropdown_SelectedIndexChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 474,
+      "signature": "private void CoreConfigFolder_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 487,
+      "signature": "private void CoreSettingsOK_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 492,
+      "signature": "private void AudioTypeDropdown_SelectedIndexChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 502,
+      "signature": "private void AltMonitorCheckbox_CheckedChanged(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 513,
+      "signature": "private void TestNotificationRouting_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/CoreSettings.cs",
+      "line": 548,
+      "signature": "private void InitializeComponent()"
+    },
+    {
+      "source": "Observatory.UI/ReadAllForm.cs",
+      "line": 32,
+      "signature": "public ReadAllForm()"
+    },
+    {
+      "source": "Observatory.UI/ReadAllForm.cs",
+      "line": 63,
+      "signature": "private void CancelButton_Click(object sender, EventArgs e)"
+    },
+    {
+      "source": "Observatory.UI/ReadAllForm.cs",
+      "line": 77,
+      "signature": "private void InitializeComponent()"
+    }
+  ],
+  "log_monitor_flags": {
+    "Idle": 0,
+    "Realtime": 1,
+    "Batch": 2,
+    "PreRead": 4,
+    "BatchCancelled": 8
+  },
+  "is_batch_read": "(state & 6) !=0"
+}

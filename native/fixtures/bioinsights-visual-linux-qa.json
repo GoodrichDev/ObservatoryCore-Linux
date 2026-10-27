@@ -1,0 +1,985 @@
+{
+  "date": "2026-10-26",
+  "core_sha256": "985a16215aec6520120a8d8b97eaa2dc79bf7c7ced9a3ac00590e6b5594ed343",
+  "synthetic_only": true,
+  "display": "owned private Xvfb; software GL",
+  "runs": {
+    "orange": {
+      "theme": "orange",
+      "host_windows_fonts": false,
+      "cases": {
+        "rust-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 0.6662143712872227,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.47991619999834256,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 38.98299250002424,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 65.99171599998499,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 39.039826000021094,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 39.17385799996964,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 38.076756999998906,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 39.095487999986744,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 38.92615900002738,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 38.4544240000082,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 11.793232000002263,
+              "native_windows": 1
+            }
+          ]
+        },
+        "webkit-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 28.288632409622217,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.5068133000008856,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 64.80705050000779,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 93.55102500001067,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 65.24203899999748,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 66.4306460000148,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 64.59835200001862,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 64.34062200003154,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 11.765923999973893,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 11.715689000027396,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 65.01574899999696,
+              "native_windows": 1
+            }
+          ]
+        },
+        "rust-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 0.6655798309333123,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.547843900000089,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 39.534088999999994,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 92.09320500002605,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 39.5108090000349,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 41.21269199998778,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 38.529713999992055,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 41.0442990000206,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 15.761437999969985,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 14.776716999961081,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 39.55736899996509,
+              "native_windows": 1
+            }
+          ]
+        },
+        "webkit-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 71.61814890394726,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.40593559999706486,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 91.30619249998517,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 118.10710399998925,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 91.14127300000519,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 91.6643889999591,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 91.27694199997904,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 91.65531400003601,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 12.118725999982871,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 12.518079000017224,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 91.3354429999913,
+              "native_windows": 1
+            }
+          ]
+        },
+        "rust-3840x2160": {
+          "window": [
+            3840,
+            2160
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 0.3329993823497499,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.39765949999264194,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 39.321830000005775,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 66.27643899992108,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 38.29527000004873,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 40.63503499992294,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 40.34838999996282,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 40.77121500006342,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 12.975741999980528,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 12.509170999919661,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 38.28385500003151,
+              "native_windows": 1
+            }
+          ]
+        },
+        "webkit-3840x2160": {
+          "window": [
+            3840,
+            2160
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 124.74461674968902,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.43975040000532317,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 109.26673749997917,
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 180.98086500003774,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 119.89285399999972,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 100.37953799997013,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 118.15393699998822,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 99.13252500007275,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 39.04000499994709,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 12.476106000008258,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 118.36414699996567,
+              "native_windows": 1
+            }
+          ]
+        }
+      },
+      "comparisons": {
+        "1200x800": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5582682291666667,
+            "unsold": 1.8544921875,
+            "about": 0.9127604166666666,
+            "codexcompanion": 0.3753255208333333,
+            "popout": 1.1038411458333333,
+            "zoom": 1.7893880208333333,
+            "settings": 1.0540364583333333
+          },
+          "symbol_center_delta_px": [
+            -1.0,
+            0.5
+          ],
+          "caption_box_delta_px": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        },
+        "3439x1400": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5660807291666667,
+            "unsold": 1.8492838541666667,
+            "about": 0.9085286458333334,
+            "codexcompanion": 0.375,
+            "popout": 1.10546875,
+            "zoom": 1.787109375,
+            "settings": 1.0576171875
+          },
+          "symbol_center_delta_px": [
+            -0.5,
+            1.0
+          ],
+          "caption_box_delta_px": [
+            0,
+            -1,
+            1,
+            1
+          ]
+        },
+        "3840x2160": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5569661458333333,
+            "unsold": 1.8450520833333333,
+            "about": 0.9117838541666666,
+            "codexcompanion": 0.3759765625,
+            "popout": 1.1031901041666667,
+            "zoom": 1.7880859375,
+            "settings": 1.0569661458333333
+          },
+          "symbol_center_delta_px": [
+            0.5,
+            0.0
+          ],
+          "caption_box_delta_px": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        }
+      },
+      "screenshots": {
+        "rust-1200x800-about.png": "8f09bd2e76f61ee0a075c6f2a485d85aeb0eefdad75723baec9c1a36d7d0e984",
+        "rust-1200x800-codexcompanion.png": "f03350622728a791e7c3a16c2c614e9cc7a99341d360ccf3e0ab2f0d02da6c8a",
+        "rust-1200x800-genusbacterium.png": "d7d05b74a33de90d826d3690e5edfa81ac9050268a978b6d4e3e04deef027829",
+        "rust-1200x800-initial-main.png": "9be6ba4460080517153a2136690bbcc6ad1ff0b987831245a639c3fa09f3fd24",
+        "rust-1200x800-main.png": "f95a565915e22d4bf121183363797a9991d2c22c800280263c525efbcdec53be",
+        "rust-1200x800-speciesalcyoneum.png": "e45c0c0aa15ca3fafb82caf29bf51d3d9e820310beed4493a05120c94d917d4b",
+        "rust-1200x800-unsold.png": "788dfddba558c7af393b790af7245c83f7d24e2db3cee1bb2262a8101f988715",
+        "rust-3439x1400-about.png": "681b2bbd8c65b31fb7078c8f9ce4dcdac752504dd42bc78d36cd099d9a9b56e1",
+        "rust-3439x1400-codexcompanion.png": "028cf8769656793815984877a401575848ce2b60bda674a10167af297c8e62cf",
+        "rust-3439x1400-genusbacterium.png": "15d3be615ef5be7b85b053cf213f79aba5da536bb35d0725919a92a2c20ad105",
+        "rust-3439x1400-initial-main.png": "0ad21a8a7ffc173ac034cf735f37cd21d06d969fdfef17e960df16b4832e1c7e",
+        "rust-3439x1400-main.png": "e5a24c9fedb74c03081273af9e70c538fb2ea52850a99898e7cc774122141567",
+        "rust-3439x1400-speciesalcyoneum.png": "bb5417d607b6493787b561e9d897047bcf17dc0005edcbeab529931cda7aefa0",
+        "rust-3439x1400-unsold.png": "9918828696be4c30fb34b4915d80380ade59904e85a9a23557b0d484312a893f",
+        "rust-3840x2160-about.png": "b81799038983a6fdc84dc421ad0e744a08dca2dd46a0fd563c793f2e672f33aa",
+        "rust-3840x2160-codexcompanion.png": "6cdd8037a6620651cd6ce3a2247a3b3a93bef648d45c9b6ac03ca7fc06aa5981",
+        "rust-3840x2160-genusbacterium.png": "95b862729de26f3e1046721f4ad622946fb464f23a3870f8c840d0a852fd48fd",
+        "rust-3840x2160-initial-main.png": "3dff9bd83d574f13553bcefd7ee2de0292650af3ba255bc6d09e5da39e193711",
+        "rust-3840x2160-main.png": "2e6edd94773e53169620df41999b20793564d718a8df0619e9599f6c8e99ad3f",
+        "rust-3840x2160-speciesalcyoneum.png": "2614263219029ad04bbebd832b32b8158842f1ca201ef947b311bc6d624fede1",
+        "rust-3840x2160-unsold.png": "bb7e2c090cefa004b44d2a24d878a6a04066cc0ba7f58b8dacaa33721ab10ee4",
+        "webkit-1200x800-about.png": "3aaaf32f6997610213102ec51ca3e59f14d6f7056e5b629e99ba09f3a056ee2b",
+        "webkit-1200x800-codexcompanion.png": "1b9d93292973245837d8a6b59f392cb9fba7f7090cc3d84b4593e171fdcaca19",
+        "webkit-1200x800-genusbacterium.png": "591193693a9c4e6959144a62325aae953a28bb1460b27098ce623cdde76dcc88",
+        "webkit-1200x800-initial-main.png": "6e0df0c1c137ee303cc856ed64e64a5890d34a20a36add3da48b04aac135fd93",
+        "webkit-1200x800-main.png": "6e0df0c1c137ee303cc856ed64e64a5890d34a20a36add3da48b04aac135fd93",
+        "webkit-1200x800-speciesalcyoneum.png": "a3984370a872d57db050fbab8ba73ce0f0e8f376e3efa22fbc0999a726db3a60",
+        "webkit-1200x800-unsold.png": "7f55277f88af3f8e64ed620428d03ef8e122c8de3f01305974d4f41bb8e2b773",
+        "webkit-3439x1400-about.png": "f615ed85abf28eb4c91ef1a345cdb80580e713110562a84926ca02801e9a68c0",
+        "webkit-3439x1400-codexcompanion.png": "f805533e10a834ae834ceb93eaa1d2405e6d3f182fd1a548235a4ebb86bcf4dd",
+        "webkit-3439x1400-genusbacterium.png": "05dddbdc7c94de4230cf035bb157b63291a37e0d21db8b9a0d375ef9bcb72ee5",
+        "webkit-3439x1400-initial-main.png": "dcf71dc0c0e8f04bd5a774b2c801aa2203b808be4b1cca913b166f7e6140aafd",
+        "webkit-3439x1400-main.png": "dcf71dc0c0e8f04bd5a774b2c801aa2203b808be4b1cca913b166f7e6140aafd",
+        "webkit-3439x1400-speciesalcyoneum.png": "24971f38405b1c60d1e643150e889e4ccfb52df99e1ad5bda8e5e78c537ed9dd",
+        "webkit-3439x1400-unsold.png": "7205153e631615a2a2912993176bef721daeed44bb12e393d09405f81d0bc09b",
+        "webkit-3840x2160-about.png": "9413c0e04c97a750235b02b2701190349fdd66272da93c5cc58459e1397ef159",
+        "webkit-3840x2160-codexcompanion.png": "56c1e7ccc7ad5abb5e4c031afd6e05acf72fcdc8abf803543dfd3d190b529e26",
+        "webkit-3840x2160-genusbacterium.png": "960b00f3dbec8cd32280d6d7a1eb6bb3c1bd8c8150bc08a9951d1f16fb232065",
+        "webkit-3840x2160-initial-main.png": "95616ec4bb2ee6acf6be61ba7f7628fdd8bdbfb92d04b9d0212f5c54e63c1433",
+        "webkit-3840x2160-main.png": "95616ec4bb2ee6acf6be61ba7f7628fdd8bdbfb92d04b9d0212f5c54e63c1433",
+        "webkit-3840x2160-speciesalcyoneum.png": "6818da85b5d7746e9ca1879752b22f8d63705aa9e38ce4754f55c288727cfacb",
+        "webkit-3840x2160-unsold.png": "ec26d64e61ce003ae4f2adb89bafae0ef79ea306239a1ac385dffe4058a809bd"
+      },
+      "raw_receipt": "/home/loic/.cache/observatory-bio-visual-qa/final-release-orange-v5/receipt.json"
+    },
+    "original": {
+      "theme": "original",
+      "host_windows_fonts": false,
+      "cases": {
+        "rust-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "rust-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        }
+      },
+      "comparisons": {
+        "1200x800": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 0.9944661458333334,
+            "unsold": 2.1962890625,
+            "about": 1.013671875,
+            "codexcompanion": 0.3440755208333333,
+            "popout": 1.2314453125,
+            "zoom": 2.0126953125,
+            "settings": 1.1748046875
+          },
+          "symbol_center_delta_px": [
+            0.5,
+            0.0
+          ],
+          "caption_box_delta_px": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        },
+        "3439x1400": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 0.9993489583333334,
+            "unsold": 2.19140625,
+            "about": 1.0048828125,
+            "codexcompanion": 0.341796875,
+            "popout": 1.2333984375,
+            "zoom": 2.017578125,
+            "settings": 1.1787109375
+          },
+          "symbol_center_delta_px": [
+            -0.5,
+            1.0
+          ],
+          "caption_box_delta_px": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        }
+      },
+      "screenshots": {
+        "rust-1200x800-initial-main.png": "dafecc306b526fb407db0cff559f1f6b41f8501168f14b77eb6d8dfd665d1612",
+        "rust-1200x800-main.png": "dafecc306b526fb407db0cff559f1f6b41f8501168f14b77eb6d8dfd665d1612",
+        "rust-3439x1400-initial-main.png": "bfe45e9747e6a70e12578642857e9f065e625da112d7d4ca8a247c4c61dd49e2",
+        "rust-3439x1400-main.png": "bfe45e9747e6a70e12578642857e9f065e625da112d7d4ca8a247c4c61dd49e2",
+        "webkit-1200x800-initial-main.png": "8185f7d18fe08bbc5d12123c78c4bbaefb85b41fbfc2fc1c7861237c39261ad4",
+        "webkit-1200x800-main.png": "8185f7d18fe08bbc5d12123c78c4bbaefb85b41fbfc2fc1c7861237c39261ad4",
+        "webkit-3439x1400-initial-main.png": "8b8fcb4e56c2e77a5292f4bf7f7cea1010533fa4e1c88d42a4f423e882b814d1",
+        "webkit-3439x1400-main.png": "8b8fcb4e56c2e77a5292f4bf7f7cea1010533fa4e1c88d42a4f423e882b814d1"
+      },
+      "raw_receipt": "/home/loic/.cache/observatory-bio-visual-qa/final-release-original-v4/receipt.json"
+    },
+    "installed_windows_fonts": {
+      "theme": "orange",
+      "host_windows_fonts": true,
+      "cases": {
+        "rust-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Segoe UI Emoji|/mnt/c/Windows/Fonts/seguiemj.ttf",
+            "Verdana": "Verdana|/mnt/c/Windows/Fonts/verdana.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Segoe UI Emoji|/mnt/c/Windows/Fonts/seguiemj.ttf",
+            "Verdana": "Verdana|/mnt/c/Windows/Fonts/verdana.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "rust-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Segoe UI Emoji|/mnt/c/Windows/Fonts/seguiemj.ttf",
+            "Verdana": "Verdana|/mnt/c/Windows/Fonts/verdana.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Segoe UI Emoji|/mnt/c/Windows/Fonts/seguiemj.ttf",
+            "Verdana": "Verdana|/mnt/c/Windows/Fonts/verdana.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        }
+      },
+      "comparisons": {
+        "1200x800": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5582682291666667,
+            "unsold": 1.8544921875,
+            "about": 0.9127604166666666,
+            "codexcompanion": 0.3753255208333333,
+            "popout": 1.1038411458333333,
+            "zoom": 1.7893880208333333,
+            "settings": 1.0540364583333333
+          },
+          "symbol_center_delta_px": [
+            0.0,
+            1.0
+          ],
+          "caption_box_delta_px": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "3439x1400": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5660807291666667,
+            "unsold": 1.8492838541666667,
+            "about": 0.9085286458333334,
+            "codexcompanion": 0.375,
+            "popout": 1.10546875,
+            "zoom": 1.787109375,
+            "settings": 1.0576171875
+          },
+          "symbol_center_delta_px": [
+            0.5,
+            1.5
+          ],
+          "caption_box_delta_px": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "screenshots": {
+        "rust-1200x800-initial-main.png": "021426ae1676ba0161037469677b98d1ed9a353e2f3c09e53d649f110527f41e",
+        "rust-1200x800-main.png": "021426ae1676ba0161037469677b98d1ed9a353e2f3c09e53d649f110527f41e",
+        "rust-3439x1400-initial-main.png": "f6b9533076926300ea9a282cbcd889833aa77f8094afb9ea4c9fc48a235ec81f",
+        "rust-3439x1400-main.png": "f6b9533076926300ea9a282cbcd889833aa77f8094afb9ea4c9fc48a235ec81f",
+        "webkit-1200x800-initial-main.png": "48ae4b14765e9848e7c24cb14ebf7c65e79e1f2201327f1a4c9f8b11670ef215",
+        "webkit-1200x800-main.png": "48ae4b14765e9848e7c24cb14ebf7c65e79e1f2201327f1a4c9f8b11670ef215",
+        "webkit-3439x1400-initial-main.png": "f7fb6ae12076d662ce433782259d011dd8c283b82fa69ae0ffaec576799a9e79",
+        "webkit-3439x1400-main.png": "f7fb6ae12076d662ce433782259d011dd8c283b82fa69ae0ffaec576799a9e79"
+      },
+      "raw_receipt": "/home/loic/.cache/observatory-bio-visual-qa/final-release-windows-fonts-v3/receipt.json"
+    },
+    "open_noto_font": {
+      "theme": "orange",
+      "host_windows_fonts": false,
+      "cases": {
+        "rust-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Noto Color Emoji|/home/loic/.cache/observatory-noto-color-font/extracted/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-1200x800": {
+          "window": [
+            1200,
+            800
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Noto Color Emoji|/home/loic/.cache/observatory-noto-color-font/extracted/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "rust-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Noto Color Emoji|/home/loic/.cache/observatory-noto-color-font/extracted/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        },
+        "webkit-3439x1400": {
+          "window": [
+            3439,
+            1400
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Noto Color Emoji|/home/loic/.cache/observatory-noto-color-font/extracted/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          }
+        }
+      },
+      "comparisons": {
+        "1200x800": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5582682291666667,
+            "unsold": 1.8544921875,
+            "about": 0.9127604166666666,
+            "codexcompanion": 0.3753255208333333,
+            "popout": 1.1038411458333333,
+            "zoom": 1.7893880208333333,
+            "settings": 1.0540364583333333
+          },
+          "symbol_center_delta_px": [
+            -1.0,
+            0.5
+          ],
+          "caption_box_delta_px": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        },
+        "3439x1400": {
+          "toolbar_centers_equal": true,
+          "outer_bands_equal": true,
+          "brown_row_positions_equal": true,
+          "toolbar_icon_mean_absolute_channel_difference": {
+            "main": 1.5660807291666667,
+            "unsold": 1.8492838541666667,
+            "about": 0.9085286458333334,
+            "codexcompanion": 0.375,
+            "popout": 1.10546875,
+            "zoom": 1.787109375,
+            "settings": 1.0576171875
+          },
+          "symbol_center_delta_px": [
+            -0.5,
+            1.0
+          ],
+          "caption_box_delta_px": [
+            0,
+            -1,
+            1,
+            1
+          ]
+        }
+      },
+      "screenshots": {
+        "rust-1200x800-initial-main.png": "3c6b198c01eeaeaa4e79ec7f11828be2e6b84a032ada80f248fe36f8a02ef3f4",
+        "rust-1200x800-main.png": "3c6b198c01eeaeaa4e79ec7f11828be2e6b84a032ada80f248fe36f8a02ef3f4",
+        "rust-3439x1400-initial-main.png": "872a816d8d5a41b51e038c689128b2e4029cd3373c61442042a55480adf5d176",
+        "rust-3439x1400-main.png": "872a816d8d5a41b51e038c689128b2e4029cd3373c61442042a55480adf5d176",
+        "webkit-1200x800-initial-main.png": "43f6dea95aef6bad07eb5f37932eb6d59c3a7e91794291c4c0a23506b6ee6d20",
+        "webkit-1200x800-main.png": "43f6dea95aef6bad07eb5f37932eb6d59c3a7e91794291c4c0a23506b6ee6d20",
+        "webkit-3439x1400-initial-main.png": "c57884c88330aa7f7aa8bf148654f02d60aca2a3aa821041a3b5d43865379ac8",
+        "webkit-3439x1400-main.png": "c57884c88330aa7f7aa8bf148654f02d60aca2a3aa821041a3b5d43865379ac8"
+      },
+      "raw_receipt": "/home/loic/.cache/observatory-bio-visual-qa/final-release-noto-font-v2/receipt.json"
+    },
+    "controls": {
+      "rust-zoom": {
+        "minimum": 50,
+        "maximum": 600,
+        "reset": 100,
+        "settings_persist_immediately": true,
+        "closes_on_focus_loss": true,
+        "native_windows": 1
+      },
+      "rust-disabled": {
+        "no_custom_toolbar": true,
+        "no_main_table": true,
+        "visible_label": "Native Output Disabled (source UI string; screenshot retained)"
+      },
+      "webkit-zoom": {
+        "minimum": 50,
+        "maximum": 600,
+        "reset": 100,
+        "settings_persist_immediately": true,
+        "closes_on_focus_loss": true,
+        "native_windows": 1
+      },
+      "webkit-disabled": {
+        "no_custom_toolbar": true,
+        "no_main_table": true,
+        "visible_label": "Native Output Disabled (source UI string; screenshot retained)"
+      }
+    },
+    "large_survey": {
+      "theme": "orange",
+      "host_windows_fonts": false,
+      "cases": {
+        "rust-3840x2160": {
+          "window": [
+            3840,
+            2160
+          ],
+          "fontconfig": {
+            "Segoe UI Emoji": "Noto Color Emoji|/home/loic/.cache/observatory-noto-color-font/extracted/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+            "Verdana": "DejaVu Sans|/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "serif": "DejaVu Serif|/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+          },
+          "idle_cpu_percent_one_core": 0.33256377233919454,
+          "latency_sampling": {
+            "roi": [
+              30,
+              145,
+              500,
+              160
+            ],
+            "capture_overhead_mean_ms": 0.4106908000039766,
+            "mouse_hold_ms": 10,
+            "description": "Observed response bound includes mouse hold and ROI capture/pixel comparison; no full-screen readback in timed interval"
+          },
+          "navigation_median_ms": 42.7686444999722,
+          "stress_projection": {
+            "bodies": 200,
+            "species_rows": 800,
+            "journal_events": 607
+          },
+          "navigation": [
+            {
+              "page": "About",
+              "latency_ms": 44.409921999999824,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 65.75585500002035,
+              "native_windows": 1
+            },
+            {
+              "page": "Unsold",
+              "latency_ms": 45.956133999993654,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 40.354850999960945,
+              "native_windows": 1
+            },
+            {
+              "page": "CodexCompanion",
+              "latency_ms": 41.12736699994457,
+              "native_windows": 1
+            },
+            {
+              "page": "GenusBacterium",
+              "latency_ms": 12.352075999956469,
+              "native_windows": 1
+            },
+            {
+              "page": "SpeciesAlcyoneum",
+              "latency_ms": 14.292890999968222,
+              "native_windows": 1
+            },
+            {
+              "page": "Main",
+              "latency_ms": 65.71370000006027,
+              "native_windows": 1
+            }
+          ]
+        }
+      },
+      "comparisons": {},
+      "screenshots": {
+        "rust-3840x2160-about.png": "a5e31330735e9e9449bcc273a7c91e697a826a2a806dc63030f3752450a7593c",
+        "rust-3840x2160-codexcompanion.png": "6cdd8037a6620651cd6ce3a2247a3b3a93bef648d45c9b6ac03ca7fc06aa5981",
+        "rust-3840x2160-genusbacterium.png": "95b862729de26f3e1046721f4ad622946fb464f23a3870f8c840d0a852fd48fd",
+        "rust-3840x2160-initial-main.png": "be4aa65403dbb0fa6c895c5897163f11368fa06f6dbadaae6afae3cf6d24c556",
+        "rust-3840x2160-main.png": "553b353cd393454c1f239c56ecf188973e5d43523d0c07eb4b3868911b8cfef9",
+        "rust-3840x2160-speciesalcyoneum.png": "2614263219029ad04bbebd832b32b8158842f1ca201ef947b311bc6d624fede1",
+        "rust-3840x2160-unsold.png": "bb7e2c090cefa004b44d2a24d878a6a04066cc0ba7f58b8dacaa33721ab10ee4"
+      },
+      "raw_receipt": "/home/loic/.cache/observatory-bio-visual-qa/final-release-stress-v5/receipt.json"
+    }
+  },
+  "limits": [
+    "Source HTML is independently captured from original pure builders; native and WebKit use the same captured markup/state inputs.",
+    "Private network namespace intentionally exercises offline gallery/bioscan paths; missing remote pictures in these captures are not evidence of live service failure.",
+    "Font rasterization differs slightly across platform engines; measured symbol centers differ by at most1.5px and fallback-font caption bounds by1px in these cases.",
+    "Navigation times are observed response bounds including10ms mouse hold and sub-millisecond ROI capture, not instrumented pure paint times.",
+    "WebKit CPU includes its GTK pump and forced software rendering; native is the default renderer."
+  ]
+}

@@ -1,0 +1,46 @@
+[package]
+name = "observatory-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "observatory-core"
+path = "src/main.rs"
+
+[dependencies]
+observatory-domain = { path = "../observatory-domain" }
+observatory-io = { path = "../observatory-io" }
+observatory-plugins = { path = "../observatory-plugins" }
+anyhow = "1"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "x11", "wayland", "persistence"] }
+egui_extras = "0.31"
+mlua = { version = "0.11", features = ["lua54", "vendored", "serialize", "send"] }
+rusqlite = { version = "0.32", features = ["bundled", "backup"] }
+csv = "1"
+zip={version="2.4",default-features=false}
+chrono={version="0.4",default-features=false,features=["clock"]}
+clap = { version = "4", features = ["derive"] }
+ctrlc = "3"
+notify-rust = "4"
+tempfile = "3"
+image = { version = "0.25", default-features = false, features = ["png","jpeg"] }
+roxmltree = "0.21"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+base64="0.22"
+x11rb={version="0.13",features=["randr"]}
+raw-window-handle="0.6"
+winit={version="0.30",default-features=false,features=["x11","wayland"]}
+libloading="0.8"
+ring="0.17"
+semver="1"
+
+[target.'cfg(target_os="linux")'.dependencies]
+wayland-client="0.31"
+libc="0.2"
+wayland-backend={version="0.3",features=["client_system","dlopen"]}
+wayland-protocols-wlr={version="0.3",features=["client"]}
+wayland-protocols={version="0.32",features=["client","unstable"]}

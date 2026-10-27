@@ -1,0 +1,663 @@
+{
+  "Scope": "Bundled worker implementation and finite source verification, not a global desktop parity certificate",
+  "Source": "Installed Observatory .eop DLLs decompiled read-only; no plugin/desktop entry point executed. Independent CLR criteria oracle executes installed Framework DTO/API methods on Linux with Windows ReadyToRun disabled.",
+  "Plugins": {
+    "Explorer": {
+      "InstalledAssemblyVersion": "1.3.0.27422",
+      "Settings": [
+        {
+          "Name": "OnlyShowCurrentSystem",
+          "Type": "bool",
+          "Label": "Only Show Current System",
+          "NewGroup": "Display",
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::OnlyShowCurrentSystem"
+        },
+        {
+          "Name": "LandableTerraformable",
+          "Type": "bool",
+          "Label": "Landable & Terraformable",
+          "NewGroup": "Built-in Criteria",
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::LandableTerraformable"
+        },
+        {
+          "Name": "LandableAtmosphere",
+          "Type": "bool",
+          "Label": "Landable w/ Atmosphere",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::LandableAtmosphere"
+        },
+        {
+          "Name": "LandableHighG",
+          "Type": "bool",
+          "Label": "Landable High-g",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::LandableHighG"
+        },
+        {
+          "Name": "LandableLarge",
+          "Type": "bool",
+          "Label": "Landable Large",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::LandableLarge"
+        },
+        {
+          "Name": "CloseOrbit",
+          "Type": "bool",
+          "Label": "Close Orbit",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::CloseOrbit"
+        },
+        {
+          "Name": "ShepherdMoon",
+          "Type": "bool",
+          "Label": "Shepherd Moon",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::ShepherdMoon"
+        },
+        {
+          "Name": "WideRing",
+          "Type": "bool",
+          "Label": "Wide Ring",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::WideRing"
+        },
+        {
+          "Name": "CloseBinary",
+          "Type": "bool",
+          "Label": "Close Binary",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::CloseBinary"
+        },
+        {
+          "Name": "CollidingBinary",
+          "Type": "bool",
+          "Label": "Colliding Binary",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::CollidingBinary"
+        },
+        {
+          "Name": "CloseRing",
+          "Type": "bool",
+          "Label": "Close Ring Proximity",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::CloseRing"
+        },
+        {
+          "Name": "Codex",
+          "Type": "bool",
+          "Label": "Codex Discoveries",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::Codex"
+        },
+        {
+          "Name": "UncommonSecondary",
+          "Type": "bool",
+          "Label": "Uncommon Secondary Star",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::UncommonSecondary"
+        },
+        {
+          "Name": "LandableRing",
+          "Type": "bool",
+          "Label": "Landable w/ Ring",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::LandableRing"
+        },
+        {
+          "Name": "Nested",
+          "Type": "bool",
+          "Label": "Nested Moon",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::Nested"
+        },
+        {
+          "Name": "SmallObject",
+          "Type": "bool",
+          "Label": "Small Object",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::SmallObject"
+        },
+        {
+          "Name": "FastRotation",
+          "Type": "bool",
+          "Label": "Fast Rotation",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::FastRotation"
+        },
+        {
+          "Name": "FastOrbit",
+          "Type": "bool",
+          "Label": "Fast Orbit",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::FastOrbit"
+        },
+        {
+          "Name": "HighEccentricity",
+          "Type": "bool",
+          "Label": "High Eccentricity",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::HighEccentricity"
+        },
+        {
+          "Name": "DiverseLife",
+          "Type": "bool",
+          "Label": "Diverse Life",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::DiverseLife"
+        },
+        {
+          "Name": "GoodFSDBody",
+          "Type": "bool",
+          "Label": "Good FSD Injection",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::GoodFSDBody"
+        },
+        {
+          "Name": "GreenSystem",
+          "Type": "bool",
+          "Label": "All FSD Mats In System",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::GreenSystem"
+        },
+        {
+          "Name": "GoldSystem",
+          "Type": "bool",
+          "Label": "All Surface Mats In System",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::GoldSystem"
+        },
+        {
+          "Name": "HighValueMappable",
+          "Type": "bool",
+          "Label": "High-Value Body",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::HighValueMappable"
+        },
+        {
+          "Name": "EnableCustomCriteria",
+          "Type": "bool",
+          "Label": "Enable Custom Criteria",
+          "NewGroup": "Custom Criteria",
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "ExplorerSettings.cs::EnableCustomCriteria"
+        },
+        {
+          "Name": "CustomCriteria",
+          "Type": "FileInfo",
+          "Label": "Custom Criteria File",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "host-file-picker-adapter-required",
+          "Evidence": "ExplorerSettings.cs::CustomCriteria"
+        },
+        {
+          "Name": "CustomCriteriaFile",
+          "Type": "string",
+          "Label": "CustomCriteriaFile",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "native-personal-directory-adapter",
+          "Evidence": "ExplorerSettings.cs::CustomCriteriaFile"
+        }
+      ],
+      "SourceSHA256": {
+        "ExplorerWorker.cs": "f389480200f60e5032ef2f73f975f6a61748406f2eb5b989edea7c2971de0e14",
+        "DefaultCriteria.cs": "089bf89c6a56cf900feed3fc50abc1294b92c44077c9d9008f40fddaf6d08626",
+        "ExplorerSettings.cs": "92c169ebbf27e10b106c4b3e7dd261280a8b351d4d95053807248ac7b4629169",
+        "CriteriaLoadException.cs": "2c97bcf36cb0ffda29e93bdbe892428d96202d0e5e564db30f760da02a255171",
+        "CustomCriteriaManager.cs": "558fdcbde17ebfaed8a7dec74b2ad47f0221d14e40c7406a83476d224112241b",
+        "ExplorerUIResults.cs": "cf433c9b69920e5620ed32df5b98e0aa60bda7ecf09951f64b102e1e91434871",
+        "Explorer.cs": "0e6d9b43575acd23d5a65dfd927b0acfb022dac278303c1b6854d4263c10d6ea"
+      },
+      "Events": [
+        "Scan",
+        "FSSBodySignals",
+        "ScanBaryCentre",
+        "FSDJump",
+        "CarrierJump (Docked only)",
+        "Location",
+        "FSSDiscoveryScan",
+        "SAASignalsFound",
+        "FSSAllBodiesFound",
+        "CodexEntry"
+      ],
+      "GridColumns": [
+        [
+          "Time",
+          300
+        ],
+        [
+          "BodyName",
+          350
+        ],
+        [
+          "Description",
+          400
+        ],
+        [
+          "Details",
+          600
+        ]
+      ],
+      "State": [
+        "first scan per nonzero system/body",
+        "first FSS signal per system/body; SAA does not seed FSS cache",
+        "first barycentre per system/body",
+        "source synthetic barycentre ordinal conversion",
+        "trim scan history above1000 systems, preserving current and separate signal/barycentre caches",
+        "live OnlyShowCurrentSystem clears histories on system-name change",
+        "all batch monitor transitions clear histories",
+        "only ReadAll bit2 latches Lua reload mode; PreRead bit4 does not"
+      ],
+      "Notifications": [
+        "source short body titles and ordinal SSML",
+        "Description becomes notification Detail; Details becomes ExtendedDetails",
+        "BodyID coalescing",
+        "new Codex entry uses source category/name and body lookup",
+        "direct Lua notify preserves explicit title; notifyForBody only shortens eligible title, never substitutes grid body",
+        "direct callbacks before built-in and returned criteria findings",
+        "multiline grid projection delegated to Core"
+      ],
+      "Oracle": {
+        "CriteriaCases": 723,
+        "WholeWorkerEventScenarios": 759,
+        "OriginalCompilerAndHelperPrograms": 38,
+        "NativeTests": "explorer::tests and criteria::tests"
+      },
+      "HostAPIs": [
+        "set_monitor_state(batch,read_all)",
+        "take_notification_payload(&Finding)",
+        "prepare_preferences(settings)",
+        "apply_preferences(prepared)",
+        "take_startup_findings() after construction and monitor transitions",
+        "take_diagnostics()"
+      ]
+    },
+    "Botanist": {
+      "InstalledAssemblyVersion": "1.1.3.27422",
+      "Settings": [
+        {
+          "Name": "OverlayEnabled",
+          "Type": "bool",
+          "Label": "Enable Sampler Status Overlay",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "BotanistSettings.cs::OverlayEnabled"
+        },
+        {
+          "Name": "OverlayIsSticky",
+          "Type": "bool",
+          "Label": "Status Overlay is sticky until sampling is complete",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "BotanistSettings.cs::OverlayIsSticky"
+        }
+      ],
+      "SourceSHA256": {
+        "Botanist.cs": "6c143c5ca2eb920a5ec77c6d9a251b2c43233469dfd8fe31b788ced593691116",
+        "BodyAddress.cs": "507dfa912024c36d862a9ab6ab1f996201647a994a490e8a27a435c9eac5268e",
+        "BotanistSettings.cs": "cb19c3b67110a8b8a8853e1c721bba25bec0e62b5b4d3425baa78e58b3aea582",
+        "BotanistGrid.cs": "491ff89ddfc6653de7534309f97f29e51d30fbde35671466209bddd83904534e",
+        "BioPlanetDetail.cs": "c30000fded507bdbe65ea0bcc6ad22e6de29592494e15e229ada00b440158414",
+        "BioSampleDetail.cs": "e78019de81fa666c3fa08081059b9d00cda3185a2e766a6ae27ca5b8c190128f"
+      },
+      "Events": [
+        "LoadGame",
+        "SAASignalsFound",
+        "FSSBodySignals (inherits SAA)",
+        "ScanOrganic",
+        "LeaveBody",
+        "FSDJump",
+        "CarrierJump (inherits FSDJump)",
+        "Shutdown",
+        "StatusChange"
+      ],
+      "GridColumns": [
+        [
+          "Body",
+          300
+        ],
+        [
+          "BioTotal",
+          100
+        ],
+        [
+          "Species",
+          300
+        ],
+        [
+          "Analysed",
+          100
+        ],
+        [
+          "ColonyDistance",
+          100
+        ]
+      ],
+      "State": [
+        "Odyssey gates signal insertion only",
+        "signals never overwrite an existing planet",
+        "first organic on unknown planet only inserts unanalysed species; no sampler",
+        "planet/species insertion order preserved",
+        "blank body/count after first species; checkmark analysed; no-sample distance blank",
+        "settings and batch changes retain active sampler",
+        "only analysis resets sample origins",
+        "source genus identifiers and fallback colony distances"
+      ],
+      "Notifications": [
+        "Rendering1",
+        "sticky Timeout0 and nonsticky Timeout-1",
+        "Log cancels previous ID then sends new ID",
+        "sticky Sample updates; nonsticky Sample sends",
+        "each StatusChange updates even unchanged text",
+        "source original distance approximation, grouping and empty-text behavior",
+        "source cancellation on LeaveBody/FSDJump/CarrierJump/Shutdown"
+      ],
+      "Oracle": {
+        "WholeWorkerScenarios": 75,
+        "PerStepComparison": [
+          "complete grid strings",
+          "notification send/update/cancel order",
+          "title/detail/rendering/timeout"
+        ],
+        "NativeTests": "botanist::tests"
+      },
+      "HostAPIs": [
+        "BotanistRow::grid_values()",
+        "take_notification_events()"
+      ]
+    },
+    "Communicator": {
+      "InstalledAssemblyVersion": "0.0.2.27422",
+      "Settings": [
+        {
+          "Name": "NotifyPrivate",
+          "Type": "bool",
+          "Label": "Private",
+          "NewGroup": "Notifications",
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifyPrivate"
+        },
+        {
+          "Name": "NotifyWing",
+          "Type": "bool",
+          "Label": "Wing",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifyWing"
+        },
+        {
+          "Name": "NotifySquadron",
+          "Type": "bool",
+          "Label": "Squadron",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifySquadron"
+        },
+        {
+          "Name": "NotifySystem",
+          "Type": "bool",
+          "Label": "System",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifySystem"
+        },
+        {
+          "Name": "NotifyLocal",
+          "Type": "bool",
+          "Label": "Local",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifyLocal"
+        },
+        {
+          "Name": "NotifyNPC",
+          "Type": "bool",
+          "Label": "NPC",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::NotifyNPC"
+        },
+        {
+          "Name": "SuppressVoice",
+          "Type": "bool",
+          "Label": "Suppress Voice",
+          "NewGroup": null,
+          "Hidden": false,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::SuppressVoice"
+        },
+        {
+          "Name": "ShowPrivate",
+          "Type": "bool",
+          "Label": "ShowPrivate",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowPrivate"
+        },
+        {
+          "Name": "ShowWing",
+          "Type": "bool",
+          "Label": "ShowWing",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowWing"
+        },
+        {
+          "Name": "ShowSquadron",
+          "Type": "bool",
+          "Label": "ShowSquadron",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowSquadron"
+        },
+        {
+          "Name": "ShowSystem",
+          "Type": "bool",
+          "Label": "ShowSystem",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowSystem"
+        },
+        {
+          "Name": "ShowLocal",
+          "Type": "bool",
+          "Label": "ShowLocal",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowLocal"
+        },
+        {
+          "Name": "ShowNPC",
+          "Type": "bool",
+          "Label": "ShowNPC",
+          "NewGroup": null,
+          "Hidden": true,
+          "Status": "worker-implemented-host-controls-unverified",
+          "Evidence": "CommunicatorSettings.cs::ShowNPC"
+        }
+      ],
+      "SourceSHA256": {
+        "Communicator.cs": "69e3a46fe968f616caf1cbf95eea8ad6daa428656facfa608592ef1f82b5efcb",
+        "CommunicatorGridItem.cs": "0e5b0913efe595e733ff747c05a8dd1374a8e03e24b6b34dcbd058d9a41ca430",
+        "CommunicatorSettings.cs": "4602da1c7d58f7f94b75a2507aebda97a9a5af11b95299f4673711c5d75c274b"
+      },
+      "Events": [
+        "LoadGame",
+        "SendText",
+        "ReceiveText"
+      ],
+      "Actions": [
+        "Local",
+        "System",
+        "Private",
+        "Wing",
+        "Squadron",
+        "NPC"
+      ],
+      "GridColumns": [
+        "Timestamp",
+        "Channel",
+        "From",
+        "Message"
+      ],
+      "State": [
+        "null-vs-empty commander/localized text",
+        "source local timestamp display and exact JournalBase parsing",
+        "source channel display casing; unknown recipients private",
+        "lossless filter toggles preserve all messages",
+        "Show flags independent of Notify flags"
+      ],
+      "Notifications": [
+        "incoming only",
+        "Notify channel settings independently",
+        "source emits plugin notifications during batch; Core suppresses native effects",
+        "SuppressVoice rendering5; otherwise7"
+      ],
+      "Oracle": {
+        "WholeWorkerCases": 250,
+        "SettingsCombinations": 128,
+        "NativeTests": "communicator::tests"
+      },
+      "HostAPIs": [
+        "notification_rendering()",
+        "display_timestamp()"
+      ]
+    }
+  },
+  "OrdinaryLua": {
+    "Implemented": [
+      "all10 Explorer event dispatch paths",
+      "Simple/Description, Detail, Complex/Criteria, Global, Jump, Discovery, BodySignals, AllBodies and End annotations",
+      "source helper Lua functions compared against original C# generated chunks (38 programs,6 synthetic event calls each)",
+      "all standard safe Lua libraries restored for trusted original Explorer criteria",
+      "zero-based lists with Count and original public DTO property shapes",
+      "System.Single field conversion; missing primitive defaults and nil strings",
+      "Parent.Item1/Item2 and StarPos.x/y/z",
+      "AdditionalProperties includes only unknown fields",
+      "exact original Json text is retained for current and cached Scan objects via optionalArc<str> in backward-compatible event envelopes",
+      "source insertion order in bodies(system)",
+      "read-all refresh latching and transition resets",
+      "malformed edits disable functions and log, then recover on repair",
+      "handler failure isolation",
+      "globals initialize even disabled; immediate callbacks exposed through startup API",
+      "preferences preserve Lua state and defer file reload"
+    ],
+    "PendingArchitecture": [],
+    "OrdinaryLuaFallbackGuardrails": [
+      "32MiB Lua allocation cap",
+      "2million instructions per criterion",
+      "4MiB source file cap",
+      "1024 callback queue cap",
+      "safe quoting for malformed annotation labels; original malformed-source exception text may differ"
+    ],
+    "HostGaps": []
+  },
+  "ClrCriteria": {
+    "Status": "implemented_real_Linux_CLR_with_native_history_feedback_and_idle_callbacks",
+    "Runtime": ".NET 8.0.33 self-contained; NLua 1.7.3; KeraLua 1.4.1",
+    "Packaging": "Complete approximately 72 MiB unpacked runtime under lib/observatory-core/clr; no system .NET required",
+    "Architecture": "Main Core, UI and four requested installed-plugin workers remain Rust; separate criteria process runs original manager and full source-built Framework, without Wine or original desktop startup",
+    "FrameworkIdentity": "ObservatoryFramework, Version=1.10.26274.2239, Culture=neutral, PublicKeyToken=null",
+    "ApiMetadata": "All 448 exported public types match installed reference; no checked types/members added, missing or changed. fixtures/clr-criteria-framework-api.json",
+    "SourceInputs": "404 linked original sources; build emits source-provenance.json",
+    "Oracle": "27 synthetic scenarios/89 responses match actual CLR host and Rust Criteria pipeline against installed Framework DLL plus unchanged installed criteria-manager source",
+    "Tests": "5 clr_oracle integration tests; 3 Explorer state tests; 2 host smoke scripts",
+    "Implemented": [
+      "real NLua LoadCLRPackage, CLR imports, compatible user assemblies, constructors, reflection, properties, methods, collections, delegates/events and ref/out",
+      "actual Framework DTO methods, defaults, Single precision and retained CLR object identity",
+      "scan/signal mutations round-trip into native history under original dictionary keys; independent Parent projection preserved",
+      "typed native echoes preserve CLR identities and aliases; only changed objects emitted",
+      "post-mutated event used for source result/notification formatting; original JournalBase.Json retained",
+      "idle polling delivers real Timer callbacks and history mutations without a journal event",
+      "scoped history pruning preserves other caches and Lua-held references",
+      "NaN and positive/negative Infinity serialize and echo as named JSON strings",
+      "source globals, parser/helpers, handler suppression and path/read-all reload ordering"
+    ],
+    "ProcessContract": "Private protocol stdin/stdout; 64 MiB frames; default 10-second request timeout; failure reported once without automatic restart or script-effect replay",
+    "PlatformLimits": "Windows-only assemblies retain normal Linux .NET limitations; criteria assembly loading is not the old Windows EOP/WinForms desktop plugin ABI",
+    "Evidence": "native/CLR_SCRIPT_PARITY.md; fixtures/clr-criteria-oracle.json; fixtures/clr-criteria-framework-api.json"
+  },
+  "Verification": {
+    "PluginLibraryTestsAtOwnedCheckpoint": 176,
+    "DesktopActiveTestsAtCheckpoint": 147,
+    "DesktopSeparateIgnoredChecks": 7,
+    "CoreRoutingOracleCases": 768,
+    "DomainTests": 3,
+    "IoTests": 20,
+    "PluginIntegrationTests": 12,
+    "Clippy": "all targets -D warnings passed",
+    "SourceCaptureTimezone": "timestamp oracles captured with TZ=UTC; native tests apply active local timezone",
+    "WorkspaceTests": "396 passed; 0 failed; 12 explicit/manual ignored with real CLR runtime override; all-target workspace clippy passed",
+    "CurrentCoreSha256": "9d8af27a8dfb9ed3c6719a89e800d9174722f31555ecc7e510bd8484302c2970",
+    "CurrentNativeWorkerSha256": "4d57a957305acbcef107ffae15df63d8ae845c58ccb177e913c2aac0b2fbab0b",
+    "ClrRuntimeContentManifestSha256": "cd8691af4e235d1944b0019851d77459c0bc56f682351f42067fee611f9ce755",
+    "ClrRuntimeFilesAndSize": "193 files; about 75 MB/72 MiB unpacked; complete self-contained runtime",
+    "RemainingStatus": "Real CLR criteria, DTO mutation feedback and idle callbacks are implemented and independently compared. Private fullscreen and production null-sink audio checks pass. Actual Linux/Proton game installation was unavailable; physical audio listening and clean-distribution installation remain unperformed acceptance checks.",
+    "PrivateFullscreenAudioReceipt": "fixtures/private-fullscreen-audio-linux-qa.json; synthetic clients/private PulseAudio only; no user desktop/player files/physical audio",
+    "CurrentWorkspaceReceipt": "dist/final-validation.json",
+    "CoreGuiReceipt": "dist/core-parity-ui/clicks.json: twelve actual interaction groups, including fixed pixel widths, sorting, TSV/XLSX, clipboard, settings, progress cancellation, tab drag and geometry restart."
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-26",
+  "synthetic_only": true,
+  "environment": {
+    "distribution": "Ubuntu22.04 underWSL2",
+    "wayland_compositor": "Sway1.7 headless/pixman, EGLsoftware render",
+    "unsupported_compositor": "Weston9.0 headless/pixman",
+    "x11": "private Xvfb with deliberately aggressive map-focus policy"
+  },
+  "wayland_scale1": {
+    "passive": {
+      "samples": 209,
+      "focus_violations": 0,
+      "first_violation": null,
+      "game": {
+        "clicks": 9,
+        "focused": true,
+        "seconds": 10.092613927,
+        "text": "abcd"
+      },
+      "overlay": {
+        "capability_error": null,
+        "foreign_seen_game": true,
+        "foreign_seen_other": true,
+        "main_focused": false,
+        "max_layers": 5,
+        "phase": 22,
+        "seconds": 10.004221388
+      },
+      "bitmap_magenta_pixels": 4608,
+      "green_pixels": 4636,
+      "core_text_pixels": 2656,
+      "radar_white_text_pixels": 687
+    },
+    "negative_control": {
+      "samples": 210,
+      "focus_violations": 210,
+      "first_violation": [
+        {
+          "id": 56,
+          "app_id": "observatory-overlay-probe",
+          "name": "Observatory overlay probe"
+        }
+      ],
+      "game": {
+        "clicks": 0,
+        "focused": true,
+        "seconds": 10.075524966,
+        "text": ""
+      },
+      "overlay": {
+        "capability_error": null,
+        "main_focused": true,
+        "max_layers": 0,
+        "phase": 22,
+        "seconds": 10.003821292
+      }
+    }
+  },
+  "wayland_scale2": {
+    "passive": {
+      "scale": 2,
+      "samples": 208,
+      "focus_violations": 0,
+      "first_violation": null,
+      "game": {
+        "clicks": 9,
+        "focused": true,
+        "seconds": 10.093760489,
+        "text": "abcd"
+      },
+      "overlay": {
+        "capability_error": null,
+        "foreign_seen_game": true,
+        "foreign_seen_other": true,
+        "main_focused": false,
+        "max_layers": 5,
+        "phase": 22,
+        "seconds": 10.005052585
+      },
+      "bitmap_magenta_pixels": 14464,
+      "green_pixels": 14656,
+      "core_text_pixels": 9776,
+      "radar_white_text_pixels": 602
+    },
+    "negative_control": {
+      "scale": 2,
+      "samples": 212,
+      "focus_violations": 212,
+      "first_violation": [
+        {
+          "id": 78,
+          "app_id": "observatory-overlay-probe",
+          "name": "Observatory overlay probe"
+        }
+      ],
+      "game": {
+        "clicks": 0,
+        "focused": true,
+        "seconds": 10.091398471,
+        "text": ""
+      },
+      "overlay": {
+        "capability_error": null,
+        "main_focused": true,
+        "max_layers": 0,
+        "phase": 22,
+        "seconds": 10.002518257
+      }
+    }
+  },
+  "wayland_no_layer_shell": {
+    "capability_error": "Wayland passive notifications unavailable: Wayland compositor does not support wlr-layer-shell; passive notifications cannot use xdg_toplevel safely",
+    "main_focused": false,
+    "max_layers": 0,
+    "phase": 22,
+    "seconds": 10.00198379,
+    "exit_code": 0,
+    "xdg_toplevel_creations": 1
+  },
+  "x11_stellar": {
+    "display": "private X11",
+    "foreground_samples": 827,
+    "focus_changes": 0,
+    "mapped_surfaces": [
+      {
+        "title": "StellarOverlay Information [\"3100\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      },
+      {
+        "title": "StellarOverlay Radar [\"2113\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      },
+      {
+        "title": "StellarOverlay [\"C755\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      },
+      {
+        "title": "StellarOverlay Information [\"3100\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      },
+      {
+        "title": "StellarOverlay Radar [\"2113\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      }
+    ],
+    "cycles": [
+      "show",
+      "update",
+      "cancel",
+      "recreate",
+      "expire"
+    ],
+    "synthetic_only": true,
+    "negative_control": false,
+    "core_fallback": false
+  },
+  "x11_core_fallback": {
+    "display": "private X11",
+    "foreground_samples": 834,
+    "focus_changes": 0,
+    "mapped_surfaces": [
+      {
+        "title": "Observatory Core Notification [\"1367\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      },
+      {
+        "title": "Observatory Core Notification [\"1367\"]",
+        "passive_before_map": true,
+        "notification_type": true
+      }
+    ],
+    "cycles": [
+      "show",
+      "update",
+      "cancel",
+      "recreate",
+      "expire"
+    ],
+    "synthetic_only": true,
+    "negative_control": false,
+    "core_fallback": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "profile": "runtime-publication-and-frame-snapshot",
+  "build": "cargo test --release --locked -p observatory-desktop",
+  "input": {
+    "events": 45145,
+    "journal_files": 53,
+    "bio_rows": 138,
+    "evaluator_rows": 1054,
+    "read_only": true,
+    "remote_lookups": false,
+    "temporary_output": true
+  },
+  "iterations": 50,
+  "baseline": {
+    "idle_publish_mean_ms": 19.6789,
+    "snapshot_clone_mean_ms": 2.61858,
+    "plugin_metadata_bytes": 439142,
+    "projection_work_held_ui_mutex": true
+  },
+  "after": {
+    "idle_publish_mean_ms": 0.00080288,
+    "snapshot_clone_mean_ms": 0.13209988,
+    "plugin_metadata_bytes": 5073,
+    "bio_summary_bytes": 379813,
+    "bio_main_view_bytes": 103434,
+    "projection_work_held_ui_mutex": false,
+    "forced_full_publish_mean_ms": 18.64694874
+  },
+  "mechanism": "Independent dirty worker projections, separately shared immutable Arc values and rows, construction and retirement outside render mutex.",
+  "limits": [
+    "CPU wall-clock averages on this machine and dataset, not end-to-end input/GPU latency.",
+    "Source Codex Companion projection was expanded during this task; after payload is richer.",
+    "Live sampler/radar/Status continue updating independently; no idle poll/FPS interval was reduced.",
+    "Forced-full publication still performs complete projection work; it now runs only on relevant changes and never holds the render mutex while building or destroying those large projections."
+  ],
+  "reproduce": "Set OBSERVATORY_PROFILE_JOURNALS to a read-only game-journal directory, then run cargo test --release --locked -p observatory-desktop profile_publication_and_snapshot_clone -- --ignored --nocapture. Optional OBSERVATORY_PROFILE_DUMP writes game projection data to an explicit local path; omit it for aggregate-only output."
+}

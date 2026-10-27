@@ -1,0 +1,74 @@
+[
+  {
+    "current": false,
+    "signals": 0,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:0 bios]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": false,
+    "signals": 0,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>[HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:0 bios]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": false,
+    "signals": 1,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:1 bio]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": false,
+    "signals": 1,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>[HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:1 bio]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": false,
+    "signals": 4,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:4 bios]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": false,
+    "signals": 4,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft \" id=\"42-1\" colspan=4>[HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet \">[RB]</td><td colspan=1 class=\"signals \">[BioCount:4 bios]</td><td colspan=3 class=\"radiant \"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value \"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 0,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:0 bios]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 0,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody][HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:0 bios]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 1,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:1 bio]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 1,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody][HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:1 bio]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 4,
+    "flags": false,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:4 bios]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  },
+  {
+    "current": true,
+    "signals": 4,
+    "flags": true,
+    "html": "<tr><td class=\"body roundleft highlight\" id=\"42-1\" colspan=4>[CurrentBody][HighValue][PersonalCodexEntry][Mark][PossibleCodexEntry]Reference System 1</td><td class=\"planet highlight\">[RB]</td><td colspan=1 class=\"signals highlight\">[BioCount:4 bios]</td><td colspan=3 class=\"radiant highlight\"><span title=\"Radiant Star\">Star: G</span></td><td colspan=2 class=\"value highlight\"><span title=\"Base value\">6.9M - 12.94M</span></td></tr>"
+  }
+]

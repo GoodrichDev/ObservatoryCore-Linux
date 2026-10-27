@@ -1,51 +1,46 @@
-DOTNET ?= dotnet
+CARGO ?= cargo
+CARGO_TARGET_DIR ?= target
+PREFIX ?= $(HOME)/.local
+DESTDIR ?=
+DIST_DIR ?= dist
+ARGS ?=
 
-OPTS    := -c Proton --os win --arch x64 -p:EnableWindowsTargeting=true
-PLUGINS := ObservatoryBotanist ObservatoryExplorer
-PROJS   := ObservatoryFramework ObservatoryCore $(PLUGINS)
-PUB_DIR := bin
+.PHONY: all build run test check fmt package install clean legacy legacy-winesetup
 
-.PHONY: all
-all: build publish
+all: build
 
-# $1: proj
-# $2: dotnet <TARGET>
-# $3: dotnet TARGET <OPTS>
-define subproj
-.PHONY: $2/$1
-$2/$1:
-	$(DOTNET) $2 $(OPTS) $3 $1/$1.csproj
+build:
+	$(CARGO) build --release --locked -p observatory-desktop
 
-endef
+run:
+	$(CARGO) run --release --locked -p observatory-desktop -- $(ARGS)
 
-# $1: PROJS[]
-# $2: dotnet <TARGET>
-# $3: dotnet TARGET <OPTS>
-define subprojs
+test:
+	$(CARGO) test --workspace --locked
 
-$(foreach p,$1,$(call subproj,$p,$2,$3))
+check:
+	$(CARGO) fmt --all --check
+	$(CARGO) clippy --workspace --all-targets --locked -- -D warnings
 
-endef
+fmt:
+	$(CARGO) fmt --all
 
-$(eval $(call subprojs,$(PROJS),build))
-$(eval $(call subprojs,$(PLUGINS),publish,-o $(PUB_DIR)/plugins))
-$(eval $(call subproj,ObservatoryCore,publish,--sc -p:PublishSingleFile=true -o $(PUB_DIR)))
+package: build
+	sh native/scripts/package.sh --binary "$(CARGO_TARGET_DIR)/release/observatory-core" --out "$(DIST_DIR)"
 
-.PHONY: build
-build: $(addprefix build/,$(PROJS))
-	
-.PHONY: publish
-publish: build $(addprefix publish/,ObservatoryCore $(PLUGINS))
-	rm -rf $(PUB_DIR)/plugins/ObservatoryFramework.*
-	mkdir -p $(PUB_DIR)/plugins/deps
-	mv -t $(PUB_DIR)/plugins/deps $(PUB_DIR)/plugins/{KeraLua,lua54,NLua}.dll
+install: build
+	@set -eu; stage=$$(mktemp -d "$${TMPDIR:-/tmp}/observatory-install.XXXXXXXX"); \
+	trap 'rm -rf -- "$$stage"' EXIT HUP INT TERM; \
+	sh native/scripts/package.sh --tar-only --binary "$(CARGO_TARGET_DIR)/release/observatory-core" --out "$$stage/packages"; \
+	tar -xzf "$$stage"/packages/observatory-core-*-linux.tar.gz -C "$$stage"; \
+	sh "$$stage"/observatory-core-*/install.sh --prefix "$(PREFIX)" --destdir "$(DESTDIR)"
 
-.PHONY: clean
 clean:
-	rm -vrf publish $(addsuffix /bin,$(PROJS)) $(addsuffix /obj,$(PROJS))
+	$(CARGO) clean
 
-.PHONY: winesetup
-winesetup:
-	winetricks -q dotnetdesktop8 ie8
-	winetricks -q win10
-	WINEDEBUG=fixme-all wine regedit wine-dll-overrides.reg
+# Explicit opt-in to the retained .NET/Wine build, for source comparison only.
+legacy:
+	$(MAKE) -f Makefile.wine all
+
+legacy-winesetup:
+	$(MAKE) -f Makefile.wine winesetup

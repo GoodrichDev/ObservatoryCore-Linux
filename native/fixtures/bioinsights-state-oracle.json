@@ -1,0 +1,18 @@
+{
+  "Format": "BiologicalCodexEntry v100",
+  "BytesBase64": "SU9JQmQAAAAEAAAACAAGAAIAAAAAAAQAAAAAABMAAQABAAAAAgAAAAAAAAD/////////////////////CAAGAAIAAAAAAAQAAAQAAA==",
+  "Entries": [
+    {
+      "Key": 8590327816,
+      "Regions": 4398046773248
+    },
+    {
+      "Key": 4295032851,
+      "Regions": 2
+    },
+    {
+      "Key": 18446744073709551615,
+      "Regions": 18446744073709551615
+    }
+  ]
+}

@@ -1,0 +1,833 @@
+[
+  {
+    "name": "1200",
+    "projection": {
+      "summary": {
+        "Commander": "Native Smoke",
+        "DefaultNotificationColours": null,
+        "FID": "F4242",
+        "Filter": "Default",
+        "GuiFocus": 0,
+        "IsPreReading": false,
+        "Odyssey": true,
+        "ReadyPeers": {
+          "Hecate": "1.3.444.761"
+        },
+        "Route": "No more bodies to map",
+        "SystemAddress": 42,
+        "Systems": [
+          {
+            "Active": true,
+            "Current": true,
+            "DateTime": "2026-10-25T00:00:01Z",
+            "ID64": 42,
+            "PotentialValue": 50594,
+            "Route": [],
+            "ScannedBodies": 2,
+            "System": "Native Smoke",
+            "SystemValue": 50594,
+            "TotalBodies": 2,
+            "VisitID": 1
+          }
+        ],
+        "TransportMode": 2,
+        "UIAlerts": [],
+        "UnsoldData": [],
+        "UnsoldTotal": 50594,
+        "ZoomLevel": 100
+      },
+      "rows": [
+        {
+          "Atmospheric": false,
+          "BioCount": null,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A",
+          "BodyID": 0,
+          "BodyName": "Native Smoke A",
+          "CurrentValue": 14531,
+          "Distance": 0.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.0,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": false,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": true,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 14531,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "F",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        },
+        {
+          "Atmospheric": true,
+          "BioCount": 2,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A 1",
+          "BodyID": 1,
+          "BodyName": "Native Smoke A 1",
+          "CurrentValue": 34063,
+          "Distance": 499.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.10197162129779283,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": true,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": false,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 204783,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "High metal content body",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        }
+      ],
+      "settings": {
+        "MinimumBodyValue": 0
+      }
+    },
+    "columns": [
+      42,
+      84.9375,
+      97.078125,
+      157.75,
+      141.0625,
+      116.796875,
+      64.375,
+      99.03125,
+      122.859375,
+      226.1875
+    ],
+    "rows": [
+      {
+        "y": 55,
+        "height": 28,
+        "text": [
+          "CMDR Native Smoke"
+        ]
+      },
+      {
+        "y": 85,
+        "height": 28,
+        "text": [
+          "System",
+          "Progress",
+          "Filter",
+          "System Value",
+          "Potential Value"
+        ]
+      },
+      {
+        "y": 115,
+        "height": 28,
+        "text": [
+          "\u00a0",
+          "Body",
+          "Type",
+          "Attributes",
+          "Distance",
+          "Gravity",
+          "Visit / Map",
+          "Current",
+          "Mapped"
+        ]
+      },
+      {
+        "y": 145,
+        "height": 26,
+        "text": [
+          "Native Smoke",
+          "2 / 2",
+          "",
+          "50 594",
+          "50 594"
+        ]
+      },
+      {
+        "y": 173,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A",
+          "\u00a0F\u00a0",
+          "0 LS",
+          "\u00a0",
+          "\u00a0",
+          "14 531",
+          "14 531"
+        ]
+      },
+      {
+        "y": 203,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A 1",
+          "",
+          "\u00a0",
+          "499 LS",
+          "0.1 G",
+          "",
+          "\u00a0",
+          "34 063",
+          "204 783"
+        ]
+      },
+      {
+        "y": 233,
+        "height": 28,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 263,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 287,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "noheaders",
+    "projection": {
+      "summary": {
+        "Commander": "Native Smoke",
+        "DefaultNotificationColours": null,
+        "FID": "F4242",
+        "Filter": "Default",
+        "GuiFocus": 0,
+        "IsPreReading": false,
+        "Odyssey": true,
+        "ReadyPeers": {
+          "Hecate": "1.3.444.761"
+        },
+        "Route": "No more bodies to map",
+        "SystemAddress": 42,
+        "Systems": [
+          {
+            "Active": true,
+            "Current": true,
+            "DateTime": "2026-10-25T00:00:01Z",
+            "ID64": 42,
+            "PotentialValue": 50594,
+            "Route": [],
+            "ScannedBodies": 2,
+            "System": "Native Smoke",
+            "SystemValue": 50594,
+            "TotalBodies": 2,
+            "VisitID": 1
+          }
+        ],
+        "TransportMode": 2,
+        "UIAlerts": [],
+        "UnsoldData": [],
+        "UnsoldTotal": 50594,
+        "ZoomLevel": 100
+      },
+      "rows": [
+        {
+          "Atmospheric": false,
+          "BioCount": null,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A",
+          "BodyID": 0,
+          "BodyName": "Native Smoke A",
+          "CurrentValue": 14531,
+          "Distance": 0.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.0,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": false,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": true,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 14531,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "F",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        },
+        {
+          "Atmospheric": true,
+          "BioCount": 2,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A 1",
+          "BodyID": 1,
+          "BodyName": "Native Smoke A 1",
+          "CurrentValue": 34063,
+          "Distance": 499.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.10197162129779283,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": true,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": false,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 204783,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "High metal content body",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        }
+      ],
+      "settings": {
+        "MinimumBodyValue": 0,
+        "ShowHeaders": false,
+        "ShowTotal": false
+      }
+    },
+    "columns": [
+      42,
+      80.109375,
+      146.484375,
+      107.578125,
+      144.1875,
+      137.328125,
+      59.515625,
+      91.546875,
+      148.765625,
+      194.546875
+    ],
+    "rows": [
+      {
+        "y": 55,
+        "height": 26,
+        "text": [
+          "Native Smoke",
+          "2 / 2",
+          "",
+          "50 594",
+          "50 594"
+        ]
+      },
+      {
+        "y": 83,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A",
+          "\u00a0F\u00a0",
+          "0 LS",
+          "\u00a0",
+          "\u00a0",
+          "14 531",
+          "14 531"
+        ]
+      },
+      {
+        "y": 113,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A 1",
+          "",
+          "\u00a0",
+          "499 LS",
+          "0.1 G",
+          "",
+          "\u00a0",
+          "34 063",
+          "204 783"
+        ]
+      },
+      {
+        "y": 143,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 167,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "total",
+    "projection": {
+      "summary": {
+        "Commander": "Native Smoke",
+        "DefaultNotificationColours": null,
+        "FID": "F4242",
+        "Filter": "Default",
+        "GuiFocus": 0,
+        "IsPreReading": false,
+        "Odyssey": true,
+        "ReadyPeers": {
+          "Hecate": "1.3.444.761"
+        },
+        "Route": "No more bodies to map",
+        "SystemAddress": 42,
+        "Systems": [
+          {
+            "Active": true,
+            "Current": true,
+            "DateTime": "2026-10-25T00:00:01Z",
+            "ID64": 42,
+            "PotentialValue": 50594,
+            "Route": [],
+            "ScannedBodies": 2,
+            "System": "Native Smoke",
+            "SystemValue": 50594,
+            "TotalBodies": 2,
+            "VisitID": 1
+          }
+        ],
+        "TransportMode": 2,
+        "UIAlerts": [],
+        "UnsoldData": [],
+        "UnsoldTotal": 50594,
+        "ZoomLevel": 100
+      },
+      "rows": [
+        {
+          "Atmospheric": false,
+          "BioCount": null,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A",
+          "BodyID": 0,
+          "BodyName": "Native Smoke A",
+          "CurrentValue": 14531,
+          "Distance": 0.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.0,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": false,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": true,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 14531,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "F",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        },
+        {
+          "Atmospheric": true,
+          "BioCount": 2,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A 1",
+          "BodyID": 1,
+          "BodyName": "Native Smoke A 1",
+          "CurrentValue": 34063,
+          "Distance": 499.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.10197162129779283,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": true,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": false,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 204783,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "High metal content body",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        }
+      ],
+      "settings": {
+        "MinimumBodyValue": 0,
+        "ShowHeaders": true,
+        "ShowTotal": true
+      }
+    },
+    "columns": [
+      42,
+      84.9375,
+      97.078125,
+      157.75,
+      141.0625,
+      116.796875,
+      64.375,
+      99.03125,
+      122.859375,
+      226.1875
+    ],
+    "rows": [
+      {
+        "y": 55,
+        "height": 28,
+        "text": [
+          "CMDR Native Smoke"
+        ]
+      },
+      {
+        "y": 85,
+        "height": 28,
+        "text": [
+          "Unsold Data (Max): 50 594"
+        ]
+      },
+      {
+        "y": 115,
+        "height": 28,
+        "text": [
+          "System",
+          "Progress",
+          "Filter",
+          "System Value",
+          "Potential Value"
+        ]
+      },
+      {
+        "y": 145,
+        "height": 28,
+        "text": [
+          "\u00a0",
+          "Body",
+          "Type",
+          "Attributes",
+          "Distance",
+          "Gravity",
+          "Visit / Map",
+          "Current",
+          "Mapped"
+        ]
+      },
+      {
+        "y": 175,
+        "height": 26,
+        "text": [
+          "Native Smoke",
+          "2 / 2",
+          "",
+          "50 594",
+          "50 594"
+        ]
+      },
+      {
+        "y": 203,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A",
+          "\u00a0F\u00a0",
+          "0 LS",
+          "\u00a0",
+          "\u00a0",
+          "14 531",
+          "14 531"
+        ]
+      },
+      {
+        "y": 233,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A 1",
+          "",
+          "\u00a0",
+          "499 LS",
+          "0.1 G",
+          "",
+          "\u00a0",
+          "34 063",
+          "204 783"
+        ]
+      },
+      {
+        "y": 263,
+        "height": 28,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 293,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 317,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "total-noheaders",
+    "projection": {
+      "summary": {
+        "Commander": "Native Smoke",
+        "DefaultNotificationColours": null,
+        "FID": "F4242",
+        "Filter": "Default",
+        "GuiFocus": 0,
+        "IsPreReading": false,
+        "Odyssey": true,
+        "ReadyPeers": {
+          "Hecate": "1.3.444.761"
+        },
+        "Route": "No more bodies to map",
+        "SystemAddress": 42,
+        "Systems": [
+          {
+            "Active": true,
+            "Current": true,
+            "DateTime": "2026-10-25T00:00:01Z",
+            "ID64": 42,
+            "PotentialValue": 50594,
+            "Route": [],
+            "ScannedBodies": 2,
+            "System": "Native Smoke",
+            "SystemValue": 50594,
+            "TotalBodies": 2,
+            "VisitID": 1
+          }
+        ],
+        "TransportMode": 2,
+        "UIAlerts": [],
+        "UnsoldData": [],
+        "UnsoldTotal": 50594,
+        "ZoomLevel": 100
+      },
+      "rows": [
+        {
+          "Atmospheric": false,
+          "BioCount": null,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A",
+          "BodyID": 0,
+          "BodyName": "Native Smoke A",
+          "CurrentValue": 14531,
+          "Distance": 0.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.0,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": false,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": true,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 14531,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "F",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        },
+        {
+          "Atmospheric": true,
+          "BioCount": 2,
+          "BioInsightsGalacticCodex": false,
+          "BioInsightsHighValue": false,
+          "BioInsightsMarked": false,
+          "BioInsightsPersonalCodex": false,
+          "Body": "A 1",
+          "BodyID": 1,
+          "BodyName": "Native Smoke A 1",
+          "CurrentValue": 34063,
+          "Distance": 499.0,
+          "Done": false,
+          "GeoCount": null,
+          "Gravity": 0.10197162129779283,
+          "ID64": 42,
+          "IsHighValue": false,
+          "IsLandable": true,
+          "IsMapped": false,
+          "IsNextToVisit": false,
+          "IsStar": false,
+          "Map": false,
+          "Order": 0,
+          "PluginWorthVisiting": false,
+          "PotentialMaxValue": 204783,
+          "System": "Native Smoke",
+          "Terraformable": false,
+          "Type": "High metal content body",
+          "VisitID": 1,
+          "Volcanism": "",
+          "WasDiscovered": false,
+          "WasFootfalled": false,
+          "WasMapped": false
+        }
+      ],
+      "settings": {
+        "MinimumBodyValue": 0,
+        "ShowHeaders": false,
+        "ShowTotal": true
+      }
+    },
+    "columns": [
+      42,
+      80.109375,
+      146.484375,
+      107.578125,
+      144.1875,
+      137.328125,
+      59.515625,
+      91.546875,
+      148.765625,
+      194.546875
+    ],
+    "rows": [
+      {
+        "y": 55,
+        "height": 28,
+        "text": [
+          "Unsold Data (Max): 50 594"
+        ]
+      },
+      {
+        "y": 85,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 109,
+        "height": 26,
+        "text": [
+          "Native Smoke",
+          "2 / 2",
+          "",
+          "50 594",
+          "50 594"
+        ]
+      },
+      {
+        "y": 137,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A",
+          "\u00a0F\u00a0",
+          "0 LS",
+          "\u00a0",
+          "\u00a0",
+          "14 531",
+          "14 531"
+        ]
+      },
+      {
+        "y": 167,
+        "height": 28,
+        "text": [
+          "\u00a0\u00a0\u00a0\u00a0",
+          "A 1",
+          "",
+          "\u00a0",
+          "499 LS",
+          "0.1 G",
+          "",
+          "\u00a0",
+          "34 063",
+          "204 783"
+        ]
+      },
+      {
+        "y": 197,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      },
+      {
+        "y": 221,
+        "height": 22,
+        "text": [
+          "\u00a0"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "headers": [
+    {
+      "head": false,
+      "total": false,
+      "html": "<div class=\"scroll\"><table width=\"100%\">"
+    },
+    {
+      "head": false,
+      "total": true,
+      "html": "<div class=\"scroll\"><table width=\"100%\"><tr><th class=\"bold border banner right\" colspan=10>Unsold Data (Max): 123 456</th></tr><tr><td colspan=11>&nbsp;</td>"
+    },
+    {
+      "head": true,
+      "total": false,
+      "html": "<div class=\"scroll\"><table width=\"100%\"><tr><th class=\"bold border banner\" colspan=10>CMDR Oracle</th></tr><tr><th class=\"bold border left\" colspan=4>System</th><th class=\"bold border\" colspan=1 title=\"Scanned bodies (FSS) / Total bodies\">Progress</th><th class=\"bold border\" colspan=1 title=\"Show mapped only | Default | Show all\">Filter</th><th colspan=3 class=\"bold border right\" title=\"Estimated current total value of system\">System Value</th><th colspan=1 class=\"bold border right\" title=\"Estimated maximum value of system if all bodies worth mapping are mapped\">Potential Value</th></tr><tr><td class=\"indent\">&nbsp;</td><th class=\"bold border\">Body</th><th class=\"bold border\">Type</th><th class=\"bold border\">Attributes</th><th class=\"bold border\">Distance</th><th class=\"bold border\">Gravity</th><th class=\"bold border\" colspan=2>Visit / Map</th><th class=\"bold border right\" title=\"Estimated current value of body\">Current</th><th class=\"bold border right\" title=\"Estimated maximum value of body if mapped\">Mapped</th></tr>"
+    },
+    {
+      "head": true,
+      "total": true,
+      "html": "<div class=\"scroll\"><table width=\"100%\"><tr><th class=\"bold border banner\" colspan=10>CMDR Oracle</th></tr><tr><th class=\"bold border banner right\" colspan=10>Unsold Data (Max): 123 456</th></tr><tr><th class=\"bold border left\" colspan=4>System</th><th class=\"bold border\" colspan=1 title=\"Scanned bodies (FSS) / Total bodies\">Progress</th><th class=\"bold border\" colspan=1 title=\"Show mapped only | Default | Show all\">Filter</th><th colspan=3 class=\"bold border right\" title=\"Estimated current total value of system\">System Value</th><th colspan=1 class=\"bold border right\" title=\"Estimated maximum value of system if all bodies worth mapping are mapped\">Potential Value</th></tr><tr><td class=\"indent\">&nbsp;</td><th class=\"bold border\">Body</th><th class=\"bold border\">Type</th><th class=\"bold border\">Attributes</th><th class=\"bold border\">Distance</th><th class=\"bold border\">Gravity</th><th class=\"bold border\" colspan=2>Visit / Map</th><th class=\"bold border right\" title=\"Estimated current value of body\">Current</th><th class=\"bold border right\" title=\"Estimated maximum value of body if mapped\">Mapped</th></tr>"
+    }
+  ],
+  "systems": [
+    {
+      "filter": 0,
+      "current": false,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4>Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\">&nbsp;</td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    },
+    {
+      "filter": 0,
+      "current": true,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4 id=\"currentsystem\">Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\"><a class=\"filter\" href=\"http://localhost/evaluator/filter/1/\">[FilterMapped]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/0/\">[FilterDefaultSelected]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/2/\">[FilterAll]</a></td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    },
+    {
+      "filter": 1,
+      "current": false,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4>Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\">&nbsp;</td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    },
+    {
+      "filter": 1,
+      "current": true,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4 id=\"currentsystem\">Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\"><a class=\"filter\" href=\"http://localhost/evaluator/filter/1/\">[FilterMappedSelected]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/0/\">[FilterDefault]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/2/\">[FilterAll]</a></td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    },
+    {
+      "filter": 2,
+      "current": false,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4>Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\">&nbsp;</td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    },
+    {
+      "filter": 2,
+      "current": true,
+      "html": "<tr><td class=\"header headerfix roundleft\" colspan=4 id=\"currentsystem\">Oracle</td><td class=\"header center BodiesNotAllScanned\">7 / 12</td><td class=\"header center\"><a class=\"filter\" href=\"http://localhost/evaluator/filter/1/\">[FilterMapped]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/0/\">[FilterDefault]</a><a class=\"filter\" href=\"http://localhost/evaluator/filter/2/\">[FilterAllSelected]</a></td><td class=\"header right w100\" colspan=3 >123 456</td><td class=\"header right w100\" colspan=1 >654 321</td></tr>"
+    }
+  ],
+  "about": "<span class=\"thanks\">Enjoying Evaluator? <a class=\"buttonlink\" href=\"https://ko-fi.com/explorationtools\"><b>Buy me a coffee</b></a><br /><br /></span><table><tr><th colspan=2 class=\"body border\">Symbol Legend</th></tr><tr><th class=\"body border\">Symbol</th><th class=\"body border\">Meaning</th></tr><tr><td align=\"center\"><div class='custom-checkbox'><input type=\"checkbox\" class=\"checkbox\" checked /><label><span></span></label></div></td><td>{{desc:WorthMapping}}</td></tr><tr><td align=\"center\">[Mapped]</td><td>{{desc:Mapped}}</td></tr><tr><td align=\"center\">[Terraformable]</td><td>{{desc:Terraformable}}</td></tr><tr><td align=\"center\">[IsHighValue]</td><td>{{desc:IsHighValue}}</td></tr><tr><td align=\"center\">[IsLandable]</td><td>{{desc:IsLandable}}</td></tr><tr><td align=\"center\">[HasBiologicals]</td><td>{{desc:HasBiologicals}}</td></tr><tr><td align=\"center\">[BioInsightsPersonalCodex]</td><td>{{desc:BioInsightsPersonalCodex}}</td></tr><tr><td align=\"center\">[BioInsightsGalacticCodex]</td><td>{{desc:BioInsightsGalacticCodex}}</td></tr><tr><td align=\"center\">[BioInsightsMarked]</td><td>{{desc:BioInsightsMarked}}</td></tr><tr><td align=\"center\">[BioInsightsHighValue]</td><td>{{desc:BioInsightsHighValue}}</td></tr><tr><td align=\"center\">[HasVolcanism]</td><td>{{desc:HasVolcanism}}</td></tr><tr><td align=\"center\">[WasDiscovered]</td><td>{{desc:WasDiscovered}}</td></tr><tr><td align=\"center\">[WasMapped]</td><td>{{desc:WasMapped}}</td></tr><tr><td align=\"center\">[WasFootfalled]</td><td>{{desc:WasFootfalled}}</td></tr><tr><td align=\"center\">[PluginWorthVisiting]</td><td>{{desc:PluginWorthVisiting}}</td></tr><tr><td align=\"center\">[NextBody]</td><td>{{desc:NextBody}}</td></tr><tr><td align=\"center\">[FilterDefault]</td><td>Filter bodies (mapped / default / all)</td></tr><tr><td align=\"center\">[FilterDefaultSelected]</td><td>Currently selected body filter</td></tr></table><br /><span class=\"h1thanks\">Thanks<br /></span><span class=\"thanks\"><b>CMDR Vithigar</b> for creating <a href=\"https://observatory.xjph.net/\" class=\"link\"><b>Observatory</b></a> and listening to my feedback and requests<br />Evaluator uses some .SVGs from Iain Collins's <a href=\"https://github.com/iaincollins/icarus\" class=\"link\"><b>Icarus Terminal</b></a><br /></span><br /><br /><span class=\"h1thanks\">Need assistance?<br /></span><span class=\"thanks\">Try the <a href=\"https://discord.gg/4J55fNdU7B\" class=\"link\"><b>Observatory Discord</b></a></span><br /><br /><br />",
+  "unsold": [
+    {
+      "lines": [],
+      "html": "<table><tr><th colspan=3>&nbsp;</th></tr><tr><th class=\"left\">Total Unsold Data (max)</th><th>&nbsp;</th><th class=\"right\">0</th></tr><tr><th colspan=3>&nbsp;</th></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><th colspan=3>Breakdown</th><tr><th>Date</th><th>System</th><th>Value</th></tr>"
+    },
+    {
+      "lines": [
+        [
+          "Alpha",
+          "2020-01-02T03:04:00.0000000Z",
+          12345
+        ]
+      ],
+      "html": "<table><tr><th colspan=3>&nbsp;</th></tr><tr><th class=\"left\">Total Unsold Data (max)</th><th>&nbsp;</th><th class=\"right\">12 345</th></tr><tr><th colspan=3>&nbsp;</th></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><th colspan=3>Breakdown</th><tr><th>Date</th><th>System</th><th>Value</th></tr><tr><td class=\"row2\">02-Jan-20 03:04</td><td class=\"row2\">Alpha</td><td class=\"row2 right\">12 345</td></tr>"
+    },
+    {
+      "lines": [
+        [
+          "Alpha",
+          "2020-01-02T03:04:00.0000000Z",
+          12345
+        ],
+        [
+          "Repeat",
+          "2020-02-03T04:05:00.0000000Z",
+          2000000000
+        ]
+      ],
+      "html": "<table><tr><th colspan=3>&nbsp;</th></tr><tr><th class=\"left\">Total Unsold Data (max)</th><th>&nbsp;</th><th class=\"right\">2 000 012 345</th></tr><tr><th colspan=3>&nbsp;</th></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><th colspan=3>Breakdown</th><tr><th>Date</th><th>System</th><th>Value</th></tr><tr><td class=\"row2\">02-Jan-20 03:04</td><td class=\"row2\">Alpha</td><td class=\"row2 right\">12 345</td></tr><tr><td class=\"row1\">03-Feb-20 04:05</td><td class=\"row1\">Repeat</td><td class=\"row1 right\">2 000 000 000</td></tr>"
+    },
+    {
+      "lines": [
+        [
+          "Alpha",
+          "2020-01-02T03:04:00.0000000Z",
+          12345
+        ],
+        [
+          "Repeat",
+          "2020-02-03T04:05:00.0000000Z",
+          2000000000
+        ],
+        [
+          "Repeat",
+          "2020-03-04T05:06:00.0000000Z",
+          3000000000
+        ]
+      ],
+      "html": "<table><tr><th colspan=3>&nbsp;</th></tr><tr><th class=\"left\">Total Unsold Data (max)</th><th>&nbsp;</th><th class=\"right\">5 000 012 345</th></tr><tr><th colspan=3>&nbsp;</th></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><th colspan=3>Breakdown</th><tr><th>Date</th><th>System</th><th>Value</th></tr><tr><td class=\"row2\">02-Jan-20 03:04</td><td class=\"row2\">Alpha</td><td class=\"row2 right\">12 345</td></tr><tr><td class=\"row1\">03-Feb-20 04:05</td><td class=\"row1\">Repeat</td><td class=\"row1 right\">2 000 000 000</td></tr><tr><td class=\"row2\">04-Mar-20 05:06</td><td class=\"row2\">Repeat</td><td class=\"row2 right\">3 000 000 000</td></tr>"
+    },
+    {
+      "lines": [
+        [
+          "Alpha",
+          "2020-01-02T03:04:00.0000000Z",
+          12345
+        ],
+        [
+          "Repeat",
+          "2020-02-03T04:05:00.0000000Z",
+          2000000000
+        ],
+        [
+          "Repeat",
+          "2020-03-04T05:06:00.0000000Z",
+          3000000000
+        ],
+        [
+          "Last",
+          "2020-04-05T06:07:00.0000000Z",
+          -12345
+        ]
+      ],
+      "html": "<table><tr><th colspan=3>&nbsp;</th></tr><tr><th class=\"left\">Total Unsold Data (max)</th><th>&nbsp;</th><th class=\"right\">5 000 000 000</th></tr><tr><th colspan=3>&nbsp;</th></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><td colspan=3>&nbsp;</td></tr><tr><th colspan=3>Breakdown</th><tr><th>Date</th><th>System</th><th>Value</th></tr><tr><td class=\"row2\">02-Jan-20 03:04</td><td class=\"row2\">Alpha</td><td class=\"row2 right\">12 345</td></tr><tr><td class=\"row1\">03-Feb-20 04:05</td><td class=\"row1\">Repeat</td><td class=\"row1 right\">2 000 000 000</td></tr><tr><td class=\"row2\">04-Mar-20 05:06</td><td class=\"row2\">Repeat</td><td class=\"row2 right\">3 000 000 000</td></tr>"
+    }
+  ]
+}

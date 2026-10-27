@@ -378,3 +378,7 @@ InnoSetup/ObservatoryCore.zip
 /InnoSetup/Elite Observatory - Patreon.iss
 /InnoSetup/Elite Observatory - Wine - Patreon.iss
 /global.json
+
+# Native Rust build output
+/target/
+/dist/
