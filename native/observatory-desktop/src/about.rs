@@ -17,7 +17,7 @@ pub fn metadata(name: &str) -> Value {
     json!({"FullName":full,"ShortName":name,"AuthorName":"Matt G","Description":description,"Links":[{"Text":"Website","Url":"https://edjp.colacube.net/observatory"},{"Text":"Buy me a coffee","Url":"https://ko-fi.com/explorationtools"}]})
 }
 #[allow(deprecated)]
-pub fn show(ui: &mut egui::Ui, metadata: &Value) {
+pub fn show(ui: &mut egui::Ui, metadata: &Value, appimage: Option<&mut crate::appimage::Manager>) {
     let origin = ui.max_rect().min;
     let rect = |x: f32, y: f32, w: f32, h: f32| {
         egui::Rect::from_min_size(origin + egui::vec2(x, y), egui::vec2(w, h))
@@ -64,6 +64,11 @@ pub fn show(ui: &mut egui::Ui, metadata: &Value) {
                 link["Text"].as_str().unwrap(),
                 link["Url"].as_str().unwrap(),
             );
+        });
+    }
+    if let Some(appimage) = appimage {
+        ui.allocate_ui_at_rect(rect(8.0, 268.0, 498.0, 172.0), |ui| {
+            appimage.show(ui);
         });
     }
 }

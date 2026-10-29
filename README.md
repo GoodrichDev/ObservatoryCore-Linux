@@ -60,6 +60,23 @@ For a bounded live-monitor check, use `--headless --watch-seconds 30 --journal-d
 
 ## Install and package
 
+The [latest verified Linux build](https://github.com/GoodrichDev/ObservatoryCore-Linux/releases/tag/continuous) includes a portable AppImage and a per-user installer. Download `Observatory_Core-x86_64.AppImage`, mark it executable in your file manager, and open it. In **About Core**, choose **Install for this user** to add an application-menu shortcut, then reopen it from that shortcut. No root access or .NET SDK is needed.
+
+For the simplest installation, including systems without FUSE, run the rolling-release installer:
+
+```sh
+curl -fL https://github.com/GoodrichDev/ObservatoryCore-Linux/releases/download/continuous/install.sh -o install-observatory.sh
+sh install-observatory.sh
+```
+
+If you already downloaded the AppImage but normal launch reports that FUSE is unavailable, run `./Observatory_Core-x86_64.AppImage --appimage-extract-and-run --install` instead. The installed application-menu launcher handles cached extraction automatically.
+
+The installer verifies the downloaded AppImage against the release's SHA256 checksum, installs it under `$XDG_DATA_HOME/observatory-core/appimage` (normally `~/.local/share/observatory-core/appimage`), and adds `~/.local/bin/observatory-core-appimage` and a desktop shortcut. The launcher uses a retained extraction cache, so FUSE is optional and unchanged files are reused on subsequent launches. The `.deb` and portable tarball remain available too.
+
+For updates, open **About Core → Check for Updates → Update**. Updates use the bundled AppImageUpdate tool and `.zsync` metadata to reuse unchanged blocks. The current app keeps running; restart it after an update. A `.zs-old` rollback copy remains beside the installed AppImage. Settings, plugin data and journals retain their existing XDG locations. Updates occur only when requested. The command-line equivalent is `~/.local/bin/observatory-core-appimage --update`.
+
+AppImages target Linux x86_64 with glibc 2.35 or newer (Ubuntu 22.04+, Debian 12+) and the distribution's standard `libstdc++.so.6` and `libgcc_s.so.1` runtimes. Graphics drivers and their libdrm/libgbm dependencies also come from the host; using these host runtimes preserves compatibility with newer drivers. GTK/WebKit, fonts, audio helpers and the complete .NET criteria runtime are bundled. The optional HTML renderer retains WebKit's sandbox and uses the distribution's `/usr/bin/bwrap` and `/usr/bin/xdg-dbus-proxy` helpers; on Ubuntu these are supplied by `bubblewrap` and `xdg-dbus-proxy`. Native views work without those optional helpers. To remove only the managed AppImage and shortcut, run the downloaded installer with `--uninstall`; your settings, journals and caches are retained.
+
 Build a portable tarball and Debian package on Linux:
 
 ```sh
@@ -69,7 +86,7 @@ sh native/scripts/package.sh
 
 The output directory is `dist/`, with checksums in `SHA256SUMS`. To package an already built release binary, pass `--binary /absolute/path/observatory-core`. The default package build publishes the complete self-contained CLR runtime to `${CARGO_TARGET_DIR:-target}/clr-criteria`. Pass `--clr-runtime /absolute/published/runtime` or set `OBSERVATORY_CLR_RUNTIME` to reuse an existing publish without an SDK. Partial or framework-dependent runtime directories are rejected. `CARGO_TARGET_DIR` is honored when the script builds the binary. `--tar-only` produces just the portable archive without requiring Debian packaging tools; `make install` uses this mode.
 
-[Native Linux CI](https://github.com/GoodrichDev/ObservatoryCore-Linux/actions/workflows/native-linux.yml) builds and packages Linux x86_64 on every push and pull request, and can also be started with **Run workflow**. Open a successful run and download the `observatory-core-linux-x86_64` artifact for the `.deb`, portable `.tar.gz`, `SHA256SUMS` and package verification report. Packages include the self-contained CLR criteria runtime. Artifacts are retained for 30 days; diagnostic captures are available separately for 14 days. The build runs formatting, Clippy, workspace tests, native plugin UI checks, isolated audio playback and fullscreen focus checks before validating and uploading the packages.
+[Native Linux CI](https://github.com/GoodrichDev/ObservatoryCore-Linux/actions/workflows/native-linux.yml) builds and packages Linux x86_64 on every push and pull request, and can also be started with **Run workflow**. Open a successful run and download the `observatory-core-linux-x86_64` artifact for the AppImage, `.zsync`, installer, `.deb`, portable `.tar.gz`, checksums and verification reports. Successful pushes to `master` also publish these files to the `continuous` GitHub prerelease, giving installers and updaters a stable download address without requiring a GitHub login. Pull requests cannot publish releases. Packages include the self-contained CLR criteria runtime. Artifacts are retained for 30 days; diagnostic captures are available separately for 14 days. The build runs formatting, Clippy, workspace tests, native plugin UI checks, isolated audio playback and fullscreen focus checks before validating and uploading the packages. AppImage build tools are pinned by SHA256 in `native/packaging/appimage/tools.lock`.
 
 Install the Debian package with the system package manager:
 

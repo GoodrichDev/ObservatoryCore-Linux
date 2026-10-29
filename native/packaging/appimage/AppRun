@@ -1,0 +1,88 @@
+#!/bin/sh
+set -eu
+
+APPDIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export APPDIR
+
+# GUI actions re-enter this launcher with the payload's library paths. Restore
+# the caller's environment before starting host tools or the separate updater.
+case "${1:-}" in
+    --install|--check-for-update|--update|--uninstall)
+        if [ "${OBSERVATORY_APPIMAGE_ENV_SAVED:-}" = 1 ]; then
+            if [ "$OBSERVATORY_APPIMAGE_LD_SET" = 1 ]; then
+                LD_LIBRARY_PATH=$OBSERVATORY_APPIMAGE_LD; export LD_LIBRARY_PATH
+            else unset LD_LIBRARY_PATH; fi
+            if [ "$OBSERVATORY_APPIMAGE_PRELOAD_SET" = 1 ]; then
+                LD_PRELOAD=$OBSERVATORY_APPIMAGE_PRELOAD; export LD_PRELOAD
+            else unset LD_PRELOAD; fi
+        fi
+        unset GIO_MODULE_DIR GIO_EXTRA_MODULES GDK_PIXBUF_MODULE_FILE GTK_IM_MODULE_FILE
+        unset GTK_PATH GTK_EXE_PREFIX GTK_DATA_PREFIX GSETTINGS_SCHEMA_DIR
+        unset FONTCONFIG_FILE FONTCONFIG_PATH GST_PLUGIN_SYSTEM_PATH GST_PLUGIN_SYSTEM_PATH_1_0 GST_PLUGIN_SCANNER
+        exec /bin/sh "$APPDIR/usr/lib/observatory-core/appimage-manage.sh" "$@"
+        ;;
+esac
+
+if [ "${OBSERVATORY_APPIMAGE_ENV_SAVED:-}" != 1 ]; then
+    OBSERVATORY_APPIMAGE_ENV_SAVED=1
+    OBSERVATORY_APPIMAGE_LD_SET=${LD_LIBRARY_PATH+1}
+    OBSERVATORY_APPIMAGE_LD=${LD_LIBRARY_PATH:-}
+    OBSERVATORY_APPIMAGE_PRELOAD_SET=${LD_PRELOAD+1}
+    OBSERVATORY_APPIMAGE_PRELOAD=${LD_PRELOAD:-}
+    export OBSERVATORY_APPIMAGE_ENV_SAVED OBSERVATORY_APPIMAGE_LD_SET OBSERVATORY_APPIMAGE_LD
+    export OBSERVATORY_APPIMAGE_PRELOAD_SET OBSERVATORY_APPIMAGE_PRELOAD
+fi
+gdk_set=${GDK_BACKEND+1}
+gdk_backend=${GDK_BACKEND:-}
+XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
+export XDG_DATA_DIRS
+# Upstream deployment hooks are ordinary shell scripts, not nounset-safe.
+set +u
+for hook in "$APPDIR"/apprun-hooks/*.sh; do
+    [ ! -f "$hook" ] || . "$hook"
+done
+set -u
+# Upstream GTK's hook forces X11. Let the caller/compositor choose the backend.
+if [ "$gdk_set" = 1 ]; then GDK_BACKEND=$gdk_backend; export GDK_BACKEND
+else unset GDK_BACKEND; fi
+
+PATH="$APPDIR/usr/bin:$PATH"
+LD_LIBRARY_PATH="$APPDIR/usr/lib:$APPDIR/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+WEBKIT_EXEC_PATH="$APPDIR/usr/lib/webkit2gtk-4.1"
+WEBKIT_INJECTED_BUNDLE_PATH="$WEBKIT_EXEC_PATH/injected-bundle"
+GIO_EXTRA_MODULES="$APPDIR/usr/lib/gio/modules"
+GIO_MODULE_DIR="$GIO_EXTRA_MODULES"
+GSETTINGS_SCHEMA_DIR="$APPDIR/usr/share/glib-2.0/schemas"
+GST_PLUGIN_SYSTEM_PATH_1_0="$APPDIR/usr/lib/gstreamer-1.0"
+GST_PLUGIN_SCANNER="$APPDIR/usr/libexec/gstreamer-1.0/gst-plugin-scanner"
+FONTCONFIG_PATH="$APPDIR/usr/etc/fonts"
+# Fontconfig 2.13 resolves relative <dir> entries against the process working
+# directory. Generate relocatable absolute paths without changing the user's cwd.
+font_cache=${XDG_CACHE_HOME:-"$HOME/.cache"}/observatory-core/appimage-fontconfig
+mkdir -p -- "$font_cache"
+font_key=$(printf '%s' "$APPDIR" | sha256sum | cut -c1-24)
+FONTCONFIG_FILE=$font_cache/$font_key.conf
+if [ ! -s "$FONTCONFIG_FILE" ]; then
+    font_root=$(printf '%s' "$APPDIR" | sed 's/\&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
+    font_tmp=$(mktemp "$font_cache/.fonts.XXXXXXXX")
+    cat > "$font_tmp" <<EOF
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <dir>$font_root/usr/share/fonts</dir>
+  <dir>/usr/local/share/fonts</dir>
+  <dir>/usr/share/fonts</dir>
+  <dir prefix="xdg">fonts</dir>
+  <include ignore_missing="yes">$font_root/usr/etc/fonts/conf.d</include>
+  <cachedir prefix="xdg">fontconfig</cachedir>
+</fontconfig>
+EOF
+    mv -f -- "$font_tmp" "$FONTCONFIG_FILE"
+fi
+SSL_CERT_FILE="$APPDIR/usr/etc/ssl/certs/ca-certificates.crt"
+TZDIR="$APPDIR/usr/share/zoneinfo"
+ESPEAK_DATA_PATH="$APPDIR/usr/share/espeak-ng-data"
+export PATH LD_LIBRARY_PATH WEBKIT_EXEC_PATH WEBKIT_INJECTED_BUNDLE_PATH GIO_EXTRA_MODULES
+export GSETTINGS_SCHEMA_DIR GIO_MODULE_DIR GST_PLUGIN_SYSTEM_PATH_1_0 GST_PLUGIN_SCANNER
+export FONTCONFIG_PATH FONTCONFIG_FILE SSL_CERT_FILE TZDIR ESPEAK_DATA_PATH
+exec "$APPDIR/usr/bin/observatory-core" "$@"

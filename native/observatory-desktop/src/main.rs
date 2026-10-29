@@ -1,4 +1,5 @@
 mod about;
+mod appimage;
 mod bioinsights_main;
 mod bioinsights_settings;
 mod bioinsights_ui;

@@ -1,0 +1,9 @@
+# name|sha256|official download URL or derivation; update pins deliberately.
+linuxdeploy|c20cd71e3a4e3b80c3483cef793cda3f4e990aca14014d23c544ca3ce1270b4d|https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20251107-1/linuxdeploy-x86_64.AppImage
+gtk-plugin|b0f4cbc684a0103a9651f0955b635eaea0096b3a66c0f5a2c2aa337960375171|https://raw.githubusercontent.com/linuxdeploy/linuxdeploy-plugin-gtk/7a3fbc31a9e5075073ff8790f26effbac5f84453/linuxdeploy-plugin-gtk.sh
+appimagetool|ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0|https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage
+# Extract the runtime prefix from the SHA-verified, versioned appimagetool above.
+# Unlike a continuous release asset this remains available with the tool pin.
+# Both extract-and-run and NO_CLEANUP cache reuse are verified for this runtime.
+runtime|d30a3ba1388ef57be73faabf606e0d326682f48c87f666106a3c8d6b35b58b4f|derive:appimagetool-header
+appimage-update|d976cdac667b03dee8cb23fb95ef74b042c406c5cbab3ff294d2b16efeaff84f|https://github.com/AppImageCommunity/AppImageUpdate/releases/download/2.0.0-alpha-1-20251018/appimageupdatetool-x86_64.AppImage

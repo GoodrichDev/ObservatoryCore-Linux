@@ -10,7 +10,8 @@ permissions:
 
 concurrency:
   group: native-linux-${{ github.ref }}
-  cancel-in-progress: true
+  # Publishing a rolling release must finish before another push replaces it.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   native-linux:
@@ -48,7 +49,10 @@ jobs:
             libgtk-3-0 libwebkit2gtk-4.1-0 libpango-1.0-0 libpangocairo-1.0-0 \
             libcairo2 librsvg2-2 fontconfig fonts-noto-color-emoji \
             espeak-ng pulseaudio pulseaudio-utils libstdc++6 zlib1g libicu70 \
-            libssl3 libgssapi-krb5-2 ca-certificates tzdata
+            libssl3 libgssapi-krb5-2 ca-certificates tzdata \
+            gstreamer1.0-plugins-base gstreamer1.0-plugins-good fonts-dejavu-core \
+            adwaita-icon-theme hicolor-icon-theme shared-mime-info libglib2.0-bin \
+            bubblewrap xdg-dbus-proxy
       - name: Build and verify the self-contained real CLR criteria runtime
         run: |
           bash native/observatory-clr-criteria/build.sh "$PWD/target/clr-criteria"
@@ -89,6 +93,15 @@ jobs:
         run: |
           sh native/scripts/package.sh --binary "$PWD/target/release/observatory-core" --clr-runtime "$PWD/target/clr-criteria"
           sh native/scripts/verify-package.sh dist --clr-runtime "$PWD/target/clr-criteria"
+      - name: Build and verify updateable AppImage
+        run: |
+          bash native/scripts/package-appimage.sh --bundle "$PWD"/dist/observatory-core-*-x86_64-linux.tar.gz --out "$PWD/dist"
+          /usr/bin/python3 native/scripts/verify-appimage.py "$PWD/dist/Observatory_Core-x86_64.AppImage" --output "$PWD/dist/appimage-verification.json"
+          /usr/bin/python3 native/scripts/appimage_update_test.py --image "$PWD/dist/Observatory_Core-x86_64.AppImage" --output "$PWD/dist/appimage-update-verification.json"
+          cd dist
+          cat SHA256SUMS AppImage-SHA256SUMS > SHA256SUMS.tmp
+          sha256sum install.sh >> SHA256SUMS.tmp
+          mv SHA256SUMS.tmp SHA256SUMS
       - name: Upload Linux packages and checksums
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -96,8 +109,13 @@ jobs:
           path: |
             dist/*.tar.gz
             dist/*.deb
+            dist/*.AppImage
+            dist/*.AppImage.zsync
+            dist/install.sh
             dist/SHA256SUMS
             dist/package-verification.json
+            dist/appimage-verification.json
+            dist/appimage-update-verification.json
           if-no-files-found: error
           compression-level: 0
           retention-days: 30
@@ -116,3 +134,25 @@ jobs:
             dist/private-wayland/
           if-no-files-found: ignore
           retention-days: 14
+
+  publish-linux:
+    name: Publish installable Linux release
+    needs: native-linux
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: observatory-core-linux-x86_64
+          path: dist
+      - name: Publish verified packages and rolling update feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: bash native/scripts/publish-linux.sh "$PWD/dist"

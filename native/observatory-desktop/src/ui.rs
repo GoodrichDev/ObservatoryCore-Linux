@@ -137,6 +137,7 @@ pub struct ObservatoryApp {
     settings_plugin: Option<String>,
     about_open: bool,
     about_plugin: Option<String>,
+    appimage: Option<crate::appimage::Manager>,
     filter_open: bool,
     monitor_active: bool,
     message_boxes: std::collections::VecDeque<Value>,
@@ -255,6 +256,7 @@ impl ObservatoryApp {
             settings_plugin: None,
             about_open: false,
             about_plugin: None,
+            appimage: crate::appimage::Manager::detect(),
             filter_open: false,
             monitor_active: false,
             message_boxes: Default::default(),
@@ -881,17 +883,25 @@ impl ObservatoryApp {
             .filter(|v| v.is_object())
             .unwrap_or_else(|| crate::about::metadata(name));
         let title = format!("About {}", metadata["FullName"].as_str().unwrap_or(name));
+        let mut appimage = if name == "Core" {
+            self.appimage.as_mut()
+        } else {
+            None
+        };
+        let height = if appimage.is_some() { 450.0 } else { 263.0 };
         let mut close = false;
         ctx.show_viewport_immediate(
             egui::ViewportId::from_hash_of(("Core AboutForm", name)),
             egui::ViewportBuilder::default()
                 .with_title(title)
-                .with_inner_size([514.0, 263.0])
+                .with_inner_size([514.0, height])
                 .with_resizable(false),
             |ctx, _| {
                 egui::CentralPanel::default()
                     .frame(egui::Frame::NONE)
-                    .show(ctx, |ui| crate::about::show(ui, &metadata));
+                    .show(ctx, |ui| {
+                        crate::about::show(ui, &metadata, appimage.as_deref_mut())
+                    });
                 close = ctx.input(|i| i.viewport().close_requested());
             },
         );
