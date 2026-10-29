@@ -60,9 +60,12 @@ def main():
         env = dict(os.environ, HOME=str(home), XDG_DATA_HOME=str(home / '.local/share'),
                    XDG_CONFIG_HOME=str(home / '.config'), XDG_CACHE_HOME=str(home / 'cache'),
                    TMPDIR=str(home / 'tmp'), APPIMAGE_EXTRACT_AND_RUN='1', NO_CLEANUP='1',
+                   # An unset bus permits auto-launching desktop portals, whose
+                   # document FUSE mounts can outlive this isolated test window.
+                   DBUS_SESSION_BUS_ADDRESS='unix:path=/nonexistent-observatory-appimage-bus',
                    PULSE_SERVER='unix:/nonexistent-observatory-appimage-audio')
         for key in ['APPIMAGE', 'APPDIR', 'OBSERVATORY_CLR_CRITERIA_HOST', 'DISPLAY',
-                    'WAYLAND_DISPLAY', 'WAYLAND_SOCKET', 'DBUS_SESSION_BUS_ADDRESS']:
+                    'WAYLAND_DISPLAY', 'WAYLAND_SOCKET']:
             env.pop(key, None)
         version = run([image, '--version'], env).stdout.strip()
         assert version.startswith('observatory-core '), version
