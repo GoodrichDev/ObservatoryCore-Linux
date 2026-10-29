@@ -1002,21 +1002,41 @@ impl ObservatoryApp {
             let r = |x: f32, y: f32, w: f32, h: f32| {
                 egui::Rect::from_min_size(base + egui::vec2(x, y), egui::vec2(w, h))
             };
-            for (label, x, y) in [
-                ("Journal Folder:", 19.0, 25.0),
-                ("Export Format:", 18.0, 50.0),
-                ("Theme:", 57.0, 79.0),
-                ("Volume:", 53.0, 118.0),
-                ("Audio Device:", 23.0, 153.0),
-                ("Notification\nRouting Test:", 32.0, 232.0),
+            for (label, center_y) in [
+                ("Journal Folder:", 35.0),
+                ("Export Format:", 58.5),
+                ("Theme:", 87.5),
+                ("Volume:", 123.5),
+                ("Audio Device:", 161.5),
+                ("Notification\nRouting Test:", 247.0),
             ] {
-                ui.put(r(x, y, 90.0, 30.0), egui::Label::new(label));
+                // Ui::put centers labels inside their rectangles. The original
+                // labels end at x=103, before the controls at x=117.
+                ui.painter().text(
+                    base + egui::vec2(103.0, center_y),
+                    egui::Align2::RIGHT_CENTER,
+                    label,
+                    egui::FontId::proportional(13.0),
+                    ui.visuals().text_color(),
+                );
             }
+            let journal_label = if self.journal_path.is_empty() {
+                "Choose journal folder…"
+            } else {
+                &self.journal_path
+            };
             if ui
-                .put(
-                    r(117.0, 25.0, 327.0, 20.0),
-                    egui::Label::new(&self.journal_path).sense(egui::Sense::click()),
+                .allocate_new_ui(
+                    egui::UiBuilder::new().max_rect(r(117.0, 25.0, 327.0, 20.0)),
+                    |ui| {
+                        ui.add(
+                            egui::Label::new(journal_label)
+                                .truncate()
+                                .sense(egui::Sense::click()),
+                        )
+                    },
                 )
+                .inner
                 .clicked()
             {
                 let path = PathBuf::from(&self.journal_path);
@@ -1091,10 +1111,14 @@ impl ObservatoryApp {
                 .unwrap_or(75)
                 .min(100);
             if ui
-                .put(
-                    r(117.0, 112.0, 214.0, 23.0),
-                    egui::Slider::new(&mut volume, 0..=100).show_value(false),
+                .allocate_new_ui(
+                    egui::UiBuilder::new().max_rect(r(117.0, 112.0, 214.0, 23.0)),
+                    |ui| {
+                        ui.spacing_mut().slider_width = 214.0;
+                        ui.add(egui::Slider::new(&mut volume, 0..=100).show_value(false))
+                    },
                 )
+                .inner
                 .changed()
             {
                 self.settings
@@ -1114,13 +1138,13 @@ impl ObservatoryApp {
                     &self.audio_choices.lock().unwrap().devices,
                 );
             });
-            ui.put(
-                r(117.0, 179.0, 180.0, 19.0),
-                egui::Checkbox::new(&mut self.settings.auto_start, "Start Monitor On Launch"),
+            ui.allocate_new_ui(
+                egui::UiBuilder::new().max_rect(r(117.0, 179.0, 180.0, 19.0)),
+                |ui| ui.checkbox(&mut self.settings.auto_start, "Start Monitor On Launch"),
             );
-            ui.put(
-                r(117.0, 204.0, 135.0, 19.0),
-                egui::Checkbox::new(&mut self.settings.start_read_all, "Read All On Launch"),
+            ui.allocate_new_ui(
+                egui::UiBuilder::new().max_rect(r(117.0, 204.0, 135.0, 19.0)),
+                |ui| ui.checkbox(&mut self.settings.start_read_all, "Read All On Launch"),
             );
             let mut polling = self
                 .settings
@@ -1129,10 +1153,11 @@ impl ObservatoryApp {
                 .and_then(Value::as_bool)
                 .unwrap_or(false);
             if ui
-                .put(
-                    r(253.0, 203.0, 100.0, 19.0),
-                    egui::Checkbox::new(&mut polling, "Use Polling"),
+                .allocate_new_ui(
+                    egui::UiBuilder::new().max_rect(r(253.0, 203.0, 100.0, 19.0)),
+                    |ui| ui.checkbox(&mut polling, "Use Polling"),
                 )
+                .inner
                 .changed()
             {
                 self.settings

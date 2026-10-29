@@ -230,6 +230,7 @@ pub fn audio(
         }
     });
     at(ui, [117.0, 95.0], [214.0, 23.0], |ui| {
+        ui.spacing_mut().slider_width = 214.0;
         let mut rate = get(s, "VoiceRate")
             .and_then(Value::as_i64)
             .unwrap_or(0)
@@ -270,8 +271,11 @@ pub fn select(
     let old = get(s, key).and_then(Value::as_str).unwrap_or("").to_owned();
     let mut value = old.clone();
     ui.horizontal(|ui| {
-        ui.label(label);
+        if !label.is_empty() {
+            ui.label(label);
+        }
         egui::ComboBox::from_id_salt(key)
+            .width(ui.available_width())
             .selected_text(
                 choices
                     .iter()
